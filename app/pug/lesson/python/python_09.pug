@@ -1,0 +1,209 @@
+.lesson-page
+  h1.lesson-title Рядки
+  p <span class="accent">Рядки</span> – це об'єкти, що складаються з послідовності символьних даних. В <span class="accent">Python</span>, рядки представлені типом даних <span class="accent">str</span>, який зберігає послідовність символів <span class="accent">Unicode</span>. Зчитування рядків відбувається за допомоги функції <span class="accent">input</span>.
+  p Зазначимо, що в мові <span class="accent">Python</span> не має, як такого, символьного типу даних, <span class="accent">символ</span> – це рядок довжиною в 1 символ.
+  p Нагадуємо, що рядкові літерали треба укладати в лапки. Можна використовувати лапки <span class="accent">одинарні</span>, <span class="accent">подвійні</span> або <span class="accent">потрійні</span>, при цьому лапки на початку рядка та в його кінці повинні співпадати. Якщо рядок укладений в потрійні лапки, в ньому можна довільно використовувати подвійні лапки чи апострофи.
+  p Для рядків визначені базові операції складання (<span class="accent">конкатенація</span>) та операція добутку строки на ціле число (<span class="accent">копіювання строк</span>).
+  
+  h3.accent.lesson-subtitle Базові операції із рядками.
+  p <span class="accent">Конкатенація</span> – складання строк. За допомоги оператора додавання <span class="accent">(+)</span> можна об’єднати декілька рядків в один.<br><span class="text-bold">Приклад:</span> створити програму, яка буде об’єднувати декілька рядків в один.
+  .example
+    ul.example-program.list
+      li a = <span class="color-accent">&#39;&#39;Py&#39;&#39;</span>
+      li b = <span class="color-accent">&#39;&#39;th&#39;&#39;</span>
+      li c = <span class="color-accent">&#39;&#39;on&#39;&#39;</span>
+      li <span class="text-bold">print</span>(a+b+c) <span class="color-excel">&#8594; &#39;Python&#39;</span>
+
+  p <span class="accent">Копіювання строк</span>. За допомоги оператора добутку <span class="accent"> (*)</span> можна створити декілька копій строки.<br><span class="text-bold">Приклад:</span> створити програму, яка буде дублювати строку декілька раз.
+  .example
+    ul.example-program.list
+      li a = <span class="color-accent">&#39;&#39;py.&#39;&#39;</span>
+      li с = <span class="color-excel">3</span>
+      li <span class="text-bold">print</span>(a*с) <span class="color-excel">&#8594; &#39;py.py.py.&#39;</span>
+  p <span class="accent">Перевірка на входження – in, not in</span>. Оператор приналежності <span class="accent">in</span> перевіряє чи входить деяка підстрока у дану строку і повертає значення <span class="accent">True</span> або <span class="accent">False</span>, в залежності від результату.<br><span class="text-bold">Приклад:</span> створити програму, яка буде перевіряти чи входить підрядок <span class="accent">а</span> в рядок <span class="accent">b</span>.
+  .example
+    ul.example-program.list
+      li <span class="text-bold">print</span>(<span class="color-excel">&#39;Вкажіть строго-типізовану мову програмування:&#39;</span>)
+      li a = <span class="text-bold">input</span>(<span class="color-excel">&#39;Python, Java, Pascal&#39;</span>)
+      li b = <span class="color-accent">&#39;Pascal - строго типізована мова програмування&#39;</span>
+      li <span class="text-bold">if</span> a <span class="text-bold">in</span> b<span class="text-bold">:</span>
+        ul
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Ви абсолютно праві&#39;</span>)
+      li <span class="text-bold">else:</span>
+        ul
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Ви помиляєтесь&#39;</span>)
+  
+  h3.accent.lesson-subtitle Функції перетворення.
+  p В комп'ютері всю інформацію зберігають у вигляді цифр, для подання символьних даних використовується схема перетворення, яка містить кожен символ з його номером. Таким чином, якщо рядок складається із одного символу, до такого рядка можна застосувати функції перетворення.
+  p <span class="accent">Функція chr()</span> – перетворює ціле число на символ. 
+  p <span class="accent">Функція ord()</span> – перетворює символ на ціле число.
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде виводити літери англійського алфавіту.
+  .example
+    ul.example-program.list
+      li a = <span class="text-bold">ord</span>(&#39;a&#39;)
+      li z = <span class="text-bold">ord</span>(&#39;z&#39;)
+      li <span class="text-bold">for</span> i <span class="text-bold">in</span> <span class="text-bold">range</span>(a, z+<span class="color-excel">1</span>):
+        ul
+          li <span class="text-bold">print</span>(<span class="text-bold">chr</span>(i), <span class="text-bold">end</span>=&#39; &#39;)
+
+  h3.accent.lesson-subtitle Довжина рядка.
+  p <span class="accent">Функция len()</span> – повертає довжину рядка, тобто визначає кількість символів, що містить рядок, включно із пропусками.
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде визначати точну кількість символів в рядку.
+  .example
+    ul.example-program.list
+      li s = <span class="text-bold">input</span>(<span class="color-excel">&#39;введіть рядок: &#39;</span>)
+      li <span class="text-bold">print</span>(<span class="color-accent">&#39;в рядку «&#39;</span>,s,<span class="color-accent">&#39;» знаходиться&#39;</span>,<span class="text-bold">len</span>(s),<span class="color-accent">&#39;символів&#39;</span>)
+
+  h3.accent.lesson-subtitle Індексація рядків.
+  p В мові програмування <span class="accent">Python</span>, окремі елементи в упорядкованому наборі даних можуть бути доступні за допомогою числового індексу або ключа. Цей процес називається індексація.
+  p Для того щоб отримати доступ до окремих символів в рядку треба: вказати ім'я рядка та номер позиції символу в квадратних дужках.
+  p <span class="accent">Індексація рядків починається з нуля:</span> у першого символу індекс <span class="accent">0</span>, наступного <span class="accent">1</span> і так далі, індекс останнього символу – <span class="accent">довжина строки мінус один (len(s)-1)</span>.
+  p Таким чином окремі символи доступні за індексом наступним чином:
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;python&#39;</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">0</span>]) <span class="color-excel">&#8594; p</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">1</span>]) <span class="color-excel">&#8594; y</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">2</span>]) <span class="color-excel">&#8594; t</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">3</span>]) <span class="color-excel">&#8594; h</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">4</span>]) <span class="color-excel">&#8594; o</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">5</span>]) <span class="color-excel">&#8594; n</span>
+  p Спроба звернення за індексом більшого ніж <span class="accent">len (s) - 1</span>, призводить до помилки <span class="accent">IndexError: string index out of range</span>.
+  p Індекси рядків можуть бути вказані і <span class="accent">негативними числами</span>. В цьому випадку <span class="accent">індексування починається з кінця строки: -1</span> відноситься до останнього символу, <span class="accent">-2</span> до передостаннього і так далі.
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;python&#39;</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">-1</span>]) <span class="color-excel">&#8594; n</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">-2</span>]) <span class="color-excel">&#8594; o</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">-3</span>]) <span class="color-excel">&#8594; h</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">-4</span>]) <span class="color-excel">&#8594; t</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">-5</span>]) <span class="color-excel">&#8594; y</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">-6</span>]) <span class="color-excel">&#8594; p</span>
+  p Для будь-якого не порожнього рядка <span class="accent">s</span>, код <span class="accent">s [len (s) -1]</span> та <span class="accent">s [-1]</span> поверне останній символ. Немає індексу, який можна застосувати до порожнього рядка.
+
+  h3.accent.lesson-subtitle <span class="color-red">Slices</span> – зрізи рядків.
+  p <span class="accent">Зріз</span> (<span class="accent">slice</span>) – отримання з цього рядка одного символу або деякого фрагмента підрядка або підпослідовності.
+  p В мові <span class="accent">Python</span> існує три форми зрізів:
+  p <span class="accent">S[i]</span> – повертає один символ із рядка <span class="accent">S</span> за індексом <span class="accent">[і]</span>.
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;python&#39;</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">0</span>]) <span class="color-excel">&#8594; p</span>
+  p <span class="accent">S[a:b]</span> – повертає рядок, який починається з символу <span class="accent">а</span> і завершується символом <span class="accent">b-1</span>. 
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;python&#39;</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">0:2</span>]) <span class="color-excel">&#8594; py</span>
+  p Можна також використовувати як <span class="accent">позитивні</span>, так і <span class="accent">негативні індекси в одному зрізі</span>, наприклад <span class="accent">S[1:-1]</span> – це рядок без першого і останнього символу (зріз починається з символу з індексом <span class="accent">1</span> і закінчується  індексом <span class="accent">-1</span>, не включаючи його).
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;python&#39;</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">1:-1</span>]) <span class="color-excel">&#8594; ytho</span>
+  p Якщо опустити другий параметр (але поставити двокрапку), то <span class="accent">зріз береться до кінця рядка</span>.
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;python&#39;</span>
+      li <span class="text-bold">print</span>(s[<span class="color-excel">2:</span>])<span class="color-excel">&#8594; thon</span>
+  p <span class="accent">S[a:b:d]</span> – повертає рядок, що починається із символу з індексом <span class="accent">а</span>, в який будуть додані символи із індексами <span class="accent">a + d</span>, <span class="accent">a+ 2*d</span> … і далі, до символу з індексом <span class="accent">b-1</span>.<br><span class="text-bold">Приклад</span>: скласти програму, яка з дати народження, що подана у форматі <span class="text-bold">ДД.MM.РРРР</span> буде повертати лише рік народження.
+  .example
+    ul.example-program.list
+      li data = <span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть дату народження у форматі ДД.ММ.РРРР: &#39;</span>)
+      li <span class="text-bold">print</span>(data<span class="color-excel">[6:</span>])
+
+  h3.accent.lesson-subtitle Методи.
+  p <span class="accent">Метод</span> – це функція, яка застосовується до об'єкта. Метод викликається наступним чином: 
+  p <span class="accent">Ім’я_об’екту.</span><span class="text-bold color-red">Ім’я_методу</span><span class="accent">(параметри).</span>
+
+  h3.accent.lesson-subtitle Методи <span class="color-red">find</span> та <span class="color-red">rfind</span>.
+  p <span class="accent">Метод find()</span> – визначає <span class="accent">індекс початкового</span> входження (початкову позицію) символу або символів у зазначеному текстовому рядку <span class="accent">з урахуванням регістру</span>, якщо ж підрядок не буде знайдено, то метод поверне значення <span class="accent">-1</span>.<br><span class="text-bold">Приклад:</span> скласти програму, яка визначить положення підрядка «Python» в текстовому рядку «Programming language Python».
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;Programming language Python&#39;
+      li <span class="text-bold">print</span>(s.<span class="text-bold">find</span>(<span class="color-excel">&#39;Python&#39;</span>)) <span class="color-excel">&#8594; 17</span>
+      li <span class="text-bold">print</span>(s.<span class="text-bold">find</span>(<span class="color-excel">&#39;python&#39;</span>)) <span class="color-excel">&#8594; -1</span>
+  p <span class="accent">Метод rfind()</span> – визначає <span class="accent">індекс останнього</span> входження символу або символів у зазначеному текстовому рядку <span class="accent">з урахуванням регістру</span>, якщо ж підрядок не буде знайдено, то метод поверне значення <span class="accent">-1</span>. Тобто, пошук починається з кінця рядка. <br><span class="text-bold">Приклад:</span> визначити положення <span class="text-bold">останнього пропуску</span> в текстовому рядку «Programming language Python».
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;Programming language Python&#39;
+      li <span class="text-bold">print</span>(s.<span class="text-bold">rfind</span>(&#39; &#39;)) <span class="color-excel">&#8594; 20</span>
+  p Метод <span class="accent">find</span> або <span class="accent">rfind</span>  можна викликати із декількома параметрами:
+  p <span class="accent">s.find(&#39;str&#39;, a)</span> – пошук символу або символів (<span class="accent">&#39;str&#39;</span>) буде відбуватися в зрізі <span class="accent">s[а:]</span>, тобто від символу з індексом <span class="accent">а</span> і до кінця строки <span class="accent">s</span>.   
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;Programming language Python&#39;
+      li <span class="text-bold">print</span>(s.<span class="text-bold">find</span>(<span class="color-excel">&#39;r&#39;, 2</span>)) <span class="color-excel">&#8594; 4</span>
+  p <span class="accent">s.find(&#39;str&#39;, a, b)</span> – пошук символу або символів (<span class="accent">&#39;str&#39;</span>) буде відбуватися в зрізі <span class="accent">s[а:b]</span>, тобто від символу з індексом <span class="accent">а</span> і до символу з індексом <span class="accent">b-1</span> в рядку <span class="accent">s</span>.    
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;Programming language Python&#39;
+      li <span class="text-bold">print</span>(s.<span class="text-bold">find</span>(<span class="color-excel">&#39;l&#39;</span>)) <span class="color-excel">&#8594; 12</span>
+      li <span class="text-bold">print</span>(s.<span class="text-bold">find</span>(<span class="color-excel">&#39;g&#39;, 4, 10</span>)) <span class="color-excel">&#8594; -1</span>
+
+  h3.accent.lesson-subtitle Метод <span class="color-red">replace</span>.
+  p <span class="accent">Метод replace()</span> замінює всі входження одного рядка в інший, тобто <span class="accent">s.replace(old, new) – замінює в рядку <span class="accent">s</span> все входження підрядка <span class="accent">old</span> на підрядок <span class="accent">new</span>.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;Hello&#39;
+      li print(s.replace(<span class="color-excel">&#39;l&#39;, &#39;L&#39;)) <span class="color-excel">&#8594; &#39;HeLLo&#39;</span>
+  p <span class="text-bold">Метод replace</span> може отримувати ще додатковий третій параметр, тобто <span class="accent">s.replace(old, new, count)</span>, в цьому випадку заміняться лише перші <span class="accent">count</span> входження підрядка.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;Hello&#39;
+      li <span class="text-bold">print</span>(s.<span class="text-bold">replace</span>(<span class="color-excel">&#39;l&#39;, &#39;L&#39;, 1</span>)) <span class="color-excel">&#8594; &#39;HeLlo&#39;</span>
+  
+  h3.accent.lesson-subtitle Метод <span class="color-red">count</span>.
+  p <span class="accent">Метод s.count()</span> - рахує кількість входжень одного рядка в інший рядок з урахуванням регістру, тобто <span class="accent">s.count(t)</span> – повертає число входжень рядка <span class="accent">t</span> у рядок <span class="accent">s</span>.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;Hello&#39;
+      li <span class="text-bold">print</span>(s.<span class="text-bold">count</span>(<span class="color-excel">&#39;l&#39;</span>))<span class="color-excel">&#8594; 2</span>
+  p Якщо вказати три параметра в методі <span class="accent">s.count(t, а, b)</span> – буде відбуватися розрахунок  входжень рядка <span class="accent">t</span> у рядок <span class="accent">s</span> у зрізі <span class="accent">s[a:b]</span>.
+  
+  h3.accent.lesson-subtitle Методи зміни регістру рядка.
+  p <span class="accent">Метод s.capitalize()</span> – повертає копію рядка <span class="accent">s</span> з першим символом, перетвореним у верхній регістр, і іншими символами, перетвореними в нижній регістр, не алфавітні символи не змінюються.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;python&#39;
+      li <span class="text-bold">print</span>(s.<span class="text-bold">capitalize</span>()) <span class="color-excel">&#8594; &#39;Python&#39;</span>
+  p <span class="accent">Метод s.lower()</span> – повертає копію рядка <span class="accent">s</span> з усіма символами літер, перетвореними в нижній регістр, не алфавітні символи не змінюються.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;PYTHON&#39;
+      li <span class="text-bold">print</span>(s.<span class="text-bold">lower</span>()) <span class="color-excel">&#8594; &#39;python&#39;</span>
+  p <span class="accent">Метод s.upper()</span> – повертає копію рядка <span class="accent">s</span> з усіма символами літер, перетвореними в верхній регістр, не алфавітні символи не змінюються.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;python&#39;
+      li <span class="text-bold">print</span>(s.<span class="text-bold">upper</span>()) <span class="color-excel">&#8594; &#39;PYTHON&#39;</span>
+  p <span class="accent">Метод s.title()</span> – повертає копію рядка <span class="accent">s</span> в якій перша буква кожного слова перетворюється в верхній регістр, а інші літери – в нижній регістр.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li s = <span class="color-accent">&#39;programming language python&#39;
+      li <span class="text-bold">print</span>(s.<span class="text-bold">title</span>()) <span class="color-excel">&#8594; &#39;Programming Language Python&#39;</span>
+  
+  h3.accent.lesson-subtitle Класифікація рядків.
+  p <span class="accent">Метод s.isalpha()</span> – повертає <span class="accent">True</span>, якщо рядок <span class="accent">s</span> не порожній, а всі його символи літери. В іншому випадку повертає <span class="accent">False</span>.
+  p <span class="accent">Метод s.isdigit()</span> – повертає <span class="accent">True</span> коли рядок <span class="accent">s</span> не порожній, а всі його символи є цифрами. В іншому випадку повертає <span class="accent">False</span>.
+  p <span class="accent">Метод s.isalnum()</span> – повертає <span class="accent">True</span>, якщо рядок <span class="accent">s</span> не порожній, а всі його символи є літери з цифрами. В іншому випадку повертає <span class="accent">False</span>.
+  p <span class="accent">Метод s.isupper()</span> – повертає <span class="accent">True</span>, якщо рядок <span class="accent">s</span> не порожній, а всі його символи є прописними (великими). В іншому випадку повертає <span class="accent">False</span>.
+  p <span class="accent">Метод s.islower()</span> повертає <span class="accent">True</span>, якщо рядок <span class="accent">s</span> не порожній, а всі його символи є строковими (малими). В іншому випадку повертає <span class="accent">False</span>.
+
+  p <span class="text-bold">Приклад:</span> скласти програму, яка буде визначати чи є рядок, що вводить користувач з клавіатури числом, літерою або це рядок який містить і цифри і літери.
+  .example
+    ul.example-program.list
+      li s = <span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть будь-який рядок: &#39;</span>)
+      li <span class="text-bold">if</span> s.<span class="text-bold">isalpha</span>():
+        ul 
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Цей рядок містить лише літери&#39;</span>)
+      li <span class="text-bold">elif</span> s.<span class="text-bold">isdigit</span>():
+        ul 
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Цей рядок містить лише цифри&#39;</span>)
+      li <span class="text-bold">elif</span> s.<span class="text-bold">isalnum</span>():
+        ul 
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Цей рядок містить літери та цифри&#39;</span>)
+      li <span class="text-bold">else:</span>
+        ul 
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Цей рядок містить інші символи&#39;</span>)
+
+
+

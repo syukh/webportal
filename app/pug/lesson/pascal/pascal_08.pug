@@ -1,0 +1,58 @@
+.lesson-page
+  h1.lesson-title Оператор циклу з параметром <span class="accent">For</span>
+  p Цикл з параметром <span class="accent">for</span> використовується зазвичай в тих випадках, коли заздалегідь <span class="accent">можна визначити кількість повторень циклу</span>. Цикл з параметром <span class="accent">for</span> служить для організації n-кратного виконання тіла циклу для значень параметра циклу з деякої впорядкованої дискретної множини.
+  h3.accent.lesson-subtitle  Схема оператора циклу з параметром.
+  .block-less
+    .block-less__img
+      <img src="../img/lesson/pass/less-pass-8-01.jpg" alt="Схема умовного оператора" style="width:70%">
+    .block-less__text
+      .example
+        ul
+          li <span class="text-bold">Оператор циклу з параметром має дві форми запису:</span>
+          <br>
+          li <span class="text-bold">for</span> параметр <span class="text-bold">:=</span> вираз_1 <span class="text-bold">to</span> вираз_2 <span class="text-bold">do</span>
+            ul
+              li тіло_циклу;
+          <br>
+          li <span class="text-bold">for</span> параметр <span class="text-bold">:=</span> вираз_1 <span class="text-bold">downto</span> вираз_2 <span class="text-bold">do</span>
+            ul
+              li тіло_циклу;
+  p <span class="accent">Параметр</span> (його ще називають параметром циклу, індексом, лічильником) – це змінна дискретного типу, тобто типу, на безлічі значень якої визначено поняття <span class="accent">«попередній елемент»</span> і <span class="accent">«наступний елемент»</span>. Найчастіше використовується змінні типу <span class="accent">integer</span> (але допустимі <span class="accent">char</span> і <span class="accent">boolean</span>). <span class="text-bold color-red">Не дозволений до застосування параметр типу real</span>.
+  p <span class="accent">Вираз_1</span> (<span class="text-bold">початкове значення параметра</span>) – це константа, змінна або вираз того ж типу, що й параметр циклу.
+  p <span class="accent">Вираз_2</span> (<span class="text-bold">кінцеве значення параметра</span>) – має той же спосіб визначення, що і вираз_1.
+  p <span class="accent">Тіло_циклу</span> – <span class="text-bold">це оператор</span>, наступний за ключовим словом <span class="accent">do</span>. Якщо необхідно повторити кілька операторів, то вони укладаються в операторні дужки <span class="accent">begin</span> і <span class="accent">end</span>, і тілом циклу стає <span class="text-bold">составний оператор</span>.
+  p.text-bold Розглянемо процес виконання циклу з параметром:
+  p <span class="text-bold">1. Цикл <span class="color-blue">for/to</span> for i := a <span class="color-red">to</span> b do тіло_циклу;</span> <br> Параметру циклу <span class="accent">i</span> присвоюється початкове значення <span class="accent">а</span>. Воно порівнюється зі значенням <span class="accent">b</span>, якщо в упорядкованій множині <span class="accent">i</span> передує <span class="accent">b</span> або збігається з ним, то виконується тіло циклу, далі параметру i присвоюється нове значення, наступне за тим, яке у нього було (<span class="accent">i := a + 1</span>). Після, відбувається наступне порівняння <span class="accent">i</span> з кінцевим значенням <span class="accent">b</span>, і якщо під час перевірки з'ясується, що поточне значення <span class="accent">i</span> слідує за кінцевим значенням <span class="accent">b</span> (<span class="accent">i > b</span>), то відбувається вихід з циклу і виконається наступний за тілом циклу оператор. </span>
+  p <span class="text-bold">2. Цикл <span class="color-blue">for/downto</span> for i := a <span class="color-red">downto</span> b do тіло_циклу;</span> <br> Цей цикл виконується наступним чином. Параметру циклу <span class="accent">i</span> присвоюється початкове значення <span class="accent">а</span>. Значення параметра порівнюється з кінцевим значенням. Якщо в упорядкованій множині воно передує кінцевому значенню (<span class="accent">i < b</span>), то відбувається вихід з циклу, в іншому випадку виконується тіло циклу, змінній i присвоюється попереднє значення (<span class="accent">i := a - 1</span>) і відбувається наступне порівняння параметру з кінцевим значенням. </p>
+  h3.accent.lesson-subtitle Зауваження.
+  ol(style="padding-left:18px")
+    li Цикл з параметром зручно використовувати в тих випадках, коли кількість повторень можна визначити заздалегідь.
+    p
+    li Тіло циклу <span class="accent">for</span> може не виконатися жодного разу, так відбувається, коли в упорядкованій безлічі кінцеве значення параметра циклу передує початковому значенню (<span class="accent">у випадку з to</span>) або початкове значення передує кінцевому (<span class="accent">в випадку з downto</span>). Це відбувається тому, що <span class="accent">перевірка умови в циклі for відбувається перед виконанням циклу</span>. Тому у мові PascalABC цикл з параметром є окремим випадком циклу з передумовою і має таку ж структурну схему.
+    p
+    li <span class="accent">Параметр циклу не повинен змінюватися будь-яким оператором всередині циклу</span>. Параметр може довільним чином використовуватися у виразах в тілі циклу, але присвоювати йому нового значення всередині циклу небажано, тому що це може привести до непередбачуваних наслідків.
+    p
+    li <span class="accent">Параметр циклу, як і будь-яка інша змінна, повинен бути описаний в розділі змінних</span>.
+    p
+    li Після виконання оператора циклу параметр циклу вважається невизначеним і не повинен використовуватися в наступних операторах без попереднього привласнення йому значення.
+    p
+    li Дозволено використання вкладених циклів. Їх реалізація повинна проводиться за тими ж правилами, що і для циклів з передумовою.
+  p
+  p <span class="text-bold">Приклад:</span> створити програму яка обчислює суму ряду <span   class="text-bold color-red">1+2+3+...+n</span>:
+  .example
+    ul
+      li <span class="text-bold">Program</span> SumRow;
+      li <span class="text-bold">var</span>
+        ul
+          li i, n : <span class="color-accent">integer</span>;</li>
+          li Sum : <span class="color-accent">real</span>;</li>
+      li <span class="text-bold">begin</span>
+        ul
+          li write(<span class="color-accent">&#39;Введіть кількість членів ряду&#39;</span>);</li>
+          li readln(n);</li>
+          li Sum := <span class="color-excel">0</span>;</li>
+          li <span class="text-bold">for</span> i := <span class="color-excel">1</span> <span class="text-bold">to</span> n <span class="text-bold">do</span>
+            ul
+              li Sum := Sum + i;</li>
+      li writeln(<span class="color-accent">&#39;Сума &#39;</span>, n,<span class="color-accent"> &#39; членів ряду = &#39;</span>, Sum);
+      li <span class="text-bold">end.</span>

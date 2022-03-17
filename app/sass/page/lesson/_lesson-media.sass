@@ -1,0 +1,212 @@
+@media only screen and (max-width: 1680px)
+  .key-shot__news
+    width: 80%
+  .table-math
+    width: 100%
+@media only screen and (max-width: 1536px)
+  .key-shot__news
+    width: 90%
+@media only screen and (max-width: 1366px)
+  .key-shot__news
+    width: 100%
+@media only screen and (max-width: 1280px)
+  .lesson-page
+    +rfs(17px)
+  .lesson-title
+    +rfs(42px)
+  .lesson-subtitle
+    +rfs(30px)
+  .key-shot-less
+    width: 45%
+  .key-shot__item
+    grid-template-columns: 33% 7% 35%
+@media only screen and (max-width: 1024px)
+  .key-shot__item
+    grid-template-columns: 33% 7% 40%
+@media only screen and (max-width: 992px)
+  .func-table
+    width: 70%
+  .example
+    &-program
+      &__str
+        &:first-child
+          width: 33%
+        &:not(:first-child)
+          font-size: 12px
+@media only screen and (max-width: 860px)
+  .key-shot__img
+    display: block
+    img
+      width: 100%
+      height: auto
+  .key-shot__news
+    display: none
+@media only screen and (max-width: 768px)
+  .lesson-page
+    +rfs(16px)
+    padding-left: 0
+  .lesson-title
+    +rfs(40px)
+    line-height: 1.3
+    margin-bottom: 15px
+  .lesson-subtitle
+    +rfs(28px)
+    line-height: 1.2
+  .key-shot-less
+    width: 60%
+  .function-descr
+    grid-template-columns: 3fr 7fr
+  .block-less__text
+    font-size: 18px
+  .block-less
+    grid-template-columns: 1fr
+    &__img
+      img
+        width: 80%
+        margin-bottom: 40px
+    &__text
+      +rfs(18px)
+  .example
+    ul
+      padding-left: 20px
+  .lesson-list
+    ul
+      padding-left: 120px
+    li
+      ul
+        padding-left: 20px
+  .red-num
+    padding-left: 20px
+    &__item::before
+      left: 0
+  .table-form
+    width: 70%
+@media only screen and (max-width: 750px)
+  .example
+    &-program
+      &__str
+        &:first-child
+          width: 100%
+        &:not(:first-child)
+          display: none
+@media only screen and (max-width: 680px)
+  .table-math
+    grid-template-columns: 35% 65%
+@media only screen and (max-width: 600px)
+  .key-shot-less
+    width: 80%
+  .block-less__text
+    +rfs(16px)
+
+@media only screen and (max-width: 480px)
+  .lesson-page
+    +rfs(14px)
+  .lesson-title
+    +rfs(34px)
+  .lesson-subtitle
+    +rfs(22px)
+  .lesson-list
+    p
+      padding-left: 85px
+      margin-left: 20px
+    ul
+      padding-left: 130px
+  .func-table
+    width: 100%
+  .dowload-btn
+    justify-content: center
+    &__wraper
+      margin: 20px
+  .table-form
+    width: 100%
+  .table-math
+    div
+      padding: 5px 10px
+
+@media only screen and (max-width: 430px)
+  .lesson-list
+    p
+      margin-left: 0px
+@media only screen and (max-width: 375px)
+  .key-shot-less
+    width: 95%
+
+  .middle-text
+    +rfs(16px)
+
+@media only screen and (max-width: 360px)
+  .table-math
+    grid-template-columns: 40% 60%
+
+// Portrait //
+@media only screen and (orientation: portrait) and (max-device-width: 1024px)
+  #section.section-lesson
+    grid-template-rows: calc(100vh - 140px)
+
+@media only screen and (orientation: portrait) and (max-device-width: 810px)
+  #section.section-lesson
+    grid-template-rows: calc(100vh - 120px)
+
+//* Phones Landscape *//
+@media only screen and (orientation: landscape) and (max-width: 960px)
+  #section.section-lesson
+    grid-template-rows: calc(100vh - 110px)
+
+@media only screen and (orientation: landscape) and (max-width: 736px)
+  #section.section-lesson
+    grid-template-rows: calc(100vh - 100px)
+
+  .table-int
+    div
+      padding: 5px 10px
+
+@media only screen and (orientation: landscape) and (max-width: 667px)
+  .table-int
+    grid-template-columns: 20% 30% 50%
+
+//* Phones Portrait*//
+@media only screen and (orientation: portrait) and (max-device-width: 767px)
+  #section.section-lesson
+    grid-template-rows: calc(100vh - 120px)
+
+  .table-int
+    grid-template-columns: 15% 25% 60%
+
+@media only screen and (orientation: portrait) and (max-device-width: 680px)
+  .table-int
+    grid-template-columns: 20% 30% 50%
+    div
+      padding: 5px 10px
+
+@media only screen and (max-width: 548px)
+  #section.section-lesson
+    grid-template-rows: calc(100vh - 110px)
+
+@media only screen  and (max-device-width: 480px)
+  #section.section-lesson
+    grid-template-rows: calc(100vh - 100px)
+
+  .table-int
+    grid-template-columns: 24% 30% 46%
+
+@media only screen and (orientation: portrait) and (max-device-width: 430px)
+  #section.section-lesson
+    grid-template-rows: calc(100vh - 90px)
+
+  .table-int
+    div
+      padding: 5px
+@media only screen and (orientation: portrait) and (max-device-width: 430px) and (max-device-height: 740px)
+  #section.section-lesson
+    grid-template-rows: calc(100vh - 70px)
+
+@media only screen and (orientation: portrait) and (max-device-width: 375px)
+  .key-shot-less
+    padding-left: 20px
+
+@media only screen and (orientation: portrait) and (max-device-width: 370px)
+  .table-int
+    grid-template-columns: 35% 65%
+
+  .table-int__func
+    display: none

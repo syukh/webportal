@@ -1,0 +1,178 @@
+.lesson-page
+  h1.lesson-title Списки
+  p <span class="accent">Список (list)</span> – це структура даних для зберігання об'єктів різних типів. Списки належать до змінюваних типів даних. Список може містити будь-яку кількість будь-яких об'єктів, в тому числі і вкладені списки. 
+  p Списки – це змінні об'єкти, тому їх елементи можуть змінюватися, або може змінюватися їх порядок.
+
+  h3.accent.lesson-subtitle Створення списків.
+  p <span class="text-bold">Існує декілька способів створення списків:</span>
+  .lesson-list
+    p у квадратних дужках перерахувати усі елементи списку через кому;<br>numbers = [<span class="color-excel">1</span>, <span class="color-excel">2</span>, <span class="color-excel">3</span>, <span class="color-excel">4</span>, <span class="color-excel">5</span>]
+    p вказати лише тільки квадратні дужки, буде створено порожній список;<br>L = []
+    p за допомоги конструктора <span class="accent">list()</span>.<br>L = <span class="text-bold">list</span>()
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде записувати числа із послідовності від <span class="accent">1</span> до <span class="accent">n</span> у список.
+  .example
+    ul.example-program.list
+      li n = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">'введіть кількість цифр = '</span>))
+      li L = <span class="text-bold">list</span>(<span class="text-bold">range</span>(<span class="color-excel">1, </span>n+<span class="color-excel">1</span>))
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;[1, 2, 3, 4, … n]</span>
+  p Кожен елемент списку має свій номер (індекс), за яким до нього можна звернутися. Перший елемент має індекс <span class="accent">[0]</span>, другий елемент має індекс <span class="accent">[1]</span> і так далі. Для звернення до елементів починаючи із кінця списку, можна використовувати негативні індекси, починаючи з <span class="accent">[-1]</span>.
+  p <span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>]
+      li <span class="text-bold">print</span>(L[<span class="color-excel">1</span>]) <span class="color-excel">&#35;['orange']</span>
+      li <span class="text-bold">print</span>(L[<span class="color-excel">-1</span>]) <span class="color-excel">&#35;['yellow']</span>
+
+  p Вивести всі елементи списку можна за допомоги циклу.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-excel">1</span>, <span class="color-excel">2</span>, <span class="color-excel">3</span>, <span class="color-excel">4</span>, <span class="color-excel">5</span>]
+      li <span class="text-bold">for</span> i <span class="text-bold">in</span> L
+      li <span class="text-bold">print</span>(i, <span class="text-bold">end</span>=' ') <span class="color-excel">#1 2 3 4 5</span>
+
+  h3.accent.lesson-subtitle Додавання елементів списку.
+  p Щоб додати елемент у список застосовуються методи <span class="accent">append()</span> та <span class="accent">insert()</span>. 
+  p <span class="accent">Метод append()</span> – додає елемент <span class="accent">item</span> в кінець списку.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>]
+      li L.<span class="text-bold">append</span>(<span class="text-bold">input</span>('введіть свій колір: ')) <span class="color-excel">&#35;'green'</span>
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['red', 'orange', 'yellow', 'green']</span>
+  p <span class="accent">Метод insert ()</span> – додає елемент <span class="accent">item</span> в список за індексом <span class="accent">[i]</span>.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'green'</span>]
+      li L.<span class="text-bold">insert</span>(<span class="color-excel">2</span>,<span class="color-accent">'yellow'</span>)
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['red', 'orange', 'yellow', 'green']</span>
+
+  h3.accent.lesson-subtitle Зміна елементів списку.
+  p На відміну від рядків, елементи списку можна змінювати, привласнюючи їм нові значення. Тому, якщо відомо значення елемента списку або його індекс, цей елемент списку можна змінити безпосередньо звернувшись до нього.
+  p <span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'green'</span>]
+      li L[<span class="color-excel">2</span>] = <span class="color-accent">'yellow'</span>
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['red', 'orange', 'yellow']</span>
+
+  h3.accent.lesson-subtitle Зріз списку.
+  p В мові <span class="accent">Python</span> можна отримати зріз списку.
+  p <span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]
+      li <span class="text-bold">print</span>(L[<span class="color-excel">1</span>:<span class="color-excel">3</span>]) <span class="color-excel">&#35;['orange', 'yellow']</span>
+      li <span class="text-bold">print</span>(L[<span class="color-excel">1</span>:]) <span class="color-excel">&#35;['orange', 'yellow', 'green']</span>
+      li <span class="text-bold">print</span>(L[:<span class="color-excel">3</span>]) <span class="color-excel">&#35;['red', 'orange']</span>
+      li <span class="text-bold">print</span>(L[:]) <span class="color-excel">&#35;['red', 'orange', 'yellow', 'green']</span>
+      li <span class="text-bold">print</span>(L[::<span class="color-excel">-1</span>]) <span class="color-excel">&#35;['green','yellow', 'orange','red']</span>
+
+  h3.accent.lesson-subtitle Видалення елементів із списку.
+  p Щоб видалити елемент із списку можна скористатися методами <span class="accent">pop()</span>, <span class="accent">remove()</span>, <span class="accent">clear()</span> або оператором <span class="accent">del</span>.
+  p <span class="accent">Метод pop()</span> – видаляє елемент з індексом <span class="accent">[i]</span> та повертає його. Якщо використовувати метод без аргументу, то буде видалений останній елемент зі списку.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+     li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]
+     li L.<span class="text-bold">pop</span>()
+     li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['red', 'orange', 'yellow']</span>
+     li <span class="text-bold">print</span>(L.<span class="text-bold">pop</span>(<span class="color-excel">0</span>)) <span class="color-excel">&#35;red</span>
+     li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['orange', 'yellow']</span>
+  p <span class="accent">Метод remove()</span> – видаляє перше входження елемента x зі списку.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]
+      li L.<span class="text-bold">remove</span>('red')
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['orange', 'yellow', 'green']</span>
+  p <span class="accent">Метод clear</span>()</span> – видаляє усі елементи із списку.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]
+      li L.<span class="text-bold">clear</span>()
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;[]</span>
+  p <span class="accent">Оператор del</span> – видаляє елемент із списку або зріз.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]
+      li <span class="text-bold">del</span> L[<span class="color-excel">0</span>]
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['orange', 'yellow', 'green']</span>
+      li <span class="text-bold">del</span> L[<span class="color-excel">0</span>:<span class="color-excel">2</span>]
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['green']</span>
+
+  h3.accent.lesson-subtitle Сортування списків.
+  p <span class="accent">Метод sort()</span> – застосовується для сортування елементів списку за зростанням.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]
+      li L.<span class="text-bold">sort</span>()
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['green', 'orange', 'red', 'yellow']</span>
+  p При сортуванні списків фактично порівнюються два об'єкти, і який з них «менше», ставиться перед тим, який «більше». Поняття <span class="accent">«більше»</span> і <span class="accent">«менше»</span> досить умовні. І якщо для чисел все просто - числа розставляються в порядку зростання, то для рядків чи інших об'єктів ситуація більш складна. Зокрема, рядки оцінюються по перших символах. Якщо перші символи рівні, оцінюються другі символи і так далі. При чому цифровий символ вважається «менше», ніж алфавітний титульний символ, а заголовний символ вважається «менше», ніж рядковий. 
+  p <span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'2orange'</span>,<span class="color-accent">'Yellow'</span>,<span class="color-accent">'green'</span>]
+      li L.<span class="text-bold">sort</span>()
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['2orange', 'Yellow', 'green', 'red']</span>
+  p Таким чином, якщо в списку поєднуються рядки з великими та малими літерами, то можна отримати не зовсім коректні результати сортування.
+  p І щоб змінити стандартну поведінку сортування, ми можемо передати в метод <span class="accent">sort()</span> в якості параметра функцію <span class="accent">key</span>.
+  p <span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'Orange'</span>,<span class="color-accent">'Yellow'</span>,<span class="color-accent">'green'</span>]
+      li L.<span class="text-bold">sort</span>(<span class="text-bold">key</span>=<span class="text-bold">srt.lover</span>)
+      li <span class="text-bold">prin</span>(L) <span class="color-excel">&#35;['green', 'Orange', 'red', 'Yellow']</span>
+  p <span class="accent">Метод reverse()</span> – переставляє елементи списку у зворотному порядку.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]
+      li L.<span class="text-bold">reverse</span>()
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['green', 'yellow', 'orange', 'red']</span>
+
+  h3.accent.lesson-subtitle Індекс елементу.
+  p <span class="accent">Метод index()</span> – використовується для отримання індексу певного елемента списку. Якщо в списку декілька однакових елементів, функція поверне індекс першого. Також, метод має два не обов’язкові параметри <span class="accent">start</span> та <span class="accent">end</span>. Води дозволять регулювати проміжок в якому буде проводитися пошук певного елемента.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]
+      li <span class="text-bold">print</span>(L.<span class="text-bold">index</span>(<span class="color-excel">'green'</span>)) <span class="color-excel">&#35;3</span>
+
+  h3.accent.lesson-subtitle Функції агрегації.
+  p В <span class="accent">Python</span> є деякі агрегатні функції:<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-excel">5</span>, <span class="color-excel">4</span>, <span class="color-excel">3</span>, <span class="color-excel">2</span>, <span class="color-excel">1</span>]
+      li <span class="text-bold">print</span>(<span class="text-bold">len</span>(L)) <span class="color-excel">&#35;5</span>
+      li <span class="text-bold">print</span>(<span class="text-bold">min</span>(L)) <span class="color-excel">&#35;1</span>
+      li <span class="text-bold">print</span>(<span class="text-bold">max</span>(L)) <span class="color-excel">&#35;5</span>
+      li <span class="text-bold">print</span>(<span class="text-bold">sum</span>(L)) <span class="color-excel">&#35;15</span>
+  p Треба зауважити, що <span class="accent">sum</span> працює тільки з числовими значеннями, а <span class="accent">min</span>, <span class="accent">max</span> та <span class="accent">len</span> можна використовувати також і з рядками.
+
+  h3.accent.lesson-subtitle Списки і строки.
+  p <span class="accent"> Метод list()</span> – перетворює строку в список, де кожним елементом цього списку виступає окремий символ цієї строки.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li S = <span class="color-accent">'My program'</span>
+      li L = <span class="text-bold">list</span>(S)
+      li <span class="text-bold">print</span>(L) <span class="color-excel">&#35;['M', 'y', ' ', 'p', 'r', 'o', 'g', 'r', 'a', 'm']</span>
+  p <span class="accent"> Метод split()</span> – перетворює строку в список, де кожен елемент цього списку визначається роздільником, за замовчуванням – це символ пропуску. Але,  роздільник може бути визначеним будь-яким рядком.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li S = <span class="color-accent">'My-program'</span>
+      li L = S.<span class="text-bold">split</span>(<span class="color-excel">'-'</span>)
+      li <span class="text-bold">print</span>(L)  <span class="color-excel">&#35;['My', 'program']</span>
+  p <span class="accent"> Метод join()</span> – об’єднує елементи списку в строку, за певним роздільником, до якого саме і застосовується метод.<br><span class="text-bold">Приклад:</span>
+  .example
+    ul.example-program.list
+      li L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>]
+      li S = ' '
+      li S = S.<span class="text-bold">join</span>(L)
+      li P = '--'.<span class="text-bold">join</span>(L)
+      li <span class="text-bold">print</span>(S) <span class="color-excel">&#35;red orange yellow</span>
+      li <span class="text-bold">print</span>(P) <span class="color-excel">&#35;red--orange—yellow</span>
+
+  h3.accent.lesson-subtitle Генератори списків.
+  p Для створення списків, які будуть заповнені за деяким алгоритмом, можна використовувати <span class="accent">генератори</span>: вирази, що дозволяють заповнити список за певною формулою.
+  p <span class="text-bold">Генератор має наступний вигляд:</span> [вираз <span class="accent">for</span> змінна <span class="accent">in</span> послідовність]<br> де <span class="accent">змінна</span> – ідентифікатор деякої змінної, <span class="accent">послідовність</span> – послідовність значень, яку приймає дана змінна (це може бути список, рядок або об'єкт, отриманий за допомогою функції range), вираз – деякий вираз, як правило, залежить від використаної в генераторі змінної, яким будуть заповнені елементи списку.
+  p <span class="text-bold">Приклад:</span> створити список, який буде заповнений квадратами чисел від <span class="accent">1</span> до <span class="accent">n</span>.
+  .example
+    ul.example-program.list
+      li n = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">'Введіть кількість членів ряду = '</span>)) 
+      li a = [i ** <span class="color-excel">2</span> <span class="text-bold">for</span> i <span class="text-bold">in</span> <span class="text-bold">range</span>(<span class="color-excel">1</span>, n+<span class="color-excel">1</span>)]
+      li <span class="text-bold">print</span>(a) <span class="color-excel">&#35; n=5 -> [1, 4, 9, 16, 25] </span>

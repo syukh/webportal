@@ -1,0 +1,269 @@
+#main
+  width: 100%
+  min-height: 100vh
+  background: url('../img/bg/header_bg.svg') no-repeat top right
+  background-size: 30%
+  display: grid
+  grid-template-columns: 100px auto
+  grid-template-rows: 1fr 
+  grid-template-areas: "menu page" "menu page"
+
+#menu
+  grid-area: menu
+
+#page
+  grid-area: page
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: auto
+  height: 100%
+  padding: 20px
+  gap: 20px
+
+/* ==== Row Title ==== */
+.home-row__header
+  display: grid
+  grid-template-columns: 2fr 1fr
+
+.home-caption
+  color: $accent
+  text-align: center
+  margin: auto
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.15)
+.home-caption__title
+  +rfs(170px)
+  text-transform: capitalize
+  line-height: 0.8
+.home-caption__subtitle
+  +rfs(64px)
+  padding-left: 14px
+  line-height: 1
+
+/* ==== Row Elements ==== */  
+.home-row__elements
+  display: grid
+  grid-template-rows: 1.2fr 2fr
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-areas: "red blue green" "slider slider dashbord"
+  gap: 20px
+
+.red
+  grid-area: red
+  background-color: $red
+.blue
+  grid-area: blue
+  background-color: $blue
+.green 
+  grid-area: green
+  background-color: $green
+.orange
+  background-color: $orange
+.slider
+  grid-area: slider
+.dashbord
+  grid-area: dashbord
+
+.item-elements
+  position: relative
+  border-radius: 15px
+  padding: 15px
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.15)
+  min-width: 0
+
+.row__elements-title
+  +rfs(34px)
+  color: #ffffff
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.15)
+
+
+/* ==== Row Elements Course ==== */
+.course
+  &-title
+    text-align: center
+    padding-bottom: 30px
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: calc(100% - 15px)
+      left: 50%
+      transform: translateX(-50%)
+      width: 100px
+      height: 1px
+      background-color: #fff
+  &-descr
+    +rfs(22px)
+    font-family: Gotham Pro
+    font-weight: 300
+    line-height: 1.5
+    color: #fff
+    padding: 0 10px
+
+.course-icon
+  position: absolute
+  bottom: 15px
+  right: 15px
+
+/* ==== Row Elements Slider ==== */
+
+/* ==== Slider ==== */  
+.item-elements.slider
+  padding: 0
+
+.slick-track
+  display: flex
+  height: 100%
+
+.slick-list 
+  overflow: hidden
+  height: 100%
+
+.slick-slide > div
+  height: 100%  
+
+.slick-arrow
+  position: absolute
+  cursor: pointer
+  z-index: 1100
+
+.slider-arrows-left
+  top: 17px
+  right: 45px
+
+.slider-arrows-right
+  top: 20px
+  right: 20px
+
+.slider
+  .slick-dots
+    display: flex
+    position: absolute
+    bottom: 15px
+    left: 15px
+    z-index: 1000
+    li     
+      padding-right: 5px
+      &:last-child
+        padding-right: 0
+    button
+      font-size: 0
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background-color: #fff
+    .slick-active
+      button
+        background-color: $red
+        border: 1px solid #fff
+        
+/* ==== Slider Items==== */
+.slider-item
+  width: 100%
+  height: 100%
+  background-color: $dark-blue
+  border-radius: 15px
+  padding: 15px
+  position: relative
+
+.slider__office-img
+  position: absolute
+  bottom: 15px
+  right: 15px
+  height: 80%
+  z-index: 10
+
+.slider-title
+  line-height: 1
+  width: 50%
+  padding: 5px 0 30px 10px
+
+.slider-link
+  padding-left: 20px
+  position: absolute
+  left: 20px
+  top: 28%
+  z-index: 100
+  &__course
+    margin-bottom: 20px
+    display: flex
+    align-items: center
+    &:last-child
+      margin-bottom: 0
+  &__img
+    width: 60px
+    height: auto
+    text-align: right
+  &__title
+    +rfs(38px)
+    color: #fff
+    padding-left: 22px
+
+/* ==== Dashbord ==== */
+.dashbord
+  position: relative
+  background-color: $accent
+
+.dashbord-title
+  position: absolute
+  left: 25px 
+
+.dashbord-mail 
+  position: absolute
+  bottom: 15px
+  left: 25px
+  &__link
+    +rfs(22px)
+    font-family: Gotham Pro
+    font-weight: 300
+    color: #ffffff
+    text-decoration: none
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.15)
+
+.dashbord-wrap
+  height: 100%
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 1fr
+  grid-template-areas: "round2 round1" "round2 round3"
+
+.dashbord-item
+  width: 60%
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.15)
+  img
+    object-fit: cover
+    width: 100%
+
+
+.dashbord-item.round-1
+  grid-area: round1
+  justify-self: start
+  align-self: end
+  margin-bottom: 15px
+.dashbord-item.round-2
+  grid-area: round2
+  justify-self: end
+  align-self: center
+  margin-right: 15px
+.dashbord-item.round-3
+  grid-area: round3
+  justify-self: start
+  align-self: start
+  margin-top: 15px
+
+.dashbord__round-wrap
+  position: relative
+
+.dashbord__round
+  &-text
+    position: absolute
+    top: 44%
+    left: 50%
+    transform: translate(-50%, -44%)
+    color: #fff
+    line-height: 1.2
+    text-align: center
+  &-num
+    +rfs(30px)
+  &-desc
+    +rfs(18px)
+    text-transform: uppercase

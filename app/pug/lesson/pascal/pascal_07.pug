@@ -1,0 +1,88 @@
+.lesson-page
+  h1.lesson-title Оператор циклу з передумовою <span class="accent">While</span>
+  p Лінійні алгоритми і алгоритми з розгалуженням не дозволяють у багатьох випадках ефективно використовувати усю обчислювальну потужність комп’ютера. Для цього необхідні програми, в яких окремі фрагменти виконуються багаторазово. Одним з найбільш простих засобів організації повторного виконання серії команд є <span class="accent">Цикли</span>.
+  p У мові PascalABC можлива організація циклів трьох видів:
+  ul.list
+    li цикл з передумовою – <span class="accent">while;</span>
+    li цикл з параметром – <span class="accent">for;</span>
+    li цикл з післяумовою – <span class="accent">repeat/until.</span>
+  p Кожен з трьох способів організації циклу має свої особливості, для кожного способу є своє коло завдань, найбільш природно розв'язуваних саме з його допомогою.
+  
+  h3.accent.lesson-subtitle Оператор циклу з передумовою - <span class="color-red">while</span>
+  p <span class="accent">Цикл</span> – <span class="text-bold color-red">while</span> використовують в тому випадку, коли необхідно, щоб на початку перевірялася деяка умова, а потім, якщо умова істинна, виконувалися деякі дії. В процесі виконання цих дій відбувається зміна значень змінних, що входять до вказаної умови у якості операндів. Завдяки цьому при <span class="accent">N-кратному</span> виконанні циклу значення логічного виразу - умови з <span class="text-bold color-red">True</span> на <span class="text-bold color-red">False</span>.
+  p У цьому випадку виконання циклу закінчується, і виконується перший оператор, що стоїть після оператора циклу.
+  p Якщо під час запису умови або операторів, які виконуються в циклі, була допущена помилка, то в такій ситуації можливо зациклення – значення логічного виразу ніколи не прийме значення <span class="text-bold color-red">False</span> і, як наслідок, група операторів в циклі буде виконуватися нескінченно.
+  p.text-bold <span class="accent">Цикл –</span> <span class="text-bold color-red">while</span> <span class="accent">служить для організації N-кратного виконання групи операторів (тіла циклу) до тих пір, поки залишається істинним умова виконання циклу.</span>
+  
+  h3.accent.lesson-subtitle Схема оператора циклу з передумовою.
+  .block-less
+    .block-less__img
+      <img src="../img/lesson/pass/less-pass-7-01.jpg" alt="Схема умовного оператора" style="width: 70%">
+    .block-less__text
+      .example
+        ul
+          li <span class="text-bold">while</span> (умова) <span class="text-bold">do</span>
+            ul
+              li <span class="text-bold">оператор_А;</span>
+  p <span class="text-bold">Виконується цей цикл наступним чином:</span> спочатку обчислюється значення виразу-умови, якщо воно істинне (приймає значення <span class="accent">True</span>), то виконується тіло циклу. В іншому випадку виконується оператор, що стоїть після оператора циклу (тобто тіло циклу виконується до тих пір, поки значення умови не стане <span class="accent">False</span>).
+  h3.accent.lesson-subtitle Зауваження.
+  ol(style="padding-left:18px")
+    li  Як тіло циклу може бути використаний будь-який оператор, в тому числі, составний. Це дає можливість циклічно повторювати не одну дію, а кілька. У цьому випадку конструкція циклу <span class="accent">while</span> набуває такого вигляду:
+      .example.otstup
+        ul
+          li <span class="text-bold">while</span> (умова) <span class="text-bold">do</span>
+            ul.text-bold
+              li begin
+                ul
+                  li оператор_1;
+                  li …
+                  li оператор_n;
+              li end;
+    p
+    li Якщо <span class="accent">умова</span> в циклі while одразу при першій перевірці приймає значення <span class="accent">False</span>, то тіло циклу не виконається жодного разу.
+    p
+    li <span class="accent">Дозволяється використання вкладених циклів</span>, тобто конструкцій, в якихдеякі оператори тіла циклу самі можуть бути циклами. Інший спосіб вкладення циклів не припустимий.<br><span class="text-bold">Приклад:</span>
+      .example.otstup
+        ul
+          li <span class="text-bold">while</span> (умова_1) <span class="text-bold">do</span>
+            ul
+              li <span class="text-bold">while</span> (умова_2) <span class="text-bold">do</span>
+                ul
+                  li <span class="text-bold">begin</span>
+                    ul
+                      li <span class="text-bold">оператор_1;</span>
+                      li <span class="text-bold">while</span> (умова_3) <span class="text-bold">do</span>
+                        ul
+                          li <span class="text-bold">оператор_i;</span>
+                      li <span class="text-bold">оператор_n;</span>
+                  li <span class="text-bold">end;</span>
+    li Слід підбирати умову для циклів <span class="accent">while</span> таким чином, щоб в певний момент вона змінила своє значення з <span class="accent">True</span> на <span class="accent">False</span>, інакше настане «зациклення» програми.
+  p
+  p <span class="text-bold">Приклад:</span> створити програму яка обчислює суму ряду <span class="text-bold color-red">1+2+3+...+n</span>:
+  .example
+    ul
+      li <span class="text-bold">Program</span> SumRow;
+      li <span class="text-bold">var</span>
+        ul
+          li i, n : <span class="color-accent">integer</span>;
+          li Sum : <span class="color-accent">real</span>;
+      li <span class="text-bold">begin</span>
+        ul
+          li write(<span class="color-accent">&#39;Введіть кількість членів ряду&#39;</span>);
+          li readln(n);
+          li i := <span class="color-excel">0</span>;
+          li sum := <span class="color-excel">0</span>;
+          li <span class="text-bold">while</span> (i < n) <span class="text-bold">do</span>
+              ul
+                li <span class="text-bold">begin</span>
+                  ul
+                    li 
+                    li i := i + <span class="color-excel">1</span>;
+                    li sum := sum + i;
+                li <span class="text-bold">end;</span>
+      li writeln(<span class="color-accent">&#39;Сума &#39;</span>, n,<span class="color-accent"> &#39; членів ряду = &#39;</span>, sum);
+      li <span class="text-bold">end.</span>
+  
+
+
+

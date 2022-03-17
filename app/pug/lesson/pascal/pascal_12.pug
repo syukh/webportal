@@ -1,0 +1,238 @@
+.lesson-page
+  h1.lesson-title Стандартний модуль бібліотеки <span class="accent">GraphABC</span>
+  h3.accent.lesson-subtitle Модуль GraphABC.
+  p Модуль <span class="accent">GraphABC</span> є графічною бібліотекою, яка призначена для створення простих графічних програм з елементами анімації. Додатково, в модулі <span class="accent">GraphABC</span> можуть бути визначені найпростіші події миші і клавіатури, що дозволяє створювати елементарні програми із певними подіями. Основна сфера використання модуля <span class="accent">GraphABC</span> - навчання.</p>
+  p У модулі <span class="accent">GraphABC</span> визначено ряд констант, типів, процедур, функцій і класів для малювання в графічному вікні.</p>
+  h3.accent.lesson-subtitle Графічні примітиви.
+  p <span class="accent">Графічні примітиви</span> – представляють собою окремі процедури, які будують різноманітні графічні фігури в спеціальному вікні, їх відображення виконується безперервно пером (лінією), поточної пензлем (заливка замкнутих областей) і поточним шрифтом (виведення строк).</p>
+  p З усім різноманіттям процедур, які будують стандартні графічні примітиви можна ознайомитися на сайті
+  <a href="http://pascalabc.net/downloads/pabcnethelp/index.htm" target="_blank" class="text-bold">pascalabc.net</a> (<span class="text-bold">розділ стандартні модулі -> модуль GraphABC</span>). Розглянемо одну з них.</p>
+  p <span class="text-bold">procedure</span> <span class="accent">Line</span>(x1, y1, x2, y2: integer); <span class="color-excel">// малює відрізок від точки (x1, y1) до точки (x2, y2).</span></p>
+  p <span class="text-bold">Приклад:</span> скласти програму, яка буде виводити на графічний екран звичайну лінію.</p>
+  .example
+    ul
+      li <span class="text-bold">Program</span> DrawLine;
+      li 
+        .example-program__str
+          <span class="text-bold">Uses</span> GraphABC;
+        .example-program__str
+          <span class="color-excel">// підключаємо графічну бібліотеку</span>
+      li <span class="text-bold">begin</span>
+        ul
+          li Line(<span class="color-excel">50</span>,<span class="color-excel">50</span>,<span class="color-excel">300</span>,<span class="color-excel">50</span>);
+      li <span class="text-bold">end.</span>
+  p Зверніть увагу, для щоб інтерпретатор середовища програмування <span class="accent">PascalABC</span> розпізнав процедуру <span class="accent">Line</span> і відобразив відповідний графічний примітив, треба в програмі обов’язково підключити графічну бібліотеку <span class="accent">GraphABC</span>.</p>
+  h3.accent.lesson-subtitle Підпрограми для роботи з пером.
+  p Малювання ліній здійснюється поточним пером. Доступ до властивостей поточного пера можна здійснювати за допомоги відповідних процедур та функцій, розглянемо деякі з них:
+  p <span class="text-bold">procedure</span> <span class="accent">SetPenColor</span>(c: Color); <span class="color-excel">// встановлює колір поточного пера.</span> <br> <span class="text-bold">procedure</span> <span class="accent">SetPenWidth</span>(Width: integer); <span class="color-excel">// встановлює ширину поточного пера.</span> <br> <span class="text-bold">procedure</span> <span class="accent">SetPenStyle</span>(style: DashStyle); <span class="color-excel">// встановлює стиль поточного пера.</span></p>
+  p <span class="text-bold">Приклад:</span> скласти програму, яка буде виводити на графічний екран широку пунктирну лінію синього кольору.
+  .example
+    ul
+      li <span class="text-bold">Program</span> DrawLine;
+      li <span class="text-bold">Uses</span> GraphABC;
+      li <span class="text-bold">begin</span>
+        ul
+          li SetPenColor(clBlue);
+          li SetPenStyle(psDash);
+          li SetPenWidth(<span class="color-excel">6</span>);
+          li Line(<span class="color-excel">50</span>,<span class="color-excel">50</span>,<span class="color-excel">300</span>,<span class="color-excel">50</span>);
+      li <span class="text-bold">end.</span>
+  h3.accent.lesson-subtitle Підпрограми для роботи з пензлем.
+  p Малювання замкнутих областей здійснюється поточним пензлем. Доступ до його властивостей можна здійснювати за допомоги відповідних процедур та функцій, розглянемо деякі з них:</p>
+  p <span class="text-bold">procedure</span> <span class="accent">SetBrushColor</span>(c: Color); <span class="color-excel">// встановлює колір поточного пензля.</span></p>
+  p <span class="text-bold">Приклад:</span> скласти програму, яка буде виводити на графічний екран квадрат червоного кольору з широким синім контуром.</p>
+  .example
+    ul
+      li <span class="text-bold">Program</span> DrawRectangle;
+      li <span class="text-bold">Uses</span> GraphABC;
+      li <span class="text-bold">begin</span>
+        ul
+          li SetBrushColor(clRed);
+          li SetPenColor(clBlue);
+          li SetPenWidth(<span class="color-excel">6</span>);
+          li Rectangle(<span class="color-excel">50</span>,<span class="color-excel">50</span>,<span class="color-excel">300</span>,<span class="color-excel">300</span>);
+      li <span class="text-bold">end.</span>
+  h3.accent.lesson-subtitle Підпрограми для роботи з текстом.
+  p Виведення тексту здійснюється поточним шрифтом. Доступ до властивостей поточного шрифту можна здійснювати за допомоги відповідних процедур та функцій, розглянемо деякі з них:</p>
+  p <span class="text-bold">procedure</span> <span class="accent">SetFontSize</span>(size: integer); <span class="color-excel">// встановлює розмір поточного шрифту в пунктах.</span> <br> <span class="text-bold">procedure</span> <span class="accent">SetFontName</span>(name: string); <span class="color-excel">// встановлює ім'я поточного шрифту.</span> <br> <span class="text-bold">procedure</span> <span class="accent">SetFontColor</span>(c: Color); <span class="color-excel">// встановлює колір поточного шрифту.</span> <br> <span class="text-bold">procedure</span> <span class="accent">SetFontStyle</span>(fs: integer); <span class="color-excel">// встановлює стиль поточного шрифту.</span></p>
+  p <span class="text-bold">Приклад:</span> скласти програму, яка буде виводити на графічний екран напис «Hello World». Для тексту задати наступні параметри: розмір шрифту – 26pt, колір – синій, накреслення – напівжирний, в якості основного шрифту обрати – Garamond.</p>
+  .example
+    ul
+      li <span class="text-bold">Program</span> DrawText;
+      li <span class="text-bold">Uses</span> GraphABC;
+      li <span class="text-bold">begin</span>
+        ul
+          li SetFontSize(<span class="color-excel">26</span>);
+          li SetFontName(<span class="accent">&#39;Garamond&#39;</span>);
+          li SetFontColor(clBlue);
+          li SetFontStyle(fsBold);
+          li TextOut(<span class="color-excel">50</span>,<span class="color-excel">50</span>, <span class="accent">&#39;Hello World&#39;</span>);
+      li <span class="text-bold">end.</span>
+  h3.accent.lesson-subtitle Підпрограми для роботи з графічним вікном.
+  p Доступ до властивостей графічного вікна можна здійснювати за допомоги відповідних процедур та функцій, розглянемо деякі з них:</p>
+  p <span class="text-bold">procedure</span> <span class="accent">SetWindowSize</span>(w,h: integer); <span class="color-excel">// встановлює розміри графічного вікна в пікселях</span> <br> <span class="text-bold">procedure</span> <span class="accent">SetWindowTitle</span>(s: string); <span class="color-excel">// встановлює заголовок графічного вікназ.</span> <br> <span class="text-bold">procedure</span> <span class="accent">CenterWindow</span>; <span class="color-excel">// встановлює графічне вікно по центру екрана.</span> <br> <span class="text-bold">procedure</span> <span class="accent">ClearWindow</span>(c: Color); <span class="color-excel">// очищує графічне вікно заданим кольором.</span> <br> <span class="text-bold">procedure</span> <span class="accent">CloseWindow</span>; <span class="color-excel">// закриває графічне вікно і завершує виконання програми.</span></p>
+  p <span class="text-bold">Приклад:</span> скласти програму, яка буде виводити по центру монітора графічний екран і скривати його через 3 секунди. Для графічного екрану встановити наступні параметри: розмір – 600х300 px, заголовок – «Window», колір вікна – синій.</p>
+  .example
+    ul
+      li <span class="text-bold">Program</span> GraphWindow;
+      li <span class="text-bold">Uses</span> GraphABC;
+      li <span class="text-bold">begin</span>
+        ul
+          li SetWindowSize(<span class="color-excel">600</span>,<span class="color-excel">300</span>);
+          li SetWindowTitle('Window');
+          li CenterWindow;
+          li ClearWindow(clblue);
+          li Sleep(<span class="color-excel">3000</span>);
+          li CloseWindow;
+      li <span class="text-bold">end.</span>
+  h3.accent.lesson-subtitle Події модуля GraphABC.
+  p Графічне вікно, що використовується бібліотекою <span class="accent">GraphABC</span> для відображення графічних примітивів може також реагувати на події миші чи клавіатури, події зміни розмірів вікна та на подію закриття вікна. Дані події визначені в модулі <span class="accent">GraphABC</span> і являють собою процедурні змінні, розглянемо декілька з них:</p>
+  p <span class="accent">OnResize:</span> <span class="text-bold">procedure</span>; <span class="color-excel">// подія зміни розміру графічного вікна.</span></p>
+  p <span class="text-bold">Приклад:</span> скласти програму, яка буде виводити по центру монітора графічний екран розміром 600х300px, яке буде спочатку зафарбоване зеленим кольором, при зменшенні вікна до розміру 400х200px вікно перекраситься у синій колір, а при його збільшенні до розміру 800х400px у червоний.</p>
+  .example
+    ul
+      li <span class="text-bold">Program</span> GraphWindow;
+      li <span class="text-bold">Uses</span> GraphABC;
+      li <span class="text-bold">procedure</span> WindowRes;
+      li <span class="text-bold">begin</span>
+        ul
+          li <span class="text-bold">if</span> (WindowWidth &#60;= 400) <span class="text-bold">and</span> (WindowHeight &#60;= 200)
+            ul
+              li <span class="text-bold">then</span>
+                ul
+                  li ClearWindow(clBlue)
+          li 
+            <span class="text-bold">else if</span> (WindowWidth >= 600) <span class="text-bold">and</span> (WindowHeight >= 400)
+            ul
+              li 
+                <span class="text-bold">then</span>
+                ul
+                  li ClearWindow(clRed)
+          li 
+            <span class="text-bold">else</span>
+            ul
+              li ClearWindow(clGreen);
+      li <span class="text-bold">end</span>;
+      li <span class="text-bold">begin</span>
+      ul
+        li SetWindowSize(<span class="color-excel">600</span>,<span class="color-excel">300</span>);
+        li CenterWindow;
+        li ClearWindow(clGreen);
+        li OnResize := WindowRes;
+      li <span class="text-bold">end.</span>
+  p Треба звернути увагу, <span class="accent">OnResize</span> це змінна, яка приймає значення, що повертає процедура <span class="accent">WindowRes</span>.</p>
+  p <span class="accent">OnKeyDown:</span> <span class="text-bold">procedure</span> (key: integer); <span class="color-excel">// подія натискання клавіші. key – віртуальний код натиснутої клавіші.</span></p>
+  p <span class="text-bold">Приклад:</span> скласти програму, яка буде виводити графічний екран на в центрі якого буде намальоване коло радіусом 100px. При натисканні клавіші &#129093; круг буде збільшуватися на 10px, при натисканні клавіші &#129095; зменшуватися на 10px.</p>
+  .example
+    ul
+      li <span class="text-bold">Program</span> ResizeCircle;
+      li <span class="text-bold">Uses</span> GraphABC;
+      li <span class="text-bold">var</span>
+        ul
+          li R: <span class="color-accent">integer</span>;
+      li <span class="text-bold">procedure</span> KeyPres(k: <span class="color-accent">integer</span>);
+        ul
+          li <span class="text-bold">begin</span>
+            ul
+              li 
+                <span class="text-bold">if</span> (k = VK_Up)
+                ul
+                  li 
+                    <span class="text-bold">then</span>
+                    ul
+                      li 
+                        R := R + <span class="color-excel">10</span>
+              li <span class="text-bold">else if</span> (k = VK_Down)
+                ul
+                  li <span class="text-bold">then</span>
+                    ul
+                      li R := R - <span class="color-excel">10</span>;       
+              li Window.Clear;
+          li <span class="text-bold">end</span>;
+      li <span class="text-bold">begin</span>
+        ul
+          li R := <span class="color-excel">100</span>;
+          li SetWindowSize(<span class="color-excel">600</span>, <span class="color-excel">300</span>);
+          li CenterWindow;
+          li SetBrushColor(clBlue);
+          li SetPenColor(clBlue);
+          li LockDrawing;
+          li <span class="text-bold">repeat</span>
+          ul
+            li Redraw;
+            li Sleep(<span class="color-excel">1</span>);
+            li Circle(<span class="color-excel">300</span>, <span class="color-excel">150</span>, R);
+            li onKeyDown := KeyPres;
+          li <span class="text-bold">until</span> (<span class="color-accent">false</span>);
+      li <span class="text-bold">end.</span>
+  p В програмі були застосовані наступні процедури <span class="accent">LockDrawing</span> та <span class="accent">Redraw</span>, для того щоб коло перемальовувалося кожного разу, коли будуть натиснуті відповідні клавіші. Основна ідея полягала в наступному: спочатьку, викликавши процедуру <span class="accent">LockDrawing</span> відключили малювання на екрані, далі, щоразу викликаючи процедуру <span class="accent">Redraw</span>, при зміні парамертів кола, формуємо новий кадр зображення і виводимо його на екран. Але при виклику <span class="accent">Redraw</span> перемальовується все графічне вікно, і швидкість анімації обмежена швидкістю виведення зображення на екран. В цьому випадку зображення блимає, щоб уникнути такого ефекту потрібно поставити затримку виведення зображення за допомоги процедури <span class="accent">Sleep</span>.
+  p <span class="accent">OnMouseDown</span>: <span class="text-bold">procedure</span> (x, y, mousebutton: integer); <span class="color-excel">// подія на натискання кнопки миші, де x, y – координати курсору миші в момент настання події, mousebutton – приймає значення 1 або 2, коли відповідно натиснута ліва чи права клавіша миші.</span></p>
+  p <span class="text-bold">Приклад:</span> скласти програму, яка буде виводити графічний екран в центрі якого буде намальоване коло радіусом 100px, додатково зліва від зображення будуть знаходитися дві кнопки зі знаками плюс (+) та мінус (-), при натисканні на котрі коло буде відповідно збільшуватися або зменшуватися.</p>
+  .example
+    ul
+      li <span class="text-bold">Program</span> ResizeCircle;
+      li <span class="text-bold">Uses</span> GraphABC;
+      li <span class="text-bold">var</span>
+        ul
+          li R, xk, yk, a: <span class="color-accent">integer</span>;
+      li 
+        <span class="text-bold">procedure</span> Krug;
+        ul
+          li <span class="text-bold">begin</span>
+            ul
+              li SetBrushColor(clBlue);
+              li SetPenColor(clBlue);
+              li Circle(<span class="color-excel">400</span>, <span class="color-excel">250</span>, R)
+          li <span class="text-bold">end</span>;
+      li <span class="text-bold">procedure</span> Buttons;
+        ul
+          li <span class="text-bold">begin</span>
+            ul
+              li SetBrushColor(clGreen);
+              li SetPenColor(clGreen);
+              li Rectangle(<span class="color-excel">50</span>,<span class="color-excel">150</span>,<span class="color-excel">100</span>,<span class="color-excel">200</span>);
+              li Rectangle(<span class="color-excel">50</span>,<span class="color-excel">250</span>,<span class="color-excel">100</span>,<span class="color-excel">300</span>);
+              li SetFontSize(<span class="color-excel">26</span>);
+              li SetFontName(<span class="color-accent">&#39;Arial&#39;</span>);
+              li SetFontColor(clWhite);
+              li SetFontStyle(fsBold);
+              li TextOut(<span class="color-excel">65</span>,<span class="color-excel">158</span>, <span class="color-accent">&#39;+&#39;</span>);
+              li TextOut(<span class="color-excel">68</span>,<span class="color-excel">253</span>, <span class="color-accent">&#39;-&#39;</span>);
+          li <span class="text-bold">end</span>;
+      li <span class="text-bold">procedure</span> MausePres(xm, ym, mb: <span class="color-accent">integer</span>);
+        ul
+          li <span class="text-bold">begin</span>
+            ul
+              li xk := <span class="color-excel">50</span>;
+              li yk := <span class="color-excel">150</span>;
+              li <span class="text-bold">if</span> (mb = 1) <span class="text-bold">and</span> (xm &#62; xk) <span class="text-bold">and</span> (xm &#60; xk + a) <span class="text-bold">and</span> (ym &#62; yk) <span class="text-bold">and</span> (ym &#60; yk + a)
+                ul
+                  li <span class="text-bold">then</span>
+                    ul
+                      li R:= R + <span class="color-excel">10</span>;
+                li xk := 50;
+                li yk := 250;
+                li <span class="text-bold">if</span> (mb = 1) <span class="text-bold">and</span> (xm &#62; xk) <span class="text-bold">and</span> (xm &#60; xk + a) <span class="text-bold">and</span> (ym &#62; yk) <span class="text-bold">and</span> (ym &#60; yk + a)
+                  ul
+                    li <span class="text-bold">then</span>
+                      ul
+                        li  R:=R &#45; <span class="color-excel">10</span>;
+                li Window.Clear;
+            li <span class="text-bold">end</span>;
+        li <span class="text-bold">begin</span>
+          ul
+            li R := <span class="color-excel">100</span>;
+            li a := <span class="color-excel">50</span>;
+            li SetWindowSize(<span class="color-excel">800</span>, <span class="color-excel">500</span>);
+            li CenterWindow;
+            li LockDrawing;
+            li <span class="text-bold">repeat</span>
+              ul
+                li Redraw;
+                li Sleep(<span class="color-excel">1</span>);
+                li Buttons;
+                li Krug;
+                li OnMouseDown := MausePres;
+            li <span class="text-bold">until</span> (<span class="color-accent">false</span>);
+        li <span class="text-bold">end.</span>
+

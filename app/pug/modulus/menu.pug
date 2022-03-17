@@ -1,0 +1,38 @@
+#menu.word
+  .logo
+    a(href="#")
+      img.logo__img(src="/img/logo.svg", alt="Logo")
+  nav.nav
+    -
+      let nav = [
+        {'src' : 'logo_office.svg', 'alt':'Microsoft Office'},
+        {'src' : 'logo_prog.svg',   'alt':'Програмування'},
+        {'src' : 'logo_web.svg',    'alt':'Web-технології'},
+        {'src' : 'logo_master.svg', 'alt':'Майстер-класи'},
+      ];
+    each element in nav
+      a(class="nav__link" href="#")
+        span.nav__tooltip #{element.alt}
+        img(src="/img/"+element.src)
+  
+    //- *** Mobile Menu *** -// 
+  .icon-bars
+    a.icon-bars__link
+      i.fa.fa-bars
+
+  .wrap-mobile-menu
+    <button class=""><i class="fa fa-bars"></i></button>
+    .overlay.overlay-scale
+      nav.mobile-menu
+        ul.mobile-nav
+          -
+            let course = [
+              {'class':'red', 'icon':'/img/logo_office.svg', 'title':'Microsoft Office'},
+              {'class':'blue', 'icon':'/img/logo_prog.svg', 'title':'Програмування'},
+              {'class':'green', 'icon':'/img/logo_web.svg', 'title':'Web-технології'},
+              {'class':'orange', 'icon':'/img/logo_master.svg', 'title':'Майстер-класи'},
+            ]
+          each element in course
+            li(class="mobile-nav__item nav-item "+element.class)
+              a.nav-item__link #{element.title}
+              //- img(src=element.icon class="course-icon")

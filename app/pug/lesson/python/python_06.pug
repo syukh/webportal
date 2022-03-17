@@ -1,0 +1,50 @@
+.lesson-page
+  h1.lesson-title Каскадні інструкції розгалуження.
+  p При написанні програми не рекомендується використовувати багаторазово вкладені одна в одну інструкції розгалуження – програма стає громіздкою і її важко читати. Вважається, що число рівнів вкладення не повинно перевищувати двох-трьох. Однак на практиці часто зустрічаються задачі, в яких необхідно перевіряти досить багато умов і, в залежності від результату перевірки, виконувати ті чи інші дії.
+  p В мові <span class="accent">Python</span> передбачений спрощений запис для виконання таких вкладених перевірок. Для їх реалізації використовується каскадна інструкція розгалуження <span class="accent">if-elif-else</span>, яка має вигляд:
+  .example
+    ul.example-program.list
+      li <span class="accent">if</span> логічний_вираз_1<span class="accent">:</span>
+        ul
+          li блок інструкцій_1
+      li <span class="accent">elif</span> логічний_вираз_2<span class="accent">:</span>
+        ul
+          li блок_інструкцій_2
+      li <span class="accent">elif</span> логічний_вираз_3<span class="accent">:</span>
+        ul
+          li блок_інструкцій_3
+      li <span class="text-bold">…</span>
+      li <span class="accent">else:</span>
+        ul
+          li блок_інструкцій_N
+  p Інструкція виконується наступним чином. Обчислюється значення <span class="accent">логічного_виразу_1</span>. Якщо значення <span class="accent">логічного_виразу_1</span> істинне (<span class="accent">True</span>), то виконується <span class="accent">блок_інструкцій_1</span>, після чого програма переходить до виконання першої інструкції наступного фрагмента алгоритму. Якщо ж значення <span class="accent">логічного_виразу_1</span> хибне (<span class="accent">False</span>), то відбувається перехід до обчислення значення <span class="accent">логічного_виразу _2</span>. Якщо значення <span class="accent">логічного_виразу_2</span> істинне, то виконується <span class="accent">блок_інструкцій_2</span> і так далі. <span class="accent">Блок_інструкцій_N</span> виконується лише в тому випадку, коли жодний з логічних виразів не був істинним.
+  p.text-center <span class="accent">Присутність в каскадній інструкції розгалуження елемента</span><span class="text-bold color-red"> else – не обов’язкова.</span>
+  p Якщо жодний з логічних виразів не був істинним, а конструкція else опущена, то відбувається перехід до наступної інструкції, що стоїть після каскадної інструкції розгалуження.
+  p <span class="text-bold">Приклад:</span> Скласти програму, яка в залежності від зазначеного номера дня тижня виводить його назву.
+  .example
+    ul.example-program.list
+      li num_day = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть номер дня тижня = &#39;</span>))
+      li <span class="text-bold">if</span> num_day == <span class="color-excel">1</span><span class="text-bold">:</span>
+        ul  
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Понеділок&#39;</span>)
+      li <span class="text-bold">elif</span> num_day == <span class="color-excel">2</span><span class="text-bold">:</span>
+        ul
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Вівторок&#39;</span>)
+      li <span class="text-bold">elif</span> num_day == <span class="color-excel">3</span><span class="text-bold">:</span>
+        ul
+          li <span class="text-bold"> print</span>(<span class="color-accent">&#39;Середа&#39;</span>)
+      li <span class="text-bold">elif</span> num_day == <span class="color-excel">4</span><span class="text-bold">:</span>
+        ul
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Четвер&#39;</span>)
+      li <span class="text-bold">elif</span> num_day == <span class="color-excel">5</span><span class="text-bold">:</span>
+        ul
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;П’ятниця&#39;</span>)
+      li <span class="text-bold">elif</span> num_day == <span class="color-excel">6</span><span class="text-bold">:</span>
+        ul
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Субота&#39;</span>)
+      li <span class="text-bold">elif</span> num_day == <span class="color-excel">7</span><span class="text-bold">:</span>
+        ul
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Неділя&#39;</span>)
+      li <span class="text-bold">else:</span>
+        ul
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Такого дня не існує&#39;</span>)

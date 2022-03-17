@@ -1,0 +1,66 @@
+.lesson-page
+  h1.lesson-title Оператор варіанту
+  p При написанні програми не рекомендується використовувати багаторазово вкладені один в одний умовні оператори – програма стає громіздкою і її важко читати. Вважається, що число рівнів вкладення не повинно перевищувати двох-трьох. Однак на практиці часто зустрічаються задачі, в яких необхідно перевіряти досить багато умов і, в залежності від результату перевірки, виконувати ті чи інші дії. Для реалізації цих цілей і використовують оператор варіанту.
+  p <span class="accent">Оператор варіанту</span> є узагальненням умовного оператора і дає можливість виконати одну з декількох дій в залежності від значення деякого виразу.
+  p <span class="accent">Оператор варіанту має наступну структуру:</span>
+  .example
+    ul
+      li <span class="text-bold">case</span> селектор варіанту <span class="text-bold">of</span>
+        ul
+          li мітка_варіанту_1 : оператор_1;
+          li …
+          li мітка_варіанту_n : оператор_n;
+      li <span class="text-bold">else</span>
+        ul
+          li оператор_q;
+      li <span class="text-bold">end;</span>
+      
+  p <span class="accent">Селектор варіанту</span> – змінна або вираз будь-якого скалярного типу, <span class="text-bold color-red">крім real</span>.
+  p <span class="accent">Мітка варіанту</span> – константа, тип якої збігається з типом селектора варіанта (<span class="text-bold color-red">усі мітки варіанту мають бути різні!</span>).
+  p Якщо одному оператору в операторі варіанту відповідають кілька міток, то вони перераховуються через кому.
+  p Якщо мітки деякого оператора належать якому-небудь діапазону, причому без пропусків, то їх можна вказати так, як це зроблено в наведеному нижче прикладі.
+  p.text-bold Приклад:
+  .example
+    ul
+      li <span class="text-bold">case</span> Ch <span class="text-bold">of</span>
+        ul
+          li <span class="accent">&#39;A&#39;</span> .. <span class="accent">&#39;Z&#39;</span>, <span class="accent">&#39;a&#39;</span> .. <span class="accent">&#39;z&#39;</span> : WriteLn(<span class="accent">&#39;буква&#39;</span>);
+          li <span class="accent">&#39;0&#39;</span> .. <span class="accent">&#39;9&#39;</span> : WriteLn(<span class="accent">&#39;цифра&#39;</span>);
+          li <span class="accent">&#39;+&#39;</span>, <span class="accent">&#39;-&#39;</span>, <span class="accent">&#39;*&#39;</span>, <span class="accent">&#39;/&#39;</span> : WriteLn(<span class="accent">&#39;знак математической операции&#39;</span>);
+      li <span class="text-bold">else</span>
+        ul
+          li WriteLn(<span class="accent">&#39;специальный символ&#39;</span>);
+      li <span class="text-bold">end;</span>
+  p <span class="accent">Оператор варіанту виконується наступним чином</span>. На початку, обчислюється значення селектора варіанта, а потім вибирається для виконання той оператор, перед яким стоїть позначка, що має дане значення. Після - виконується наступний за ключовим словом <span class="accent">end</span> оператор.
+  p Якщо відповідної мітки немає, то виконується оператор після ключового слова <span class="accent">else</span>. Потім відбувається перехід до першого оператора, що стоїть після оператора варіанту.
+  <p class="text-bold text-center"> <span class="color-blue">Присутність</span> <span class="color-red">в операторі варіанту</span> <span class="color-blue">елемента</span> <span class="color-red">else - не обов'язково</span>.
+  p Якщо відповідної мітки немає, а конструкція else опущена, то відбувається перехід до першого оператора, що стоїть після оператора варіанту.
+  p <span class="text-bold">Завдання:</span> Скласти програму <span class="accent">WeekDay</span>. Програма в залежності від зазначеного номера дня тижня виводить його назву.
+
+  .example
+    ul
+      li <span class="text-bold">Program</span> WeekDay;
+      li <span class="text-bold">var</span>
+        ul
+          li d: <span class="color-accent">integer</span>;
+      li <span class="text-bold">begin</span>
+        ul
+          li Writeln(<span class="color-accent">&#39;Введіть номер дня тижня&#39;</span>);
+          li Read(d);
+          li <span class="text-bold">case</span> d <span class="text-bold">of</span>
+            ul
+              li <span class="green-ex">1</span>: WriteLn(<span class="color-accent">&#39;Понеділок&#39;</span>);
+              li <span class="green-ex">2</span>: WriteLn(<span class="color-accent">&#39;Вівторок&#39;</span>);
+              li <span class="green-ex">3</span>: WriteLn(<span class="color-accent">&#39;Середа&#39;</span>);
+              li <span class="green-ex">4</span>: WriteLn(<span class="color-accent">&#39;Четвер&#39;</span>);
+              li <span class="green-ex">5</span>: WriteLn(<span class="color-accent">&#39;П’ятниця&#39;</span>);
+              li <span class="green-ex">6</span>: WriteLn(<span class="color-accent">&#39;Субота&#39;</span>);
+              li <span class="green-ex">7</span>: WriteLn(<span class="color-accent">&#39;Неділя&#39;</span>);
+          li 
+            <span class="text-bold">else</span>
+            ul
+              li WriteLn(<span class="color-accent">&#39;Такого дня не існує&#39;</span>);
+          li <span class="text-bold">end;</span>
+      li <span class="text-bold">end.</span>
+
+

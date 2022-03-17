@@ -1,0 +1,144 @@
+.lesson-page
+  h1.lesson-title Працюємо з цілими та дійсними числами
+  p Для роботи з цілими та дійсними типами визначені наступні стандартні арифметичні операції і функції:
+  .table-int
+    .table-int__act Операція
+    .table-int__func Функція
+    .table-int__text Опис
+    .table-int__act <span class="accent">a</span> <span class="text-bold color-red">+</span> <span class="accent">b</span>
+    .table-int__func <span class="accent">add(a, b)</span>
+    .table-int__text складання
+    .table-int__act <span class="accent">a</span> <span class="text-bold color-red">-</span> <span class="accent">b</span>	
+    .table-int__func <span class="accent">sub(a, b)</span>
+    .table-int__text віднімання
+    .table-int__act <span class="accent">a</span> <span class="text-bold color-red">*</span> <span class="accent">b</span>	
+    .table-int__func <span class="accent">mul(a, b)</span>
+    .table-int__text множення
+    .table-int__act <span class="accent">a</span> <span class="text-bold color-red">**</span> <span class="accent">b</span>	
+    .table-int__func <span class="accent">pow(a, b)</span>
+    .table-int__text зведення в ступінь
+    .table-int__act <span class="accent">a</span> <span class="text-bold color-red">/</span> <span class="accent">b</span>	
+    .table-int__func <span class="accent">truediv(a, b)</span>
+    .table-int__text ділення (отримаємо дійсне число – <span class="accent">float</span>)
+    .table-int__act <span class="accent">a</span> <span class="text-bold color-red">//</span> <span class="accent">b</span>	
+    .table-int__func <span class="accent">floordiv(a, b)</span>
+    .table-int__text цілочисельне ділення (отримаємо ціле число – <span class="accent">int</span>)
+    .table-int__act <span class="accent">a</span> <span class="text-bold color-red">% <span class="accent">b</span>
+    .table-int__func <span class="accent">mod(a, b)</span>
+    .table-int__text залишок від ділення
+    .table-int__act
+    .table-int__func <span class="accent">abs(a)</span>
+    .table-int__text абсолютне значення
+    .table-int__act
+    .table-int__func <span class="accent">round(x[, n])</span>
+    .table-int__text округлення до найближчого цілого (<span class="accent">int</span>) або з точністю до n знаків (<span class="accent">float</span>)
+  p  Треба зазначити, якщо в якості операндів деякого арифметичного виразу <span class="accent">використовуються тільки цілі числа</span>, то <span class="accent">результат</span> теж буде <span class="accent">ціле число</span>, винятком є операція <span class="accent">ділення, результатом</span> якої <span class="accent">буде дійсне число</span>. При спільному використанні цілих і дійсних чисел результатом буде дійсне число.
+  
+  h3.accent.lesson-subtitle Правила обчислення виразів.
+  p Форма запису виразу однозначно визначає правила його обчислення: <span class="accent">дії виконуються з ліва на право</span> з дотриманням наступного старшинства операцій (<span class="accent">в порядку зменшення пріоритету</span>).
+  p.text-bold Пріоритет обчислення у виразі:
+    ol.list.text-bold
+      li Зведення в ступінь <span class="accent">**</span>
+      li Унарні: <span class="accent">+</span> та <span class="accent">–</span>;
+      li <span class="accent">*</span>, <span class="accent">/</span>, <span class="accent">floordiv</span>, <span class="accent">mod</span>;
+      li Бінарні: <span class="accent">+</span> та <span class="accent">–</span>;
+      li <span class="accent"><</span>, <span class="accent"><=</span>, <span class="accent">></span>, <span class="accent">>=</span>, <span class="accent">!=</span>, <span class="accent">==</span>.
+  p У операторів є своя термінологія, яка використовується в усіх мовах програмування. Перш, ніж ми рушимо далі розглянемо кілька термінів, щоб розуміти, про що йдеться.
+  p <span class="accent">Операнд</span> – те, до чого застосовується оператор. Наприклад: 5 * 2 – оператор множення з лівим і правим операндами. Інша назва: «аргумент оператора».
+  p <span class="accent">Унарний оператор</span> – це оператор, який застосовується до одного операнду. Наприклад: оператор унарний мінус <span class="accent">-</span> змінює знак числа на протилежний:
+  .example.otstup
+    p.text-bold Приклад:
+    ul.example-program.list
+      li 
+        .example-program__str x = <span class="color-excel">1</span>
+      li 
+        .example-program__str x = -x
+        .example-program__str <span class="color-excel"># -1, застосували унарний мінус</span>
+  p <span class="accent">Бінарний оператор</span> – це оператор, який застосовується до двох операндів. Той же мінус існує і в бінарній формі:
+  .example.otstup
+    p.text-bold Приклад:
+    ul.example-program.list
+      li 
+        .example-program__str x = <span class="color-excel">2</span>
+      li 
+        .example-program__str y = <span class="color-excel">3</span>
+      li 
+        .example-program__str z = x – y
+        .example-program__str <span class="color-excel"># -1, застосували бінарний мінус</span>
+  p З таблиці видно, що деякі арифметичні операції: <span class="accent">*</span>, <span class="accent">/</span>, <span class="accent">//</span>, <span class="accent">%</span> мають однаковий пріоритет. Виникає питання: якщо операції мають однаковий пріоритет, то в якому порядку (послідовності) будуть виконуватися ці операції в складному виразі? Тому крім пріоритету, операції <span class="accent">мають асоціативність</span>. Для арифметичних операцій <span class="accent">асоціативність «ліва»</span>, тобто, операції будуть виконуватися послідовно зліва направо.
+  p Для більш точної інтерпретації порядку обчислень у виразах використовують круглі дужки, які застосовуються і в звичайних математичних обчисленнях.
+
+  h3.accent.lesson-subtitle Форма скорочених операцій.
+  p Розробники мови <span class="accent">python</span> прагнули зробити кодинг більш лаконічним і компактним. Ще одним способом скоротити запис виразів з арифметичними операціями є скорочена форма. Використовується вона тоді, коли значення даної змінної змінюється значенням іншої змінної або константою:
+  .table-form
+    .table-form__th Повна форма	
+    .table-form__th Скорочена форма
+    .table-form__max <span class="accent">a = a</span> <span class="color-red">+</span> <span class="accent">b</span>	
+    .table-form__min <span class="accent">a</span> <span class="color-red">+=</span> <span class="accent">b</span>
+    .table-form__max <span class="accent">a = a</span> <span class="color-red">-</span> <span class="accent">b</span>	
+    .table-form__min <span class="accent">a</span> <span class="color-red">-=</span> <span class="accent">b</span>
+    .table-form__max <span class="accent">a = a</span> <span class="color-red">*</span> <span class="accent">b</span>	
+    .table-form__min <span class="accent">a</span> <span class="color-red">*=</span> <span class="accent">b</span>
+    .table-form__max <span class="accent">a = a</span> <span class="color-red">/</span> <span class="accent">b</span>	
+    .table-form__min <span class="accent">a</span> <span class="color-red">/=</span> <span class="accent">b</span>
+    .table-form__max <span class="accent">a = a</span> <span class="color-red">//</span> <span class="accent">b</span>	
+    .table-form__min <span class="accent">a</span> <span class="color-red">//=</span> <span class="accent">b</span>
+    .table-form__max <span class="accent">a = a</span> <span class="color-red">%</span> <span class="accent">b</span>	
+    .table-form__min <span class="accent">a</span> <span class="color-red">%=</span> <span class="accent">b</span>
+    .table-form__max <span class="accent">a = a</span> <span class="color-red">**</span> <span class="accent">b</span>	
+    .table-form__min <span class="accent">a</span> <span class="color-red">**=</span> <span class="accent">b</span>
+  p Проміжки між оператором присвоєння <span class="accent">=</span> і операцією що скорочується не допускаються.
+
+  h3.accent.lesson-subtitle Імпорт модулів.
+  p Окрім стандартної бібліотеки з досить широким набором функцій, мова Python містить велику кількість додаткових бібліотек, які можуть бути використанні при написанні програм. Так однією з бібліотек, яка містить математичні функцій і призначена для роботи з числовими даними, є бібліотека (модуль) <span class="accent">math</span>.
+  p Для роботи з модулем його необхідно імпортувати (підключити), або на початку програми, або безпосередньо перед викликом компоненти. Підключення модуля виконується командою <span class="accent">import</span>, далі через пропуск вказується ім’я модуля.
+  .example.otstup
+    p.text-bold Приклад:
+    ul.example-program.list
+      li 
+        .example-program__str <span class="accent">import</span> math
+        .example-program__str <span class="color-excel">#підключили модуль math</span>
+
+  p Після того як модуль імпортовано, ми отримуємо доступ до всіх його функцій. Наведемо в таблиці нижче, найбільш часто використовувані функції модуля <span class="accent">math</span>:
+  .table-math
+    .table-math__th Функція
+    .table-math__th Опис
+    .table-math__fn <span class="accent">math.pi</span>
+    .table-math__td число <span class="accent default-font">&pi;</span> (<span class="color-excel">3.14</span>)
+    .table-math__fn <span class="accent">math.tau</span>
+    .table-math__td математична константа кола, рівна <span class="accent">2</span><span class="accent default-font">&pi;</span>.
+    .table-math__fn <span class="accent">math.e</span>
+    .table-math__td експонента (<span class="color-excel">2.71</span>)
+    .table-math__fn <span class="accent">math.exp(x)</span>
+    .table-math__td експонента <span class="accent">e</span>
+    .table-math__fn <span class="accent">math.sqrt(x)</span>
+    .table-math__td корень квадратний числа <span class="accent">х</span>
+    .table-math__fn <span class="accent">math.pow(a, b)</span>
+    .table-math__td зведення в ступінь
+    .table-math__fn <span class="accent">math.ceil(x)</span>
+    .table-math__td повертає найближче ціле число, більше чим <span class="accent">x</span> (округлення вгору)
+    .table-math__fn <span class="accent">math.floor(х)</span>
+    .table-math__td повертає найближче ціле число, менше чим <span class="accent">х</span> (округлення вниз)
+    .table-math__fn <span class="accent">math.trunc(х)</span>
+    .table-math__td Повертає усічене значення <span class="accent">х</span> до цілого.
+  .example.otstup
+    p.text-bold Використання функцій округлення чисел:
+    ul.example-program.list
+      li
+        .example-program__str <span class="text-bold">math</span>.ceil(<span class="color-excel">3.1</span>)
+        .example-program__str <span class="color-excel"># 4</span>
+      li
+        .example-program__str <span class="text-bold">math</span>.ceil(<span class="color-excel">-3.1</span>)
+        .example-program__str <span class="color-excel"># -3</span>
+      li
+        .example-program__str <span class="text-bold">math</span>.floor(<span class="color-excel">3.8</span>)
+        .example-program__str <span class="color-excel"># 3</span>
+      li
+        .example-program__str <span class="text-bold">math</span>.floor(<span class="color-excel">-3.8</span>)
+        .example-program__str <span class="color-excel"># -4</span>
+      li
+        .example-program__str <span class="text-bold">math</span>.trunc(<span class="color-excel">3.8</span>)
+        .example-program__str <span class="color-excel"># 4</span>
+      li
+        .example-program__str <span class="text-bold">math</span>.trunc(<span class="color-excel">-3.8</span>)
+        .example-program__str <span class="color-excel"># -3</span>

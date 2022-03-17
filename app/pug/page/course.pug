@@ -1,0 +1,37 @@
+#main-section
+  include ../modulus/menu.pug
+  #section.course-lesson
+    .section-row.section-row__header
+        //- h2.title-course JavaScript
+        h2.title-course PowerPoint
+        //- h2.section-title Web-технології
+    .section-row.section-row__course.lesson-row
+      .course-wrap#spbar
+        -
+          let lesson = [
+            {'name':'Починаємо працювати з Microsoft Excel'},
+            {'name':'Уведення та редагування даних в Microsoft Excel'},
+            {'name':'Форматування електронної таблиці Microsoft Excel'},
+            {'name':'Уведення та редагування даних в Microsoft Excel'},
+            {'name':'Використання вбудованих функцій в Microsoft Excel'},
+            {'name':'Діаграми та графіки в Microsoft Excel'},
+            {'name':'Умовне форматування в Microsoft Excel'},
+            {'name':'Сортування та фільтрація даних в Microsoft Excel'},
+            {'name':'Використання функції IF в Excel'},
+            {'name':'Графічні примітиви у текстовому редакторі Microsoft Word'},
+          ]
+        each element,i in lesson
+          if (i < 9)
+            .lesson-item
+              .lesson-element
+                .lesson-element__num 0#{(i+1)}
+                .lesson-element__name
+                  a(href="#" class="name-link") #{element.name}
+                a(href="#" class="lesson-element__link")
+          else
+            .lesson-item
+              .lesson-element
+                .lesson-element__num #{(i+1)}
+                .lesson-element__name
+                  a(href="#" class="name-link") #{element.name}
+                a(href="#" class="lesson-element__link")

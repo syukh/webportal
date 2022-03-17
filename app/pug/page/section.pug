@@ -1,0 +1,21 @@
+#main-section
+  include ../modulus/menu.pug
+  #section
+    .section-row.section-row__header
+      h2.section-title Microsoft Excel
+    .section-row.section-row__course
+      .course-wrap#spbar
+        -
+          let item = [
+            {'src':'../img/logo_powerpoint.svg', 'name':'PowerPoint', "lesson":"2", "task":"15"},
+            {'src':'../img/logo_excel.svg', 'name':'Excel', "lesson":"12", "task":"55"},
+            {'src':'../img/logo_word.svg', 'name':'Word', "lesson":"14", "task":"35"},
+          ]
+        each element in item
+          .course-element
+            .course-element__item
+              .course-element__name.border
+                img(src=element.src class="course-element__img")
+                a(href="#" class="name-course") #{element.name}
+              .course-element__info.border <span class="element-num">#{element.lesson}</span> уроки
+              .course-element__info <span class="element-num">#{element.task}</span> завдання

@@ -1,0 +1,120 @@
+//*==========  Desktop Menu  ==========*/
+#menu
+  display: flex
+  justify-content: center
+  position: relative
+
+.logo
+  position: absolute
+  top: 30px
+  z-index: 2000
+
+.nav
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  &__link
+    padding: 10px
+    position: relative
+    transition: all 1s
+    &:last-child
+      margin-bottom: 0
+    &:hover
+      .nav__tooltip
+        opacity: 1
+        left: 98%
+        visibility: visible
+  &__tooltip
+    position: absolute
+    opacity: 0
+    visibility: hidden
+    top: 15px
+    left: 130%
+    background-color: $accent
+    border: 1px solid #ffffff
+    border-radius: 30px
+    +rfs(16px)
+    font-family: $text-font
+    font-weight: 300
+    white-space: nowrap
+    color: #ffffff
+    text-align: center
+    padding: 5px 10px
+    transition: visibility 0.4s, opacity 0.4s, left 0.5s
+    z-index: 1200
+
+// *** Mobile Menu ***//
+.icon-bars
+  display: none
+  .open
+    visibility: visible
+    opacity: 1
+    display: block
+
+.wrap-mobile-menu
+  button
+    margin-right: auto
+    padding: 0px
+    background: transparent
+    border: none
+    position: fixed
+    right: 20px
+    top: 20px
+    z-index: 1700
+    display: none
+    outline: none
+    .fa
+      color: #fff
+      +rfs(50px)
+  .show-button
+    display: block
+    position: fixed
+
+.overlay
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1600
+  background: $accent
+
+.overlay-scale
+  visibility: hidden
+  opacity: 0
+  transform: scale(0.4)
+  display: none
+
+.open
+  visibility: visible
+  opacity: 1
+  transform: scale(1)
+  display: block
+
+.mobile-menu
+  width: 100vw
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  overflow: hidden
+
+.mobile-nav
+  padding-left: 0
+  &__item
+    text-align: center
+    padding: 25px 50px
+    list-style: none
+    border-radius: 15px
+    margin-bottom: 20px
+    display: flex
+    flex-direction: row-reverse
+    align-items: center
+  &:last-child
+    margin-bottom: 0
+
+.nav-item__link
+  +rfs(38px)
+  color: #fff
+  text-decoration: none
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.3)

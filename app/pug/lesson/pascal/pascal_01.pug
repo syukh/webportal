@@ -1,0 +1,135 @@
+.lesson-page
+  h1.lesson-title Введення в мову програмування <span class="accent">Pascal</span>
+  p Мова програмування <span class="accent">Pascal</span> була розроблена швейцарським вченим <span class="accent">Ніклаусом Віртом</span> у 1970 році, як мова із строгою типізацією та інтуїтивно зрозумілим синтаксисом. У 80-ті роки найбільш відомою реалізацією мови став компілятор <span class="accent">Turbo Pascal</span> фірми <span class="accent">Borland</span>, а в 90-ті йому на зміну прийшло середовище програмування <span class="accent">Delphi</span>, яке стало одним з найкращих середовищ для швидкого створення додатків під Windows.
+  p Delphi, ввела в мову Паскаль ряд вдалих об'єктно-орієнтованих розширень, оновлена мова отримала назву <span class="accent">Object Pascal</span>. З версії <span class="accent">Delphi 7</span> мова <span class="accent">Delphi Object Pascal</span> стала називатися просто <span class="accent">Delphi</span>. З альтернативних реалізацій Object Pascal слід зазначити багатоплатформений open source компілятор <span class="accent">Free Pascal</span>.
+  p Мова програмування <span class="accent">PascalABC</span> (далі Pascal) – це мова <span class="accent">Pascal</span> нового покоління, що включає в себе всі можливості стандартної мови Pascal, розширення мови Delphi Object Pascal, ряд власних розширень, а також ряд можливостей, які забезпечують її сумісність з іншими .NET-мовами. PascalABC є мультіпарадігменною мовою – на ній можна програмувати в різних стилях: структурне програмування, об'єктно-орієнтоване програмування, функціональне програмування.
+  
+  h3.accent.lesson-subtitle Основні поняття мови PascalABC.
+  h3.accent.lesson-subtitle Алфавіт мови.
+  p <span class="accent">Алфавіт мови</span> – це фіксований для даної мови набір основних символів, з яких повинен складатися будь-який текст на цій мові. <span class="text-bold  color-red">Ніякі інші символи не допускаються! </span>
+  p.text-bold Алфавіт алгоритмічної мови Pascal включає в себе:</span>
+  ul.list
+    li великі (A … Z) та малі (a … z) букви латинського алфавіту
+    li цифри: 1 2 3 4 5 6 7 8 9 0
+    li спеціальні символи: + - * / = <> { } [ ] , . : ; ^ @ $
+    li пари символів: <=>= := .. (‘ ‘)
+
+  h3.accent.lesson-subtitle Ідентифікатори.
+  p <span class="accent">Паскаль</span> – програма, яка реалізує процес обробки даних, оперує з різними типами даних, на які необхідно якимось чином посилатися. Для цього програмним об'єктам даються індивідуальні імена та опис тих чи інших дій над об'єктами в термінах їх імен. Роль таких імен і виконують <span class="accent">ідентифікатори</span>.
+  p Таким чином, <span class="accent">ідентифікатори використовуються для позначення</span>: <span class="text-bold">міток, констант, типів, змінних, процедур, модулів, програм...</span>
+  p <span class="accent">Ідентифікатор</span> <span class="text-bold"> – це будь-яка кінцева послідовність літер, цифр і символу підкреслення, яка </span> <span class="text-bold color-red">починається з букви.</span>
+  p <span class="text-bold color-red">Будь-які інші символи в ідентифікаторах не допускаються!</span> Довжина ідентифікатора не повинна перевищувати 128 символів. Ідентифікатор не повинен збігатися по написанню ні з одним ключовим словом Паскаля.
+  p <span class="text-bold">Великі і малі літери в ідентифікаторах при роботі програми не розрізняються</span>. Вони використовуються на ряду з символом підкреслення для поліпшення зручності читання програми. Рекомендується використовувати мнемонічні імена, розділяючи смислові складові великими літерами або символом підкреслення.
+
+  .example
+    <span class="text-bold">Приклади:</span>
+    ul
+      li <span class="accent">Error_Code</span>, <span class="accent">Version_Number</span>, <span class="accent">KeyPress</span>.
+
+  h3.accent.lesson-subtitle Змінні.
+  p Дані, що обробляються програмою, можуть мати постійне значення в процесі виконання програми і тоді вони можуть бути описані як константи, в іншому випадку їх описують як змінні.
+  p <span class="accent">Змінна має фіксоване ім'я, задане у вигляді ідентифікатора, фіксований тип і змінне значення, яке отримує вже в процесі виконання програми.</span> Це значення змінна зберігає доти, поки вона не отримає нове значення. При цьому попереднє значення змінної безповоротно втрачається.
+
+  h3.accent.lesson-subtitle Оператори.
+  p Під операторами в мові Pascal мають на увазі опис дій над даними. Кожен оператор є закінченою фразу мови і означає якийсь цілком закінчений етап обробки даних.
+  p <span class="accent">Розрізняють два типи операторів:</span>
+  ul.list
+    li оператори обробки інформації;
+    li оператори, які керують роботою програми в часі.
+
+  h3.accent.lesson-subtitle Коментарі.
+  p Будь-який текст, що поміщається в програму для її пояснення називається <span class="accent">коментарем</span>. <span class="accent">Компілятор не сприймає коментарі</span> – вони призначені для поліпшення розуміння програми. Для відділення тексту програми від тексту коментарів останні <span class="accent">беруться у фігурні дужки</span> <span class="text-bold color-excel">{коментар}</span>, <span class="accent">якщо це один рядок</span> можна поставити стандартні <span class="text-bold color-excel">//</span>.
+
+  h3.accent.lesson-subtitle Загальна структура програми на мові Pascal.
+  p.text-bold Програма на мові Pascal складається з таких частин:
+  ul.list
+    li заголовок програми;
+    li опис використовуваних даних, процедур і функцій;
+    li опис операторів - дій, які повинні бути зроблені над даними.
+  br
+  p.text-bold Програма на мові PascalABC має наступний вигляд:
+
+  .example
+    ul.example-program
+      li 
+        .example-program__str
+          <span class="accent">Program</span> ім’я_програми;
+        .example-program__str
+          <span class="color-excel">// заголовок програми</span>
+      li 
+        .example-program__str 
+          <span class="accent">uses</span>
+        .example-program__str 
+          <span class="color-excel">// розділ для підключення стандартних бібліотек функцій</span>
+      li 
+        .example-program__str
+         <span class="text-bold">розділ описів</span>
+        .example-program__str
+         <span class="color-excel">// розділ де визначаються усі використовувані в програмі дані</span>
+      li 
+        .example-program__str 
+          <span class="accent">begin</span>
+        .example-program__str 
+          <span class="color-excel">// початок розділу опису операторів</span>
+        ul
+          li оператори
+      li <span class="accent">end.</span>
+ 
+  p Запис програми на мові Pascal являє собою строго лінійну послідовність символів, не допускається використання верхніх і нижніх індексів, раціональні дроби повинні бути записані через косу дробову риску (/). Кожна конструкція на Pascal повинна закінчуватися крапкою з комою (;). В кінці програми ставиться крапка (.).
+
+  h3.accent.lesson-subtitle Заголовок програми.
+  p Ім'я програми повинно бути унікальним, ніде більше не використовуватися і бути складеним за правилами, загальним для всіх ідентифікаторів. Вибирати ім'я програми слід так, щоб воно несло якомога більше інформації про призначення самої програми, так само можна забезпечити заголовок і коментарями. <span class="accent">У PascalABC заголовок програми не обов'язковий.</span>
+  p.text-bold Заголовок має наступний вигляд:
+  .example
+    ul
+      li <span class="accent">Program</span> ім’я_програми;
+  br
+  .example
+    <span class="text-bold">Приклад:</span>
+    ul
+      li <span class="accent">Program</span> WekDay; <span class="accent">Program</span> MinMax; <span class="accent">Program</span> Calculator.
+
+  h3.accent.lesson-subtitle Підключення стандартної бібліотеки функцій.
+  p Для використання функцій із стандартної бібліотеки необхідно виконати її підключення. Ця операція здійснюється за допомогою директиви <span class="accent">Uses</span>.
+  
+  p.text-bold Підключення бібліотек у програмі:
+  .example
+    ul
+      li <span class="accent">Uses</span> ім’я_бібліотеки_1, …, ім’я_бібліотеки_n;
+  br
+  .example
+    <span class="text-bold">Приклад:</span>
+    ul
+      li <span class="text-bold"><span class="accent">Uses</span> Crt, GraphABC</span>.
+
+  p <span class="accent">Uses</span> - ключове слово <span class="accent">Pascal</span>, що використовується для вказівки підключення бібліотек. Якщо бібліотека не підключена, то спроба звернутися до її функцій призведе до помилки.
+  p <span class="text-bold">В мові Pascal є набір стандартних бібліотек:</span>
+  ul.list
+    li <span class="accent">Ctr</span> - для роботи з текстовим екраном;
+    li <span class="accent">GraphABC</span> - для роботи з графічним екраном
+
+  h3.accent.lesson-subtitle Тіло програми.
+  p У тілі програми міститися опис та визначення всіх використовуваних в програмі даних, воно складається з шести розділів, розташованих в наступному порядку:
+  ul.list
+    li розділ міток;
+    li розділ констант;
+    li розділ типів;
+    li розділ змінних;
+    li розділ процедур і функцій;
+    li розділ операторів.
+
+  p Будь-який розділ може бути порожнім. У розділах 1 - 4 визначаються дані які обробляються в програмі. Розділи 5 і 6 містять алгоритми обробки даних.
+
+  h3.accent.lesson-subtitle Приклад програми на мові Pascal.
+  .example
+    ul.list
+      li <span class="text-bold">Program</span> Hello_World;
+      li <span class="text-bold">begin</span>
+        ul.example-program
+          li 
+            .example-program__str
+              <span class="text-bold">write</span> (<span class="color-accent">&#39;Hello World&#39;</span>);
+            .example-program__str
+              <span class="color-excel">// write – оператор виводу</span>
+          li 
+            <span class="text-bold">end.</span>

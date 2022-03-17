@@ -1,0 +1,57 @@
+.lesson-page
+  h1.lesson-title Оператори вводу-виводу
+  h3.accent.lesson-subtitle Оператор вводу даних.</h3>
+  <p> Цей оператор використовується для введення даних з клавіатури.
+  .example
+    <span class="text-bold">Формат оператора вводу:</span>
+    ul
+      li <span class="accent">Read</span> (ім’я_змінної_1, …, ім’я_ змінної _n);
+  <p> Значення кожної змінної вводиться з клавіатури. Тип змінної повинен відповідати типам тих змінних, які, вказані у списку параметрів оператора <span class="accent">Read</span>, а також ця змінна повинна бути описана в розділі опису змінних <span class="accent">Var</span>. При виконанні оператора введення черговій змінній із зазначеного списку в операторі <span class="accent">Read</span> присвоюється значення, що було введено. При введенні з клавіатури <span class="accent">дані набираються</span> через <span class="accent">пробіл</span> або <span class="accent">Enter</span>.
+
+  h3.accent.lesson-subtitle Оператор виводу даних.</h3>
+  <p> Цей оператор використовується для виведення даних на текстовий екран <span class="accent">Pascal.</span>
+
+  .example
+    <span class="text-bold">Формат оператора виводу:</span>
+    ul
+      li  <span class="accent">Write</span> (вираз_1, …, вираз_n);
+  <p> При виконанні оператора виведення значення виразів виводяться в тому ж порядку, в якому вони перераховані в списку. Якщо вхідні дані не поміщаються в одному рядку, то автоматично відбувається перехід на інший рядок. Після виведення останнього даного курсор залишається в поточній позиції.
+
+  p.text-bold Приклади:
+  .example
+    ul.example-program
+      li 
+        .example-program__str
+          <span class="accent">write</span> (<span class="accent">&#39;Hello World&#39;</span>);
+        .example-program__str
+          <span class="color-excel">// Hello World</span>
+      li 
+        .example-program__str
+          <span class="accent">write</span> (<span class="color-excel">5</span>);
+        .example-program__str
+          <span class="color-excel">// 5</span>
+      li 
+        .example-program__str
+          <span class="accent">write</span> (<span class="color-excel">5 + 3</span>);
+        .example-program__str
+          <span class="color-excel">// 8</span>
+      br
+      li a := <span class="color-excel">5</span>; b := <span class="color-excel">3</span>;
+      li Sum := a + b;
+      li 
+        .example-program__str
+          <span class="accent">write</span> (<span class="color-accent">&#39;Sum = &#39;</span>, Sum);
+        .example-program__str
+          <span class="color-excel">// Sum = 8</span>
+      br
+      li <span class="text-bold">або</span>
+      br
+      li a := <span class="color-excel">15</span>; b := <span class="color-excel">5</span>;
+      li 
+        .example-program__str
+          <span class="accent">write</span> (<span class="color-accent">&#39;Sum = &#39;</span>, a+b);
+        .example-program__str
+          <span class="color-excel">// Sum = 20</span>
+
+
+

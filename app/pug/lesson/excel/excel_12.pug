@@ -1,0 +1,192 @@
+.lesson-page
+  h1.lesson-title Функції дати та часу в <span class="accent">Excel</span>
+  .function
+    h5.function-title-exel
+      <u>today</u> (<u>сегодня</u>)
+    p.text-bold <span class="function-name color-red">today</span>() – <span class="accent">повертає поточну дату.</span>
+  
+  p.text-bold Зауваження:
+  ul.list
+    <li>у функції <span class="text-bold">TODAY</span> немає аргументів;</li>
+
+  h3.accent.lesson-subtitle Приклади використання функції TODAY.
+  <p><span class="text-bold color-red">Приклад №1:</span> відобразити поточну дату.
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li> ставимо знак рівняння, вказуємо ім’я функції та закриваємо дужки; </li>
+    <li>для отримання результату натискаємо клавішу <span class="text-bold accent">Enter</span>. </li>
+
+  <p class="text-bold text-center">=<span class="text-bold accent">TODAY</span>()
+
+  .function
+    h5.function-title-exel
+      <u>year</u> (<u>год</u>)
+    p.text-bold <span class="function-name color-red">year</span>(Serial_number) – <span class="accent">повертає рік, відповідний заданій даті. Рік визначається як ціле число в діапазоні від 1900 до 9999.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="text-bold accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Serial_number</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text дата, рік якої необхідно знайти. Дати повинні вводитися за допомогою функції <span class="text-bold accent">DATE (ДАТА)</span> або як результат обчислення інших формул і функцій.
+
+  h3.accent.lesson-subtitle Приклади використання функції YEAR.
+  <p><span class="text-bold color-red">Приклад №1:</span> використовуючи функцію <span class="text-bold">YEAR</span> відобразити лише рік поточної дати.
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li>починаємо складати формулу;</li>
+    <li>вказуємо клітинку у якій знаходиться дата – <span class="text-bold accent">D3</span>;</li>
+    <li>для отримання результату натискаємо клавішу <span class="text-bold accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="text-bold accent">YEAR</span>(<span class="text-bold color-blue">D3</span>)
+
+
+  .function
+    h5.function-title-exel
+      <u>workday</u> (<u>рабдень</u>)
+    p.text-bold <span class="function-name color-red">workday</span>(Start_date;Days;[Holidays]) – <span class="accent">повертає число, яке представляє дату, віддалену на задану кількість робочих днів   вперед або назад від початкової дати.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="text-bold accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Start_date</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text початкова дата.
+      .function-descr__arg
+        <span class="text-bold ">Days</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text кількість днів до або після початкової дати, які не є вихідними або святами. Позитивне значення аргументу <span class="text-bold">Days</span> визначає дату в майбутньому, негативне - дату в минулому.
+      .function-descr__arg
+        <span class="text-bold ">Holidays</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text список з однієї або декількох дат, наприклад державних свят, які потрібно виключити з робочого календаря. Список може являти собою діапазон клітинок, що містять дати, або константу масиву, що містить числа, які представляють дати. 
+
+  p.text-bold Зауваження:
+  ul.list
+    <li>не забувайте отримане значення перевести у формат дати;</li>
+
+
+  h3.accent.lesson-subtitle Приклади використання функції WORKDAY.
+  <p><span class="text-bold color-red">Приклад №1:</span> визначити дату, яка наступить через 14 робочих днів від поточної.
+  p.text-bold Розв’язок:
+  ul.list
+    <li>починаємо складати формулу;</li>
+    <li>в якості першого аргументу функції <span class="text-bold accent">WORKDAY</span> задаємо поточну дату за допомоги функції – <span class="text-bold accent">TODAY()</span>;</li>
+    <li>вказуємо кількість робочих днів, що повинні минути – <span class="text-bold accent">14</span>;</li>
+    <li>за необхідністю вказуємо вихідні дні, які не може визначити <span class="text-bold accent">Excel</span>;</li>
+    <li>для отримання результату натискаємо клавішу <span class="text-bold accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="text-bold accent">WORKDAY</span>(<span class="text-bold color-blue">TODAY();</span><span class="text-bold accent">14</span>)
+
+  .function
+    h5.function-title-exel
+      <u>weekday</u> (<u>деньнед</u>)
+    p.text-bold <span class="function-name color-red">weekday</span>(Serial_number;[Return_type]) – <span class="accent">повертає день тижня, який відповідає даті. За замовчуванням день тижня визначається як ціле число в інтервалі від 1 (неділя) до 7 (субота).</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="text-bold accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Serial_number</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text порядковий номер, який відповідає даті, день тижня для якої необхідно знайти.
+      .function-descr__arg
+        <span class="text-bold ">Return_type</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text число, що визначає тип значення.
+
+  h3.accent.lesson-subtitle Приклади використання функції WEEKDAY.
+  <p><span class="text-bold color-red">Приклад №1:</span> використовуючи функцію <span class="text-bold accent">WEEKDAY</span> у відповідній клітинці, відобразити номер дня тижня.
+  p.text-bold Розв’язок:
+  ul
+    <li>починаємо складати формулу;</li>
+    <li>вказуємо клітинку у якій знаходиться дата – <span class="text-bold accent">B4</span>;</li>
+    <li>для отримання результату натискаємо клавішу <span class="text-bold accent">Enter</span>.</li>
+
+  <p class="text-bold text-center">=<span class="text-bold accent">WEEKDAY</span>(<span class="text-bold color-blue">B4</span>)
+
+  .function
+    h5.function-title-exel
+      <u>text</u> (<u>текст</u>)
+    p.text-bold <span class="function-name color-red">text</span>(Value;Format_text) – <span class="accent">перетворює число в текст і дозволяє задавати формат відображення за допомогою   спеціальних рядків форматування.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="text-bold accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Value</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text значення, яке треба переформатувати.
+      .function-descr__arg
+        <span class="text-bold ">Format_text</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text число, що визначає тип значення.
+
+  p.text-bold Зауваження:</span>
+  ul
+    <li>код формату завжди береться у лапки.</li>
+
+
+  h3.accent.lesson-subtitle Приклади використання функції TEXT.
+  <p><span class="text-bold color-red">Приклад №1:</span> використовуючи функцію <span class="text-bold accent">TEXT</span> визначити назву дня тижня.
+  p.text-bold Розв’язок:</span>
+  ul
+    <li>починаємо складати формулу;</li>
+    <li>вказуємо клітинку у якій знаходиться дата – <span class="text-bold accent">B4</span>;</li>
+    <li>вказуємо код формату за яким відбудеться форматування – <span class="text-bold accent">&#34;ДДДД&#34;</span>;
+    <li>для отримання результату натискаємо клавішу <span class="text-bold accent">Enter</span>.</li>
+
+  <p class="text-bold text-center">=<span class="text-bold accent">TEXT</span>(<span class="text-bold color-blue">B4;</span><span class="text-bold accent">&#34;ДДДД&#34;</span>)
+
+  .function
+    h5.function-title-exel
+      <u>networkdays</u> (<u>чистрабдни</u>)
+    p.text-bold <span class="function-name color-red">networkdays</span>(Start_date;End_date;[Holidays]) – <span class="accent">повертає кількість робочих днів між датами.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="text-bold accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Start_date</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text початкова дата.
+      .function-descr__arg
+        <span class="text-bold ">End_date</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text кінцева дата.
+      .function-descr__arg
+        <span class="text-bold ">Holidays</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text список з однієї або декількох дат, наприклад державних свят, які потрібно виключити з робочого календаря. Список може являти собою діапазон клітинок, що містять дати, або константу масиву, що містить числа, які представляють дати.
+    
+  h3.accent.lesson-subtitle Приклади використання функції NETWORKDAYS.
+  <p><span class="text-bold color-red">Приклад №1:</span> використовуючи функцію <span class="text-bold accent">NETWORKDAYS</span> визначити кількість робочих днів, затрачених на виконання проекту.
+  p.text-bold Розв’язок:</span>
+  ul
+    <li>починаємо складати формулу;</li>
+    <li>вказуємо клітинку у якій початкова дата – <span class="text-bold accent">D4</span>;</li>
+    <li>вказуємо клітинку у якій кінцева дата – <span class="text-bold accent">E4</span>;</li>
+    <li>за необхідністю вказуємо вихідні дні, які не може визначити <span class="text-bold accent">Excel</span>;</li>
+    <li>для отримання результату натискаємо клавішу <span class="text-bold accent">Enter</span>.</li>
+
+  <p class="text-bold text-center">=<span class="text-bold accent">NETWORKDAYS</span>(<span class="text-bold color-blue">D4;</span><span class="text-bold accent">E4</span>)
+
+  

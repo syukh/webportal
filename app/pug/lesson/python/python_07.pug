@@ -1,0 +1,145 @@
+.lesson-page
+  h1.lesson-title Інструкція циклу з передумовою <span class="accent">While</span>.
+  p Лінійні алгоритми і алгоритми з розгалуженням не дозволяють у багатьох випадках ефективно використовувати усю обчислювальну потужність комп’ютера. Для цього необхідні програми, в яких окремі фрагменти виконуються багаторазово. Одним з найбільш простих засобів організації повторного виконання серії команд є <span class="accent">Цикли</span>.
+  p У мові <span class="accent">Python</span> можлива організація циклів двох видів:
+  ul.list
+    li цикл з передумовою – <span class="accent">while</span>;
+    li цикл з параметром – <span class="accent">for</span>.
+  p Кожен з способів організації циклу має свої особливості, для кожного способу є своє коло завдань, найбільш природно розв’язуваних саме з його допомогою.
+  
+  h3.accent.lesson-subtitle Інструкція циклу з передумовою – <span class="color-red">while</span>.
+  p <span class="accent">Цикл</span> – <span class="text-bold color-red">while</span> використовують у випадку, коли неможливо визначити точну кількість <span class="accent">ітерацій</span> циклу. Тому, на початку виконання циклу перевіряється деяка умова, якщо умова повертає значення  істинна, виконуються інструкції циклу, після чого умова перевіряється знову і знову виконуються інструкції циклу. Так триває до тих пір, поки умова буде істинною, тобто буде повертати значення <span class="text-bold color-red">True</span>.
+  p.text-center <span class="accent">Одноразове виконання інструкцій циклу називається</span> – <span class="text-bold color-red">ітерацією.</span>
+  p В процесі виконання інструкцій циклу відбувається заміна значень змінних, що входять до вказаної умови у якості операндів. Завдяки чому при <span class="accent">N-кратному</span> виконанні циклу змінюється і значення логічного виразу (умови) з <span class="text-bold color-red">True</span> на <span class="text-bold color-red">False</span>. У цьому випадку, виконання циклу закінчується і управління передається на наступну інструкцію, яка стоїть після тіла циклу.
+  p Якщо під час запису умови або операторів, які виконуються в тілі циклу, була допущена помилка, в такій ситуації, можливо <span class="accent">зациклення</span> – значення логічного виразу ніколи не прийме значення <span class="text-bold color-red">False</span> і, як наслідок, група інструкцій в циклі буде виконуватися нескінченно.
+  p <span class="accent">Цикл</span> – <span class="text-bold color-red">while</span> <span class="accent">служить для організації N-кратного виконання групи інструкцій (тіла циклу) до тих пір, поки залишається істинним умова виконання циклу.</span>
+  
+  h3.accent.lesson-subtitle Схема циклу з передумовою.
+  .block-less
+    .block-less__img
+      <img src="../img/lesson/python/less-pyton-7-01.jpg" alt="Схема інструкції цикду while">
+    .block-less__text
+      .example
+        ul
+          li <span class="accent">while</span> логічний_вираз<span class="accent">:</span>
+            ul
+              li блок_інструкцій_1
+              li блок_інструкцій_2
+              li блок_інструкцій_3
+              li …
+              li блок_інструкцій_N
+          li [<span class="accent">else:</span>
+            ul
+              li блок_інструкцій_N+1]
+  p 
+  p Зауважимо, що ключове слово <span class="accent">else:</span> з блоком інструкцій можна опустити при складанні інструкції циклу <span class="accent">while</span>, на це вказують квадратні дужки. Якщо, даний блок інструкцій є присутнім, він буде виконаний один раз після закінчення циклу.
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде виводити на екран, в рядок, числа від <span class="accent">1</span> до <span class="accent">n</span>:
+  .example
+    ul.example-program.list  
+      li n = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;введіть кількість цифр = &#39;</span>))
+      li i = <span class="color-excel">0</span>
+      li <span class="text-bold">while</span> i < n<span class="text-bold">:</span>
+        ul
+          li i = i + <span class="color-excel">1</span>
+          li <span class="text-bold">print</span>(i, <span class="text-bold">end</span> = <span class="color-accent">&#39; &#39;</span>)
+  
+  h3.accent.lesson-subtitle Накопичувачі суми і добутку
+  P В циклах, доволі часто треба виконувати дії з отримання суми або добутку. Для цих цілей використовуються накопичувачі. Прикладом такого накопичувача є лічильник (рахує кроки циклу), який збільшує своє значення на одиницю з кожною ітерацією циклу. Для використання таких накопичувачів необхідна змінна цілого або дійсного типу , яка приймає початкове значення <span class="text-bold color-red">0</span> <span class="accent">для накопичення суми</span> і початкове значення <span class="text-bold color-red">1</span> <span class="accent">для накопичення добутку</span> поза тілом циклу (до початку циклу). 
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде обчислювати суму ряду <span class="text-bold color-red">1+2+3+…+n</span> та виводити її на екран:
+  .example
+    ul.example-program.list 
+      li n = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;введіть кількість членів ряду = &#39;</span>))
+      li i = <span class="color-excel">0</span>
+      li sum = <span class="color-excel">0</span>
+      li <span class="text-bold">while</span> i < n<span class="text-bold">:</span>
+        ul
+          li i = i + <span class="color-excel">1</span>
+          li sum = sum + <span class="color-excel">i</span>
+      li <span class="text-bold">else:</span>
+        ul
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Сума&#39;</span>, n, <span class="color-accent">&#39;членів ряду =&#39;</span>, sum)
+  
+  h3.accent.lesson-subtitle Використання в циклах випадкових чисел.
+  p Інколи, трапляються завдання, в яких необхідно генерувати випадкові числа, для цього зручно застосовувати генератор псевдо-випадкових чисел. Реалізація такого генератора, у  мові <span class="accent">python</span>, знаходиться в модулі <span class="accent">random</span>. Цей модуль містить досить багато різноманітних функцій, які генерують випадкові числа, ми, поки що, розглянемо тільки функцію <span class="accent">randint</span>. 
+  p Ця функція має два аргументи <span class="accent">randint (a, b)</span>, які, власне, визначають відрізок безлічі цілих чисел з якого будуть отримані випадкові числа, тобто випадкове ціле число видається в діапазоні від нижньої межі <span class="text-bold color-red">a</span> до верхньої межі <span class="text-bold color-red">b</span> включно.
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде виводити на екран, в рядок,  десять випадкових чисел від <span class="accent">1</span> до <span class="accent">n</span>:
+  .example
+    ul.example-program.list
+      li <span class="text-bold">import</span> random
+      li n = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;введіть кількість цифр = &#39;</span>))
+      li i = <span class="color-excel">0</span>
+      li <span class="text-bold">while</span> i < <span class="color-excel">10</span><span class="text-bold">:</span>
+        ul 
+          li i = i + <span class="color-excel">1</span>
+          li <span class="text-bold">print</span>(<span class="text-bold">random</span>.randint(0, n), <span class="text-bold">end</span> = <span class="color-accent">&#39; &#39;</span>)
+  
+  h3.accent.lesson-subtitle Інструкції управління циклом.
+  p Взагалі, звичайний цикл завершується, коли логічний вираз повертає значення <span class="text-bold color-red">False</span>. Але, можна перервати виконання циклу через інструкцію <span class="accent">break</span>.
+  p <span class="accent">Інструкція break</span> перериває виконання циклу <span class="accent">while</span> або <span class="accent">for</span> і передає управління програмою інструкції, що стоїть одразу за блоком циклу. Блок <span class="accent">else</span> не буде виконуватися, якщо цикл переривається інструкцією <span class="accent">break</span> або <span class="accent">continue</span>.
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде отримувати від користувача довільні числа і визначати їх суму. Введення чисел повинно припинятися, коли програма отримує від’ємне число або нуль.
+  .example
+    ul.example-program.list
+      li sum = <span class="color-excel">0</span>
+      li <span class="text-bold">while</span> <span class="text-bold">True</span>:
+        ul
+          li a = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть число &#39;</span>))
+          li if a == <span class="color-excel">0</span> <span class="text-bold">or</span> a < <span class="color-excel">0</span>:
+            ul
+              li <span class="text-bold">break</span>
+          li sum = sum + a
+      li <span class="text-bold">print</span>(<span class="color-accent">&#39;Сума чисел =&#39;</span>,sum)
+  p <span class="accent">Інструкція continue</span> перериває виконання тільки поточної ітерації і передає виконання на обчислення логічного виразу. При цьому інструкції, наступні за <span class="accent">continue</span> до кінця блоку, ігноруються.
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде отримувати від користувача довільні числа і визначати їх суму, від’ємні числа ігноруються. Введення чисел повинно припинятися, коли програма отримує число нуль. 
+  .example
+      ul.example-program.list
+        li sum = <span class="color-excel">0</span>
+        li <span class="text-bold">while</span> <span class="text-bold">True</span><span class="text-bold">:</span>
+          ul
+            li a = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть число &#39;</span>))
+            li if a == <span class="color-excel">0</span><span class="text-bold">:</span>
+              ul
+                li <span class="text-bold">break</span>
+            li if a < <span class="color-excel">0</span><span class="text-bold">:</span>
+              ul
+                li <span class="text-bold">continue</span>
+            li sum = sum + a
+        li <span class="text-bold">print</span>(<span class="color-accent">&#39;Сума чисел =&#39;</span>,sum)
+
+  h3.accent.lesson-subtitle Вкладені цикли
+  p Інструкція одного циклу <span class="accent">while</span> може перебувати всередині інструкції іншого циклу. Така структура називається структурою вкладених циклів. Робота такої структури відбувається наступним чином: на одну ітерацію зовнішнього циклу вкладений цикл робить всі можливі ітерації.
+  .block-less
+      .block-less__img
+        <img src="../img/lesson/python/less-pyton-7-02.jpg" alt="Схема інструкції цикду while">
+      .block-less__text
+        .example
+          ul
+            li <span class="accent">while</span> логічний_вираз_1<span class="accent">:</span>
+              ul
+                li блок_інструкцій_1
+                li …
+                li блок_інструкцій_M
+                li <span class="accent">while</span> логічний_вираз_2<span class="accent">:</span>
+                  ul
+                    li блок_інструкцій_N
+                    li …
+                    li блок_інструкцій_X
+                li [<span class="accent">else:</span>
+                  ul
+                    li блок_інструкцій_X+1]
+            li [<span class="accent">else:</span>
+              ul
+                li блок_інструкцій_Z]
+  p 
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде виводити на екран таблицю множення.
+  .example
+    ul.example-program.list
+      li i = <span class="color-excel">1</span> 
+      li <span class="text-bold">while</span> i < <span class="color-excel">10</span>:
+        ul
+          li j = <span class="color-excel">1</span> 
+          li <span class="text-bold">while</span> j < <span class="color-excel">10</span>:
+            ul
+              li <span class="text-bold">print</span>(j*i, <span class="text-bold">end</span> =<span class="color-accent">&#39;\t&#39;</span>)
+              li j += <span class="color-excel">1</span> 
+          li i += <span class="color-excel">1</span>
+          li <span class="text-bold">print</span>()

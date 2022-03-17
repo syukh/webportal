@@ -1,0 +1,113 @@
+.lesson-page
+  h1.lesson-title Сортування та фільтрація даних в Microsoft <span class="accent">Excel</span>
+  h3.accent.lesson-subtitle Сортування даних.
+  p <span class="accent">Сортування даних</span> – це впорядкування даних у стовпцях електронної таблиці за одним або кількома заданими критеріями.
+  p.text-bold Види сортування в Excel за:
+  ul.list
+    li зростанням;
+    li спаданням;
+    li кольором клітинки;
+    li кольором тексту;
+    li піктограмою умовного форматування.
+  p <span class="accent">Порядок сортування залежить від типу даних</span>. Тобто, упорядкування даних здійснюється з урахуванням розміщення символів у кодовій таблиці <span class="text-bold">Unicode</span>.
+  p.text-bold Сортування даних в електронній таблиці відбувається за:
+  ul.list
+    li <span class="accent">текстом</span> (від <span class="text-bold color-red">А</span> до <span class="text-bold color-blue">Я</span> або від <span class="text-bold color-blue">Я</span> до <span class="text-bold color-red">А</span>);
+    li <span class="accent">числами</span> (від <span class="accent">Min</span> до <span class="accent">Max</span> або від <span class="accent">Max</span> до <span class="accent">Min</span>);
+    li <span class="accent">датою</span> та <span class="accent">часом</span> (від старих до нових або від нових до старих).
+  p.text-bold Правила сортування даних:
+  ul.list
+    li якщо стовпець містить дані різних типів, то після сортування вони розмістяться в такому порядку:
+      ul
+        li числові;
+        li дата/час;
+        li текстові;
+        li логічні.
+    li текстові дані розташовуються в наступному порядку:
+      ul
+        li спочатку <u>латиниця</u> потім <u>кирилиця</u>;
+        li текст з символом пропуску на початку буде вищім за інші.
+  <p class="text-bold text-center color-red"> Сортування <u>не можна</u> застосувати в таблицях, в яких є об'єднані клітинки!
+  
+  h3.accent.lesson-subtitle Сортування даних за одним стовпчиком.
+  .lesson-list.otstup
+    p
+    ul.list
+      li зробити поточною будь-яку клітинку стовпця електронної таблиці у якому буде відбуватися сортування (<span class="text-bold color-red">стовпець не виділяти!</span>);
+      li перейти до вкладки <span class="accent">Home</span> (Основне), у розділі <span class="accent">Editing</span> (Редагування) обрати параметр <span class="accent">Sort&Filter</span> (Сортувати й Фільтрувати);
+      li далі обрати напрям сортування: <span class="text-bold color-blue">A</span><span class="text-bold">/Z</span> <i class="fas fa-long-arrow-alt-down"></i> (за зростанням) або <span class="text-bold">Z/</span><span class="text-bold color-blue">A</span> <i class="fas fa-long-arrow-alt-down"></i> (за спаданням).
+    .otstup 
+    p
+    ul.list
+      li зробити поточною будь-яку клітинку стовпця електронної таблиці у якому буде відбуватися сортування (<span class="text-bold color-red">стовпець не виділяти!</span>);
+      li перейти до вкладки <span class="accent">Data</span> (Дані), у розділі <span class="accent">Sort&Filter</span> (Сортування й Фільтр) обрати напрям сортування: <span class="text-bold color-blue">A</span><span class="text-bold">/Z</span> <i class="fas fa-long-arrow-alt-down"></i> (за зростанням) або <span class="text-bold">Z/</span><span class="text-bold color-blue">A</span> <i class="fas fa-long-arrow-alt-down"></i> (за спаданням).
+    .otstup 
+    p
+    ul.list
+      li кликнути правою кнопкою миші на клітинку стовпця у якому буде відбуватися сортування;
+      li у контекстному меню обрати параметр <span class="accent">Sort</span> (Сортування), а далі – потрібний варіант сортування.
+  <img src="#" alt="1">
+  
+  h3.accent.lesson-subtitle Багаторівневе сортування.
+  .lesson-list.otstup
+    p
+    ul.list
+      li зробити поточною будь-яку клітинку електронної таблиці, але якщо таблиця містить пусті рядки або стовпці треба виділити усю таблицю разом з заголовками;
+      li перейти до вкладки <span class="accent">Data</span> (Дані), у розділі <span class="accent">Sort&Filter</span> (Сортування й Фільтр) обрати параметр <span class="accent">Sort</span> (Сортувати);
+      li у вікні <span class="accent">Sort</span> (Сортування) налаштувати послідовність сортування стовпців.
+    .otstup
+    p
+    ul.list
+      li кликнути правою кнопкою миші на будь-яку клітинку електронної таблиці;
+      li у контекстному меню обрати параметр <span class="accent">Sort</span> (Сортування) і далі у списку <span class="accent">Custom Sort</span> (Настроюване сортування);
+      li у вікні <span class="accent">Sort</span> (Сортування) налаштувати послідовність сортування стовпців.
+  <img src="#" alt="2">
+  p Роздивимося уважно які можливості дає Excel для налаштування багаторівневого сортування даних. В першу чергу, за допомоги верхніх кнопок можна: додавати, видаляти, копіювати або змінювати чергу сортування.
+  p Далі, коли рівень сортування додано потрібно його налаштувати, тобто вказати:
+  ul.list
+    li <span class="text-bold">стовпець</span> у якому буде виконуватися сортування – <span class="accent">Column</span> (Стовпець);
+    li <span class="text-bold">параметр</span> сортування – <span class="accent">Sort on</span> (Сортувати за);
+    li <span class="text-bold">напрям</span> сортування – <span class="accent">Order</span> (Порядок).
+  p Сортувати можна не тільки рядки але й стовпці. За замовчуванням в Excel встановлюється режим сортування рядків за значеннями у стовпцях. Для зміни цього режиму сортування потрібно у вікні <span class="accent">Sort</span> (Сортування) натиснути на кнопку <span class="accent">Options</span> (Параметри), а потім у вікні <span class="accent">Sort Options</span> (Параметри сортування) встановити відповідний перемикач у групі <span class="accent">Orientation</span> (Орієнтація). <span class="accent">Якщо треба враховувати регістр букв</span> (великі – малі), під час сортування, в цьому ж вікні встановіть галочку навпроти напису <span class="accent">Case sensetive</span> (Враховувати регістр).
+  <img src="#" alt="3">
+
+  h3.accent.lesson-subtitle Фільтрація або вибір даних.
+  p <span class="accent">Фільтрація</span> – це відбір тих рядків таблиці, значення яких задовольняють обраним умовам в стовпцях.
+  p.text-bold Встановлення фільтрів:
+  .lesson-list
+    p
+    ul.list
+      li зробити поточною будь-яку клітинку електронної таблиці;
+      li перейти до вкладки <span class="accent">Home</span> (Основне), у розділі <span class="accent">Editing</span> (Редагування) обрати параметр <span class="accent">Sort&Filter</span> (Сортувати й Фільтрувати);
+      li далі обрати властивість <span class="accent">Filter</span> (Фільтр).
+    .otstup
+    p
+    ul.list
+      li зробити поточною будь-яку клітинку електронної таблиці;
+      li перейти до вкладки <span class="accent">Data</span> (Дані), у розділі <span class="accent">Sort&Filter</span> (Сортування й Фільтр) обрати параметр <span class="accent">Filter</span> (Фільтр).
+  <img src="#" alt="4">
+  p Після виконання цих дій, в клітинках що містять заголовки стовпчика з’являться кнопки відкриття списку команд фільтрування.
+  p.text-bold Види фільтрів:
+  ul.list
+    li <span class="accent">фільтрування за кольором:</span>
+      ul
+        li клітинки;
+        li тексту;
+        li за піктограмою.
+  <img src="#" alt="5">
+  ul.list
+    li <span class="accent">в залежності від вмісту клітинки:</span>
+      ul
+        li Текстові фільтри;
+        li Числові фільтри;
+        li Фільтри за датою.
+  <img src="#" alt="6">
+  <img src="#" alt="7">
+  <img src="#" alt="8">
+  p Після того, як ми застосуємо фільтр до будь-якого із стовпців електронної таблиці, кнопка фільтру зміниться на наступну.
+  <img src="#" alt="9">
+  p Наявність такої кнопки в клітинці вказує, що у даному стовпці вже встановлений фільтр який відображає певні дані.
+  <p class="text-center accent"> Фільтрування можна здійснювати послідовно для кількох стовпців електронної таблиці.
+  p Тоді, кожний наступний фільтр буде застосований уже тільки для тих рядків таблиці, які відображаються після застосування всіх попередніх фільтрів. Тобто загальна умова фільтрування – це умови фільтрування для кожного стовпця, об’єднані логічною операцією <span class="accent">i</span>.
+  p Також <span class="accent">можна встановлювати декілька параметрів фільтрування даних для одного стовпця</span> електронної таблиці. Наприклад, користувачу потрібно встановити граничні межі для фільтрування числових даних у таблиці, <span class="accent">&#8804;30</span> та <span class="accent">&#62;100</span>. Ставити галочки навпроти потрібних значень, якщо їх достатньо багато кожного разу не доцільно, тому можна скористатися <span class="accent">Custom Filter</span> (Користувацьким фільтром).
+  <img src="#" alt="10">

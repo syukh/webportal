@@ -1,0 +1,55 @@
+.lesson-page
+  h1.lesson-title Оператор присвоювання
+  p Оператор присвоювання служить для присвоювання змінній або типізованій константі нового значення.
+  p.text-bold Формат оператора присвоювання:
+  .example
+    ul
+      li ім’я_змінної := значення;
+      li ім’я_змінної := вираз;
+        ul
+          li <span class="text-bold">або</span>
+      li ім’я_константи:= значення;
+      li ім’я_константи:= вираз;
+  p Виконується оператор присвоювання наступним чином: <span class="accent">обчислюється значення виразу в правій частині оператора присвоювання і це значення присвоюється змінній</span>, що стоїть в його лівій частині. Вирази можуть містити константи, імена змінних і функцій, знаки операцій та дужки.
+  p.text-bold Приклад:
+  .example
+    ul
+      li x := <span class="color-excel">3</span> * c + <span class="color-excel">2</span> * Sqr(i);
+
+  h3.accent.lesson-subtitle Правила обчислення виразів.
+  p Форма запису виразу однозначно визначає правила його обчислення: <span class="accent">дії виконуються з ліва на право</span> з дотриманням наступного старшинства операцій (<span class="accent">в порядку зменшення пріоритету </span>):
+  p.text-bold Пріоритет обчислення у виразі:
+  .example
+    ol
+      li.text-bold Унарні <span class="accent">+</span> та <span class="accent">–</span> , <span class="accent">not</span>;
+      li.text-bold <span class="accent">*</span>, <span class="accent">/</span>, <span class="accent">div</span>, <span class="accent">mod</span>, <span class="accent">and</span>;
+      li.text-bold Бінарні <span class="accent">+</span> та <span class="accent">-</span>, <span class="accent">or</span>;
+      li.text-bold <span class="accent">=</span>, <span class="accent">&#60;&#62;</span>, <span class="accent">&#60;</span>, <span class="accent">&#62;</span>, <span class="accent">&#60;=</span>, <span class="accent">&#62;=</span>, <span class="accent">in</span>, <span class="accent">=&#62;</span>.
+
+  p У операторів є своя термінологія, яка використовується в усіх мовах програмування. Перш, ніж ми рушимо далі розглянемо кілька термінів, щоб розуміти, про що йдеться.
+  p <span class="accent">Операнд</span> – те, до чого застосовується оператор. Наприклад: 5 * 2 - оператор множення з лівим і правим операндами. Інша назва: «аргумент оператора».
+  p <span class="accent">Унарний оператор</span> – це оператор, який застосовується до одного операнду. Наприклад: оператор унарний мінус "-" змінює знак числа на протилежний:
+
+  p.text-bold Приклад:
+  .example
+    ul
+      li x := <span class="color-excel">1</span>;
+      li 
+        .example-program__str x := -x;
+        .example-program__str <span class="color-excel">// -1, застосували унарний мінус</span>
+
+  p <span class="accent">Бінарний оператор</span> – це оператор, який застосовується до двох операндів. Той же мінус існує і в бінарній формі:
+  p.text-bold Приклад:
+  .example
+    ul
+      li x := <span class="color-excel">2</span>; y := <span class="color-excel">3</span>;
+      li 
+        .example-program__str z := x - y;
+        .example-program__str <span class="color-excel">// -1, застосували бінарний мінус</span>
+
+  p Для більш точної інтерпретації порядку обчислень у виразах використовують круглі дужки, які застосовуються і в звичайних математичних обчисленнях.
+  p.text-bold Зауваження:</span>
+  ul.list
+    li присвоювання допускається для всіх типів змінних, за винятком змінних типу файл;
+    li змінна і значення виразу в операторі присвоєння повинні належати до одного типу даних;
+    li дозволено привласнювати змінної типу <span class="accent">real</span> значення висловлювання на кшталт <span class="accent">integer</span> (але не навпаки).

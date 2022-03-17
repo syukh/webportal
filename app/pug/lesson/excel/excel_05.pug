@@ -1,0 +1,142 @@
+.lesson-page
+  h1.lesson-title Використання вбудованих функцій в Microsoft <span class="accent">Excel</span>
+  p Окрім застосування формул для виконання базових математичних обчислень в Microsoft Excel можна використовувати значну бібліотеку вбудованих функцій, які допомагають виконувати інші складні операції з даними.
+  <img src="#" alt="1">
+  p Для того щоб краще зрозуміти доцільність використання вбудованих функцій давайте розглянемо наступнийприклад: в нас є папка, що містить декілька файлів, потрібно розрахувати загальний обсяг файлів в папці,якщо нам відомо обсяг кожного файлу.
+  <img src="#" alt="2">
+  p Насправді, розв’язати цю задачу можна за допомоги простої формули <span class="accent">=C3+D3+E3+F3+G3</span>, але з іншого боку, коли файлів в папці буде значно більше, то використовувати подібну формулу не є раціонально, вона буде дуже громіздкою та незручною для введення. У такому випадку треба скористатися вбудованою в Excel функцією <span class="text-bold color-red">SUM</span>: <span class="accent">=SUM(C3:G3)</span>.
+  p <span class="accent">Функція – це заздалегідь визначена формула, згідно з якою виконуються обчислення за заданими величинами у вказаному порядку.</span>
+  <img src="#" alt="3">
+  p <span class="accent">Функція в Excel має такі параметри: ім’я, аргументи і результат.</span>
+  p Під час запису функції у формулі спочатку вказується її ім’я, а потім у дужках список аргументів через крапку з комою. Аргументами функції можуть бути числа, текст, посилання на клітинки або діапазони, вирази та функції.
+  p.text-bold Вставлення функції у формулу:</span>
+  ul.list
+    li обрати клітинку для виводу результату;
+    li натиснути на кнопку <span class="accent">Insert Function</span> (Вставлення функції) або <span class="text-bold color-red">Shift+F3</span>;
+    li у вікні <span class="accent">Insert Function</span> (Вставлення функції) зі списку <span class="accent">Or select a category</span> (Категорія) обрати потрібну категорію функції, наприклад <span class="accent">Math &Tring</span> (Математичні);
+    li вибрати у списку потрібну функцію, наприклад <span class="accent">SUM</span> (СУММ);
+    li підтвердити вибір обраної функції – натиснути кнопку <span class="accent">ОК</span>;
+    li увести у вікні <span class="accent">Function Arguments</span> (Аргументи функції) в поля <span class="accent">Number1, Number2</span> (Число1, Число2) аргументи функції, або ввести в поле для першого аргументу діапазон клітинок;
+    li натиснути кнопку <span class="accent">ОК</span> для виводу результату.
+  <img src="#" alt="4">
+  p.text-bold Додатково існують ще два способи вставити функцію у формулу.</span>
+  
+  .lesson-list
+    p Звернутись до вкладки <span class="accent">Formulas</span> (Формули), де у розділу <span class="accent">Function Library</span> (Бібліотека функцій) зібрані усі вбудовані в Excel функції за категоріями. Розгортаємо список категорії і знаходимо потрібну функцію, вставляєм її у формулу, вказуємо аргументи, знак рівняння додається автоматично.
+    <img src="#" alt="5">
+    p Якщо користувач знає назву функції, він може одразу почати вводити її ім’я, активується засіб <span class="accent">Intellisense</span> (Автозевершення функцій), який виводить усі функції, назви яких починаються з введених користувачем букв. Далі, курсором на клавіатурі виділяємо потрібну функцію і натискаємо клавішу <span class="accent">Tab</span>, або робимо подвійний клік на ім’я функції. Excel автоматично завершить ім'я функції і відкриє круглу дужку для початку введення аргументів.
+  
+  h3.accent.lesson-subtitle Аргументи функції.
+  p Якщо <span class="accent">назва аргументу функції виділена напівжирним</span>, то такий <span class="accent">аргумент є обов’язковим</span> для введення і навпаки, якщо назва аргументу не виділена то такий аргумент вказувати непотрібно.
+  
+  h3.accent.lesson-subtitle Прості математичні та статистичні формули.
+  .function
+    h5.function-title-exel
+      <u>sum</u> (<u>сумм</u>)
+    p.text-bold <span class="function-name color-red">sum</span>(Number1; Number2;) – <span class="accent">повертає суму числових аргументів.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Number1</span><br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text перший аргумент може бути константою (<span class="accent">8</span>), посиланням на клітинку (<span class="accent">А3</span>) або на діапазон клітинок (<span class="accent">B2:B8</span>).
+      .function-descr__arg <span class="text-bold ">Number2-255</span><br> <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text це друге число для складання. Можна вказати до 255 чисел (аргументів).
+  p.text-bold Зауваження:
+  ul.list
+    li функція <span class="accent">SUM</span> проігнорує текст і поверне суму лише числових значень.  
+
+  .function
+    h5.function-title-exel 
+      <u>average</u> (<u>срзнач</u>)
+    p.text-bold <span class="function-name color-red">average</span>(Number1; Number2;) – <span class="accent">повертає середнє арифметичне значення аргументів, які можуть бути числами, іменами або посиланнями на клітинки з числами.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Number1</span><br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text перший аргумент може бути константою (<span class="accent">8</span>), посиланням на клітинку (<span class="accent">А3</span>) або на діапазон клітинок (<span class="accent">B2:B8</span>).
+      .function-descr__arg
+        <span class="text-bold ">Number2-255</span><br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text додаткові числа для яких потрібно обчислити середнє значення. Можна вказати до 255 чисел.  
+  p.text-bold Зауваження:
+  ul.list
+    li якщо аргумент є посиланням на клітинку або діапазон клітинок, що містять текст або логічні значення, або є посиланням на вільну позицію, то такі значення ігноруються; проте клітинки, які містять нульові значення, враховуються;
+    li аргументи, які є значеннями помилок або текстом, які не можуть бути перетворені в числа, викликають помилки.
+
+  .function
+    h5.function-title-exel
+      <u>count</u> (<u>счёт</u>)
+    p.text-bold <span class="function-name color-red">count</span>(Value1;Value2;) – <span class="accent">повертає кількість клітинок діапазону, у яких містяться числа.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Value1</span><br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text посилання на окремі клітинки або діапазон клітинок (<span class="accent">B2:B8</span>), у якому потрібно підрахувати кількість клітинок які містять числа.
+      .function-descr__arg
+        <span class="text-bold ">Value2-255</span><br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text додаткові посилання на клітинки та діапазони, можна вказати до 255 посилань.
+  p.text-bold Зауваження:
+  ul.list
+    li враховуються лише аргументи, які є числами, датами або текстовим поданням чисел;
+    li аргументи, які є значеннями помилок або текстом, який не можна перетворити в числа пропускаються.
+ 
+  .function
+    h5.function-title-exel
+      <u>max</u> (<u>макс</u>)
+    p.text-bold <span class="function-name color-red">max</span>(Number1;Number2;) – <span class="accent">повертає найбільше значення з набору значень.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Number1</span><br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text перший аргумент може бути константою (<span class="accent">8</span>), посиланням на клітинку (<span class="accent">А3</span>) або на діапазон клітинок (<span class="accent">B2:B8</span>).
+      .function-descr__arg
+        <span class="text-bold ">Number2-255</span><br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text додаткові значення для яких потрібно знайти найбільше значення. Можна вказати до 255 значень.
+  p.text-bold Зауваження:
+  ul.list
+    li якщо аргументи не містять чисел, функція МАКС повертає значення 0 (нуль);
+    li порожні клітинки, логічні значення і текст в масиві або посиланні ігноруються;
+    li аргументи, які є значеннями помилки або текстами, що не перетворюваними в числа, викликають виникнення помилок.
+
+  .function
+    h5.function-title-exel
+      <u>min</u> (<u>мин</u>)
+    p.text-bold <span class="function-name color-red">min</span>(Number1;Number2;) – <span class="accent">повертає найменше значення з набору значень.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Number1</span><br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text перший аргумент може бути константою (<span class="accent">8</span>), посиланням на клітинку (<span class="accent">А3</span>) або на діапазон клітинок (<span class="accent">B2:B8</span>).
+      .function-descr__arg
+        <span class="text-bold ">Number2-255</span><br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text додаткові значення для яких потрібно знайти найбільше значення. Можна вказати до 255 значень.
+  p.text-bold Зауваження:
+  ul.list
+    li якщо аргументи не містять чисел, функція МИН повертає значення 0 (нуль);
+    li порожні клітинки, логічні значення і текст в масиві або посиланні ігноруються;
+    li аргументи, які є значеннями помилки або текстами, що не перетворюваними в числа, викликають виникнення помилок.
+      
+    

@@ -1,0 +1,110 @@
+.lesson-page
+  h1.lesson-title Процедури та функції на мові <span class="accent">PascalABC</span>
+  p <span class="accent">Процедура</span> або <span class="accent">функція – являє собою послідовність операторів, яка має ім'я, список параметрів і може бути викликана у різних частинах програми</span>. Функції, на відміну від процедур, в результаті свого виконання повертають значення, яке може бути використане у виразі. Для однаковості функції і процедури називаються <span class="accent">підпрограмами</span>.
+  p Будь-яка використовувана в програмі процедура або функція повинна бути попередньо описана в розділі описів.
+  h3.accent.lesson-subtitle Процедури.
+  p <span class="accent">Процедура</span> – це незалежна сукупність операторів, що виконують задану послідовність дій, і визначені окремо від основної частини програми. Опис процедури починається зі службового слова <span class="accent">Procedure</span>, після якого йде її ідентифікатор та формальні параметри. Інша частина аналогічна основній програмі.
+  p Як тільки в тілі програми оголошується ім'я процедури з параметрами, виконання основної її частини припиняється, і управління обчислювальними процесами передається процедурі. Після виконання процедури здійснюється повернення на оператор основної програми, наступний за викликом процедури.
+  p.text-bold Опис процедури має вигляд:</span>
+  .example
+    ul
+      li <span class="text-bold">procedure</span> ім’я_процедури (формальні параметри: тип даних);
+        ul
+          li <span class="text-bold">var</span>
+            ul
+              li локальні змінні;
+          li <span class="text-bold">begin</span>
+            ul
+              li оператори
+          li <span class="text-bold">end;</span>
+  p.text-bold Виклик процедури у програмі:
+  .example
+    ul
+      li ім’я_процедури (фактичні параметри);
+  p <span class="text-bold">Приклад:</span> скласти програму з процедурою <span class="text-bold">PrintSum</span>, яка буде складати два числа і виводити їхню суму на екран.
+  .example
+    ul
+      li <span class="text-bold">Program</span> Print_Sum;
+      li <span class="text-bold">var</span>
+        ul
+          li a, b: <span class="color-accent">integer</span>;
+      li <span class="text-bold">procedure</span> PrintSum (x, y: <span class="color-accent">integer</span>);
+        ul
+          li <span class="text-bold">var</span>
+            ul
+              li z: <span class="color-accent">integer</span>;
+          li <span class="text-bold">begin</span>
+            ul
+              li z := x + y;
+              li WriteLn(z);
+          li <span class="text-bold">end</span>;
+      li <span class="text-bold">begin</span>
+        ul
+          li WriteLn(<span class="color-accent">&#39;Введіть два числа&#39;</span>);
+          li Readln(a, b);
+          li PrintSum(a, b);
+      li <span class="text-bold">end</span>;
+
+  h3.accent.lesson-subtitle Параметри процедури.
+  p У будь-якій програмі всі змінні діляться на два типи: <span class="accent">локальні</span> та <span class="accent">глобальні</span>.
+
+  p <span class="accent">Глобальні змінні</span> – це змінні з розділу описів основної частини програми, а <span class="accent">локальні</span> – з розділу описів процедур та функцій. Локальні змінні існують тільки протягом часу роботи процедури, визначаються при її виклику і зникають після завершення роботи процедури. Глобальні навпаки, існують протягом роботи всієї програми.
+  p При описі процедури вказується список формальних параметрів. Кожен параметр є локальним по відношенню до описуваної процедури, до нього можна звертатися тільки в межах даної процедури (в нашому прикладі <span class="accent">х, у – формальні параметри</span>).
+  p <span class="accent">Фактичні параметри</span> – це параметри, які передаються процедурі при зверненні до неї (<span class="accent">а, b – фактичні параметри</span>). <span class="text-bold">Число і тип формальних і фактичних параметрів повинні збігатися з точністю до їх   слідування.</span>
+  p Якщо попереду формального параметра <span class="accent">стоїть</span> ключове слово <span class="accent">var</span> або <span class="accent">const</span>, то його називають <span class="accent">параметром-змінною</span> і кажуть, що <span class="accent">він передається за посиланням</span>. Якщо ж параметр описаний без слів var або const, то його називають <span class="accent">параметром-значенням</span> і кажуть, що <span class="accent">він передається за значенням</span>.
+  p <span class="text-bold">Приклад:</span> скласти програму <span class="accent">з процедурою Sum</span>, яка буде складати два числа і передавати їхню суму.
+  .example
+    ul
+      li <span class="text-bold">Program</span> NumberSum;
+      li <span class="text-bold">var</span>
+        ul
+          li a, b, c: <span class="color-accent">integer</span>;
+      li <span class="text-bold">procedure</span> Sum(x, y: <span class="color-accent">integer</span>; var z: <span class="color-accent">integer</span>);
+        ul
+          li <span class="text-bold">begin</span>
+            ul
+              li z := x + y;
+          li <span class="text-bold">end</span>;
+      li <span class="text-bold">begin</span>
+        ul
+          li Readln(a, b);
+          li Sum(a, b, c);
+          li WriteLn(c);
+      li <span class="text-bold">end.</span>
+  p Змінна <span class="accent">z</span> в процедуру <span class="accent">Sum</span> передана за посиланням, це означає, що якщо її змінити в тілі процедури, то вона зміниться і в тому місці, звідки її передали в процедуру (наприклад, в тілі основної програми).
+  h3.accent.lesson-subtitle Функції.
+  p <span class="accent">Функція</span> – це підпрограма, результат виконання якої є єдине скалярне значення, що привласнюється імені цієї функції. Отже, функції є окремим випадком процедур і принципово відрізняються від них тим, що, по-перше, результат виконання функції – одне значення, а процедури – одне або кілька; по-друге, результат виконання функції передається в основну програму, як значення імені цієї функції (тобто в тілі функції хоча б раз імені функції має бути присвоєно значення), а результати виконання процедури – як значення її параметрів.
+  p Опис функції починається зі службового слова <span class="accent">Function</span>, після якого вказується її ідентифікатор, формальні параметри та тип значення, що повертає функція. Інша частина аналогічна основній програмі.
+  p.text-bold Опис функції має вигляд:
+  .example
+    ul
+      li <span class="text-bold">Function</span> ім’я_функції (список формальних параметрів): тип значення, що буде повертатися;
+        ul
+          li розділ опису
+      li <span class="text-bold">begin</span>
+        ul
+          li оператори
+      li <span class="text-bold">end;</span>
+  p.text-bold Виклик функції в програмі:
+  .example
+    ul
+      li ім’я_функції (фактичні параметри);
+  p <span class="text-bold"> Приклад:</span> скласти програму <span class="accent">з функцією Sum</span>, що буде складати два числа і повертати їх значення.
+  .example
+    ul
+      li <span class="text-bold">Program</span> NumberSum;
+      li <span class="text-bold">var</span>
+        ul
+          li a, b: <span class="color-accent">integer</span>;
+      li 
+        <span class="text-bold">function</span> Sum(x, y: <span class="color-accent">integer</span>) : <span class="color-accent">integer</span>;
+        ul
+          li <span class="text-bold">begin</span>
+            ul
+              li Sum := x + y;
+          li <span class="text-bold">end</span>;
+      li <span class="text-bold">begin</span>
+        ul
+          li Readln(a, b);
+          li WriteLn(<span class="color-accent">&#39;Сума двох чисел дорівнює&#39;</span>,Sum(a, b));
+      li <span class="text-bold">end.</span>

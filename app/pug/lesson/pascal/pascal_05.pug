@@ -1,0 +1,247 @@
+.lesson-page
+  h1.lesson-title Умовний оператор
+  p Алгоритми, в яких пропонується виконання ті чи інші послідовності дій в залежності від деяких умов, називаються алгоритмами з розгалуженням.
+  p Для реалізації таких алгоритмів в мовах програмування існують спеціальні засоби. В Pascal такими засобами є <span class="accent">умовний оператор</span> і <span class="accent">оператор варіанту</span>. Кожен умовний оператор передбачає виконання однієї з двох дій в залежності від істинності деякої умови.
+  p Умовний оператор може використовуватися в повній або скороченій формі.
+
+  h3.accent.lesson-subtitle Схема умовного оператора.
+  .block-less
+    .block-less__img
+      <img src="../img/lesson/pass/less-pass-5-01.jpg" alt="Схема умовного оператора">
+    .block-less__text
+      .example
+        ul
+          li <span class="text-bold">if</span> (умова)
+            ul
+              li <span class="text-bold">then</span>
+                ul
+                  li оператор_А
+              li <span class="text-bold">else</span>
+                ul
+                  li оператор_B;
+  p <span class="accent">A</span> та <span class="accent">B</span> - деякі оператори.
+  h3.accent.lesson-subtitle Скорочена схема умовного оператора.
+  .block-less
+    .block-less__img
+      <img src="../img/lesson/pass/less-pass-5-02.jpg" alt="Скорочена схема умовного оператора">
+    .block-less__text
+      .example
+        ul
+          li <span class="text-bold">if</span> (умова)
+            ul
+              li <span class="text-bold">then</span>
+                ul
+                  li оператор_А;
+  p Ключові слова, які використовуються в умовному операторі, мають наступний сенс:
+  p.text-center.text-bold.middle-text <span class="accent">if</span> – якщо, <span class="accent">then</span> – то, <span class="accent">else</span> – інакше.
+  p Умовою в умовному операторі може бути будь-який вираз логічного типу, тобто вираз, який може приймати одне з двох значень: <span class="accent">True</span>, <span class="accent">False</span>.
+  p Найпростішими логічними виразами є вирази відносин, в Pascal використовуються наступні позначення відносин:
+  .example
+    ul
+      li <span class="accent">= </span> - дорівнює;
+      li <span class="accent">&#60;&#62;</span> - не дорівнює
+      li <span class="accent">&#62;</span> - більше;
+      li <span class="accent">&#60;</span> - меньше;
+      li <span class="accent">&#62;=</span> - більше або дорівнює;
+      li <span class="accent">&#60;=</span> - меньше або дорівнює.
+
+  p <span class="text-bold">Приклад:</span> скласти програму обчислення значення функції:
+  .example
+    .formula-less
+      .formula-less__item у =
+      .formula-less__item.brace-2 {
+      .formula-less__item x, при x < 0 <br> x<sup>2</sup>, при x = 0
+    ul
+      li <span class="text-bold">program</span> First_Function;
+      li <span class="text-bold">var</span>
+        ul
+          li x, y: <span class="color-accent">real</span>;
+      li <span class="text-bold">begin</span>
+        ul
+          li wrile (<span class="color-accent">&#39; ввести значення x: &#39;</span>);
+          li read (x);
+          li <span class="text-bold">if</span> (x < <span class="color-excel">0</span>)
+            ul
+              li <span class="text-bold">then</span>
+                ul
+                  li y := x
+                li <span class="text-bold">else</span>
+                  ul
+                    li y := Sqr(x);
+          li writeln (<span class="color-accent">&#39;y = &#39;</span>, y);
+      li <span class="text-bold">end.</span>
+
+  h3.accent.lesson-subtitle Логічні операції.
+  p Логічні вирази (умови) можуть складатися з декількох частин. При цьому різні їх частини, також є логічними виразами (простими або складеними), які з'єднуються один з одним за допомоги наступних логічних операцій:
+  .example
+    ul
+      li <span class="accent">not</span> - заперечення (<span class="accent">не</span>);
+      li <span class="accent">and</span> - кон'юнкція або логічне множення (<span class="accent">і</span>);
+      li <span class="accent">or </span> - диз'юнкція або логічне додавання (<span class="accent">або</span>).
+  p.text-bold Приклад:
+  .example
+    ul
+      li <span class="text-bold">not</span>(Odd(x));
+      li (a > <span class="color-excel">10</span>) <span class="text-bold">and</span> (a < <span class="color-excel"> 20</span>);
+      li (y = <span class="color-excel">2</span>) <span class="text-bold">or</span> (y = <span class="color-excel">3</span>);
+  p При обчисленні значень логічних виразів дотримуються наступного порядку дій:
+  ol.list
+    li Обчислюються значення логічних функцій;
+    li Обчислюються результати операцій порівняння;
+    li Обчислюються логічні операції в послідовності:
+  p.text-bold.text-center.middle-text <span class="accent">not</span> -----------> <span class="accent">and</span> -----------> <span class="accent">or</span>
+  ol.table-truth
+    li <span class="accent">not</span> (не)
+      ul
+        <li class="text-bold"><span class="color-red">not</span> False = True
+        <li class="text-bold"><span class="color-red">not</span> True = False
+    br
+    li <span class="accent">and</span> (і)
+      ul
+        <li class="text-bold">True <span class="color-red">and </span>True = True
+        <li class="text-bold">True <span class="color-red">and </span>False = False
+        <li class="text-bold">False<span class="color-red"> and</span> True = False
+        <li class="text-bold">False<span class="color-red"> and</span> False = False 
+    br
+    li <span class="accent">or </span> (або)
+      ul
+        <li class="text-bold">True <span class="color-red">or </span>True = True
+        <li class="text-bold">True <span class="color-red">or </span>False = True
+        <li class="text-bold">False<span class="color-red"> or</span> True = True
+        <li class="text-bold">False<span class="color-red"> or</span> False = False
+
+  h3.accent.lesson-subtitle Составний оператор.
+  p В умовному операторі після ключових слів <span class="accent">then</span> та <span class="accent">else</span> може стояти <span class="text-bold color-red">лише один оператор</span>. Щоб обійти це обмеження, використовують составний оператор.
+  p.text-bold Составний оператор має наступну структуру:
+  .example
+    ul
+      li <span class="text-bold">begin</span>
+        ul
+          li оператор_1;
+          li <span class="text-bold">…</span>
+          li оператор_n;
+      li <span class="text-bold">end;</span>
+
+
+  p Ключові слова <span class="accent">begin</span> і <span class="accent">end</span> виконують роль операторних дужок. Тіло будь-якої програми є один складений оператор. Составний оператор можна поміщати в будь-якому місці програми, де за правилами мови <span class="accent">Pascal</span> можна використовувати тільки один оператор, а за умовою задачі потрібно кілька.
+  p Умовний оператор, при використанні його в структурі складеного оператора, виглядає наступним чином:
+  .example
+    ul
+      li <span class="text-bold">if</span> (умова)
+        ul
+          li <span class="text-bold">then</span>
+            ul
+              li <span class="text-bold">begin</span>
+                ul
+                  li оператор_1;
+                  li <span class="text-bold">…</span>
+                  li оператор_n;
+              li <span class="text-bold">end</span>
+          li <span class="text-bold">else</span>
+            ul
+              li <span class="text-bold">begin</span>
+                ul
+                  li оператор_n+1;
+                  li <span class="text-bold">…</span>
+                  li оператор_n+m;
+              li <span class="text-bold">end;</span>
+
+  h3.accent.lesson-subtitle Вкладені умови.
+  p В умовному операторі, в якості <span class="accent">оператора_А</span> і <span class="accent">оператора_В</span> в Pascal дозволяється використовувати будь-які оператори, в тому числі і умовні.
+  p Таким чином, в Паскалі можливо вкладення умовних операторів по одній з наступних схем:
+  ol.red-num
+    li.red-num__item
+      .example
+        ul
+          li <span class="text-bold">if</span> (умова_1)
+            ul
+              li <span class="text-bold">then</span>
+                ul
+                  li <span class="text-bold">if</span> (умова_2)
+                    ul
+                      li <span class="text-bold">then</span>
+                        ul
+                          li оператор_1
+                      li <span class="text-bold">else</span>
+                        ul
+                          li оператор_2
+                li <span class="text-bold">else</span>
+                ul
+                  li оператор_3;
+    p
+    li.red-num__item
+      .example
+        ul
+          li <span class="text-bold">if</span> (умова_1)
+            ul
+              li <span class="text-bold">then</span>
+                ul
+                  li оператор_1
+              li <span class="text-bold">else</span>
+                ul
+                  li <span class="text-bold">if</span> (умова_2)
+                    ul
+                      li <span class="text-bold">then</span>
+                        ul
+                          li оператор_2
+                      li <span class="text-bold">else</span>
+                        ul
+                          li оператор_3;
+    p
+    li.red-num__item
+      .example
+        ul
+          li <span class="text-bold">if</span> (умова_1)
+            ul
+              li <span class="text-bold">then</span>
+                ul
+                  li <span class="text-bold">if</span> (умова_2)
+                    ul
+                      li <span class="text-bold">then</span>
+                        ul
+                          li оператор_1
+                      li <span class="text-bold">else</span>
+                        ul
+                          li оператор_2
+              li <span class="text-bold">else</span>
+                ul
+                  li <span class="text-bold">if</span> (умова_3)
+                    ul
+                      li <span class="text-bold">then</span>
+                        ul
+                          li оператор_3
+                      li <span class="text-bold">else</span>
+                        ul
+                          li оператор_4.
+  p <span class="text-bold">Приклад:</span> скласти програму обчислення значення функції:
+  .example
+    .formula-less
+      .formula-less__item у =
+      .formula-less__item.brace-3 {
+      .formula-less__item x, при x < 0 <br> 0, при 0 <= x < 1 <br> x<sup>2</sup>, при x = 0
+    ul
+      li <span class="text-bold">program</span> Next_Function;
+      li <span class="text-bold">var</span>
+        ul
+          li x, y: <span class="color-accent">real</span>;
+      li <span class="text-bold">begin</span>
+        ul
+          li wrile (<span class="color-accent">&#39;ввести значення x:&#39;</span>);
+          li read (x);
+          li <span class="text-bold">if</span> (x < <span class="color-excel">0</span>) 
+            ul
+              li <span class="text-bold">then</span>
+                ul
+                  li y := x
+              li <span class="text-bold">else</span>
+                ul
+                  li <span class="text-bold">if</span> (x < <span class="color-excel">1</span>) 
+                    ul
+                      li <span class="text-bold">then</span>
+                        ul
+                          li y := <span class="color-excel">0</span>
+                      li <span class="text-bold">else</span>
+                        ul
+                          li y := <span class="color-excel">2</span> * x;
+          li writeln (<span class="color-accent">&#39;y = &#39;</span>, y);
+      li <span class="text-bold">end.</span>

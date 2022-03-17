@@ -1,0 +1,443 @@
+.lesson-page
+  h1.lesson-title Текстові функції, обробка текстових даних в <span class="accent">Excel</span>
+  .function
+    h5.function-title-exel
+      <u>concat</u> (<u>сцеп</u>)
+    p.text-bold
+      <span class="function-name color-red">concat</span>(Text1;[Text2]) –
+      <span class="accent">об'єднання кілька текстових рядків в одну строку.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Text1</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текстове значення, число чи посилання на клітинку або їх діапазон.
+      .function-descr__arg
+        <span class="text-bold ">Text2</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text додаткові елементи для об'єднання, можна вказати до 255 елементів.
+
+  p.text-bold Зауваження:
+  ul.list
+    <li>текстові дані завжди необхідно брати у лапки;
+    <li>якщо між елементами потрібно вставляти пропуски або інші знаки, їх також треба додавати як окремі аргументи.
+
+  h3.accent.lesson-subtitle Приклади використання функції CONCAT.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> помістити навпроти творів повні прізвища їх авторів, таким чином щоб вони знаходилися у одній клітинці. Прізвища авторів знаходяться у додатковій таблиці.
+  p.text-bold Розв’язок:</span>
+    ul.list
+      <li>починаємо складати формулу; 
+      <li>в якості першого аргументу функції <span class="accent">CONCAT</span> вказуємо перше текстове значення – <span class="accent">B4</span>;
+      <li>далі додаємо пропуск – <span class="accent">&#34; &#34;</span>;
+      <li>вказуємо наступне текстове значення – <span class="accent">С4</span>;
+      <li>знову додаємо пропуск і так далі;
+      <li>після складання формули натискаємо клавішу <span class="accent">Enter</span> для отримання результату.
+  <p class="text-bold text-center">=<span class="accent">CONCAT</span>(<span class="text-bold color-blue">B4</span>;<span class="accent">&#34; &#34;</span>;<span class="text-bold color-red">C4</span>;<span class="accent">&#34; &#34;</span>;<span class="text-bold color-purple">D4</span>)
+  
+  .function
+    .function-title-exel
+      <u>textjoin</u> (<u>объединить</u>)
+    p.text-bold <span class="function-name color-red">textjoin</span>(Delimiter; Ignore_empty; Text1; [Text2]) – <span class="accent">об'єднує текст з декількох діапазонів і (або) рядків, вставляючи між текстовими значеннями вказаний роздільник.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Delimiter</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text роздільник, текстовий рядок (порожній або з символами в подвійних лапках) або посилання на текстовий рядок.
+      .function-descr__arg
+        <span class="text-bold ">Ignore_empty</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text якщо аргумент отримує значення TRUE, функція ігнорує порожні клітинки.
+      .function-descr__arg
+        <span class="text-bold ">Text1</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text елемент тексту, який потрібно приєднати. Текстовий рядок або масив рядків, наприклад діапазон клітинок.
+      .function-descr__arg
+        <span class="text-bold ">Text2</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text додаткові текстові елементи для об'єднання, можна вказати до 252 елементів.
+  
+  p.text-bold Зауваження:
+  ul.list
+    <li>якщо об'єднаний рядок який містить більше ніж 32767 символів (обмеження для клітинки), функція <span class="text-bold">TEXTJOIN</span> поверне помилку <span class="text-bold">#VALUE!</span>.
+
+  h3.accent.lesson-subtitle Приклади використання функції TEXTJOIN.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> помістити навпроти творів повні прізвища їх авторів, таким чином щоб вони знаходилися у одній клітинці. Прізвища авторів знаходяться у додатковій таблиці.
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">TEXTJOIN</span> вказуємо роздільник пропуск – <span class="accent">&#34; &#34;</span>;
+    <li>далі вказуємо чи буде формула ігнорувати порожні клітинки – <span class="accent">TRUE</span>;
+    <li>виділяємо діапазон клітинок які треба об’єднати – <span class="accent">B4:D4</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">TEXTJOIN</span>(<span class="text-bold color-blue">&#34; &#34;</span>;<span class="text-bold color-red">ИСТИНА</span>;<span class="accent">B4:D4</span>)
+  .function
+    .function-title-exel
+      <u>trim</u> (<u>сжпробелы</u>)
+    p.text-bold <span class="function-name color-red">trim</span>(Text) – <span class="accent">видаляє з тексту зайві пропуски, окрім поодиноких між словами.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текст, з якого видаляються зайві пропуски, може бути посиланням або текстовою строчкою.
+
+  h3.accent.lesson-subtitle Приклади використання функції TRIM.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> видалити з тексту зайві пропуски.
+  p.text-bold Розв’язок:
+  ul.list
+    <li>починаємо складати формулу;
+    <li>вказуємо клітинку у якій знаходиться текст с зайвими пропусками – <span class="accent">B3</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">TRIM</span>(<span class="text-bold color-blue">B3</span>)
+  .function
+    .function-title-exel
+      <u>upper</u> (<u>прописн</u>)
+    p.text-bold <span class="function-name color-red">upper</span>(Text) – <span class="accent">повертає всі великі літери тексту з клітинки.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текст, що буде переведений у нижній регістр, може бути посиланням або текстовою строчкою.
+
+  h3.accent.lesson-subtitle Приклади використання функції UPPER.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> перевести літери з яких складаються назви програм у верхній регістр.
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li>починаємо складати формулу;
+    <li>вказуємо клітинку у якій знаходиться текст – <span class="accent">B3</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">UPPER</span>(<span class="text-bold color-blue">B3</span>)
+  .function
+    .function-title-exel
+      <u>lower</u> (<u>строчн</u>)
+    p.text-bold <span class="function-name color-red">lower</span>(Text) – <span class="accent">повертає всі великі літери тексту з клітинки.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текст, що буде переведений у верхній регістр, може бути посиланням або текстовою строчкою.
+
+  h3.accent.lesson-subtitle Приклади використання функції LOWER.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> перевести літери з яких складаються назви програм у верхній регістр.
+  p.text-bold Розв’язок:
+  ul.list
+    <li>починаємо складати формулу;
+    <li>вказуємо клітинку у якій знаходиться текст – <span class="accent">B3</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">LOWER</span>(<span class="text-bold color-blue">B3</span>)
+
+  .function
+    .function-title-exel
+      <u>proper</u> (<u>пропнач</u>)
+    p.text-bold <span class="function-name color-red">proper</span>(Text) – <span class="accent">перша буква в тексті і всі перші букви, наступні за знаками, відмінними від букв, перетворюються в прописні (великі букви). Усі інші букви в тексті перетворюються на малі (нижній регістр).</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текст, в якому потрібно замінити деякі букви на прописні, може бути посиланням або текстовою строчкою.
+
+  h3.accent.lesson-subtitle Приклади використання функції PROPER.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> перевести літери з яких складаються назви програм у верхній регістр.
+  p.text-bold Розв’язок:
+  ul.list
+    <li>починаємо складати формулу;
+    <li>вказуємо клітинку у якій знаходиться текст – <span class="accent">B3</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">PROPER</span>(<span  class="text-bold color-blue">B3</span>)
+
+  .function
+    .function-title-exel
+      <u>left</u> (<u>левсимв</u>)
+    p.text-bold <span class="function-name color-red">left</span>(Text;[Num_chars]) – <span class="accent">повертає вказану кількість символів з початку рядка тексту.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текстовий рядок, що містить символи, які потрібно витягти.
+      .function-descr__arg
+        <span class="text-bold ">Num_chars</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text  кількість символів, які потрібно витягти.
+
+  p.text-bold Зауваження:
+  ul.list
+    <li>якщо <span class="text-bold">Num_chars</span> перевищує довжину тексту, функція <span class="text-bold">LEFT</span> поверне увесь текст з клітинки;
+    <li>якщо аргумент <span class="text-bold">Num_chars</span> невказаний, то за замовчуванням вважається рівним <span class="text-bold">1</span>.
+
+  h3.accent.lesson-subtitle Приклади використання функції LEFT.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> з існуючої дати народження взяти лише тільки день самого народження.
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">LEFT</span> вказуємо клітинку з текстом – <span class="accent">B3</span>;
+    <li>далі вказуємо кількість знаків які повертатиме функція з текстової строки – <span class="accent">2</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">LEFT</span>(<span class="text-bold color-blue">B3</span>)
+
+  .function
+    .function-title-exel
+      <u>right</u> (<u>правсимв</u>)
+    p.text-bold <span class="function-name color-red">right</span>(Text;[Num_chars]) – <span class="accent">повертає вказану кількість символів з кінця рядка тексту.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текстовий рядок, що містить символи, які потрібно витягти.
+      .function-descr__arg
+        <span class="text-bold ">Num_chars</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text кількість символів, які потрібно витягти.
+
+  p.text-bold Зауваження:</span>
+  ul.list
+    <li>якщо <span class="text-bold">Num_chars</span> перевищує довжину тексту, функція <span class="text-bold">RIGHT</span> поверне увесь текст з клітинки;
+    <li>якщо аргумент <span class="text-bold">Num_chars</span> невказаний, то за замовчуванням вважається рівним <span class="text-bold">1</span>.
+
+
+  h3.accent.lesson-subtitle Приклади використання функції RIGHT.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> з існуючої дати народження взяти лише тільки рік народження.
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">RIGHT</span> вказуємо клітинку з текстом – <span class="accent">B3</span>;
+    <li>далі вказуємо кількість знаків які повертатиме функція з текстової строки – <span class="accent">4</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">RIGHT</span>(<span class="text-bold color-blue">B3</span>)
+
+  .function
+    .function-title-exel
+      <u>mid</u> (<u>пстр</u>)
+    p.text-bold <span class="function-name color-red">mid</span>(Text;Start_num;Num_chars) – <span class="accent">повертає задане число символів з рядка тексту, починаючи з вказаної позиції.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текстовий рядок, що містить символи, які потрібно витягти.
+      .function-descr__arg
+        <span class="text-bold ">Start_num</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text позиція першого знака, що витягується з тексту.
+      .function-descr__arg
+        <span class="text-bold ">Num_chars</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text кількість символів, які потрібно витягти.
+
+  p.text-bold Зауваження:
+  ul.list
+    <li>якщо <span class="text-bold">Start_num</span> перевищує довжину тексту, функція <span class="text-bold">MID</span> поверне порожнє значення;
+    <li>якщо значення <span class="text-bold">Start_num</span> менше, ніж довжина тексту, але сума значень <span class="text-bold">Start_num</span> і <span class="text-bold">Num_chars</span> перевищують довжину тексту, функція <span class="text-bold">MID</span> поверне увесь текст.
+
+  h3.accent.lesson-subtitle Приклади використання функції MID.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> з існуючої дати народження взяти лише тільки місяць народження.
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">MID</span> вказуємо клітинку з текстом – <span class="accent">B3</span>;
+    <li>далі вказуємо позицію першого знаку у тексті – <span class="accent">4</span>;
+    <li>вказуємо кількість знаків що треба повернути – <span class="accent">2</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">MID</span>(<span class="text-bold color-blue">B3</span>;<span class="text-bold color-red">4</span>;<span class="accent">2</span>)
+
+  .function
+    .function-title-exel
+      <u>find</u> (<u>найти</u>)
+    p.text-bold <span class="function-name color-red">find</span>(Find_text;Within_text;[Start_num]) – <span class="accent">визначає початкову позицію символу (або символів) у зазначеному текстовому рядку з <u>урахуванням регістру</u>.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Find_text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текст, який необхідно знайти.
+      .function-descr__arg
+        <span class="text-bold ">Within_text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текст, в якому потрібно знайти шуканий текст.
+      .function-descr__arg
+        <span class="text-bold ">Start_num</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text знак, з якого потрібно почати пошук.
+
+  p.text-bold Зауваження:
+  ul.list
+    <li>якщо <span class="text-bold">Start_num</span> не вказувати, функція <span class="text-bold">FIND</span> почне пошук з початку текстового рядка;
+
+  h3.accent.lesson-subtitle Приклади використання функції FIND.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> визначити положення підрядка &#34;Excel&#34; в текстовому рядку &#34;Microsoft Office Excel&#34;.
+  p.text-bold Розв’язок:
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">FIND</span> вказуємо текст, що потрібно знайти – <span class="accent">&#34;Excel&#34;</span>;
+    <li>далі вказуємо адресу клітинки яка містить текст, в якому потрібно знайти шуканий текст – <span class="accent">В2</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">FIND</span>(<span class="text-bold color-blue">&#34;Excel&#34;</span>;<span class="text-bold color-red">B2</span>)
+
+  .function
+    .function-title-exel
+      <u>search</u> (<u>поиск</u>)
+    p.text-bold <span class="function-name color-red">search</span>(Find_text;Within_text;[Start_num]) – <span class="accent">визначає позицію першого входження символу або рядка тексту в зазначеному текстовому рядку <u>без урахування регістру</u>.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Find_text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текст, який необхідно знайти.
+      .function-descr__arg
+        <span class="text-bold ">Within_text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текст, в якому потрібно знайти шуканий текст.
+      .function-descr__arg
+        <span class="text-bold ">Start_num</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text знак, з якого потрібно почати пошук.
+
+  p.text-bold Зауваження:
+  ul.list
+    <li>якщо <span class="text-bold">Start_num</span> не вказувати, функція <span class="text-bold">SEARCH</span> почне пошук з початку текстового рядка;
+
+  h3.accent.lesson-subtitle Приклади використання функції SEARCH.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> визначити положення підрядка &#34;Excel&#34; в текстовому рядку &#34;Microsoft Office Excel&#34;.
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">SEARCH</span> вказуємо текст, що потрібно знайти – <span class="accent">&#34;Excel&#34;</span>;
+    <li>далі вказуємо адресу клітинки яка містить текст, в якому потрібно знайти шуканий текст – <span class="accent">В2</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">SEARCH</span>(<span class="text-bold color-blue">&#34;Excel&#34;</span>;<span class="text-bold color-red">B2</span>)
+ 
+  .function
+    .function-title-exel
+      <u>len</u> (<u>длстр</u>)
+    p.text-bold <span class="function-name color-red">len</span>(Text) – <span class="accent">визначає кількість символів в текстовому рядку.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текст, довжину якого потрібно визначити. Пропуски рахуються як символи.
+
+  h3.accent.lesson-subtitle Приклади використання функції LEN.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> визначити скільки знаків міститься у текстовому рядку: &#34;Microsoft Office Excel&#34;.
+  p.text-bold Розв’язок:
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">LEN</span> вказуємо текст довжину якого потрібно визначити – <span class="accent">В2</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+  <p class="text-bold text-center">=<span class="accent">LEN</span>(<span class="text-bold color-blue">B2</span>)
+
+  .function
+    .function-title-exel
+      <u>rept</u> (<u>повтор</u>)</h5>
+    p.text-bold <span class="function-name color-red">rept</span>(Text;Number_times) – <span class="accent">повторює текст указану кількість разів.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Text</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text текст, який потрібно повторити.
+      .function-descr__arg
+        <span class="text-bold ">Number_times</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text число, що визначає, скільки разів потрібно повторити текст.
+
+  p.text-bold Зауваження:</span>
+  ul.list
+    <li>якщо аргумент <span class="text-bold">Number_times</span> дорівнює 0 (нулю), функція <span class="text-bold">REPT</span> повертає «» (пустий текст);
+    <li>якщо в якості аргументу <span class="text-bold">Number_times</span> вказати не ціле число, то його остаток буде автоматично відкидатися;
+    <li>результат функції <span class="text-bold">REPT</span> не має перевищувати 32767 символів, інакше функція <span class="text-bold">REPT</span> поверне значення помилки <span class="text-bold">#VALUE!</span>.
+
+
+
+  h3.accent.lesson-subtitle Приклади використання функції REPT.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> Використовуючи функцію REPT додати до номеру бонусної карти п'ять нулів, щоб отримати наступне значення – 000005982.
+  
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">REPT</span> вказуємо текст, що необхідно повторювати – <span class="accent">&#34;0&#34;</span>;
+    <li>далі вказуємо скільки разів потрібно повторити текст. – <span class="accent">5</span>;
+    <li>за допомоги знаку <span class="accent">&</span> об’єднуємо отриманий текст з останніми цифрами номера бонусної карти;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">REPT</span>(<span class="text-bold color-blue">&#34;0&#34;</span>;<span class="text-bold color-red">5</span>)&<span class="accent">B3</span>

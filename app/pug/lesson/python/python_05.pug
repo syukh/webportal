@@ -1,0 +1,190 @@
+.lesson-page
+  h1.lesson-title Логічний тип даних. Інструкція розгалуження.
+  h3.accent.lesson-subtitle Логічний тип даних.
+  p <span class="accent">Логічний</span> (<span class="accent">Булевий</span>) <span class="accent">тип</span> даних в <span class="accent">Python</span> відноситься до цілочисельного типу. Для цього типу визначені лише дві константи <span class="accent">True</span> і <span class="accent">False</span>.
+  p Зверніть увагу, що в іменах констант <span class="accent">True</span> і <span class="accent">False перша буква - прописна</span>.
+  p Значення логічного типу можна перетворювати, наприклад, застосувавши функцію перетворення <span class="accent">int</span> до логічного <span class="accent">True</span>  – отримаємо <span class="accent">1</span>, а перетворення <span class="accent">False</span>  дасть <span class="accent">0</span>. При зворотному перетворенні, число <span class="accent">0</span>  перетворюється в <span class="accent">False</span>, а будь-яке число більше нуля в <span class="accent">True</span>. Якщо перетворювати порожній рядок, то отримаємо логічне <span class="accent">False</span>, а будь-який непорожній рядок перетвориться в <span class="accent">True</span>.
+  p Для перетворення до логічного типу використовується стандартна функція <span class="accent">bool()</span>.
+
+  h3.accent.lesson-subtitle Оператори порівняння.
+  p В <span class="accent">Python</span> для порівняння об’єктів (змінних різних типів) використовують операції порівняння.
+  p.text-bold До операцій порівняння належать наступні операції:
+  .example
+    ul.example-program.list
+      li <span class="accent"><</span> – менше;
+      li <span class="accent"><=</span> – менше або дорівнює;
+      li <span class="accent">></span> – більше;
+      li <span class="accent">>=</span> – більше або дорівнює;
+      li <span class="accent">==</span> – дорівнює;
+      li <span class="accent">!=</span> – не дорівнює.
+  p За замовчуванням, ці операції мають однаковий пріоритет, тому при виконанні обчислень вмикається асоціативність (порядок обчислення), для операцій порівняння вона ліва – обчислення відбувається з права на ліво. З іншого боку це дозволяє об’єднувати операції порівняння  в ланцюги, і на відміну від більшості мов програмування, не використовувати логічні оператори. 
+  .example.otstup
+    p.text-bold Приклад:
+    ul.example-program.list
+      li 
+        .example-program__str print(<span class="color-excel">4</span> > <span class="color-excel">3</span> <= <span class="color-excel">7</span> != <span class="color-excel">3</span> < <span class="color-excel">2</span>)
+        .example-program__str <span class="color-excel"># False</span>
+
+  h3.accent.lesson-subtitle Логічні операції.
+  p Логічні вирази (умови) можуть складатися з декількох частин. При цьому різні їх частини, також є логічними виразами (простими або складеними), які з’єднуються один з одним за допомоги наступних логічних операцій:
+  ol
+    li <span class="accent">or</span> – диз’юнкція або логічне додавання (<span class="accent">або</span>);
+    li <span class="accent">and</span> – кон’юнкція або логічне множення (<span class="accent">і</span>);
+    li <span class="accent">not</span> – заперечення (<span class="accent">не</span>).
+  p На відміну від операцій порівняння, <span class="color-excel">л</span>огічні операції мають різний пріоритет</span> (за вказаним порядком) але більш високий, ніж операції порівняння. Тому, в виразах з операціями порівняння, для зміни порядку обчислень, необхідно використовувати дужки.
+  .example.otstup
+    p.text-bold Приклад:
+    ul.example-program.list
+      li 
+        .example-program__str print(<span class="color-excel">4</span> > <span class="color-excel">3</spn> or <span class="color-excel">3</spn> < <span class="color-excel">2</span> and <span class="color-excel">4</spn> == <span class="color-excel">5</spn>)
+        .example-program__str <span class="color-excel"># True</span>
+      li
+        .example-program__str print((<span class="color-excel">4</spn> > <span class="color-excel">3</span> or <span class="color-excel">3</span> < <span class="color-excel">2</spn>) and <span class="color-excel">4</spn> == <span class="color-excel">5</spn>)
+        .example-program__str <span class="color-excel"># False</span>
+  p.text-bold Таблиця істинності логічних операцій:
+  ol.table-truth
+    li <span class="accent">not</span> (не)
+      ul
+        <li class="text-bold"><span class="color-red">not</span> False = True
+        <li class="text-bold"><span class="color-red">not</span> True = False
+    br
+    li <span class="accent">and</span> (і)
+      ul
+        <li class="text-bold">True <span class="color-red">and </span>True = True
+        <li class="text-bold">True <span class="color-red">and </span>False = False
+        <li class="text-bold">False<span class="color-red"> and</span> True = False
+        <li class="text-bold">False<span class="color-red"> and</span> False = False 
+    br
+    li <span class="accent">or </span> (або)
+      ul
+        <li class="text-bold">True <span class="color-red">or </span>True = True
+        <li class="text-bold">True <span class="color-red">or </span>False = True
+        <li class="text-bold">False<span class="color-red"> or</span> True = True
+        <li class="text-bold">False<span class="color-red"> or</span> False = False 
+
+  h3.accent.lesson-subtitle Інструкція розгалуження.
+  p Алгоритми, в яких відбувається виконання тих чи інших послідовностей дій в залежності від деяких умов, називаються алгоритмами з розгалуженням. 
+  p Для реалізації таких алгоритмів в мовах програмування існують спеціальні засоби. В <span class="accent">Python</span> такими засобами є <span class="accent">інструкція розгалуження і вкладені інструкції розгалуження</span>.
+  p Кожна інструкція розгалуження передбачає виконання однієї з двох дій в залежності від істинності деякої умови. Інструкція розгалуження може використовуватися в повній або скороченій формі.
+  
+  h3.accent.lesson-subtitle Блок-схема повного розгалуження.
+  .block-less
+    .block-less__img
+      <img src="../img/lesson/python/less-pyton-5-01.jpg" alt="Схема повного розгалуження">
+    .block-less__text
+      .example
+        ul
+          li <span class="accent">if</span> логічний_вираз<span class="accent">:</span>
+            ul
+              li блок_інструкцій_А
+          li <span class="accent">else:</span>
+            ul
+              li блок_інструкцій_B
+  p
+  p Виконання інструкції повного розгалуження відбувається наступним чином: обчислюється  <span class="accent">значення логічного виразу</span>, якщо логічний вираз повертає значення <span class="accent">True</span>, то далі <span class="accent">виконується блок_інструкцій_А</span>, після чого програма переходить до виконання першої інструкції наступного фрагмента алгоритму; якщо ж логічний вираз повертає значення <span class="accent">False</span>, то <span class="accent">виконується блок_інструкцій_В</span>, а потім наступні інструкції.
+  p Звернемо увагу, що у блоках <span class="accent">if</span> та <span class="accent">else</span> для внутрішніх блоків інструкцій треба робити відступи. Важливо щоб відступи були однакової довжини, тому для їх встановлення доцільно використовувати табуляцію або ставити рівну кількість пропусків (рекомендується використовувати відступ в 4 пропуски).
+  p Для сумісності коду, не слід використовувати в оформленні блоків змішані символи (табуляції і пропуску). <span class="accent">Python</span> має самобутній синтаксис в якому відступи – частина суворого синтаксису. Порушення цих правил призведе до синтаксичної помилки. 
+  p Відступи є обмежувачами блоку. Блоком називається інструкція або група інструкцій, які виконуються як одна.
+  .example.otstup
+    p <span class="text-bold">Приклад:</span> скласти програму, яка буде знаходити максимальне з двох чисел.
+    ul.example-program.list
+      li a = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть перше число а = &#39;</span>)) 
+      li b = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть друге число b = &#39;</span>))
+      li <span class="text-bold">if</span> (a>b)<span class="text-bold">:</span>
+        ul
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Максимальне число&#39;</span>, а)
+      li <span class="text-bold">else:</span>
+        ul
+          li <span class="text-bold">print</span>(<span class="color-accent">&#39;Максимальне число&#39;</span>, b)
+  
+  h3.accent.lesson-subtitle Блок-схема скороченого розгалуження.
+  .block-less
+    .block-less__img
+      <img src="../img/lesson/python/less-pyton-5-02.jpg" alt="Схема скороченного розгалуження">
+    .block-less__text
+      .example
+        ul
+          li <span class="accent">if</span> логічний_вираз<span class="accent">:</span>
+            ul
+              li блок_інструкцій_А
+  p
+  p Як бачимо, інструкція розгалуження може мати ще і  неповну форму, якщо в ній  відсутня гілка <span class="accent">else</span>, тобто відсутнє службове слово <span class="accent">else</span> з відповідним йому блоком інструкцій.
+  .example.otstup
+    p <span class="text-bold">Приклад:</span> скласти програму, яка буде знаходити розв’язок наступного рівняння: <span class="accent">х = а ÷ b</span>, за умови, що <span class="accent">b</span> не дорівнює нулю.
+    ul.example-program.list
+      li a = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть перше число а = &#39;</span>)) 
+      li b = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть друге число b = &#39;</span>))
+      li <span class="text-bold">if</span> (b != <span class="color-excel">0</span>)<span class="text-bold">:</span>
+        ul
+          li <span class="text-bold">print</span>(a/b)
+
+  h3.accent.lesson-subtitle Вкладені інструкції розгалуження.
+  p В інструкції розгалуження, в якості <span class="accent">блоків інструкцій А</span> та <span class="accent">В</span> дозволяється використовувати будь-які інструкції в тому числі і інструкції розгалуження. Таким чином, в <span class="accent">Python</span> можливо вкладення інструкції розгалуження по одній з наступних схем:
+  ol.red-num
+    li.red-num__item
+      .example
+        ul
+          li <span class="accent">if</span> логічний_вираз_1<span class="accent">:</span>
+            ul
+              li <span class="accent">if</span> логічний_вираз_2<span class="accent">:</span>
+                ul
+                  li блок_інструкцій_А
+              li <span class="accent">else:</span>
+                ul
+                  li блок_інструкцій_B
+          li <span class="accent">else:</span>
+            ul
+              li блок_інструкцій_С
+    li.red-num__item
+      .example
+        ul
+          li <span class="accent">if</span> логічний_вираз_1<span class="accent">:</span>
+            ul
+              li блок_інструкцій_А
+          li <span class="accent">else:</span>
+            ul
+              li <span class="accent">if</span> логічний_вираз_2<span class="accent">:</span>
+                ul
+                  li блок_інструкцій_B
+              li <span class="accent">else:</span>
+                ul
+                  li блок_інструкцій_С
+    li.red-num__item
+      .example
+        ul
+          li <span class="accent">if</span> логічний_вираз_1<span class="accent">:</span>
+            ul
+              li <span class="accent">if</span> логічний_вираз_2<span class="accent">:</span>
+                ul
+                  li блок_інструкцій_А
+              li <span class="accent">else:</span>
+                ul
+                  li блок_інструкцій_B
+          li <span class="accent">else:</span>
+            ul
+              li <span class="accent">if</span> логічний_вираз_3<span class="accent">:</span>
+                ul
+                  li блок_інструкцій_C
+              li <span class="accent">else:</span>
+                ul
+                  li блок_інструкцій_D
+  p <span class="text-bold">Приклад:</span> скласти програму обчислення значення функції:
+  .example
+    .formula-less
+      .formula-less__item у =
+      .formula-less__item.brace-3 {
+      .formula-less__item x, при x < 0 <br> 0, при 0 <= x < 1 <br> 2*x, при x > 1
+    ul
+      li x = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть перше число x = &#39;</span>)) 
+      li <span class="text-bold">if</span> (x < <span class="color-excel">0</span>)<span class="text-bold">:</span>
+        ul
+          li y = x
+      li <span class="text-bold">else:</span>
+        ul
+          li <span class="text-bold">if</span> x > <span class="color-excel">1</span><span class="text-bold">:</span>
+            ul 
+              li y = 2*x
+          li <span class="text-bold">else:</span>
+            ul
+              li y = <span class="color-excel">0</span>
+      li <span class="text-bold">print</span>(y)

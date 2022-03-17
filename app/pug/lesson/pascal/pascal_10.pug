@@ -1,0 +1,78 @@
+.lesson-page
+  h1.lesson-title Масиви
+  h3.accent.lesson-subtitle Розділ опису типів.
+  p Якщо в програмі вводяться деякі типи даних, які відмінні від стандартних, вони повинні бути описані в розділі опису типів. Розділ типів починається з ключового слова <span class="accent">type</span> і має наступний формат:
+  .example
+    ul.text-bold
+      li type
+        ul
+          li ім’я_типу_1 := опис_типу_1;
+          li …
+          li ім’я_типу_n := опис_типу_n;
+  p Таким же чином можуть і перевизначатися стандартні типи даних для того, щоб поліпшити наочність програми. У цьому випадку ім'я типу даних буде асоціюватися з областю значень відповідних змінних.
+  .example
+    ul
+      li <span class="text-bold">Наприклад:</span>
+        ul
+          li <span class="text-bold">type</span>
+            ul
+              li Wysota = <span class="color-accent">real;</span>
+              li Nomera = <span class="color-accent">integer;</span>
+              li Litery = <span class="color-accent">char;</span>
+        ul
+          li <span class="text-bold">var</span>
+            ul
+              li h1, h2, h3: Wysota;
+              li num_1, num_2: Nomera;
+              li index, grif: Litery;
+  h3.accent.lesson-subtitle Одновимірні масиви.
+  p <span class="accent">Масив даних</span> – це лінійно впорядкована сукупність елементів одного і того ж типу. Для масиву характерно наступне:
+  ul
+    li кожен компонент масиву може бути явно позначений і до нього є прямий доступ;
+    li число компонентів масиву визначається при його описі і надалі не змінюється.
+  p Масив є аналогом такого математичного поняття як <span class="accent">вектор</span>. Кожен елемент масиву є аналог проекції вектору на відповідну вісь координат. Отже, масив, що містить n елементів є аналог вектора в n-вимірному просторі.
+  p Для позначення компонентів масиву використовується <span class="accent">ім’я</span>, яке ставиться у відповідності даного масиву (ім'я змінної масиву) та <span class="accent">індекси</span>, які однозначно вказують необхідний елемент. Індекси можуть бути тільки <span class="accent">рахованого типу</span> (<span class="text-bold color-red">integer, char</span>), який є безліччю цілого або символьного типів. Зазвичай в якості індексів при описі масиву використовують відрізок ряду цілих чисел: <span class="text-bold">m ... n</span>, де <span class="accent">m &#60; n</span>.
+  p Об’явити масив можна одним з таких способів:
+  .lesson-list
+    p
+    .example
+      ul
+        li <span class="text-bold">type</span>
+          ul
+            li Ar : <span class="text-bold">array</span>[m .. n] <span class="text-bold">of</span> <span class="color-accent">тип_елементів_масиву</span>; 
+        li <span class="text-bold">var</span>
+          ul
+            li a : Ar;
+    br
+    p
+    .example
+      ul
+        li <span class="text-bold">var</span>
+          ul
+            li a : <span class="text-bold">array</span>[m .. n] <span class="text-bold">of</span> <span class="color-accent">тип_елементів_масиву</span>;
+  p Скалярна величина вказівка ідентифікатора деякої змінної дозволяє однозначно звернеться до її значення. При роботі з масивами цього недостатньо. Тут крім вказівки ідентифікатора змінної-масиву необхідно ще й вказувати його індекс, що показує місце розташування необхідного значення в масиві <span class="accent">a[i]</span>.
+  p Якщо при обробці деякої скалярної величини використовувався лінійний алгоритм, то <span class="accent">при обробці масиву</span> за тими ж правилами <span class="accent">необхідно використовувати циклічний алгоритм</span>. Пов'язано це з тим, що масив довжиною <span class="accent">n</span> значень відповідного типу, містить <span class="accent">n</span> значень відповідного типу, що еквівалентно наявності <span class="accent">n</span> змінних. Якби ми створили програму для роботи з скалярними величинами і нам необхідно було б обробити їх <span class="accent">n</span> різних значень (причому зберігати їх в пам'яті комп'ютера одночасно), то довелося б створювати довгу і неефективну програму, що обробляє кожен елемент по черзі.
+  p При роботі з масивами алгоритм записується для обробки <span class="accent">лише однієї величини – елемента масиву</span>, а потім охоплюється циклом, який перебирає по черзі всі наступні елементи масиву.
+  <img src="#">
+  p <span class="accent">Приклад</span>: Скласти програму знаходження суми елементів деякої послідовності.
+  .example
+    ul
+      li <span class="text-bold">program</span> SumMass;
+      li <span class="text-bold">Const</span>
+            ul
+              li n = <span class="color-excel">5</span>;
+      li <span class="text-bold">Var</span>
+            ul
+              li mas: <span class="text-bold">array</span>[<span class="color-excel">1</span> .. n] <span class="text-bold">of</span> <span class="color-accent">integer</span>;
+              li i: <span class="color-accent">integer</span>;
+              li Sum: <span class="color-accent">integer</span>;
+      li <span class="text-bold">begin</span>
+            ul
+              li <span class="text-bold">for</span> i := <span class="color-excel">1</span> <span class="text-bold">to</span> n <span class="text-bold">do</span>
+                ul
+                  li ReadLn(mas[i]);
+              li Sum := 0;
+              li <span class="text-bold">for</span> i := <span class="color-excel">1</span> <span class="text-bold">to</span> n <span class="text-bold">do</span>
+                ul Sum:= Sum + mas[i];
+      li WriteLn(<span class="color-accent">&apos;Sum = &apos;</span>, Sum);
+      li <span class="text-bold">end.</span>

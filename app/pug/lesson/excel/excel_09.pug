@@ -1,0 +1,182 @@
+.lesson-page
+  h1.lesson-title Використання функції IF в <span class="accent">Excel</span>
+  .function
+    h5.function-title-exel
+      <u>if</u> (<u>если</u>)
+    p.text-bold <span class="function-name color-red">if</span>(Local_test; Value_if_true; Value_if_false) – <span class="accent">перевіряє, чи виконується умова, і повертає одне значення, якщо вона виконується, і інше значення, якщо не виконується.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold">Local_test</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text це будь-яке значення або вираз, який при обчисленні дає значення <span class="accent">TRUE</span> або <span class="accent">FALSE</span>.
+      .function-descr__arg
+        <span class="text-bold">Value_if_true</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text результат, якщо умова виявиться істинною.
+      .function-descr__arg
+        <span class="text-bold">Value_if_false</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text результат, якщо умова виявиться хибною.
+  p.text-bold Зауваження:
+  ul.list
+    li якщо потрібно використати текст у формулах, візьміть його в лапки (наприклад, <span class="accent">&#34;Текст&#34;</span>). Виняток становлять лише значення TRUE та FALSE, які Excel інтерпретує автоматично.
+    li якщо не вказувати результати, які повертатиме формула, то вона буде повертати TRUE або FALSE в залежності від того яке значення при обчисленні дасть логічний вираз.
+
+  h3.accent.lesson-subtitle Приклади використання функції IF.</h3>
+  <p><span class="text-bold color-red">Приклад №1:</span> перевірити, чи має студент допуск до іспиту? Щоб отримати допуск, студенти групи повинні успішно здати залік.
+  p.text-bold Розв’язок:
+  ul.list
+    li починаємо складати формулу;
+    li в якості першого аргументу функції IF виступає наступна умова – <span class="accent">С3 = &#34;залік&#34;</span>;
+    li далі вказуємо результати які повертатиме функція, якщо умова <span class="accent">TRUE</span> – <span class="accent">&#34;допущений&#34;</span>, якщо умова <span class="accent">FALSE</span> – <span class="accent">&#34;не допущений&#34;</span>;
+    li для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+  
+  <p class="text-center text-bold">=<span class="accent">IF</span>(<span class="color-blue">С3 = "залік"</span>;<span class="color-red">"допущений"</span>;<span class="color-purple">"не допущений"</span>)
+  
+  <p><span class="text-bold color-red">Приклад №2:</span> встановити нову ціну зі знижкою 30%, якщо товар на полиці магазину зберігається протягом п’яти діб.
+  p.text-bold Розв’язок:
+  ul.list
+    li починаємо складати формулу;
+    li в якості першого аргументу функції IF виступає наступна умова – <span class="accent">C3>=5</span>;
+    li далі вказуємо результати які повертатиме функція, якщо умова <span class="accent">TRUE</span> – <span class="accent">D3-D3*30%</span>, якщо умова <span class="accent">FALSE</span> - <span class="accent">D3</span>;
+    li для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+  
+  <p class="text-center text-bold">=<span class="accent">IF</span>(<span class="text-bold color-blue">С3>=5</span>;<span class="color-red">D3-D3*30%</span>;<span class="color-purple">D3</span>)
+  
+  h3.accent.lesson-subtitle Функція IF з декількома умовами.</h3>
+  <p>Задачі з однією логічною умовою – це окремий випадок, зазвичай при розв’язанні задач потрібно враховувати декілька варіантів рішення. Наприклад, треба визначити яке число ми отримали: позитивне, негативне або нуль.
+  <p>В цьому випадку потрібно використовувати вкладені один в одного оператори IF. Це буде виглядати наступним чином:
+  p.text-bold.text-center  =<span class="function-name color-red">if</span>(Local_test; Value_if_true; <span class="function-name color-red">if</span>(Local_test; Value_if_true; Value_if_false))
+  <p>Тобто, якщо умова дає значення <span class="accent">TRUE</span> то оператор <span class="accent">IF</span> повертає значення другого аргументу, якщо <span class="accent">FALSE</span> оператор перевіряє наступну умову і так далі за ступенями вкладання.
+  <p>Взагалі, в залежності від того як буде задана умова в операторі <span class="accent">IF</span> можна скорегувати де будуть знаходитися вкладені оператори у формулі.
+  <p><span class="text-bold color-red">Приклад:</span> визначити яке число ми отримали: позитивне, негативне або нуль.
+  p.text-bold Розв’язок:
+  ul.list
+    li починаємо складати формулу;
+    li в якості першого аргументу функції <span class="accent">IF</span> виступатиме наступна умова – <span class="accent">C3=0</span>;
+    li значення другого аргументу, коли умова дає <span class="accent">TRUE</span> буде – <span class="accent">0</span>;
+    li в якості значення третього аргументу, коли умова дає <span class="accent">FALSE</span> виступатиме вкладена функція <span class="accent">IF</span> зі своїми аргументами:
+    ul
+      li перший аргумент – умова – <span class="accent">C3>0</span>;
+      li значення другого аргументу – <span class="accent">"позитивне"</span>;
+      li значення третього аргументу – <span class="accent">"негативне"</span>.
+
+  p.text-bold.text-center =<span class="accent">IF</span>(<span class="text-bold color-blue">С3=0</span>; <span class="text-bold color-red">0</span>; <span class="accent">IF(</span><span class="text-bold color-purple">C3>0</span>; <span class="accent">&#34;позитивне&#34;</span>; <span class="text-bold color-point">&#34;негативне&#34;</span>))
+
+  h3.accent.lesson-subtitle Розширення функціоналу IF за допомогою операторів AND та OR.</h3>
+  <p>Функція <span class="accent">IF</span> дає змогу порівняти значення з очікуваним результатом, використовуючи логічну операцію. Для цього вона перевіряє умову та повертає результат, якщо перевірка дала значення <span class="accent">TRUE</span> або <span class="accent">FALSE</span>.
+  p.text-bold.text-center =<span class="accent">IF</span>(якщо умова – істина, то виконати наступну дію, інакше – іншу дію)
+  <p>Але, бувають випадки, коли треба перевірити одночасно декілька умов, і щоб кожна з них була істиною, або хоча б одна з них була істиною, або взагалі перевірити чи не відповідають умови певним умовам. В цих випадках доцільно використовувати разом з функцією <span class="accent">IF</span> допоміжні оператори <span class="accent">AND (И)</span> чи <span class="accent">OR (ИЛИ)</span>. 
+  .function
+    h5.function-title-exel
+      <u>And</u> (<u>и</u>)
+    p.text-bold <span class="function-name color-red">and</span>(Logical1; Logical2;) – <span class="accent">повертає значення TRUE, якщо всі її аргументи мають значення TRUE, і повертає значення FALSE, якщо хоча б один аргумент має значення FALSE.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold">Logical1</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text перша умова, яку потрібно перевірити, дає результат <span class="accent">TRUE</span> або <span class="accent">FALSE</span>.
+      .function-descr__arg
+        <span class="text-bold">Logical2</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text додаткові умови (не більше 255), які потрібно перевірити та які можуть давати результат <span class="accent">TRUE</span> або <span class="accent">FALSE</span>.
+
+  p.accent.text-center Таблиця істинності функції AND
+  table.func-table(cellspacing=0)
+    tr
+      th Logical1
+      th Logical2
+      th Result
+    tr
+      td True
+      td True
+      td True
+    tr
+      td True
+      td.false False
+      td.false False
+    tr
+      td.false False
+      td True
+      td.false False
+    tr
+      td.false False
+      td.false False
+      td.false False
+  <br>
+
+  .function
+    h5.function-title-exel
+      <u>Or</u> (<u>или</u>)
+    p.text-bold <span class="function-name color-red">or</span>(Logical1; Logical2;) – <span class="accent">повертає значення TRUE, якщо принаймні один аргумент має значення TRUE, і повертає значення FALSE, якщо всі аргументи мають значення FALSE.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold">Logical1</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text перша умова, яку потрібно перевірити, дає результат <span class="accent">TRUE</span> або
+        <span class="accent">FALSE</span>.
+      .function-descr__arg
+        <span class="text-bold">Logical2</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text додаткові умови (не більше 255), які потрібно перевірити та які можуть давати результат <span class="accent">TRUE</span> або <span class="accent">FALSE</span>.
+
+  p.accent.text-center Таблиця істинності функції OR
+  table.func-table(cellspacing=0)
+    tr
+      th Logical1
+      th Logical2
+      th Result
+    tr
+      td True
+      td True
+      td True
+    tr
+      td True
+      td.false False
+      td True
+    tr
+      td.false False
+      td True
+      td True
+    tr
+      td.false False
+      td.false False
+      td.false False
+  <br>
+  <p><span class="text-bold color-red">Приклад №1:</span> Перевірити, чи пройдено тестування? Для цього, на кожному з іспитів студент повинен набрати не менше 70 балів.
+  p.text-bold Розв’язок:
+  ul.list
+    li починаємо складати формулу;
+    li так як нам треба перевірити одразу декілька умов і кожна з них повинна давати істину, скористаємося оператором <span class="accent">OR</span> і умова в нашому рівнянні буде записана наступним чином – <span class="accent">OR(C3>=70; D3>=70; E3>=70)</span>;
+    li далі вказуємо результати які повертатиме функція, якщо умова <span class="accent">TRUE – &#34;пройдено&#34;</span>, якщо умова <span class="accent">FALSE – &#34;не пройдено&#34;</span>;
+    li для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  p.text-bold.text-center =<span class="accent">IF</span>(<span class="text-bold color-blue">OR(C3>=70; D3>=70; E3>=70)</span>; <span class="text-bold color-red">&#34;пройдено&#34;</span>; <span class="text-bold color-purple">&#34;не пройдено&#34;</span>)
+  <p><span class="text-bold color-red">Приклад №2:</span> Перевірити, чи пройдено тестування? Для цього, хоча б на одному з іспитів студент повинен набрати не менше 70 балів.
+  p.text-bold Розв’язок:
+  ul.list
+    li починаємо складати формулу;
+    li знов ж таки треба перевірити декілька умов, але тепер хоча б одна з умов повинна давати істину, отже скористаємося оператором <span class="accent">OR</span> і умова в нашому рівнянні буде записана наступним чином – <span class="accent">OR(C3>=70; D3>=70; E3>=70)</span>;
+    li далі вказуємо результати які повертатиме функція, якщо умова <span class="accent">TRUE – &#34;пройдено&#34;</span>, якщо умова <span class="accent">FALSE – &#34;не пройдено&#34;</span>;
+    li для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  p.text-bold.text-center =<span class="accent">IF</span>(<span class="text-bold color-blue">OR(C3>=70; D3>=70; E3>=70)</span>; <span class="text-bold color-red">&#34;пройдено&#34;</span>; <span class="text-bold color-purple">&#34;не пройдено&#34;</span>)

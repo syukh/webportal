@@ -1,0 +1,237 @@
+.lesson-page
+  h1.lesson-title Функції для пошуку та роботи з посиланнями в <span class="accent">Excel</span>
+  .function
+    h5.function-title-exel
+      <u>vlookup</u> (<u>впр</u>)
+    p.text-bold <span class="function-name color-red">vlookup</span>(Lookup_value;Table_array;Col_index_num;Range_lookup) – <span class="green-ex">шукає значення в крайньому лівому стовпчику таблиці і повертає значення клітинки, що знаходиться у зазначеному стовпці у тому ж рядку.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Lookup_value</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text значення, за яким шукаємо збіг в першому стовпці іншої таблиці.
+      .function-descr__arg
+        <span class="text-bold ">Table_array</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text таблиця, у якій в першому стовпці здійснюється пошук потрібного значення.
+      .function-descr__arg
+        <span class="text-bold ">Col_index_num</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text номер стовпчика таблиці, з якого треба підставити значення.
+      .function-descr__arg
+        <span class="text-bold ">Range_lookup</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text за необхідності можна задати <span class="accent">TRUE (1)</span>, щоб шукати <u>приблизне значення</u>, або <span class="accent">FALSE (0)</span>, щоб отримати <u>точний збіг</u>.
+
+  p.text-bold Зауваження:
+  ul
+    <li>необхідно виділяти таблицю таким чином, щоб в першому лівому стовпчику було шукане значення, а правіше – стовпець з якого будуть підставлятися необхідні дані;
+    <li>номер стовпчика з якого беруться значення – ціле число;
+    <li>якщо не задати аргументу <span class="accent">Range_lookup</span> значення, то за замовчуванням в ньому використовується значення <span class="accent">TRUE</span> (приблизне значення);
+    <li>якщо в аргументі <span class="accent">Range_lookup</span> заданий параметр <span class="accent">TRUE</span> (приблизне значення), таблицю в якій знаходяться потрібні дані треба відсортувати за зростанням.
+
+  <p><span class="text-bold color-red">Виникнення помилок #N/A:
+  ul.list
+    <li>в аргументі <span class="accent">Range_lookup</span> заданий параметр <span class="accent">FALSE</span> (точний пошук), але потрібне значення не найдене;
+    <li>посилання на таблицю в якій знаходяться потрібні дані повинно бути абсолютним.
+
+  h3.accent.lesson-subtitle Приклади використання функції VLOOKUP.
+  <p><span class="text-bold color-red">Приклад №1:</span> зробити автоматичне відображення цін на фрукти у відповідній клітинці в залежності від обраного значення зі списку.
+  p.text-bold Розв’язок:</span>
+    ul.list
+      <li>починаємо складати формулу; 
+      <li>в якості першого аргументу функції <span class="accent">VLOOKUP</span> виступає значення що ми шукаємо – <span class="accent">B18</span>;
+      <li>далі виділяємо електрону таблицю в якій знаходяться дані – <span class="accent">В2:C13</span>;
+      <li>вказуємо номер стовпчика з якого будуть підставлятися дані – <span class="accent">2</span>;
+      <li>задаємо параметр пошуку – <span class="accent">0</span>, для отримання точного збігу із значенням яке ми шукаємо;
+      <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>. 
+  
+  <p class="text-bold text-center">=<span class="accent">VLOOKUP</span>(<span class="text-bold color-blue">B18</span>;<span class="text-bold color-red">C3:F15</span>;<span class="accent">2</span>;<span class="text-bold color-purple">0</span>)
+
+  .function
+    h5.function-title-exel
+      <u>hlookup</u> (<u>гпр</u>)
+    p.text-bold <span class="function-name color-red">hlookup</span>(Lookup_value;Table_array;Row_index_num;Range_lookup) – <span class="green-ex">шукає значення в крайній верхній частині таблиці і повертає значення у тому ж стовпці з зазначеного рядка таблиці.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Lookup_value</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text значення, яке має бути знайдено в першому рядку іншої таблиці.
+      .function-descr__arg
+        <span class="text-bold ">Table_array</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text таблиця, у якій в першому рядку здійснюється пошук потрібного значення
+      .function-descr__arg
+        <span class="text-bold ">Row_index_num</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text номер рядка таблиці, з якого треба підставити значення.
+      .function-descr__arg
+        <span class="text-bold ">Range_lookup</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text за необхідності можна задати <span class="accent">TRUE (1)</span>, щоб шукати <u>приблизне значення</u>, або <span class="accent">FALSE (0)</span>, щоб отримати <u>точний збіг</u>.
+
+  p.text-bold Зауваження:
+  ul.list
+    <li>необхідно виділяти таблицю таким чином, щоб в першому рядку було шукане значення, а нижче – рядок з якого будуть підставлятися необхідні дані;
+    <li>номер рядка з якого беруться значення – ціле число;
+    <li>якщо не задати аргументу <span class="accent">Range_lookup</span> значення, то за замовчуванням в ньому використовується значення <span class="accent">TRUE</span> (приблизне значення);
+    <li>якщо в аргументі <span class="accent">Range_lookup</span> заданий параметр <span class="accent">TRUE</span> (приблизне значення), таблицю в якій знаходяться потрібні дані треба відсортувати за спаданням.
+
+  <p><span class="text-bold color-red">Виникнення помилок #N/A:
+  ul.list
+    <li>в аргументі <span class="accent">Range_lookup</span> заданий параметр <span class="accent">FALSE</span> (точний пошук), але потрібне значення не найдене;
+    <li>посилання на таблицю в якій знаходяться потрібні дані повинно бути абсолютним.
+
+  h3.accent.lesson-subtitle Приклади використання функції HLOOKUP.
+  <p><span class="text-bold color-red">Приклад №1:</span> визначити за кодом замовлення, на основі таблиці A1:IH4 - код клієнта.
+  p.text-bold Розв’язок:
+    ul.list
+      <li>починаємо складати формулу; 
+      <li>в якості першого аргументу функції <span class="accent">HLOOKUP</span> виступає значення що ми шукаємо – <span class="accent">B9</span>;
+      <li>далі виділяємо електрону таблицю в якій знаходяться дані – <span class="accent">A1:IH4</span>;
+      <li>вказуємо номер стовпчика з якого будуть підставлятися дані – <span class="accent">2</span>;
+      <li>задаємо параметр пошуку – <span class="accent">0</span>, для отримання точного збігу із значенням яке ми шукаємо;
+      <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>. 
+  
+  <p class="text-bold text-center">=<span class="accent">HLOOKUP</span>(<span class="text-bold color-blue">B9</span>;<span class="text-bold color-red">A1:IH4</span>;<span class="accent">2</span>;<span class="text-bold color-purple">0</span>)
+  .function
+    h5.function-title-exel
+      <u>match</u> (<u>поискпоз</u>)
+    p.text-bold <span class="function-name color-red">match</span>(Lookup_value;Lookup_array;Match_type) – <span class="green-ex">виконує пошук вказаного значення в діапазоні клітинок та повертає його відносну позицію у цьому діапазоні.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Lookup_value</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text значення, для якого визначається відносне положення в діапазоні даних.
+      .function-descr__arg
+        <span class="text-bold ">Lookup_array</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text діапазон даних, в якому здійснюється пошук потрібного значення.
+      .function-descr__arg
+        <span class="text-bold ">Match_type</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text за необхідності вказуємо режим пошуку: <span class="accent">-1</span> – шукає найменше значення, яке більше або дорівнює значенню аргументу (<u>округлює шукане значення в більшу сторону</u>); <span class="accent">0</span> – <u>точний збіг</u>; <span class="accent">1</span> – шукає найбільше значення, яке менше або дорівнює значенню аргументу (<u>округлює шукане значення в меншу сторону</u>).
+
+  p.text-bold Зауваження:
+  ul.list
+    <li>за замовчуванням у функції <span class="accent">MATCH</span> аргумент <span class="accent">Match_type</span> якщо його не вказати приймає значення – <span class="accent">1</span> (округлення в меншу сторону);
+    <li>якщо в якості аргументу <span class="accent">Match_type</span> вказується значення <span class="accent">1</span> то діапазон даних повинен бути впорядкований за зростанням (<span class="text-bold color-red">A</span>-<span class="accent">Z</span>);
+    <li>якщо в якості аргументу <span class="accent">Match_type</span> вказується значення <span class="accent">-1</span> то діапазон даних повинен бути впорядкований за спаданням (<span class="text-bold color-red">Z</span>-<span class="accent">A</span>);
+
+  h3.accent.lesson-subtitle Приклади використання функції MATCH.
+  <p><span class="text-bold color-red">Приклад №1:</span> визначити в діапазоні даних B3:B14 відносне положення елемента.
+
+  p.text-bold Розв’язок:
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">MATCH</span> виступає значення для якого ми визначаємо його відносне положення в діапазоні даних – <span class="accent">D6</span>;
+    <li>виділяємо діапазон даних в якому здійснюється пошук потрібного значення – <span class="accent">В3:В14</span>;
+    <li>задаємо параметр пошуку – <span class="accent">0</span>, для отримання точного збігу із значенням яке ми шукаємо;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">MATCH</span>(<span class="text-bold color-blue">B9</span>;<span class="text-bold color-red">A1:IH4</span>;<span class="accent">0</span>)
+  .function
+    h5.function-title-exel
+      <u>index</u> (<u>индекс</u>)
+    p.text-bold <span class="function-name color-red">index</span>(Array;Row_num;Column_num) – <span class="green-ex">повертає масив даних або значення з клітинки таблиці, ім’я клітинки задається номером рядка і номером стовпця.</span>
+    .function-descr
+      .function-descr__arg
+        <span class="text-bold">Ім’я аргументу</span>
+      .function-descr__text
+        <span class="accent">Опис аргументів функції</span>
+      .function-descr__arg
+        <span class="text-bold ">Array</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text діапазон клітинок або константа масиву.
+      .function-descr__arg
+        <span class="text-bold ">Row_num</span>
+        <br>
+        <span class="function-arg__des">(обов’язковий)</span>
+      .function-descr__text вибирає рядок в масиві, з якої потрібно повернути значення.
+      .function-descr__arg
+        <span class="text-bold ">Column_num</span>
+        <br>
+        <span class="function-arg__des">(не обов’язковий)</span>
+      .function-descr__text за необхідності вказуємо режим пошуку: <span class="accent">-1</span> – шукає найменше значення, яке більше або дорівнює значенню аргументу (<u>округлює шукане значення в більшу сторону</u>); <span class="accent">0</span> – <u>точний збіг</u>; <span class="accent">1</span> – шукає найбільше значення, яке менше або дорівнює значенню аргументу (<u>округлює шукане значення в меншу сторону</u>).
+
+  p.text-bold Зауваження:</span>
+  ul.list
+    <li>якщо масив містить тільки один рядок або один стовпець, відповідний аргумент <span class="accent">"Row_num"</span> або <span class="accent">"Column_num"</span> не є обов'язковим;
+    <li>якщо масив містить більше одного рядка і одного стовпця, а з аргументів <span class="accent">"Row_num"</span> та <span class="accent">"Column_num"</span> заданий тільки один, функція <span class="accent">INDEX</span> повертає масив, що складається з цілого рядка або цілого стовпця;
+    <li>якщо вказати в якості аргументу <span class="accent">"Row_num"</span> або <span class="accent">"Column_num"</span> значення <span class="accent">0</span> (<u>нуль</u>), функція <span class="accent">INDEX</span> поверне масив значень для цілого стовпця або цілого рядка відповідно;
+
+  h3.accent.lesson-subtitle Приклади використання функції INDEX.
+  <p><span class="text-bold color-red">Приклад №1:</span> визначити назву фрукта, який знаходиться в діапазоні даних В3:В14 під певним номером.
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li>починаємо складати формулу; 
+    <li>в якості першого аргументу функції <span class="accent">INDEX</span> задаємо масив даних – <span class="accent">В3:В14</span>;
+    <li>далі вказуємо номер клітинки з якої треба повернути значення – <span class="accent">5</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>. 
+
+  <p class="text-bold text-center">=<span class="accent">INDEX</span>(<span class="text-bold color-blue">B3:В14</span>;<span class="text-bold color-red">5</span>)
+  <p><span class="text-bold color-red">Приклад №2:</span> визначити оцінку яку отримає учень з визначеного шкільного предмета.
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">INDEX</span> задаємо масив даних – <span class="accent">C4:F8</span>;
+    <li>вказуємо номер рядка в якому знаходиться ПІБ учня – <span class="accent">2</span>;
+    <li>вказуємо номер стовпчика в якому знаходиться оцінки учнів з предмету – <span class="accent">4</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">INDEX</span>(<span class="text-bold color-blue">C4:F8</span>;<span class="text-bold color-red">2</span>;<span class="accent">4</span>)
+  <p> Явний недолік функції <span class="accent">VLOOKUP</span> – є те, що шукані дані повинні завжди знаходитися з правої сторони від стовпчика з критерієм за яким ведеться пошук. Але у звичайному житті цього не завжди вдається досягнути і шукані дані опиняються з ліва від стовпчика з критерієм. Розглянемо подібний випадок.
+
+  <p><span class="text-bold color-red">Приклад №3 (заміна функції VLOOKUP):</span> налаштувати автоматичне відображення назви країни за відповідним кодом.
+  p.text-bold Розв’язок:</span>
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">INDEX</span> задаємо масив даних у якому містяться назви країн – <span class="accent">В4:В207</span>;
+    <li>далі за допомоги функції <span class="accent">MATCH</span> шукаємо номер клітинки в діапазоні даних, тобто шукаємо номер рядка в якому міститься код країни:
+      ul
+        <li>вказуємо назву функції – <span class="accent">MATCH</span>;
+        <li>перший її аргумент – шукане значення – <span class="accent">G10</span>; 
+        <li>другий аргумент – діапазон даних в якому відбувається пошук – <span class="accent">E4:E207</span>;
+        <li>третій – режим пошуку – <span class="accent">0</span> (точне співпадіння);
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">INDEX</span>(<span class="text-bold color-blue">В4:В207</span>;<span class="accent">MATCH</span>(<span class="text-bold color-red">G10</span>;<span class="text-bold color-purple">E4:E207</span>;<span class="accent">0</span>))
+  p.text-bold Розглянемо приклад коли на листі Excel є декілька електронних таблиць і треба з вказаної таблиці повернути необхідні дані. В цьому випадку синтаксис функції INDEX буде наступний:
+  p.text-bold <span class="function-name color-red">index</span>(Reference;Row_num;Column_num;Area_num)
+  <p><span class="accent">Reference</span> – посилання на один або більше діапазонів клітинок.
+    <br>
+    <span class="accent">Area_num</span> – діапазон, з якого будуть повернуті дані, нумерація діапазонів починається з <span class="accent">1</span>.
+  <p><span class="text-bold color-red">Приклад №4:</span> відобразити продажі у 2018 р. за III квартал у Центральному регіоні.
+  p.text-bold Розв’язок:
+  ul.list
+    <li>починаємо складати формулу;
+    <li>в якості першого аргументу функції <span class="accent">INDEX</span> вказуємо у дужках через крапку з комою діапазони даних – <span class="accent">(C4:F8;I4:L8;O4:R8)</span>;
+    <li>вказуємо номер рядок в якому знаходиться дані з продажів у Центральному регіоні – <span class="accent">2</span>;
+    <li>вказуємо номер стовпчика в якому знаходиться дані з продажів за ІІІ квартал – <span class="accent">3</span>;
+    <li>вказуємо номер діапазону в якому знаходяться необхідні дані – <span class="accent">2</span>;
+    <li>для отримання результату натискаємо клавішу <span class="accent">Enter</span>.
+
+  <p class="text-bold text-center">=<span class="accent">INDEX</span>(<span class="text-bold color-blue">(C4:F8;I4:L8;O4:R8)</span>;<span class="text-bold color-red">2</span>;<span class="text-bold color-purple">3</span>;<span class="accent">2</span>))

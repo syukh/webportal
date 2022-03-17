@@ -1,0 +1,72 @@
+.lesson-page
+  h1.lesson-title Типи даних в <span class="accent">Python</span>
+  p Мова <span class="accent">Python</span> відноситься до мов з неявною строгою динамічною типізацією. Неявна типізація означає, що при оголошенні змінної її тип не вказується (при явній типізації тип змінної вказується обов’язково).
+  p Для мов з <span class="accent">динамічною типізацією</span> тип змінної визначається безпосередньо при виконанні програми. 
+  p.text-bold Для мов програмування з динамічною типізацією характерно:
+  ul.list
+    li будь-яка змінна є посиланням;
+    li типом змінної є те, на що вона посилається;
+    li тип змінної може довільно змінюватися по ходу виконання коду, коли змінна починає посилатися на інший об’єкт.
+  
+  h3.accent.lesson-subtitle Вбудовані типи даних.
+  p <span class="accent">Тип даних</span> – це множина значень і операцій на цими значеннями. В Python типи даних можна розділити на вбудовані в інтерпретатор (built-in) і невбудовані, які можна використовувати при імпортуванні відповідних модулів.
+  p.text-bold До основних вбудованих типів в Python відносяться:
+  ol.list
+    li <span class="accent">None</span> – невизначене значення змінної.
+    li <span class="accent">Boolean Type</span> – логічний тип.
+    li <span class="accent">Numeric Type</span> – числа:
+    ol(type="a" style="margin-bottom:0")
+      li <span class="accent">int</span> – ціле число;
+      li <span class="accent">float</span> – число з плаваючою точкою (дійсне число);
+      li <span class="accent">complex</span> – комплексне число.
+    li <span class="accent">Sequence Type</span> – послідовності:
+    ol(type="a" style="margin-bottom:0")
+      li <span class="accent">list</span> – список;
+      li <span class="accent">tuple</span> – кортеж;
+      li <span class="accent">range</span> – діапазон.
+    li <span class="accent">Text Sequence Type</span> – рядки;
+    ol(type="a" style="margin-bottom:0")
+      li <span class="accent">str</span> – рядки.
+    li <span class="accent">Binary Sequence Types</span> – бінарні послідовності:
+    ol(type="a" style="margin-bottom:0")
+      li <span class="accent">bytes</span> – байти;
+      li <span class="accent">bytearray</span> – масиви байт 24;
+      li <span class="accent">memoryview</span> – спеціальні об'єкти для доступу до внутрішніх даних об'єкта через protocol buffer.
+    li <span class="accent">Set Types</span> – множини:
+    ol(type="a" style="margin-bottom:0")
+      li <span class="accent">set</span> – множина;
+      li <span class="accent">frozenset</span> – незмінювана множина.
+    li <span class="accent">Mapping Types</span> – словники:
+    ol(type="a" style="margin-bottom:0")
+      li <span class="accent">dict</span> – словник.
+
+  h3.accent.lesson-subtitle Ініціалізація змінних.
+  p Враховуючи неявну типізацію мови Python при оголошенні змінної, їй повинно бути надане значення (вона має бути ініціалізована). Щоб оголосити та <span class="accent">ініціалізувати змінну необхідно</span>: написати її ім’я, потім поставити оператор присвоєння (знак дорівнює) і вказати значення, з яким дана змінна буде створена.
+  .example.otstup
+    p.text-bold Приклад:
+        ul.list
+          li a = <span class="color-excel">10</span>
+  p.text-bold При ініціалізації змінної на рівні інтерпретатора відбувається наступне:
+  ul.list
+    li <span class="accent">створюється цілочисельний об’єкт</span> <span class="color-excel text-bold">10</span> (можна представити, що в цей момент виділяється комірка пам’яті певного об’єму і в неї записується число 10);
+    li <span class="accent">за оператором присвоєння</span> <span class="color-red text-bold">=</span> <span class="accent">відбувається зв’язування змінної</span> <span class="color-red text-bold">z</span> <span class="accent">і цілочисельного об’єкту</span> <span class="color-excel text-bold">10</span> (визначається адреса отриманого об’єкту 10, яка присвоюється змінній z, тобто в результаті змінна z посилається на об’єкт 10).
+  p Якщо, змінній за оператором присвоєння надається будь-який вираз (a = <span class="color-excel">5</span> + <span class="color-excel">10</span>), то спочатку інтерпретатор обчислює значення виразу справа (<span class="color-excel">5</span> + <span class="color-excel">10</span>), створює об’єкт з отриманим значенням (<span class="color-excel">15</span>), а далі аналогічно до попереднього.
+    
+  h3.accent.lesson-subtitle Ідентифікатор та тип об’єктів.
+  p <span class="accent">Python</span> є об’єктно-орієнтовною мовою програмування, тому об’єктів в мові Python багато. Спробуємо розібратися, як пов’язане поняття об’єкту із змінними та їх значеннями.
+  p Ми вже знаємо, що при ініціалізації змінної спочатку створюється цілочисельний об’єкт. <span class="accent">Об’єкт</span> в даному випадку – <span class="accent">це абстракція для подання даних певного типу</span>, що розміщуються в пам’яті за адресом. <span class="accent">Кожен</span> такий <span class="accent">об’єкт має три атрибути: адресу</span> (ідентифікатор об’єкту), <span class="accent">значення</span> та <span class="accent">тип</span>. <span class="accent">Ідентифікатор об’єкту</span> – це унікальна ознака об’єкту (адреса об’єкту в пам’яті), за якою можна відрізнити один об’єкт від іншого. Ідентифікатор представляється в вигляді деякого цілочисельного значення. Щоб переглянути ідентифікатор об’єкту, на який посилається певна змінна, в мові Python є спеціальна функція <span class="accent">id()</span>, для визначення типу призначена функція <span class="accent">type()</span>.
+  .example.otstup
+    p.text-bold Приклад:
+      ul.example-program.list
+          li
+            .example-program__str a = <span class="color-excel">10</span>
+            .example-program__str <span class="color-excel"># ініціалізуємо змінну а</span>
+          li
+            .example-program__str <span class="text-bold">print</span>(a)
+            .example-program__str <span class="color-excel"># виводимо значення змінної</span>
+          li
+            .example-program__str <span class="text-bold">print</span>(<span class="text-bold">id</span>(a))
+            .example-program__str <span class="color-excel"># виводимо ідентифікатор об’єкту</span>
+          li
+            .example-program__str <span class="text-bold">print</span>(<span class="text-bold">type</span>(a))
+            .example-program__str <span class="color-excel"># виводимо до якого типу даних належить об’єкт</span>

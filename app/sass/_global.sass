@@ -1,0 +1,129 @@
+// *** Simple bar *** //
+.smbar
+  width: 300px
+  height: 300px
+  border: 1px solid #222222
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  margin: 200px auto 0
+
+// *** Accent Color *** //
+#menu
+  background-color: $accent
+
+#menu.word,
+.color-word.simplebar-scrollbar:before,
+.word.nav__tooltip
+  background-color: $color-word
+.color-word
+  color: $color-word
+.color-word
+  p
+    &:before
+      color: $color-word
+
+#menu.excel,
+.color-excel.simplebar-scrollbar:before,
+.excel.nav__tooltip
+  background-color: $color-excel
+.color-excel
+  color: $color-excel
+.color-excel
+  p
+    &:before
+      color: $color-excel
+
+#menu.pascal,
+.color-pascal.simplebar-scrollbar:before,
+.pascal.nav__tooltip
+  background-color: $color-pascal
+.color-pascal
+  color: $color-pascal
+.color-pascal
+  p
+    &:before
+      color: $color-pascal
+
+#menu.point,
+.color-point.simplebar-scrollbar:before,
+.point.nav__tooltip
+  background-color: $color-point
+.color-point
+  color: $color-point
+.color-point
+  p
+    &:before
+      color: $color-point
+
+#menu.python,
+.color-python.simplebar-scrollbar:before,
+.python.nav__tooltip
+  background-color: $color-python
+.color-python
+  color: $color-python
+.color-python
+  p
+    &:before
+      color: $color-python
+
+.color-accent
+  color: $accent
+
+.color-blue
+  color: $blue
+
+.color-red
+  color: $red
+
+.color-purple
+  color: $purple
+
+.color-point
+  color: $color-point
+
+.text-bold
+  font-weight: bold
+
+.text-center
+  text-align: center
+
+.text-def
+  font-family: $default-font
+
+// ==== Slick Slider ====//   
+.slick-dots
+  list-style: none
+
+//==== Download Button ====//
+
+.dowload-btn
+  display: flex
+  justify-content: flex-end
+  &__wraper
+    display: flex
+    align-items: flex-end
+    color: #ffffff
+    margin: 50px
+    padding: 8px 25px 12px
+    border-radius: 50px
+
+.btn-descr
+  +rfs(18px)
+  line-height: 1.1
+
+.btn-icon
+  i
+    +rfs(38px)
+    margin-left: 10px
+
+.dowload-btn
+  .word
+    background-color: $color-word
+  .excel
+    background-color: $color-excel
+  .pascal
+    background-color: $color-pascal
+  .python
+    background-color: $color-python
+
+.default-font
+  font-family: $default-font

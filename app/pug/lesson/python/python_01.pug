@@ -1,0 +1,86 @@
+.lesson-page
+  h1.lesson-title Знайомство з мовою програмування <span class="accent">Python</span>
+  p <span class="accent">Python</span> – це універсальна інтерпретована мова програмування, що в останній час стала досить популярною завдяки своїй концепції, великому ком'юніті розробників та можливості застосування.
+  p Днем народження мови Python вважається 20 лютого 1991 року, а її автором є нідерландський програміст <span class="accent">Гвідо ван Россум</span>.
+  p Python застосовують такі IT-гіганти як: Google, Facebook, Dropbox, Mozilla, Яндекс та Microsoft. На ньому написані такі додатки, як <span class="accent">YouTube</span>, <span class="accent">Instagram</span>, <span class="accent">PayPal</span>, тощо.
+  
+  h3.accent.lesson-subtitle Алфавіт мови.
+  p <span class="accent">Алфавіт мови</span> – це фіксований для даної мови набір основних символів, з яких повинен складатися будь-який текст на цій мові. <span class="text-bold">Ніякі інші символи не допускаються!</span>
+  p.text-bold Алфавіт алгоритмічної мови Python включає в себе:
+  ul.list
+    li великі (A … Z) та малі (a … z) букви латинського алфавіту
+    li цифри: 1 2 3 4 5 6 7 8 9 0
+    li операції:  +  -  *  **  /  //    %  @ <<  >>  &  |  ^  ~  <  >  <=  >=  ==  !=
+    li роздільники: (  )  [  ]  {  }  ,  :  .  ;  @  =  ->  +=  -=  *= 
+  p.text-bold Розмір літер має значення, тобто великі і маленькі літери вважаються різними.
+  p <span class="text-bold color-red">Не допускаються символи</span>: $  ?  `  
+  
+  h3.accent.lesson-subtitle Ідентифікатори.
+  p <span class="accent">Python</span> – мова, яка реалізує процес обробки даних, оперує з різними типами даних, на які необхідно якимось чином посилатися. Для цього програмним об'єктам даються індивідуальні імена. Роль таких імен і виконують <span class="accent">ідентифікатори</span>.
+  p.text-bold <span class="accent">Ідентифікатор</span> – це будь-яка кінцева послідовність літер, цифр і символу підкреслення, яка <span class="color-red">починається з букви або символу підкреслення</span>.
+  p Не можна використовувати два поспіль символи нижнього підкреслення на початку і в кінці ідентифікатора.
+  p Ідентифікатор не повинен співпадати ні з одним ключовим (зарезервованим) словом інтерпретатора Python. Перелік ключових слів можна отримати, виконавши послідовно дві команди: <span class="accent">import keyword</span> та <span class="accent">print(keyword.kwlist)</span>.
+  img(src="#", alt="1")
+  p Як можна побачити, більшість службових слів (окрім: False, None, True) та вбудованих функцій пишуться маленькими літерами. Але <span class="accent">імена ідентифікаторів чутливі до регістру</span>. Наприклад, <span class="accent">myname</span> і <span class="accent">myName</span> - <span class="text-bold">це два різні ідентифікатори</span>.
+
+  h3.accent.lesson-subtitle Літерали.
+  p <span class="accent">Літерал</span> (<span class="text-bold">literal – константа</span>) – постійне значення певного типу даних, записане у вихідному коді комп'ютерної програми. 
+  p Значення літералу використовується буквально, число 2 завжди представляє саме себе і нічого іншого - це «константа», тому що її значення не можна змінити. В мові Python немає окремої синтаксичної конструкції для оголошення літералів. Досить часто для вказання того, що змінну не варто змінювати, її пишуть великими літерами (це вказівка розробнику, а не інтерпретатору).
+
+  h3.accent.lesson-subtitle Синтаксис мови Python.
+  p При складанні програми на мові Python треба дотримуватися наступних положень:
+  ul.list
+    li Кінець рядка є кінцем інструкції (прикінцеві символи непотрібні).
+    li Для надання значень змінним <span class="accent">оператором присвоювання</span> є знак дорівнює <span class="accent">=</span>. Формат оператора:  <span class="accent">ім’я_змінної = вираз</span>.
+    li Основна інструкція та вкладені інструкції (вкладений блок інструкцій) записуються відповідно до одного шаблону: основна інструкція завершується двокрапкою, наступними рядками розташовуються вкладені інструкції, з однаковим відступом на початку рядків по відношенню до основної інструкції. Відступ може бути будь-яким, головне, щоб в межах одного вкладеного блоку відступ був однаковий.
+      br
+      br
+      .example
+        p.text-bold Шаблон:
+        ul.list
+          li <span class="accent">основна інструкція</span> <span class="text-bold color-red">:</span>
+            ul
+              li <span class="accent">вкладений блок інструкцій</span>
+    li Можна записати кілька інструкцій в одному рядку, розділяючи їх крапкою з комою:
+      br
+      br
+      .example
+        p.text-bold Приклад:
+        ul.list
+          li a = <span class="color-excel">1</span>; b = <span class="color-excel">2</span>; <span class="text-bold">print</span>(a, b)
+    li Можна записувати одну інструкцію в декілька рядків. Для цього необхідно розмістити її в парі круглих, квадратних або фігурних дужок.
+      br
+      br
+      .example
+        p.text-bold Приклад:
+        ul.list
+          li <span class="text-bold">if</span> (a < <span class="color-excel">1</span> and b < <span class="color-excel">2</span> and 
+          li c < <span class="color-excel">3</span> and d < <span class="color-excel">4</span>) : 
+          li <span class="text-bold">print</span>(<span class="color-accent">'spam'</span> * <span class="color-excel">3</span>)
+      p Також, додатково, можна записувати одну інструкцію в декілька рядків ще за допомоги зворотного слеша (<span class="accent">\</span>).
+      .example.otstup
+        p.text-bold Приклад:
+        ul.list
+          li <span class="text-bold">if</span> a < <span class="color-excel">1</span> and \
+          ul(style="padding-left: 15px")
+            li b &#60; <span class="color-excel">2</span> and \
+            li c &#60; <span class="color-excel">3</span> and \
+            li d &#60; <span class="color-excel">4</span>) : 
+            li <span class="text-bold">print</span>(<span class="color-accent">'spam'</span> * <span class="color-excel">3</span>)
+    li Якщо тіло вкладеної інструкції містить єдиний оператор, то він може розташовуватися в тому ж рядку, що і основна інструкція
+      br
+      br
+      .example
+        p.text-bold Приклад:
+        ul.list
+          li <span class="text-bold">if</span> x > y: <span class="text-bold">print</span>(x)
+
+  h3.accent.lesson-subtitle Коментар.
+  p <span class="accent">Коментар</span> – це довільний текст у будь-якому місці програми, що пишеться після символу <span class="accent">#</span>, і представляє інтерес лише як замітка для того, хто буде переглядати код програми.
+  .example.otstup 
+    p.text-bold Приклад:
+    ul.list
+      li a = <span class="color-excel">10</span>
+      li b = <span class="color-excel">5</span>
+      li <span class="color-excel"># Виводимо добуток двох чисел</span>
+      li <span class="text-bold">print</span>(a * b)

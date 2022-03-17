@@ -1,0 +1,21 @@
+#main-section
+  include ../modulus/menu.pug
+  #section.course-lesson
+    .section-row.section-row__header
+        //- h2.title-course JavaScript
+        //- h2.title-course PowerPoint
+        h2.title-course Майстер-класи
+    .section-row.section-row__course.lesson-row
+      .course-wrap#spbar
+        -
+          let lesson = [
+            {'icon':'../img/logo_excel.svg', 'name':'Простий планувальник проектів в Excel'},
+            {'icon':'../img/logo_word.svg', 'name':'Налаштовуємо Keyboard Shortcuts для Office Word'},
+          ]
+        each element,i in lesson
+          .lesson-item
+            .lesson-element.master-class
+              .lesson-element__icon
+                img(src=element.icon)
+              .lesson-element__name
+                a(href="#" class="name-link") #{element.name}

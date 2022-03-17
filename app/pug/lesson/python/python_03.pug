@@ -1,0 +1,147 @@
+.lesson-page
+  h1.lesson-title Введення виведення даних, перетворення типів в <span class="accent">Python</span>
+  
+  h3.accent.lesson-subtitle Введення даних.
+  p Для зчитування рядка зі стандартного пристрою введення <span class="accent">sys.stdin</span> (<span class="accent">клавіатура</span>) в мові Python передбачено функцію <span class="accent">input([prompt])</span>.
+  p Необов’язковий параметр <span class="accent">prompt</span>, призначений для вказання запрошення до введення, та буде виведений на стандартний пристрій виведення <span class="accent">sys.stdout</span> (<span class="accent">екран</span>).
+  .example.otstup
+    p.text-bold Формат оператору вводу:
+    ul.list
+      li <span class="accent">Змінна = input([prompt])</span>
+  .example.otstup
+    p <span class="text-bold">Приклад:</span> скласти програму, яка буде запитувати ім’я користувача, а потім з ним привітається.
+    ul.list
+      li name = <span class="text-bold">input</span>(<span class="color-excel">&#39;Як Вас звати?&#39;</span>)</span>
+      li <span class="text-bold">print</span>(<span class="color-accent">&#39;Вітаю&#39;, name</span>)
+  
+  h3.accent.lesson-subtitle Перетворення типів.
+  p Однак, функція <span class="accent">input</span> <span class="color-red text-bold">повертає лише значення рядкового типу</span> і для того щоб змінні, наприклад, мали цілочисельні значення треба <span class="accent">виконати перетворення типів</span> за допомогою функції <span class="accent">int()</span>.
+  .example.otstup
+     p.text-bold Приклад:
+      ul.example-program.list
+        li 
+          .example-program__str a = <span class="text-bold">input</span>()
+          .example-program__str <span class="color-excel"># вводимо 3</span>
+        li 
+          .example-program__str b = <span class="text-bold">input</span>()
+          .example-program__str <span class="color-excel"># вводимо 5</span>
+        li 
+          .example-program__str a = <span class="text-bold">int</span>(a)
+        li 
+          .example-program__str b = <span class="text-bold">int</span>(b)
+        li 
+          .example-program__str x = a + b
+        li 
+          .example-program__str  <span class="text-bold">print</span>(x)
+          .example-program__str <span class="color-excel"># отримаємо 8</span>
+  p Але в мові <span class="accent">Python</span> можна об'єднати зчитування рядків і перетворення типів, якщо викликати функцію <span class="accent">int()</span> для того значення, яке поверне функція <span class="accent">input()</span>:
+  .example.otstup
+    p.text-bold Приклад:
+      ul.example-program.list
+        li 
+          .example-program__str a = <span class="text-bold">int</span>(<span class="text-bold">input</span>())
+          .example-program__str <span class="color-excel"># вводимо 3</span>
+        li 
+          .example-program__str b = <span class="text-bold">int</span>(<span class="text-bold">input</span>())
+          .example-program__str <span class="color-excel"># вводимо 5</span>
+        li 
+          .example-program__str x = a + b
+        li
+          .example-program__str  <span class="text-bold">print</span>(x)
+          .example-program__str <span class="color-excel"># отримаємо 8</span>
+  p Бувають випадки, коли треба зчитувати значення змінних, які записані в окремому рядку, в цьому випадку доцільно використовувати <strong>метод</strong> <span class="accent">split()</span>, котрий розділяє рядок на частини по одному або декільком пропускам (можуть бути використані також інші символи пропуску зокрема табуляція).
+  .example.otstup
+    p.text-bold Приклад:
+      ul.list
+        li a, b = <span class="text-bold">input</span>().<span class="text-bold">split</span>()
+  p Для того щоб одночасно зчитувати значення змінних, які записані в окремому рядку та виконувати перетворення їх типів, треба додатково використовувати функцію <span class="accent">map()</span>, яка застосовує до кожного елементу списку задану функцію.
+  .example.otstup
+    p.text-bold Приклад:
+      ul.list
+        li a, b = <span class="text-bold">map</span>(<span class="text-bold color-accent">int</span>, <span class="text-bold">input</span>().<span class="text-bold">split</span>())
+  p Також, можна перетворити рядок і в дробове число, для цього треба застосовувати функцію <span class="accent">float()</span>.
+  .example.otstup
+    p.text-bold Приклад:
+      ul.example-program.list
+        li 
+          .example-program__str a = <span class="text-bold">float</span>(<span class="text-bold">input</span>())		
+          .example-program__str <span class="color-excel"># вводимо 5.2</span>
+        li 
+          .example-program__str b = <span class="text-bold">float</span>(<span class="text-bold">input</span>())		
+          .example-program__str <span class="color-excel"># вводимо 3.4</span>
+        li 
+          .example-program__str <span class="text-bold">print</span>(<span class="text-bold">float</span>(a)+ <span class="text-bold">float</span>(b)) 	
+          .example-program__str <span class="color-excel"># отримаємо 8.6</span>
+  p Дробові числа можна перетворити у цілі функцією <span class="accent">int()</span>. Зверніть увагу: <span class="accent">int()</span> <span class="text-bold">НЕ округлює числа за правилами арифметики, а просто відкидає дробову частину</span>.
+  .example.otstup
+    p.text-bold Приклад:
+      ul.example-program.list
+        li
+          .example-program__str a = <span class="color-excel">8.6</span>
+        li
+          .example-program__str <span class="text-bold">print</span>(<span class="text-bold">int</span>(a))
+          .example-program__str <span class="color-excel"># отримаємо 8</span>
+
+  h3.accent.lesson-subtitle Виведення даних.
+  p Для виведення результату роботи програми на стандартний пристрій виведення <span class="accent">sys.stdout</span> (<span class="accent">екран</span>), може бути використана функція <span class="accent">print()</span>.
+  .example.otstup
+    p.text-bold Формат оператору виводу:
+    ul.list
+      li <span class="accent">print(*objects, sep=&#39; &#39;, end=&#39;\n&#39;, file=sys.stdout, flush=False)</span>
+
+  p.text-bold Аргументи функції:
+  ul.list
+    li <span class="accent">*objects</span> – перераховані через кому об'єкти (змінні, рядки, константи), значення яких потрібно виводити
+      br
+      br
+      .example
+        p.text-bold Приклад:
+        ul.example-program.list
+          li 
+            .example-program__str a = <span class="color-excel">1</span>
+          li 
+            .example-program__str b = <span class="color-excel">2</span>
+          li 
+            .example-program__str <span class="text-bold">print</span>(a, <span class="color-accent">&#39;+&#39;</span>, b, <span class="color-accent">&#39;=&#39;</span>, a + b)	
+            .example-program__str <span class="color-excel"># результат –> 1 + 2 = 3</span>
+    li <span class="accent">sep&#39; &#39;</span> – роздільник, який потрібно ставити між об’єктами що виводяться (за замовчуванням – пропуск). Для виводу спеціальних символів використовують <span class="accent">Escape-послідовності</span>, ось деякі з них:
+      .example.otstup 
+        ul
+          li <span class="accent">\&#39;</span> – одинарна лапка
+          li <span class="accent">\&#39;&#39;</span> – подвійна лапка
+          li <span class="accent">\?</span> – знак питання
+          li <span class="accent">\\</span> – зворотний слеш
+          li <span class="accent">\n</span> – новий рядок
+          li <span class="accent">\t</span> – горизонтальна табуляція
+          li <span class="accent">\v</span> – вертикальна табуляція
+      .example
+        p.text-bold Приклад:
+        ul.example-program.list
+          li 
+            .example-program__str a = <span class="color-excel">1</span>
+          li 
+            .example-program__str b = <span class="color-excel">2</span>
+          li 
+            .example-program__str с = <span class="color-excel">3</span>
+          li 
+            .example-program__str <span class="text-bold">print</span>(a,b,с, <span class="text-bold">sep</span>=&#39;:&#39;)
+            .example-program__str <span class="color-excel"># результат –> 1:2:3</span>
+      li <span class="accent">end=&#39\n&#39</span> – символ, що ставиться в кінці  рядка (за замовчуванням – символ кінця рядка)
+      li <span class="accent">file=sys.stdout</span> – виведення в файл. Об'єкт <span class="accent">file</span> повинен бути об'єктом з методом <span class="accent">write(str)</span>. <span class="accent">print()</span> можна використовувати тільки для текстових файлів.
+      li <span class="accent">flush=False</span> – примусове очищення буфера виводу (за замовчуванням – немає, оскільки зазвичай визначається файлом).
+  .example.otstup
+    p <span class="text-bold">Приклад:</span> скласти програму, яка буде виводити на екран суму двох чисел
+    ul.example-program.list
+      li 
+        .example-program__str <span class="text-bold">print</span>(<span class="color-excel">5</span>+<span class="color-excel">3</span>)
+        .example-program__str <span class="color-excel"># результат –> 8</span>
+  .example.otstup
+    p <span class="text-bold">Приклад:</span> скласти програму, яка буде зчитувати числові дані введені користувачем з клавіатури у змінні <span class="accent">a</span> та <span class="accent">b</span>, а потім виводити на екран їх добуток.
+    ul.list
+      li a=<span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-accent">&#39;Введіть перше число a = &#39;</span>))
+      li b=<span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-accent">&#39;Введіть друге число b = &#39;</span>))
+      li <span class="text-bold">print</span>(<span class="color-accent">&#39;a&#39;</span>, <span class="color-accent">&#39;*&#39;</span>, <span class="color-accent">&#39;b&#39;</span>, <span class="color-accent">&#39;=&#39;</span>, a*b)
+
+
+
+

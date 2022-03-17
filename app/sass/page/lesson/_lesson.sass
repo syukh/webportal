@@ -1,0 +1,374 @@
+#main-section.lesson-section
+  background: none
+
+#section.section-lesson
+  grid-template-columns: 1fr
+  grid-template-rows: calc(100vh - 40px)
+
+.lesson-page
+  +rfs(19px)
+  font-family: $text-font
+  line-height: 1.65
+  padding: 0 40px
+  p
+    margin-bottom: 15px
+
+.lesson-title
+  +rfs(50px)
+  font-family: $default-font
+  text-align: center
+  margin-bottom: 30px
+  span
+    font-weight: normal
+
+ul
+  padding-left: 40px
+
+ol
+  padding-left: 40px
+  margin-bottom: 15px
+
+ul.list,
+ol.list
+  margin-top: -15px
+  margin-bottom: 15px
+  padding-left: 40px
+
+ul.list-table
+  list-style: none
+
+.accent
+  font-weight: bold
+
+.lesson-subtitle
+  +rfs(34px)
+  font-weight: normal
+  text-align: center
+  padding: 25px 0 15px 0
+  font-family: $default-font
+
+.lesson-list
+  margin-top: -15px
+  counter-reset: heading // Инициируем счетчик
+  p
+    display: block
+    padding-left: 110px
+    margin-left: 25px
+    position: relative
+    color: $text
+    &:before
+      position: absolute
+      // top: calc(0px + 15px)
+      left: 0
+      font-weight: bold
+      counter-increment: heading //* Указываем идентификатор счетчика */
+      content: counter(heading) "-й спосіб" //* Выводим текст перед содержимым тега <h2> */
+  ul
+    padding-left: 160px
+  li
+    ul
+      padding-left: 40px
+  h4
+    +rfs(20px)
+.word
+  p
+    &:before
+      color: $color-word
+.excel
+  p
+    &:before
+      color: $color-excel
+.pascal
+  p
+    &:before
+      color: $color-pascal
+.python
+  p
+    &:before
+      color: $color-python
+
+.lesson-list.otstup,
+.lesson-list.otstup ul.list,
+.example.otstup
+  margin-top: 0
+
+.otstup
+  padding-bottom: 10px
+
+.wp-block-image
+  img
+    display: block
+    width: 80%
+    height: auto
+    margin: 40px auto
+
+.lesson-img
+  display: block
+  width: 92%
+  height: auto
+  margin: 40px auto
+
+.key-shot-less
+  margin: 0 auto
+  width: 40%
+
+.cursor
+  width: 0.5em
+  display: inline-block
+  padding: 0
+  margin: 0
+
+// ***  WORD ***// 
+
+// ***  EXCEL ***//  
+.lesson-text__box
+  border: 3px solid $color-excel
+  border-radius: 15px
+  padding: 10px 50px
+  width: 92%
+  margin: 15px auto
+
+.box-ex
+  background: rgba(0,128,0,.3)
+
+.lesson-page__iframe
+  display: flex
+  justify-content: center
+  padding: 20px 0
+  iframe
+    width: 92%
+    height: 400px
+.pi
+  font-weight: 500
+
+.function
+  text-align: left
+  margin-bottom: 20px
+  &-title-exel
+    font-family: $default-font
+    font-size: 26px
+    text-transform: uppercase
+    text-align: center
+    color: $blue
+  &-name
+    font-family: $default-font
+    text-transform: uppercase
+  &-descr
+    display: grid
+    grid-template-columns: 2fr 8fr
+    align-items: start
+    margin-top: 20px
+    &__arg
+      background: $color-excel
+      color: #fff
+      line-height: 1.25
+      border-top: 1px solid #fff
+      border-left: 1px solid $color-excel
+      &:first-child
+        border-top: 1px solid $color-excel
+    &__text
+      border-top: 1px solid $color-excel
+      border-left: 1px solid $color-excel
+      border-right: 1px solid $color-excel
+    &__arg,
+    &__text
+      width: 100%
+      height: 100%
+      padding: 5px 15px
+      &:last-child
+        border-bottom: 1px solid $color-excel
+.function-arg__des
+  font-weight: 300
+
+.func-table
+  width: 50%
+  margin: 0 auto
+  text-align: center
+  th
+    background: $color-excel
+    color: #fff
+    &:nth-child(2)
+      border-right: 1px solid #fff
+      border-left: 1px solid #fff
+  td
+    width: 33.33333%
+    border-right: 1px solid $color-excel
+    border-bottom: 1px solid $color-excel
+    font-weight: 600
+    color: $color-excel
+    &:first-child
+      border-left: 1px solid $color-excel
+  .false
+    color: $red
+
+.table-func-pivot
+  width: 100%
+  margin: 15px auto
+  display: grid
+  grid-template-columns: 30% 70%
+  align-items: start
+  div
+    width: 100%
+    height: 100%
+    padding: 5px 15px
+    border-bottom: solid 1px $color-excel
+    border-right: solid 1px $color-excel
+  div:nth-child(odd)
+    border-left: solid 1px $color-excel
+  div:first-child
+    border-top: solid 1px $color-excel
+  div:nth-child(2)
+    border-top: solid 1px $color-excel
+  .func-pivot
+    line-height: 1.25
+  .func-descr
+    font-weight: 300
+
+// ***  PASCAL ***// 
+.example
+  margin-top: -15px
+  margin-bottom: 15px
+  ul
+    list-style: none
+  &-program__str
+    display: inline-block
+    &:first-child
+      width: 30%
+
+.block-less
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  justify-items: center
+  width: 70vw
+  margin: 0 auto
+  &__img
+    text-align: center
+    img
+      width: 80%
+      height: auto
+  &__text
+    margin: auto 0
+    +rfs(20px)
+
+.formula-less
+  display: flex
+  align-items: center
+  align-content: center
+  color: $accent
+  &__item
+    &:first-child
+      padding-top: 3px
+
+.brace-2
+  +rfs(49px)
+  padding: 0 5px
+
+.brace-3
+  +rfs(73px)
+  font-weight: 300
+
+.red-num
+  list-style-type: none
+  counter-reset: heading // Инициируем счетчик
+  &__item
+    position: relative
+    &:before
+      position: absolute
+      top: 0
+      left: 10px
+      font-weight: bold
+      color: red
+      counter-increment: heading
+      content: counter(heading)"."
+
+.middle-text
+  +rfs(20px)
+
+.table-truth
+  ul
+    list-style: none
+
+// ***  NEWS ***// 
+.key-shot__news
+  margin: 0 auto
+  width: 70%
+
+.key-shot__img
+  display: none
+  text-align: center
+
+.key-shot__item
+  display: grid
+  justify-content: center
+  grid-template-columns: 27% 7% 30%
+
+// *** PYTHON ***// 
+.table-int
+  display: grid
+  grid-template-columns: 15% 20% 65%
+  align-items: start
+  margin-bottom: 15px
+  div
+    width: 100%
+    height: 100%
+    padding: 5px 15px
+    border-bottom: solid 1px $color-python
+    border-right: solid 1px $color-python
+  div:nth-child(-n+3)
+    background: $color-python
+    color: #fff
+    font-weight: bold
+    text-align: center
+  div:nth-child(-n+2)
+    border-right: solid 1px #fff
+  &__act,
+  &__func
+    text-align: center
+  &__act
+    border-left: solid 1px $color-python
+
+.table-form
+  width: 50%
+  margin: 0 auto
+  display: grid
+  grid-template-columns: 50% 50%
+  align-items: start
+  margin-bottom: 15px
+  div
+    width: 100%
+    height: 100%
+    padding: 5px 15px
+    border-bottom: solid 1px $color-python
+    border-right: solid 1px $color-python
+    text-align: center
+    font-weight: bold
+  div:nth-child(-n+2)
+    background: $color-python
+    color: #fff
+    font-weight: bold
+  div:first-child
+    border-right-color: #fff
+  &__max
+    border-left: solid 1px $color-python
+
+.table-math
+  width: 70%
+  margin: 0 auto
+  display: grid
+  grid-template-columns: 25% 75%
+  align-items: start
+  margin-bottom: 15px
+  div
+    width: 100%
+    height: 100%
+    padding: 5px 15px
+    border-bottom: solid 1px $color-python
+    border-right: solid 1px $color-python
+  div:nth-child(-n+2)
+    background: $color-python
+    color: #fff
+    font-weight: bold
+  div:first-child
+    border-right-color: #fff
+  &__fn
+    border-left: solid 1px $color-python

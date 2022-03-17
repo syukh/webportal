@@ -1,0 +1,53 @@
+.lesson-page
+  h1.lesson-title Оператор циклу з постумовою <span class="accent">Repeat/Until</span>
+  p Цикл з постумовою – використовується в тому випадку, коли доцільно організувати повторення так, щоб спочатку виконувалася деяка послідовність дій, а потім перевірялося умова припинення її виконання.
+  p Цикл з постумовою <span class="accent">Repeat/Until</span> – служить для організації n-кратного виконання групи операторів (тіла циклу) до тих пір, поки умова завершення циклу не стане істинною (<span class="accent">True</span>).
+  h3.accent.lesson-subtitle  Схема оператора циклу з постумовою.
+  .block-less
+    .block-less__img
+      <img src="../img/lesson/pass/less-pass-9-01.jpg" alt="Схема оператора циклу з постумовою" style="width:60%">
+    .block-less__text
+      .example
+        ul
+          li <span class="text-bold">repiat</span>
+            ul
+              li оператор_1;
+              li ...
+              li оператор_n;
+          li <span class="text-bold">until</span> (умова);
+  p
+  p.text-bold Значення ключових слів:
+  .example
+    ul
+      li <span class="accent">repeat</span> – повторити;
+      li <span class="accent">until </span>– до.
+  p <span class="text-bold">Виконується оператор циклу з постумовою в такий спосіб</span>: спочатку виконуються оператори – <span class="accent">тіло циклу</span>; далі, обчислюється значення виразу-умови, якщо воно приймає значення <span class="accent">False</span>, то знову виконується тіло циклу, в іншому випадку виконується наступний оператор, що іде за оператором циклу з постумовою.
+  h3.accent.lesson-subtitle Зауваження
+  ol(style="padding-left:18px")
+    li Тіло циклу з постумовою може містити кілька операторів, які не потрібно брати в операторні дужки. В даному випадку ключові слова <span class="accent">repeat і until відіграють роль операторних дужок</span>, між якими може знаходиться будь-яка кількість операторів.
+    p
+    li Тіло циклу з постумовою завжди буде виконуватися хоча б один раз.
+    p
+    li Дозволено використання вкладених циклів. Їх реалізація повинна проводиться за тими ж правилами, що і для циклів з передумовою.
+    p
+  p <span class="text-bold">Приклад:</span> створити програму яка обчислює суму ряду <span class="text-bold color-red">1+2+3+...+n</span>:
+  .example
+    ul
+      li <span class="text-bold">Program</span> SumRow;
+      li <span class="text-bold">var</span>
+        ul
+          li i, n : <span class="color-accent">integer</span>;
+          li Sum : <span class="color-accent">real</span>;
+      li <span class="text-bold">begin</span>
+        ul
+          li write(<span class="color-accent">&#39;Введіть кількість членів ряду &#39;</span>);
+          li readln(n);
+          li i := <span class="color-excel">0</span>;
+          li Sum := <span class="color-excel">0</span>;
+          li <span class="text-bold">repeat</span>
+            ul
+              li i := i + <span class="color-excel">1</span>;
+              li Sum := Sum + i;
+          li <span class="text-bold">until</span> (i >= n);
+      li  writeln(<span class="color-accent">&#39;Сума &#39;</span>, n,<span class="color-accent"> &#39; членів ряду = &#39;</span>, Sum);
+      li <span class="text-bold">end.</span>

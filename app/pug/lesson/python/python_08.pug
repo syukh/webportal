@@ -1,0 +1,85 @@
+.lesson-page
+  h1.lesson-title Інструкція циклу з параметром <span class="accent">For</span>
+  p Цикл з параметром <span class="accent">for</span> використовується зазвичай в тих випадках, коли заздалегідь <span class="accent">можна визначити кількість повторень циклу</span>. Цикл з параметром <span class="accent">for</span> служить для організації n-кратного виконання тіла циклу для значень параметра циклу з деякої впорядкованої дискретної множини.
+  h3.accent.lesson-subtitle Схема оператора циклу з параметром.
+  .block-less
+    .block-less__img
+      <img src="../img/lesson/python/less-pyton-8-01.jpg" alt="Схема інструкції цикду for">
+    .block-less__text
+      .example
+        ul
+          li <span class="accent">for</span> <span class="text-bold">target_list</span> <span class="accent">in</span> <span class="text-bold">expression_list</span>:
+            ul
+              li блок_інструкцій_1
+              li блок_інструкцій_2
+              li блок_інструкцій_3
+              li …
+              li блок_інструкцій_N
+          li [<span class="accent">else:</span>
+            ul
+              li блок_інструкцій_N+1]
+  p 
+  p <span class="accent">target_list</span> – параметр циклу (його ще називають індексом, лічильником) це змінна дискретного типу, тобто типу, на безлічі значень якої визначено поняття <span class="accent">«попередній елемент»</span> і <span class="accent">«наступний елемент»</span>.   
+  p <span class="accent">expression_list</span> – ім’я послідовності (наприклад, список) або  виклик функції <span class="accent">range()</span>.
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде виводити на екран, у  назви кольорів: red, orange, yellow, green, cyan, blue, violet.
+  .example
+    ul.example-program.list
+      li <span class="text-bold">for</span> color <span class="text-bold">in</span> <span class="color-accent">&#39;red&#39;</span>, <span class="color-accent">&#39;orange&#39;</span>, <span class="color-accent">&#39;yellow&#39;</span>, <span class="color-accent">&#39;green&#39;</span>, <span class="color-accent">&#39;cyan&#39;</span>, <span class="color-accent">&#39;blue&#39;</span>, <span class="color-accent">&#39;violet&#39;</span>:
+        ul
+          li <span class="text-bold">print</span>(color)
+  h3.accent.lesson-subtitle Функція <span class="color-red">range</span>.
+  p <span class="accent">range</span> – це функція, що генерує послідовності із цілих чисел у визначеному діапазоні. Функція може мати один, два чи три аргументи.
+  p <span class="accent">range(A)</span> – створюється  послідовність від <span class="accent">0</span> до <span class="accent">A-1</span> <span class="color-excel">#range(5) –> 0, 1, 2, 3, 4</span>
+  p <span class="accent">range(A,B)</span> – створюється  послідовність від <span class="accent">A</span> до <span class="accent">B-1</span> <span class="color-excel">#range(1, 5) –> 1, 2, 3, 4</span>
+  p <span class="accent">range(A,B,N)</span> – створюється  послідовність від <span class="accent">A</span> до <span class="accent">B-1</span> з кроком <span class="accent">N</span> <span class="accent">може бути від’ємним</span>) <span class="color-excel">#range(1, 6, 2) –> 1, 3, 5</span>
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде виводити на екран, в рядок, числа від <span class="accent">1</span> до <span class="accent">n</span>:
+  .example
+      ul.example-program.list
+        li n = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;введіть кількість цифр = &#39;</span>))
+        li <span class="text-bold">for</span> i <span class="text-bold">in range</span>(<span class="color-excel">1</span>, n+<span class="color-excel">1</span>):
+        ul
+          li <span class="text-bold">print</span>(i, <span class="text-bold">end</span> = &#39; &#39;)
+  h3.accent.lesson-subtitle Накопичувачі суми і добутку.
+  p В циклах, доволі часто треба виконувати дії з отримання суми або добутку. Для цих цілей використовуються накопичувачі. Для використання таких накопичувачів необхідна змінна цілого або дійсного типу , яка приймає початкове значення <span class="text-bold color-red">0</span> <span class="accent">для накопичення суми</span> і початкове значення <span class="text-bold color-red">1</span> <span class="accent">для накопичення добутку</span> поза тілом циклу (до початку циклу). 
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде обчислювати суму ряду <span class="text-bold color-red">1+2+3+…+n</span> та виводити її на екран:
+  .example
+    ul.example-program.list
+      li n = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;введіть кількість членів ряду = &#39;</span>))
+      li sum = <span class="color-excel">0</span>
+      li <span class="text-bold">for</span> i <span class="text-bold">in range</span>(<span class="color-excel">1</span>, n+<span class="color-excel">1</span>):
+      ul
+        li sum = sum + i
+      li <span class="text-bold">else:</span>
+      ul
+        li  <span class="text-bold">print</span>(<span class="color-accent">&#39;Сума&#39;</span>, n, <span class="color-accent">&#39;членів ряду =&#39;</span>, sum)
+  h3.accent.lesson-subtitle Вкладені цикли.
+  p Інструкція одного циклу <span class="accent">for</span> може перебувати всередині інструкції іншого циклу. Така структура називається структурою вкладених циклів. Робота такої структури відбувається наступним чином: на одну ітерацію зовнішнього циклу вкладений цикл робить всі можливі ітерації.
+  .block-less
+    .block-less__img
+      <img src="../img/lesson/python/less-pyton-8-02.jpg" alt="Схема інструкції цикду for">
+    .block-less__text
+      .example
+        ul
+          li <span class="accent">for</span> <span class="text-bold">target_list</span> <span class="accent">in</span> <span class="text-bold">expression_list</span>:
+            ul
+              li <span class="accent">for</span> <span class="text-bold">target_list</span> <span class="accent">in</span> <span class="text-bold">expression_list</span>:
+                ul
+                  li блок_інструкцій_1
+                  li …
+                  li блок_інструкцій_N
+              li [<span class="accent">else:</span>
+                ul
+                  li блок_інструкцій_N+1]
+          li [<span class="accent">else:</span>
+            ul
+              li блок_інструкцій_Z]
+  p 
+  p <span class="text-bold">Приклад:</span> створити програму, яка буде виводити на екран таблицю множення.
+  .example
+    ul.example-program.list
+      li <span class="text-bold">for</span> i <span class="text-bold">in range</span>(<span class="color-excel">1</span>, <span class="color-excel">11</span>):
+        ul
+          li  <span class="text-bold">for</span> j <span class="text-bold">in range</span>(<span class="color-excel">1</span>, <span class="color-excel">11</span>):
+            ul
+              li <span class="text-bold">print</span>(i * j, <span class="text-bold">end</span>=&#39;\t&#39;)
+          li <span class="text-bold">print</span>()

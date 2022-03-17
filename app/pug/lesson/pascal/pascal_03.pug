@@ -1,0 +1,122 @@
+.lesson-page
+  h1.lesson-title Стандартні типи даних <span class="accent">Pascal</span>
+  p <span class="accent">Дані</span> - це ті об'єкти, з якими оперує програма, вони повинні бути описані. Дані, значення яких не змінюється в процесі виконання програми, описуються в розділі констант, дані що змінюються дані - в розділі опису змінних.
+  h3.accent.lesson-subtitle Структура розділу опису констант.
+  p Розділ опису іменованих констант починається з службового слова const, після якого йдуть елементи опису.
+  p.text-bold Структура розділу констант:
+  .example
+    ul
+      li  <span class="accent">Const</span>
+        ul
+          li ім’я_константи = значення;
+          li ім’я_константи : тип_даних = значення;
+  p.text-bold Приклади:
+  .example
+    ul
+      li <span class="accent">Const</span>
+        ul
+          li Pi = <span class="color-excel">3.14</span>;</li>
+          li Arr: <span class="text-bold">array</span> [<span class="color-excel">1..5</span>] <span class="text-bold">of</span> <span class="accent">integer</span> = (<span class="color-excel">1</span>,<span class="color-excel">3</span>, <span class="color-excel">5</span>,<span class="color-excel">7</span>, <span class="color-excel">9</span>);
+
+  h3.accent.lesson-subtitle  Структура розділу опису змінних.
+  p У розділі опису змінних <span class="accent">var</span> повинні бути описані <span class="text-bold">усі</span> змінні величини, які використовуються в програмі.
+  p.text-bold Структура розділу змінних:
+  .example
+    ul
+      li <span class="accent">Var</span>
+        ul
+          li ім’я_змінної_1 ,…, ім’я_змінної_r : тип_даних;</li>
+          li ...</li>
+          li ім’я_змінної_k ,…, ім’я_змінної_n : тип_даних;</li>
+  p Будь-які дані в програмі мають бути описані, тобто віднесені до одного і тільки одного типу даних, тобто <span class="text-bold color-red">повторний опис неприпустимий</span>. Задати тип даних - це означає вказати безліч допустимих значень даного типу. Pascal - строго типізована мова, тому що в ній необхідно описувати всі дані, вказуючи їх типи, і використовувати дані тільки відповідно до їх типу.
+
+  h3.accent.lesson-subtitle Основні типи даних.
+  h3.accent.lesson-subtitle <span class="color-red">Integer</span> <span class="color-blue">- цілий тип даних, операції над даними цілого типу.</span>
+  
+  p Змінні цілого типу можуть приймати <span class="text-bold color-red">тільки цілі значення</span>, що належать діапазону від <span class="accent">-2147483648 ... 2147483647</span>. Для опису даних цілого типу в розділі опису змінних служить ключове слово – <span class="accent">integer</span>.
+  p.text-bold Приклад:
+  .example
+    ul
+      li <span class="accent">Var</span>
+        ul
+          li x1, x2, x3 : <span class="accent">integer</span>;</li>
+  p На безлічі цілих чисел визначені <span class="accent">тільки</span> наступні <span class="accent">операції</span>, <span class="accent">результат</span> яких також є <span class="accent">ціле число</span>.
+  ul.list
+    li <span class="accent">+</span> – складання;</li>
+    li <span class="accent">-</span> – віднімання;</li>
+    li <span class="accent">*</span> – множення;</li>
+    li <span class="accent">div</span> – цілочисельне ділення, при якому у результата відсікається дробна частина;
+    li <span class="accent">mod</span> – залишок від ділення;
+    li <span class="accent">Trunc(x)</span> – відкидання дробової частини числа x;
+    li <span class="accent">Round(x)</span> – округлення числа х;
+    li <span class="accent">Abs(x)</span> – модуль числа х;
+    li <span class="accent">Sqr(x)</span> – зведення в квадрат числа х;
+    li <span class="accent">Power(x,y)</span> – зведення числа х в ступінь у;
+
+  h3.accent.lesson-subtitle <span class="color-red">Real</span> <span class="color-blue"> - дійсний тип даних, операції над даними дійсного типу. </span>
+  p Змінні дійсного типу можуть приймати значення, що належать до безлічі дійсних чисел: <span class="accent">-1.8Е+308 ... 1.8Е+308</span>. Для опису даних дійсного типу в розділі опису змінних служить ключове слово - <span class="accent">real</span>.
+  p.text-bold Приклад:
+  .example
+    ul
+      li <span class="accent">Var</span>
+        ul
+          li x1, x2, x3 : <span class="accent">real</span>;</li>
+  p У <span class="accent">Pascal</span> визначені наступні функції, що дають результат дійсного типу при речових значеннях аргументу:
+  ul.list
+    li <span class="accent">Abs (x)</span> – модуль числа;
+    li <span class="accent">Arctan (x) </span> – арктангенс числа х (х – в радіанах);
+    li <span class="accent">Cos (x) </span> – косінус числа х (х – в радіанах);
+    li <span class="accent">Exp (x) </span> – експонента х;
+    li <span class="accent">Ln (x) </span> – натуральний логарифм х;
+    li <span class="accent">Sin (x) </span> – сінус числа х (х – в радіанах);
+    li <span class="accent">Sqr (x) </span> – зведення в квадрат числа х;
+    li <span class="accent">Sqrt (х) </span> – корінь квадратний із х;
+    li <span class="accent">Random (x) </span> – випадкове число в діапазоні (0, x). Ініціалізація генератора випадкових чисел за допомогою команди: Randomize.
+  p При спробі обчислення значення функції від неприпустимих значень аргументу виникає переривання виконання програми.
+  
+  h3.accent.lesson-subtitle <span class="color-red">Char</span> <span class="color-blue">символьний тип даних, операції над даними символьного типу.</span>
+  p <span class="accent">Pascal</span> може обробляти не тільки числову інформацію, а й дані символьного типу. Останні можуть приймати значення з кінцевого впорядкованої множини символів, які для зручності зведені в таблицю – <span class="accent">Unicode</span>. Ця таблиця містить всього 256 символів, кожному з яких відповідає свій код. Для опису даних символьного типу в розділі опису змінних служить ключове слово - <span class="accent">char</span>.
+  p.text-bold Приклад:
+  .example
+    ul
+      li <span class="accent">Var</span>
+        ul
+          li Key, Pointers, Switch : <span class="accent">char</span>;
+  p Взаємно однозначна відповідність між символом і його номером в кодуванні Windows в процесі виконання програми встановлюється за допомогою наступних функцій:
+  ul.list
+    li <span class="accent">Ord(s)</span> – функція, повертає код символу s в кодуванні Windows.
+    li <span class="accent">Chr(n)</span> – функція, повертає символ з кодом n в кодуванні Windows.
+
+  h3.accent.lesson-subtitle <span class="color-red">String</span> <span class="color-blue">- строковий тип даних, операції над даними строкового типу.</span>
+  p Для опису даних строкового типу в розділі опису змінних служить ключове слово - <span class="accent">string</span>. Рядки складаються з набору послідовно розташованих символів <span class="accent">char</span> і використовуються для представлення тексту.
+  p Рядки можуть мати довільну довжину. До символів в рядку можна звертатися, використовуючи індекс: <span class="accent">s[i]</span>, який позначає i-тий символ в рядку, нумерація починається з одиниці. Якщо індекс <span class="accent">i</span> виходить за межі довжини рядка, то генерується виняток.
+  p Операція <span class="accent">+</span> для символів або рядків <span class="accent">означає конкатенацію (злиття) строк</span>. Наприклад: <span class="accent">&#39;a&#39; + &#39;b&#39; = &#39;ab&#39;</span>. Також, як і для символів, якщо <span class="accent">до рядка додати число</span>, то <span class="accent">число перетвориться на строку</span>.
+  p.text-bold Приклад:
+  .example
+    ul
+      li <span class="accent">Var</span>
+        ul
+          li s : <span class="accent">string</span>;</li>
+      li <span class="accent">Begin</span>
+        ul
+          li
+            .example-program__str s := <span class="color-excel">15</span> + <span class="accent">&#39; &#39;</span>;
+            .example-program__str <span class="color-excel">// s = &#39;15 &#39;</span>
+
+  p Над рядками визначені операції порівняння: <span class="accent">&#60;</span>, <span class="accent">&#62;</span>, <span class="accent">&#60;=</span>, <span class="accent">&#62;=</span>, <span class="accent">=</span>, <span class="accent">&#60;&#62;</span>. Порівняння рядків на нерівність здійснюється лексикографічно, тобто порівняння починається з першого символу рядка і по черзі до останнього. Якщо в процесі перевірки i-ті символи не збігаються, то перевірка завершується.
+  h3.accent.lesson-subtitle <span class="color-red">Boolean</span> <span class="color-blue">- логічний тип даних, операції над даними логічного типу.</span>
+  p Для опису даних логічного типу в розділі опису змінних служить ключове слово – <span class="accent">boolean</span>. Значення логічного типу займають <span class="accent">1 байт</span> і приймають одне з двох значень, що задаються зумовленими константами <span class="accent">True</span> (істина) і <span class="accent">False</span> (брехня).
+  p Результат виконання операцій порівняння над даними одного типу є логічна величина. У Pascal визначені наступні операції порівняння:
+  ul.list
+    li <span class="accent">= </span>- дорівнює;</li>
+    li <span class="accent">&#62;= </span>- більше або дорівнює;
+    li <span class="accent">&#62; </span>- більше;</li>
+    li <span class="accent">&#60;= </span>- менше або дорівнює;;
+    li <span class="accent">&#60; </span>- менше;</li>
+    li <span class="accent">&#60;&#62; </span>- не дорівнює.
+
+  p Додатково, в Pascal визначена функція, яка повертає результат логічного типу:
+  ul.list
+    li <span class="accent">Odd(x)</span> – функція, повертає: <span class="accent">True</span>, х – непарне ціле число; <span class="accent">False</span>, х – парне ціле.
+
+
