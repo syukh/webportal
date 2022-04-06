@@ -121,6 +121,16 @@ $(document).ready(function () {
       $('.lesson-list').addClass('pascal');
       break;
 
+    case "html":
+      $('.accent').addClass('color-html');
+      $('.simplebar-scrollbar').addClass('color-html');
+      $('.dowload-btn__wraper').addClass('html');
+      $('.nav__tooltip').addClass('html');
+      $('.nav__tooltip').addClass('html');
+      $('.lesson-list').addClass('html');
+      break;
+
+    
     default:
       $('.accent').addClass('color-accent');
   }

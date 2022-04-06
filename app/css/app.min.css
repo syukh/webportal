@@ -200,6 +200,20 @@ b, strong {
   color: #0066CC;
 }
 
+#menu.html,
+.color-html.simplebar-scrollbar:before,
+.python.nav__tooltip {
+  background-color: #F25700;
+}
+
+.color-html {
+  color: #F25700;
+}
+
+.color-html p:before {
+  color: #F25700;
+}
+
 .color-accent {
   color: #003EFF;
 }
@@ -276,9 +290,19 @@ b, strong {
 .dowload-btn .python {
   background-color: #0066CC;
 }
+.dowload-btn .html {
+  background-color: #F25700;
+}
 
 .default-font {
   font-family: "Days", sans-serif;
+}
+
+pre {
+  margin-bottom: 10px;
+}
+pre code {
+  border-radius: 10px;
 }
 
 #menu {
@@ -1167,6 +1191,10 @@ ul.list-table {
 
 .python p:before {
   color: #0066CC;
+}
+
+.html p:before {
+  color: #F25700;
 }
 
 .lesson-list.otstup,
