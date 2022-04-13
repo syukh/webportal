@@ -165,9 +165,9 @@ function browsersync(){
 function styles() {
   return src('app/'+prepros+'/main.'+prepros+'')
     .pipe(eval(prepros)())
-    .pipe(concat('app.min.css'))
-    // .pipe(autoprefixer({overrideBrowserslist: ['last 10 versions'], grid: true}))
-    // .pipe(cleanCSS({level: {1: {specialComments: 0 } }, /* format: 'beautify' */ }))
+    .pipe(concat('main.min.css'))
+    .pipe(autoprefixer({overrideBrowserslist: ['last 10 versions'], grid: true}))
+    .pipe(cleanCSS({level: {1: {specialComments: 0 } }, /* format: 'beautify' */ }))
     .pipe(dest('app/css/'))
     .pipe(browserSync.stream());
 };
