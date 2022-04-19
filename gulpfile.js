@@ -145,7 +145,7 @@ const uglify = require('gulp-uglify-es').default;
 const sass = require('gulp-sass')(require('sass'));
 const less = require('gulp-less');
 const pug = require('gulp-pug');
-const autoprefixer = require('gulp-autoprefixer');
+// const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const notify = require('gulp-notify'); // обрабатывает и отправляет сообщения об ошибке
 const plumber = require('gulp-plumber'); // обработчик ошибок к каждому pipe
@@ -166,8 +166,8 @@ function styles() {
   return src('app/'+prepros+'/main.'+prepros+'')
     .pipe(eval(prepros)())
     .pipe(concat('main.min.css'))
-    .pipe(autoprefixer({overrideBrowserslist: ['last 10 versions'], grid: true}))
-    .pipe(cleanCSS({level: {1: {specialComments: 0 } }, /* format: 'beautify' */ }))
+    // .pipe(autoprefixer({overrideBrowserslist: ['last 10 versions'], grid: true}))
+    // .pipe(cleanCSS({level: {1: {specialComments: 0 } }, /* format: 'beautify' */ }))
     .pipe(dest('app/css/'))
     .pipe(browserSync.stream());
 };
