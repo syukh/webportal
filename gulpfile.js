@@ -213,7 +213,7 @@ function libsCss(){
 function libsJs(){
   return src([
     // '...',           // Подключаем файлы JS
-    'node_modules/jquery/dist/jquery.min.js',
+    // 'node_modules/jquery/dist/jquery.min.js',
     // 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/slick-slider/slick/slick.min.js',
