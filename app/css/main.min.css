@@ -133,15 +133,15 @@ b, strong {
 #menu.word,
 .color-word.simplebar-scrollbar:before,
 .word.nav__tooltip {
-  background-color: #00569f;
+  background-color: #185ABD;
 }
 
 .color-word {
-  color: #00569f;
+  color: #185ABD;
 }
 
 .color-word p:before {
-  color: #00569f;
+  color: #185ABD;
 }
 
 #menu.excel,
@@ -279,7 +279,7 @@ b, strong {
 }
 
 .dowload-btn .word {
-  background-color: #00569f;
+  background-color: #185ABD;
 }
 .dowload-btn .excel {
   background-color: #008000;
@@ -1178,7 +1178,7 @@ ul.list-table {
 }
 
 .word p:before {
-  color: #00569f;
+  color: #185ABD;
 }
 
 .excel p:before {
