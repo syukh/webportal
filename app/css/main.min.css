@@ -1554,6 +1554,10 @@ ul.list-table {
   border-left: solid 1px #0066CC;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
 @media only screen and (max-width: 1920px) and (max-height: 900px) {
   .home-caption__title {
     font-size: calc(2rem + 9vw);
