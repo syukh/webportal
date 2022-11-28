@@ -1,0 +1,126 @@
+.lesson-page
+  h1.lesson-title Таблиці
+  p <span class="accent">HTML-таблиця</span> – це складений елемент, що створюється за допомогою парного елемента <span class="accent">table</span>, який є контейнером для елементів таблиці і всі його дочірні елементи повинні знаходитись усередині нього.
+  p Тобто, клітинки таблиці можуть містити будь-які HTML-елементи: заголовки, списки, текст, зображення, елементи форм, а також інші таблиці.
+  pre
+    code.html &#60;table&#62;
+      //-   &#60;tr&#62;
+      //-     &#60;th&#62;Категорія&#60;/th&#62;
+      //-     &#60;th&#62;Категорія&#60;/th&#62;
+      //-     &#60;th&#62;Категорія&#60;/th&#62;
+      //-   &#60;/tr&#62;
+      //-   &#60;tr&#62;
+      //-     &#60;td&#62;клітинка&#60;/td&#62;
+      //-     &#60;td&#62;клітинка&#60;/td&#62;
+      //-     &#60;td&#62;клітинка&#60;/td&#62;
+      //-   &#60;/tr&#62;
+      //- &#60;/table&#62;
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-09-01.png" alt="таблиця">
+  p <span class="text-bold">Розмітка таблиці містить у собі кілька основних елементів:</span>
+  ul.list 
+    li <span class="accent">&#60;table&#62;</span> – область таблиці;
+    li <span class="accent">&#60;tr&#62;</span> - рядок (<span class="accent">table row</span> – рядок таблиці);
+    li <span class="accent">&#60;th&#62;</span> - клітинка категорії (<span class="accent">table header</span> – заголовок категорії);
+    li <span class="accent">&#60;td&#62;</span> - клітинка (<span class="accent">table data</span> – данні таблиці).
+  p За замовчуванням таблиця та клітинки не мають видимих меж. Межі в таблиці задаються за допомогою атрибуту border, значення якого це – будь-яке позитивне ціле число.
+  pre
+    code.html &#60;table border = "1"&#62;
+      //- &#65049;
+      //- &#60;/table&#62;
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-09-02.png" alt="межі таблиці">
+  p Привести таблицю до звичайного вигляду допоможе комбінація атрибутів:  <span class="accent">cellspacing</span> (відстань між клітинками) та <span class="accent">bordercolor</span> (колір межі клітинок).
+  pre
+    code.html &#60;table border = "1" cellspacing = "0" bordercolor = "DarkOrange"&#62;
+      //- &#65049;
+      //- &#60;/table&#62;
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-09-03.png" alt="таблиця із звичайними межами">
+  p За допомоги атрибутів <span class="accent">width</span> та <span class="accent">align</span> таблиці можна задати ширину та вирівнювання відносно веб-сторінки. 
+  pre
+    code.html &#60;table border = "1" cellspacing = "0" bordercolor = "darkorange" width = "60%" align = "center"&#62;
+      //- &#65049;
+      //- &#60;/table&#62;
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-09-04.png" alt="таблиця із заданою шириною">
+    
+  h3.accent.lesson-subtitle Заголовок (підпис) таблиці.
+  p Використання HTML-елементу <span class="accent">caption</span> дозволяє створити підпис таблиці. Елемент додається безпосередньо після тегу <span class="accent">table</span>. За замовчуванням, текст заголовку розташовується по центру таблиці.
+  pre
+    code.html &#60;table border = "1" cellspacing = "0" bordercolor = "darkorange"&#62;
+      //-   &#60;caption&#62;Заголовок таблиці&#60;/caption&#62;
+      //-   &#60;tr&#62;
+      //-     &#60;th&#62;Категорія&#60;/th&#62;
+      //-     &#60;th&#62;Категорія&#60;/th&#62;
+      //-     &#60;th&#62;Категорія&#60;/th&#62;
+      //-   &#60;/tr&#62;
+      //-   &#60;tr&#62;
+      //-     &#60;td&#62;клітинка&#60;/td&#62;
+      //-     &#60;td&#62;клітинка&#60;/td&#62;
+      //-     &#60;td&#62;клітинка&#60;/td&#62;
+      //-   &#60;/tr&#62;
+      //- &#60;/table&#62;
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-09-05.png" alt="заголовктаблиці">
+
+  h3.accent.lesson-subtitle Групування рядків та стовпців таблиці.
+  p При оформленні таблиці іноді виникає потреба виділити певним кольором сукупність клітинок, що буде включати в себе деяку кількість стовпчиків. Саме для таких випадків був створений html-елемент <span class="accent">colgroup</span>.
+  p Елемент <span class="accent">colgroup</span> створює структурну групу з одного або більше стовпців для єдиного форматування, дозволяючи застосувати єдині стилі до стовпців 
+  pre
+    code.html &#60;table border = "1" cellspacing = "0" bordercolor = "darkorange" width = "60%" align = "center"&#62;
+      //-   &#60;colgroup&#62;
+      //-     &#60;col span = "2" bgcolor = "AntiqueWhite"&#62;
+      //-     &#60;col span = "1" bgcolor = "Gold"&#62;
+      //-   &#60;/colgroup&#62;
+      //-   &#60;tr&#62;
+      //-     &#60;th width = "10%"&#62;№ з/п&#60;/th&#62;
+      //-     &#60;th width = "60%"&#62;Найменування товару&#60;/th&#62;
+      //-     &#60;th width = "30%"&#62;Ціна, грн&#60;/th&#62;
+      //-   &#60;/tr&#62;
+      //-   &#60;tr&#62;
+      //-     &#60;td&#62;1&#60;/td&#62;
+      //-     &#60;td&#62;Тістечко "Мрія"&#60;/td&#62;
+      //-     &#60;td&#62;50,00&#60;/td&#62;
+      //-   &#60;/tr&#62;
+      //-   &#60;tr&#62;
+      //-     &#60;td&#62;2&#60;/td&#62;
+      //-     &#60;td&#62;Тістечко "Еклер"&#60;/td&#62;
+      //-     &#60;td&#62;60,00&#60;/td&#62;
+      //-   &#60;/tr&#62;
+      //- &#60;/table&#62;
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-09-06.png" alt="форматована таблиця">
+  h3.accent.lesson-subtitle Об'єднання клітинок таблиці.
+  p Однією з основних властивостей структури таблиці є можливість об'єднання клітинок, вони можуть розтягуватися та займати кілька рядків або стовпців, що дозволяє створювати досить складні структури.
+  p Клітинки об’єднуються за допомоги додавання атрибутів <span class="accent">colspan</span> або <span class="accent">rowspan</span> безпосередньо в html-елементи <span class="accent">th</span> та <span class="accent">td</span>.
+  p Значеннями атрибутів виступають цілі позитивні числа, що визначають яку кількість стандартних клітинок по ширині або висоті буде займати поточна клітинка в таблиці.  
+  pre
+    code.html &#60;table border = "1" cellspacing = "0" bordercolor = "darkorange" width = "60%" align = "center"&#62;
+      //-   &#60;colgroup&#62;
+      //-     &#60;col span = "2" bgcolor = "khaki"&#62;
+      //-     &#60;col span = "1" bgcolor = "orange"&#62;
+      //-   &#60;/colgroup&#62;
+      //-   &#60;tr&#62;
+      //-     &#60;th width = "10%"&#62;№ з/п&#60;/th&#62;
+      //-     &#60;th width = "60%" colspan= "2"&#62;Найменування товару&#60;/th&#62;
+      //-     &#60;th width = "30%"&#62;Ціна, грн&#60;/th&#62;
+      //-   &#60;/tr&#62;
+      //-   &#60;tr&#62;
+      //-     &#60;td&#62;1&#60;/td&#62;
+      //-     &#60;td rowspan= "2" align= "center"&#62;Тістечко&#60;/td&#62;
+      //-     &#60;td&#62;"Мрія"&#60;/td&#62;
+      //-     &#60;td&#62;50,00&#60;/td&#62;
+      //-   &#60;/tr&#62;
+      //-   &#60;tr&#62;
+      //-     &#60;td&#62;2&#60;/td&#62;
+      //-     &#60;td&#62;"Еклер"&#60;/td&#62;
+      //-     &#60;td&#62;60,00&#60;/td&#62;
+      //-   &#60;/tr&#62;
+      //-   &#60;tr&#62;
+      //-     &#60;th rowspan= "2" align= "right"&#62;Ітог&#60;/th&#62;
+      //-     &#60;th align= "left"&#62;120,00&#60;/th&#62;
+      //-   &#60;/tr&#62;
+      //- &#60;/table&#62;
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-09-07.png" alt="об'єднання клітинок в таблиці">
