@@ -38,16 +38,39 @@
       <div class="section-row section-row__course">
         <div class="course-wrap" id="spbar">
           <div class="lesson-page">
-            <h1 class="lesson-title">Html-зображення</h1>
-            <p>Для вставлення зображення у веб-сторінку використовується одинарний рядковий тег <span class="accent">&#60;img&#62;</span>.</p>
-            <P>Зауважимо, що оскільки елемент <span class="accent">img</span> є рядковим, рекомендується розташовувати його всередині блокових тегів. </P>
-            <p>Елемент <span class="accent">img</span> має обов'язковий атрибут <span class="accent">src</span> (<span class="accent">source</span> – джерело), значенням якого є абсолютний або відносний шлях до зображення, в кінці якого вказується ім’я файлу з розширенням.</p>
-            <pre><code class="html">&#60;img src="image.jpg" alt="Зображення"&#62;</code></pre>
-            <h3 class="accent lesson-subtitle">Адреса зображення.</h3>
-            <p>Адреса зображення може бути вказана повністю (абсолютно), наприклад:</p>
-            <pre><code class="html">&#60;img src="https://webportal.com.ua/img/photo.jpg"&#62;  </code></pre>
-            <p>Або через відносний шлях від кореневого каталогу:</p>
-            <pre><code class="html">&#60;img src="/img/photo.jpg"&#62; </code></pre>
+            <h1 class="lesson-title">Форми</h1>
+            <p>Форма – це компонент веб-сторінки з інтерактивними елементами керування, такими як текстові поля, кнопки, прапорці, перемикачі, списки, що призначений для отримання даних від користувача. </p>
+            <p>Форми додають на веб-сторінку за допомогою елемента <span class="accent">&#60;form&#62;</span>. Він є контейнером для всього вмісту форми, а також для будь-яких інших тегів мови HTML. Однак він не може містити інший елемент <span class="accent">&#60;form&#62;</span>.</p>
+            <p>Майже всі поля для форми створюються за допомогою елемента <span class="accent">&#60;input&#62;</span> (введення). Зовнішній вигляд елемента <span class="accent">&#60;input&#62;</span> змінюється залежно від його атрибута <span class="accent">type</span>.</p>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-01.png" alt="html form"></figure>
+            <h3 class="accent lesson-subtitle">Атрибут placeholder.</h3>
+            <p>На практиці доволі часто трапляються ситуації, коли опис для поля є, але зовсім незрозуміло, в якому форматі потрібно заповнити дані. Щоб допомогти користувачу зорієнтуватися, у тезі <span class="accent">&#60;input&#62;</span> використовується атрибут <span class="accent">placeholder</span>. Значення цього атрибуту буде виведено у текстовому полі.</p>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-02.png" alt="placeholder"></figure>
+            <h3 class="accent lesson-subtitle">Eлемент-перемикач.</h3>
+            <p>Атрибут типу <span class="accent">radio</span> для елементу <span class="accent">input</span> створює перемикачі, які використовують принцип логічного «АБО», тобто дозволяється обрати лише одне з декількох значень.</p>
+            <p>Треба зауважити, що при створенні перемикачів (радіокнопок), в елементі <span class="accent">input</span> додатково треба вказувати ще атрибут <span class="accent">name</span>, значенням якого є довільне ім'я. Це ім'я має бути однаковим у всій групі радіокнопок. Без цього атрибуту браузер не бачитиме зв'язку між перемикачами і буде можливість вибрати всі значення одразу.</p>
+            <p>Для того, щоб після виправлення форми на сервері можливо було визначити, який саме пункт обрали, використовується значення атрибута <span class="accent">value</span>, всередині якого знаходиться певне значення, воно може відрізнятися від тексту підказки.</p>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-03.png" alt="input radio"></figure>
+            <h3 class="accent lesson-subtitle">Eлемент-прапорець.</h3>
+            <p>Атрибут типу <span class="accent">checkbox</span> для елементу <span class="accent">input</span> створює елемент-прапорець (чекбокс). На відміну від перемикачів, чексбокс дозволяє обирати із наявних декілька елементів.</p>
+            <p>Для об’єднання чекбоксів в єдину групу, як і для радіокнопок, додатково в елементі <span class="accent">input</span> треба вказати атрибут <span class="accent">name</span>, значенням якого є довільне ім'я. Також, для подальшого визначення значень обраних пунктів застосовується атрибут <span class="accent">value</span>.</p>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-04.png" alt="input checkbox"></figure>
+            <p>Наявність атрибута <span class="accent">checked</span> (встановлений) у елемента-перемикача та прапорця вказує на те, який з запропонованих варіантів повинен бути обраний за замовчуванням при завантаженні сторінки, якщо це необхідно.</p>
+            <h3 class="accent lesson-subtitle">Кнопки підтвердження та скидання.</h3>
+            <p>Атрибут типу <span class="accent">submit</span> (надіслати) для елементу <span class="accent">input</span> створює кнопку, при натисканні якої відбувається відправлення браузером даних, що були введені користувачем у форму.</p>
+            <p>За замовчуванням у браузерах на кнопці пишеться «Надіслати», для заміни напису на кнопці використовується атрибут <span class="accent">valuе</span> з новим значенням напису.</p>
+            <p>Атрибут типу <span class="accent">reset</span> (скинути) для елементу <span class="accent">input</span> створює кнопку, при натисканні якої відбувається скидання усіх налаштувань у формі, що зробив користувач.</p>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-05.png" alt="button submit&reset"></figure>
+            <h3 class="accent lesson-subtitle">Групування елементів форми.</h3>
+            <p>Елементи форми, що пов'язані за змістом, можна згрупувати за допомоги елементу <span class="accent">fieldset</span>. Браузер відображає його, як рамку навколо групи елементів форми. </p>
+            <p>Для зручності, кожна така група може містити свій заголовок, встановлюється він за допомоги  елементу <span class="accent">legend</span>, який вбудовує текст заголовка в рамку групи.</p>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-06.png" alt="fieldset"></figure>
           </div>
           <div class="dowload-btn"><a class="dowload-btn__wraper" href="#">
               <div class="btn-descr">додаткові<br />матеріали</div>
