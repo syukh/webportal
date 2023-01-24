@@ -3,6 +3,14 @@
   p Форма – це компонент веб-сторінки з інтерактивними елементами керування, такими як текстові поля, кнопки, прапорці, перемикачі, списки, що призначений для отримання даних від користувача. 
   p Форми додають на веб-сторінку за допомогою елемента <span class="accent">&#60;form&#62;</span>. Він є контейнером для всього вмісту форми, а також для будь-яких інших тегів мови HTML. Однак він не може містити інший елемент <span class="accent">&#60;form&#62;</span>.
   p Майже всі поля для форми створюються за допомогою елемента <span class="accent">&#60;input&#62;</span> (введення). Зовнішній вигляд елемента <span class="accent">&#60;input&#62;</span> змінюється залежно від його атрибута <span class="accent">type</span>.
+  P <span class="text-bold">Основні типи відображуваного елемента керування:</span> 
+  ul.list 
+    li <span class="accent">text</span> – введення одного рядка тексту;
+    li <span class="accent">password</span> – текстове поле для введення пароля, в якому всі символи, що вводяться, замінюються зірочкою;
+    li <span class="accent">radio</span> – елемент-перемикач;
+    li <span class="accent">checkbox</span> – поле для встановлення прапорця, який можна встановити чи скинути;
+    li <span class="accent">submit</span> – кнопка, при натисканні якої відбувається надсилання даних, введених у форму;
+    li <span class="accent">reset</span> – кнопка при натисканні якої вся форма очищається.
   pre
     code.html &#60;form&#62;
     //-   &#60;p&#62;Ваш логін:&#60;input type="text"&#62;&#60;/p&#62; 
@@ -29,11 +37,12 @@
   p Для того, щоб після виправлення форми на сервері можливо було визначити, який саме пункт обрали, використовується значення атрибута <span class="accent">value</span>, всередині якого знаходиться певне значення, воно може відрізнятися від тексту підказки.
   pre
     code.html &#60;form&#62;
+      //-&#60;p&#62;Яким браузером користуєтесь?&#60;/p&#62;
       //- &#60;ul type="none" &#62;
-        //- &#60;li&#62;&#60;input type="radio" name="browser" value=" Chrome"&#62;Chrome&#60;/li&#62;
-        //- &#60;li&#62;&#60;input type="radio" name="browser" value=" Opera"&#62;Opera&#60;/li&#62;
-        //- &#60;li&#62;&#60;input type="radio" name="browser" value=" Edge"&#62;Edge&#60;/li&#62;
-        //- &#60;li&#62;&#60;input type="radio" name="browser" value=" Safari"&#62;Safari&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="radio" name="browser" value="Chrome"&#62;Chrome&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="radio" name="browser" value="Opera"&#62;Opera&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="radio" name="browser" value="Edge"&#62;Edge&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="radio" name="browser" value="Safari"&#62;Safari&#60;/li&#62;
       //- &#60;/ul&#62;
       //- &#60;input type="sяubmit"&#62;
     //- &#60;/form&#62;
@@ -45,11 +54,12 @@
   p Для об’єднання чекбоксів в єдину групу, як і для радіокнопок, додатково в елементі <span class="accent">input</span> треба вказати атрибут <span class="accent">name</span>, значенням якого є довільне ім'я. Також, для подальшого визначення значень обраних пунктів застосовується атрибут <span class="accent">value</span>.
   pre
     code.html &#60;form&#62;
+      //-&#60;p&#62;Яким браузером користуєтесь?&#60;/p&#62;
       //- &#60;ul type="none" &#62;
-        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value=" Chrome" checked&#62;Chrome&#60;/li&#62;
-        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value=" Opera"&#62;Opera&#60;/li&#62;
-        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value=" Edge"&#62;Edge&#60;/li&#62;
-        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value=" Safari"&#62;Safari&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value="Chrome" checked&#62;Chrome&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value="Opera"&#62;Opera&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value="Edge"&#62;Edge&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value="Safari"&#62;Safari&#60;/li&#62;
       //- &#60;/ul&#62;
       //- &#60;input type="submit"&#62;
     //- &#60;/form&#62;
@@ -63,13 +73,14 @@
   p Атрибут типу <span class="accent">reset</span> (скинути) для елементу <span class="accent">input</span> створює кнопку, при натисканні якої відбувається скидання усіх налаштувань у формі, що зробив користувач.
   pre
     code.html &#60;form&#62;
+      //-&#60;p&#62;Яким браузером користуєтесь?&#60;/p&#62;
       //- &#60;ul type="none" &#62;
-        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value=" Chrome" checked&#62;Chrome&#60;/li&#62;
-        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value=" Opera"&#62;Opera&#60;/li&#62;
-        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value=" Edge"&#62;Edge&#60;/li&#62;
-        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value=" Safari"&#62;Safari&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value="Chrome"#62;Chrome&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value="Opera"&#62;Opera&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value="Edge"&#62;Edge&#60;/li&#62;
+        //- &#60;li&#62;&#60;input type="checkbox" name="browser" value="Safari"&#62;Safari&#60;/li&#62;
       //- &#60;/ul&#62;
-      //- &#60;input type="submit value="Обрати""&#62;
+      //- &#60;input type="submit" value="Обрати"&#62;
       //- &#60;input type="reset"&#62;
     //- &#60;/form&#62;
   figure.wp-block-image

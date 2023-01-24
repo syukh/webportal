@@ -214,6 +214,20 @@ b, strong {
   color: #F25700;
 }
 
+#menu.css,
+.color-css.simplebar-scrollbar:before,
+.css.nav__tooltip {
+  background-color: #0096D2;
+}
+
+.color-css {
+  color: #0096D2;
+}
+
+.color-css p:before {
+  color: #0096D2;
+}
+
 .color-accent {
   color: #003EFF;
 }
@@ -292,6 +306,9 @@ b, strong {
 }
 .dowload-btn .html {
   background-color: #F25700;
+}
+.dowload-btn .css {
+  background-color: #0096D2;
 }
 
 .default-font {
@@ -1195,6 +1212,10 @@ ul.list-table {
 
 .html p:before {
   color: #F25700;
+}
+
+.css p:before {
+  color: #0096D2;
 }
 
 .lesson-list.otstup,

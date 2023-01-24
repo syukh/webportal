@@ -1,0 +1,42 @@
+.lesson-page
+  h1.lesson-title Введення в <span class="accent">CSS</span>
+  p <span class="accent">Cascading Style Sheets</span> (каскадні таблиці стилів) – це мова, яка дозволяє надавати певні стилі оформлення структурованим документам.
+  p Використовується для створення та зміни стилів елементів веб-сторінок та інтерфейсів користувача, що розмічені мовою <span class="accent">HTML</span>. Може задавати, як окремо відображатимуться HTML-елементи на екранах пристроїв, папері (при друку) та інших носіях.
+
+  h3.accent.lesson-subtitle Синтаксис CSS.
+  p В каскадних таблицях стилів описуються правила форматування елементів, вони задаються певними властивостями та їх допустимими значеннями. Кожен елемент має обмежений набір властивостей, інші властивості не матимуть на нього жодного впливу.
+  P <span class="text-bold">CSS правила складаються з двох частин:
+  ul.list
+    li <span class="accent">селектор</span> – вказує на елемент HTML, якому потрібно надати стиль;
+    li <span class="accent">оформлення</span> – це сукупність властивостей та значень, що розділені крапками з комою.
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-01-01.svg" alt="сінтаксис стилю" style="width: 55%;">
+
+  h3.accent.lesson-subtitle Використання стилів.
+  p Здебільшого, таблиця стилів – це окремий документ, що являє собою текстовий файл із розширенням <span class="accent">.css</span>. В цьому випадку, <span class="accent">CSS</span> не пов'язаний з розміткою <span class="accent">HTML</span>, браузеру необхідно вказувати, звідки потрібно завантажувати стилі.
+  p <span class="accent">Зовнішня таблиця стилів</span> підключається до веб-сторінки за допомогою елемента <span class="accent">&#60;link&#62;</span>, розташованого всередині розділу <span class="accent">head</span>.
+  pre
+    code.html &#60;link rel="stylesheet" type="style.css" type="text/css"&#62;
+
+  p Розмістити стилі можна і безпосередньо в середині HTML-документа. <span class="accent">Внутрішня таблиця стилів</span> вбудовується в розділ <span class="accent">head</span> документа, а самі стилі визначаються всередині елемента <span class="accent">&#60;style&#62;</span>.
+  pre
+    code.html &#60;head&#62;
+      //-   &#60;style&#62;
+      //-     p { 
+      //-       font-weight:bold;
+      //-       font-size:20px;
+      //-       color:#0096D2;
+      //-     }
+      //-   &#60;/style&#62;
+      //- &#60;/head&#62;
+      //- &#60;body&#62;
+      //-   &#60;p&#62;Hello world!&#60;/p&#62;
+      //- &#60;/body&#62;
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-01-02.png" alt="внутрішні стилі">
+
+  p Для застосування унікального стилю, до окремого елемента, треба використовувати <span class="accent">вбудований стиль</span>. Вбудовані стилі, пишемо безпосередньо всередині HTML-елемента за допомогою атрибуту <span class="accent">style</span>.
+  pre
+    code.html &#60;p style="font-style:italic"&#62;Hello world!&#60;/p&#62;
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-01-03.png" alt="вбудовані стилі">

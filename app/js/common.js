@@ -130,6 +130,15 @@ $(document).ready(function () {
       $('.lesson-list').addClass('html');
       break;
 
+    case "css":
+      $('.accent').addClass('color-css');
+      $('.simplebar-scrollbar').addClass('color-css');
+      $('.dowload-btn__wraper').addClass('css');
+      $('.nav__tooltip').addClass('css');
+      $('.nav__tooltip').addClass('css');
+      $('.lesson-list').addClass('css');
+      break;
+
     
     default:
       $('.accent').addClass('color-accent');

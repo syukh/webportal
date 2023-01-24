@@ -16,7 +16,7 @@
 </head>
 <body>
   <div class="lesson-section" id="main-section">
-    <div class="html" id="menu">
+    <div class="css" id="menu">
       <div class="logo"><a href="#"><img class="logo__img" src="/img/logo.svg" alt="Logo"/></a></div>
       <nav class="nav"><a class="nav__link" href="#"><span class="nav__tooltip">Microsoft Office</span><img src="/img/logo_office.svg"/></a><a class="nav__link" href="#"><span class="nav__tooltip">Програмування</span><img src="/img/logo_prog.svg"/></a><a class="nav__link" href="#"><span class="nav__tooltip">Web-технології</span><img src="/img/logo_web.svg"/></a><a class="nav__link" href="#"><span class="nav__tooltip">Майстер-класи</span><img src="/img/logo_master.svg"/></a>
       </nav>
@@ -37,41 +37,42 @@
     <div class="section-lesson" id="section">
       <div class="section-row section-row__course">
         <div class="course-wrap" id="spbar">
-          <div class="lesson-page">
-            <h1 class="lesson-title">Форми</h1>
-            <p>Форма – це компонент веб-сторінки з інтерактивними елементами керування, такими як текстові поля, кнопки, прапорці, перемикачі, списки, що призначений для отримання даних від користувача. </p>
-            <p>Форми додають на веб-сторінку за допомогою елемента <span class="accent">&#60;form&#62;</span>. Він є контейнером для всього вмісту форми, а також для будь-яких інших тегів мови HTML. Однак він не може містити інший елемент <span class="accent">&#60;form&#62;</span>.</p>
-            <p>Майже всі поля для форми створюються за допомогою елемента <span class="accent">&#60;input&#62;</span> (введення). Зовнішній вигляд елемента <span class="accent">&#60;input&#62;</span> змінюється залежно від його атрибута <span class="accent">type</span>.</p>
-            <pre><code class="html">&#60;form&#62;</code></pre>
-            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-01.png" alt="html form"></figure>
-            <h3 class="accent lesson-subtitle">Атрибут placeholder.</h3>
-            <p>На практиці доволі часто трапляються ситуації, коли опис для поля є, але зовсім незрозуміло, в якому форматі потрібно заповнити дані. Щоб допомогти користувачу зорієнтуватися, у тезі <span class="accent">&#60;input&#62;</span> використовується атрибут <span class="accent">placeholder</span>. Значення цього атрибуту буде виведено у текстовому полі.</p>
-            <pre><code class="html">&#60;form&#62;</code></pre>
-            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-02.png" alt="placeholder"></figure>
-            <h3 class="accent lesson-subtitle">Eлемент-перемикач.</h3>
-            <p>Атрибут типу <span class="accent">radio</span> для елементу <span class="accent">input</span> створює перемикачі, які використовують принцип логічного «АБО», тобто дозволяється обрати лише одне з декількох значень.</p>
-            <p>Треба зауважити, що при створенні перемикачів (радіокнопок), в елементі <span class="accent">input</span> додатково треба вказувати ще атрибут <span class="accent">name</span>, значенням якого є довільне ім'я. Це ім'я має бути однаковим у всій групі радіокнопок. Без цього атрибуту браузер не бачитиме зв'язку між перемикачами і буде можливість вибрати всі значення одразу.</p>
-            <p>Для того, щоб після виправлення форми на сервері можливо було визначити, який саме пункт обрали, використовується значення атрибута <span class="accent">value</span>, всередині якого знаходиться певне значення, воно може відрізнятися від тексту підказки.</p>
-            <pre><code class="html">&#60;form&#62;</code></pre>
-            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-03.png" alt="input radio"></figure>
-            <h3 class="accent lesson-subtitle">Eлемент-прапорець.</h3>
-            <p>Атрибут типу <span class="accent">checkbox</span> для елементу <span class="accent">input</span> створює елемент-прапорець (чекбокс). На відміну від перемикачів, чексбокс дозволяє обирати із наявних декілька елементів.</p>
-            <p>Для об’єднання чекбоксів в єдину групу, як і для радіокнопок, додатково в елементі <span class="accent">input</span> треба вказати атрибут <span class="accent">name</span>, значенням якого є довільне ім'я. Також, для подальшого визначення значень обраних пунктів застосовується атрибут <span class="accent">value</span>.</p>
-            <pre><code class="html">&#60;form&#62;</code></pre>
-            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-04.png" alt="input checkbox"></figure>
-            <p>Наявність атрибута <span class="accent">checked</span> (встановлений) у елемента-перемикача та прапорця вказує на те, який з запропонованих варіантів повинен бути обраний за замовчуванням при завантаженні сторінки, якщо це необхідно.</p>
-            <h3 class="accent lesson-subtitle">Кнопки підтвердження та скидання.</h3>
-            <p>Атрибут типу <span class="accent">submit</span> (надіслати) для елементу <span class="accent">input</span> створює кнопку, при натисканні якої відбувається відправлення браузером даних, що були введені користувачем у форму.</p>
-            <p>За замовчуванням у браузерах на кнопці пишеться «Надіслати», для заміни напису на кнопці використовується атрибут <span class="accent">valuе</span> з новим значенням напису.</p>
-            <p>Атрибут типу <span class="accent">reset</span> (скинути) для елементу <span class="accent">input</span> створює кнопку, при натисканні якої відбувається скидання усіх налаштувань у формі, що зробив користувач.</p>
-            <pre><code class="html">&#60;form&#62;</code></pre>
-            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-05.png" alt="button submit&reset"></figure>
-            <h3 class="accent lesson-subtitle">Групування елементів форми.</h3>
-            <p>Елементи форми, що пов'язані за змістом, можна згрупувати за допомоги елементу <span class="accent">fieldset</span>. Браузер відображає його, як рамку навколо групи елементів форми. </p>
-            <p>Для зручності, кожна така група може містити свій заголовок, встановлюється він за допомоги  елементу <span class="accent">legend</span>, який вбудовує текст заголовка в рамку групи.</p>
-            <pre><code class="html">&#60;form&#62;</code></pre>
-            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/html/less-html-11-06.png" alt="fieldset"></figure>
-          </div>
+<div class="lesson-page">
+<h1 class="lesson-title">Введення в <span class="accent">CSS</span></h1>
+<p><span class="accent">Cascading Style Sheets</span> (каскадні таблиці стилів) – це мова, яка дозволяє надавати певні стилі оформлення структурованим документам.</p>
+<p>Використовується для створення та зміни стилів елементів веб-сторінок та інтерфейсів користувача, що розмічені мовою <span class="accent">HTML</span>. Може описувати, як HTML-елементи повинні відображатися на екранах пристроїв, папері (при друку) та інших носіях.</p>
+<h3 class="accent lesson-subtitle">Синтаксис CSS.</h3>
+<p>В каскадних таблицях стилів описуються правила форматування елементів, вони задаються певними властивостями та їх допустимими значеннями. Кожен елемент має обмежений набір властивостей, інші властивості не матимуть на нього жодного впливу.</p>
+<P><span class="text-bold">CSS правила складаються з двох частин:</P>
+<ul class="list">
+<li><span class="accent">селектор</span> – вказує на елемент HTML, якому потрібно надати стиль;</li>
+<li><span class="accent">оформлення</span> – це сукупність властивостей та значень, що розділені крапками з комою.</li>
+</ul>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-01-01.svg" alt="сінтаксис стилю" style="width: 55%;"></figure>
+<h3 class="accent lesson-subtitle">Використання стилів.</h3>
+<p>Здебільшого, таблиця стилів – це окремий документ, що являє собою текстовий файл із розширенням <span class="accent">.css</span>. В цьому випадку, <span class="accent">CSS</span> не пов'язаний з розміткою <span class="accent">HTML</span>, браузеру необхідно вказувати, звідки потрібно завантажувати стилі.</p>
+<p><span class="accent">Зовнішня таблиця стилів</span> підключається до веб-сторінки за допомогою елемента <span class="accent">&#60;link&#62;</span>, розташованого всередині розділу <span class="accent">head</span>.</p>
+<pre><code class="html">&#60;link rel="stylesheet" type="style.css" type="text/css"&#62;</code></pre>
+<p>Розмістити стилі можна і безпосередньо в середині HTML-документа.</p>
+<p><span class="accent">Внутрішня таблиця стилів</span> вбудовується в розділ <span class="accent">head</span> HTML-документа, а самі стилі визначаються всередині елемента <span class="accent">&#60;style&#62;</span>.</p>
+<pre><code class="html">&#60;head&#62;
+  &#60;style&#62;
+    p { 
+      font-weight:bold;
+      font-size:20px;
+      color:#0096D2;
+    }
+  &#60;/style&#62;
+&#60;/head&#62;
+&#60;body&#62;
+  &#60;p&#62;Hello world!&#60;/p&#62;
+&#60;/body&#62;</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-01-02.png" alt="внутрішні стилі"></figure>
+<p>Для застосування унікального стилю для окремого елемента може бути використаний <span class="accent">вбудований стиль</span>.</p>
+<p>Вбудовані стилі, пишемо безпосередньо всередині HTML-елемента за допомогою атрибуту <span class="accent">style</span>.</p>
+<pre><code class="html">&#60;p style="font-style:italic"&#62;Hello world!&#60;/p&#62;</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-01-03.png" alt="вбудовані стилі"></figure>
+</div>
           <div class="dowload-btn"><a class="dowload-btn__wraper" href="#">
               <div class="btn-descr">додаткові<br />матеріали</div>
               <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
