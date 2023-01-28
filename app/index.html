@@ -38,40 +38,140 @@
       <div class="section-row section-row__course">
         <div class="course-wrap" id="spbar">
 <div class="lesson-page">
-<h1 class="lesson-title">Введення в <span class="accent">CSS</span></h1>
-<p><span class="accent">Cascading Style Sheets</span> (каскадні таблиці стилів) – це мова, яка дозволяє надавати певні стилі оформлення структурованим документам.</p>
-<p>Використовується для створення та зміни стилів елементів веб-сторінок та інтерфейсів користувача, що розмічені мовою <span class="accent">HTML</span>. Може описувати, як HTML-елементи повинні відображатися на екранах пристроїв, папері (при друку) та інших носіях.</p>
-<h3 class="accent lesson-subtitle">Синтаксис CSS.</h3>
-<p>В каскадних таблицях стилів описуються правила форматування елементів, вони задаються певними властивостями та їх допустимими значеннями. Кожен елемент має обмежений набір властивостей, інші властивості не матимуть на нього жодного впливу.</p>
-<P><span class="text-bold">CSS правила складаються з двох частин:</P>
-<ul class="list">
-<li><span class="accent">селектор</span> – вказує на елемент HTML, якому потрібно надати стиль;</li>
-<li><span class="accent">оформлення</span> – це сукупність властивостей та значень, що розділені крапками з комою.</li>
-</ul>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-01-01.svg" alt="сінтаксис стилю" style="width: 55%;"></figure>
-<h3 class="accent lesson-subtitle">Використання стилів.</h3>
-<p>Здебільшого, таблиця стилів – це окремий документ, що являє собою текстовий файл із розширенням <span class="accent">.css</span>. В цьому випадку, <span class="accent">CSS</span> не пов'язаний з розміткою <span class="accent">HTML</span>, браузеру необхідно вказувати, звідки потрібно завантажувати стилі.</p>
-<p><span class="accent">Зовнішня таблиця стилів</span> підключається до веб-сторінки за допомогою елемента <span class="accent">&#60;link&#62;</span>, розташованого всередині розділу <span class="accent">head</span>.</p>
-<pre><code class="html">&#60;link rel="stylesheet" type="style.css" type="text/css"&#62;</code></pre>
-<p>Розмістити стилі можна і безпосередньо в середині HTML-документа.</p>
-<p><span class="accent">Внутрішня таблиця стилів</span> вбудовується в розділ <span class="accent">head</span> HTML-документа, а самі стилі визначаються всередині елемента <span class="accent">&#60;style&#62;</span>.</p>
-<pre><code class="html">&#60;head&#62;
-  &#60;style&#62;
-    p { 
-      font-weight:bold;
-      font-size:20px;
-      color:#0096D2;
-    }
-  &#60;/style&#62;
-&#60;/head&#62;
-&#60;body&#62;
-  &#60;p&#62;Hello world!&#60;/p&#62;
-&#60;/body&#62;</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-01-02.png" alt="внутрішні стилі"></figure>
-<p>Для застосування унікального стилю для окремого елемента може бути використаний <span class="accent">вбудований стиль</span>.</p>
-<p>Вбудовані стилі, пишемо безпосередньо всередині HTML-елемента за допомогою атрибуту <span class="accent">style</span>.</p>
-<pre><code class="html">&#60;p style="font-style:italic"&#62;Hello world!&#60;/p&#62;</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-01-03.png" alt="вбудовані стилі"></figure>
+<h1 class="lesson-title"><span class="accent">CSS</span> селектори</h1>
+<p><span class="accent">Селектор</span> – визначає до якого HTML-елемента буде застосований стиль <span class="accent">CSS</span>. Селекторами можуть бути HTML-елементи, їх класи та ідентифікатори, а також псевдокласи та псевдоелементи.</p>
+<h3 class="accent lesson-subtitle">Селектор елемента.</h3>
+<p>Селектор елемента або селектор тегу встановлює форматування для всіх подібних елементів на веб сторінці. </p>
+<pre><code class="html">&#60;h3&#62;CSS правила складаються з двох частин:&#60;/h3&#62;
+&#60;ul&#62;
+  &#60;li&#62; &#60;span&#62;селектор&#60;/span&#62; – вказує на елемент HTML, якому потрібно надати стиль;&#60;/li&#62;
+  &#60;li&#62; &#60;span&#62;оформлення&#60;/span&#62; – це сукупність властивостей та значень, що розділені крапками з комою.&#60;/li&#62;
+&#60;/ul&#62;</code></pre>
+<pre><code class="css">span {
+  color: #0096D2;
+  font-weight: bold;
+}</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-02-01.png" alt="селектор елементу"></figure>
+<p>Якщо у CSS-правил відрізняються тільки селектори, а властивості і значення однакові, їх можна згрупувати через кому.</p>
+<pre><code class="css">h2, span {
+  color: #0096D2;
+  font-weight: bold;
+}</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-02-02.png" alt="группа селекторів"></figure>
+<h3 class="accent lesson-subtitle">Селектор ідентифікатора.</h3>
+<p><span class="accent">Ідентифікатор</span> – це глобальний атрибут, який надає елементу унікальне значення (ім’я), яке може належати тільки цьому елементу. Це значення використовується для вирішення ряду задач: створення посилання-якоря, надання унікальних стилів, встановлення певних сценаріїв поведінки.</p>
+<p>В <span class="accent">CSS</span>, щоб вибрати ідентифікатор елемента, треба перед його іменем поставити символ хешу (<span class="accent">#</span>).</p>
+<pre><code class="html">&#60;h2&#62;Tаблиця стилів.&#60;/h2&#62;
+  &#60;p&#62;Здебільшого, таблиця стилів – це окремий документ, що являє собою текстовий файл із розширенням .css.&#60;/p&#62;</code></pre>
+<pre><code class="css">#header {
+  text-align: center;
+  font-style: italic;
+  text-decoration: underline;
+  color: #0096D2;
+}</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-02-03.png" alt="cелектор ідентифікатора"></figure>
+<h3 class="accent lesson-subtitle">Селектор класу.</h3>
+<p>Селектори класу дозволяють задавати стилі для одного чи більше елементів з однаковим ім'ям класу, що розміщені в різних місцях сторінки або на різних сторінках сайту.</p>
+<p>Щоб вибрати елементи з певним класом, напишіть символ точки (<span class="accent">.</span>), за яким слідує ім'я класу.</p>
+<pre><code class="html">&#60;p&#62;Урок №1: &#60;a class="link" href="https://webportal.com.ua"&#62;Введення в CSS&#60;/a&#62;&#60;/p&#62;</code></pre>
+<pre><code class="css">.link {
+  text-decoration: none;
+  color: #0096D2;
+}</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-02-04.png" alt="cелектор класу"></figure>
+<h3 class="accent lesson-subtitle">Селектор атрибуту.</h3>
+<p>Селектори атрибутів вибирають елементи на основі імені атрибуту або його значення.</p>
+<pre><code class="html">&#60;ul type="none"&#62;
+  &#60;li span="title"&#62;HTML підтримує списки трьох різних типів:
+    &#60;ul type="disc"&#62;
+      &#60;li span="list"&#62;нумерований список;&#60;/li&#62;
+      &#60;li span="list"&#62;маркований список;&#60;/li&#62;
+      &#60;li span="list"&#62;список визначень.&#60;/li&#62;
+    &#60;/ul&#62;
+  &#60;/li&#62;
+&#60;/ul&#62;</code></pre>
+<pre><code class="css">[span] {
+  font-weight: bold;
+}
+[span = "list"]{
+  font-weight: normal;
+  color: #0096D2;
+} 
+</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-02-05.png" alt="cелектор атрибуту"></figure>
+<h3 class="accent lesson-subtitle">Селектор псевдокласу.</h3>
+<p><span class="accent">Псевдокласи</span> – це класи, які дозволяють застосувати CSS-правила до елементів під час здійснення події або підпорядковується певному правилу.</p>
+<pre><code class="html">&#60;form&#62;
+  &#60;h3&#62;Яким браузером користуєтесь?&#60;/h3&#62;
+  &#60;ul type="none" &#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Chrome" checked&#62;Chrome&#60;/li&#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Opera"&#62;Opera&#60;/li&#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Edge"&#62;Edge&#60;/li&#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Safari"&#62;Safari&#60;/li&#62;
+  &#60;/ul&#62;
+&#60;/form&#62;
+</code></pre>
+<pre><code class="css">input[type="checkbox"]:checked{
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background-color: #0096D2;
+  border-radius: 3px;
+  transform: translateY(3px);
+}</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-02-06.png" alt="cелектор псевдокласу"></figure>
+<h3 class="accent lesson-subtitle">Селектор структурних псевдокласів.</h3>
+<p>Структурні псевдокласи відбирають дочірні елементи відповідно до параметра, зазначеного у круглих дужках.</p>
+<pre><code class="html">&#60;ul type="none"&#62;
+  &#60;li&#62;&#60;span class="title"&#62;Типи нумерації у списках:&#60;span&#62;
+    &#60;ul type="disc"&#62;
+      &#60;li&#62;&#60;span&#62;A&#60;/span&#62; – великі латинські літери;&#60;/li&#62;
+      &#60;li&#62;&#60;span&#62;a&#60;/span&#62; – малі латинські літери;&#60;/li&#62;
+      &#60;li&#62;&#60;span&#62;I&#60;/span&#62; – великі римські цифри;&#60;/li&#62;
+      &#60;li&#62;&#60;span&#62;i&#60;/span&#62; – малі римські цифри;&#60;/li&#62;
+      &#60;li&#62;&#60;span&#62;1&#60;/span&#62; – арабські цифри.&#60;/li&#62;
+    &#60;/ul&#62;
+  &#60;/li&#62;
+&#60;/ul&#62;
+</code></pre>
+<pre><code class="css">.title {
+  font-size: 20px;
+  color: #0091ff; 
+}
+span {
+  font-weight: bold;
+  font-style: italic;
+}
+ul[type="disc"] li:first-child span{ /*перший дочірній елемент*/
+  color: #1e90ff;
+} 
+ul[type="disc"] li:last-child span{ /*останній дочірній елемент*/
+  color: #d27f46;
+} 
+ul[type="disc"] li:nth-child(3) span{ /* третій дочірній елемент */
+  color: #cf432e;
+} 
+ul[type="disc"] li:nth-child(even) span{ /* парні дочірні елементи */
+  color: #6ca38c;
+}
+</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-02-07.png" alt="селектор структурних псевдокласів"></figure>
+<h3 class="accent lesson-subtitle">Спадкування стилів.</h3>
+<p>Спадкування полягає в тому, що елементи успадковують властивості свого батька (елемента, що їх містить).</p>
+<p>Специфікацією <span class="accent">CSS</span> передбачено успадкування властивостей, які стосуються текстового вмісту сторінки, таких як <span class="accent">color</span>, <span class="accent">font</span>, <span class="accent">letter-spacing</span>, <span class="accent">line-height</span>, <span class="accent">list-style</span>, <span class="accent">text-align</span>, <span class="accent">text-indent</span>, <span class="accent">text-transform</span>, <span class="accent">visibility</span>, <span class="accent">white-space</span> та <span class="accent">word-spacing</span>.</p>
+<p>Властивості, що стосуються форматування блоків, не успадковуються.</p>
+<pre><code class="html">&#60;div&#62;
+  &#60;h2&#62;Tаблиця стилів.&#60;/h2&#62;
+  &#60;p&#62;Здебільшого, таблиця стилів – це окремий документ, що являє собою текстовий файл із розширенням .css.&#60;/p&#62;
+&#60;/div&#62;
+</code></pre>
+<pre><code class="css">div {
+  font-style: italic;
+  text-align: center;
+  color: #0091ff;
+}
+</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-02-08.png" alt="спадкування стилів"></figure>
 </div>
           <div class="dowload-btn"><a class="dowload-btn__wraper" href="#">
               <div class="btn-descr">додаткові<br />матеріали</div>
