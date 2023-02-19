@@ -1,0 +1,168 @@
+.lesson-page
+  h1.lesson-title Блочна модель <span class="accent">CSS</span>
+  h3.accent.lesson-subtitle Складові HTML-елемента.
+  p Практично кожен HTML-елемент можна розглядати як прямокутник, що має свій власний вміст і певні властивості, вони дозволяють встановити межі навколо елементів та визначити відступи між самими елементами.
+  p <span class="accent">Блочна модель</span> визначає, як різні частини елемента – поля, рамки, відступи та вміст – працюватимуть разом, щоб створити об'єкт, який буде відображений на сторінці.
+  p <span class="text-bold">Розглянемо складові елемента:</span>
+  ul.list
+    li <span class="accent">вміст</span> – область, де відображається контент;
+    li <span class="accent">внутрішні відступи</span> – розташовуються навколо вмісту як порожній простір; їх розмір контролюється за допомогою властивості <span class="accent">padding</span>;
+    li <span class="accent">рамка</span> – обертає вміст та внутрішні відступи. Її розмір та стиль можна контролювати за допомогою властивості <span class="accent">border</span>;
+    li <span class="accent">зовнішній відступи</span> – зовнішній шар, що містить вміст, внутрішній відступ і рамки, являє собою простір між поточним та іншими елементами. Його розмір контролюється за допомогою властивості <span class="accent">margin</span>.
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-01.png" alt="складові елемента">
+  p Треба зауважити, що поля і відступи елемента не є обов'язковими, їх значення, за замовчуванням, дорівнює нулю. Тем не менш, деякі браузери, на основі своїх таблиць стилів додають цим властивостям позитивні значення. Очистити стилі браузерів для всіх елементів можна за допомогою універсального селектора:
+  pre
+    code.css * {
+      //-   margin: 0;
+      //-   padding: 0;
+      //- }
+  h3.accent.lesson-subtitle Розміри елемента.
+  p Для надання ширини і висоти об'єкту в CSS існують дві властивості – <span class="accent">width</span> та <span class="accent">height</span>. Однак, при застосуванні деяких властивостей, таких як <span class="accent">padding</span>, <span class="accent">border</span> та <span class="accent">margin</span>, можна помітити, що це впливає на кінцевий розмір блоку. Тобто, виявляється, для визначення остаточного розміру елемента необхідно складати значення усіх цих властивостей.
+  pre
+    code.html &#60;div class="container"&#62;
+      //-   &#60;div class="div"&#62;content-box&#60;/div&#62;
+      //-   &#60;div class="div box"&#62;border-box&#60;/div&#62;
+      //- &#60;/div&#62;
+  pre
+    code.css .container {
+        //-   display: flex;
+        //-   justify-content: space-around;
+        //-   margin-top: 20px
+        //- }
+        //- .div {
+        //-   text-align: center;
+        //-   font-family: monospace;
+        //-   font-size: 26px;
+        //-   font-weight: bold;
+        //-   width: 400px;
+        //-   height: 150px;
+        //-   margin: 0 auto;
+        //-   border: 4px solid #0096D2;
+        //-   padding: 50px;
+        //-   background-color: #0096D2;
+        //- } 
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-02.png" alt="розміри елемента">
+  pre
+    code.css .box {
+      //-   box-sizing: border-box;
+      //- }
+
+  h3.accent.lesson-subtitle Межі елемента.
+  p Будь-який блоковий HTML-елемент можна виділяти за допомогою меж. Межа елемента являє собою одну або кілька ліній, що оточують вміст елемента та його відступи.
+  p Для створення межі в елементі використовується властивість <span class="accent">border</span>, яка є скороченням від кількох властивостей:
+  ul.list
+    li <span class="accent">border-width</span> – ширина межі;
+    li <span class="accent">border-style</span> – стиль межі;
+    li <span class="accent">border-color</span> – колір межі.
+  p Кожна з цих властивостей може мати від одного до чотирьох значень (для верхньої, правої, нижньої та лівої межі).
+  pre
+    code.css .container {
+      //-   border-top-width: 3px;
+      //-   border-right-width: 5px;
+      //-   border-bottom-width: 7px;
+      //-   border-left-width: 9px;
+
+      //-   border-top-style: solid;
+      //-   border-right-style: dotted;
+      //-   border-bottom-style: dashed;
+      //-   border-left-style: double;
+
+      //-   border-top-color:  #d27f46;
+      //-   border-right-color: #6ca38c;
+      //-   border-bottom-color: #cf432e;
+      //-   border-left-color: #0096D2;
+      //- }
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-03.png" alt="різні межі у елемента">
+  p Для скорочення коду ці властивості можна задавати одним правилом, порядок застосування значень іде за годинниковою стрілкою: <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span>, <span class="accent">left</span>.   
+   pre
+    code.css .container {
+      //-   border-width: 3px 5px 7px 9px;
+      //-   border-top-style: solid dotted dashed double;
+      //-   border-top-color: #d27f46 #6ca38c #cf432e #0096D2;
+      //- }
+  p В звичайному випадку, властивості межі для елементу задаються одним правилом через ключовий тег <span class="accent">border</span>.
+  pre
+    code.css .container {
+      //-   border: 3px  solid  #0096D2;
+      //- }
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-04.png" alt="boder елемента">
+
+  h3.accent.lesson-subtitle Внутрішні відступи.
+  p Властивість <span class="accent">padding</span> задає внутрішні відступи блоку для всіх чотирьох сторін — відступи від зовнішньої межі блоку до його вмісту. Ці відступи іноді називають «полями».
+  p Внутрішні відступи для різних сторін задаються за допомогою властивостей <span class="accent">padding-top</span>, <span class="accent">padding-right</span>, <span class="accent">padding-bottom</span> і <span class="accent">padding-left</span>.
+  pre
+    code.html &#60;div class="container"&#62;
+      //- &#60;div class="div"&#62;content&#60;/div&#62;
+      //- &#60;/div&#62;
+  pre
+    code.css .container {
+      //-   color: #FFFFFF;
+      //-   font-weight: bold;
+      //-   text-align: center;
+      //-   width: 300px;
+      //-   height: 150px;
+      //-   margin: 50px auto;
+      //-   background-color: #0096D2;
+      //-   box-sizing: border-box;
+      //-   padding-top: 100px;
+      //-   padding-left: 150px;  
+      //- }
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-05.png" alt="внутрішні відступи елемента">
+
+  h3.accent.lesson-subtitle Зовнішні відступи.
+  p Властивість <span class="accent">margin</span> задає зовнішні відступи блоку для всіх чотирьох сторін — відступи від зовнішньої межі елемента до межі батьківського елемента або до сусідніх елементів. Застосовується до усіх елементів, окрім внутрішніх елементів таблиці. Допустимі і негативні значення.
+  p Зовнішні відступи для різних сторін задаються за допомогою відповідних властивостей: <span class="accent">margin-top</span>, <span class="accent">margin-right</span>, <span class="accent">margin-bottom</span> і <span class="accent">margin-left</span>.
+  p За допомоги властивостей <span class="accent">margin-left</span> та <span class="accent">margin-right</span>, яким надано значення <span class="accent">auto</span>, елемент в середині батьківського контейнера можна рухати в горизонтальному напрямку. Тобто, у елемента відповідне поле розширюється до крою батьківського контейнера або суміжного блоку, що знаходиться в тому ж контейнері. Якщо обидва цих значення становляться рівними, елемент центрується відносно країв, що містить блок. 
+  p Суміжні вертикальні відступи елементів у блочній моделі перекриваються.
+  pre
+    code.html &#60;div class="container"&#62;
+      //-   &#60;div class="box"&#62;
+      //-     &#60;div&#62;box&#60;/div&#62;
+      //-   &#60;/div&#62;
+      //-   &#60;div class="box"&#62;
+      //-     &#60;div&#62;box&#60;/div&#62;
+      //-   &#60;/div&#62;
+      //-   &#60;div class="box"&#62;
+      //-     &#60;div&#62;box&#60;/div&#62;
+      //-   &#60;/div&#62;
+      //- &#60;/div&#62;
+  pre
+    code.css .container {
+      //-   color: #FFFFFF;
+      //-   width: 60%;
+      //-   margin: 0 auto;
+      //-   border: 3px solid #0096D2;
+      //- }
+      //- .box {
+      //-   margin-top: 20px;
+      //-   margin-bottom: 20px;
+      //- }
+      //- .box div {
+      //-   width: 70px;
+      //-   height: 70px;
+      //-   padding: 20px 15px 15px 15px;
+      //-   text-align: center;
+      //-   background-color: #0096D2;
+      //-   border-radius: 5px;
+      //- }
+      //- .box:first-child div {
+      //-   margin-left: 100px;
+      //-   background-color: #d27f46;
+      //- }
+      //- .box:nth-child(2) div {
+      //-   margin-right: 100px;
+      //-   margin-left: auto;
+      //-   background-color: #6ca38c;
+      //- }
+      //- .box:last-child div {
+      //-   margin-right: auto;
+      //-   margin-left: auto;
+      //-   background-color: #cf432e;
+      //- } 
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-06.png" alt="зовнішні відступи елемента">
