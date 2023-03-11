@@ -38,156 +38,153 @@
       <div class="section-row section-row__course">
         <div class="course-wrap" id="spbar">
 <div class="lesson-page">
-<h1 class="lesson-title">Блочна модель <span class="accent">CSS</span></h1>
-<h3 class="accent lesson-subtitle">Складові HTML-елемента.</h3>
-<p>Практично кожен HTML-елемент можна розглядати як прямокутник, що має свій власний вміст і певні властивості, вони дозволяють встановити межі навколо елементів та визначити відступи між самими елементами.</p>
-<p><span class="accent">Блочна модель</span> визначає, як різні частини елемента – поля, рамки, відступи та вміст – працюватимуть разом, щоб створити об'єкт, який буде відображений на сторінці.</p>
-<p><span class="text-bold">Розглянемо складові елемента:</span></p>
+<h1 class="lesson-title">Одиниці вимірювання в <span class="accent">CSS</span></h1>
+<p>В <span class="accent">CSS</span> існує певний набір одиниць вимірювання, які дозволяють задавати розміри та відстані для елементів на веб-сторінці. </p>
+<p><span class="text-bold">Одиниці вимірювання можна розділити на дві основні категорії:</span></p>
 <ul class="list">
-<li><span class="accent">вміст</span> – область, де відображається контент;</li>
-<li><span class="accent">внутрішні відступи</span> – розташовуються навколо вмісту як порожній простір; їх розмір контролюється за допомогою властивості <span class="accent">padding</span>;</li>
-<li><span class="accent">рамка</span> – обертає вміст та внутрішні відступи. Її розмір та стиль можна контролювати за допомогою властивості <span class="accent">border</span>;</li>
-<li><span class="accent">зовнішній відступи</span> – зовнішній шар, що містить вміст, внутрішній відступ і рамки, являє собою простір між поточним та іншими елементами. Його розмір контролюється за допомогою властивості <span class="accent">margin</span>.</li>
+<li><span class="accent">абсолютні</span> – це одиниці, значення яких фіксовані незалежно від будь-яких інших чинників, як-от батьківського елементу чи вікна перегляду. Тобто, розмір екрана не впливає на розмір елемента.</li>
+<li><span class="accent">відносні</span> – обчислюються з урахуванням інших успадкованих величин:  розмір шрифту або екрану, і можуть змінюватися разом із ними.</li>
 </ul>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-01.png" alt="складові елемента"></figure>
-<p>Треба зауважити, що поля і відступи елемента не є обов'язковими, їх значення, за замовчуванням, дорівнює нулю. Тем не менш, деякі браузери, на основі своїх таблиць стилів додають цим властивостям позитивні значення. Очистити стилі браузерів для всіх елементів можна за допомогою універсального селектора:</p>
-<pre><code class="css">* {
-  margin: 0;
-  padding: 0; 
-}</code></pre>
-<h3 class="accent lesson-subtitle">Розміри елемента.</h3>
-<p>Для надання ширини і висоти об'єкту в CSS існують дві властивості – <span class="accent">width</span> та <span class="accent">height</span>. Однак, при застосуванні деяких властивостей, таких як <span class="accent">padding</span>, <span class="accent">border</span> та <span class="accent">margin</span>, можна помітити, що це впливає на кінцевий розмір блоку. Тобто, виявляється, для визначення остаточного розміру елемента необхідно складати значення усіх цих властивостей.</p>
-<pre><code class="html">&#60;div class="container"&#62;
-  &#60;div class="div"&#62;content-box&#60;/div&#62;
-  &#60;div class="div box"&#62;border-box&#60;/div&#62;
-&#60;/div&#62;</code></pre>
+<h3 class="accent lesson-subtitle">Pixels.</h3>
+<p><span class="accent">Pixels</span> (<span class="accent">px</span>) – це абсолютна одиниця вимірювання, яка використовується для надання фіксованого розміру HTML-елементам. Один піксель – найменша можлива одиниця на екрані, що має окреме значення кольору.</p>
+<p>Якщо ширина та висота елемента задана в пікселях, він завжди відображатиметься однаково, незалежно від розміру вікна браузера чи розміру екрану пристрою. </p>
+<p>Важливо пам'ятати, що розмір екранів та кількість пікселів в них на різних пристроях відрізняються. Тому, використання пікселів, як основної одиниці для надання розмірів, може призвести до проблем із їх відображенням на різних пристроях. Хоча, під час обробки коду, браузер все рівно усі значення перераховує в пікселі.</p>
+<p>Як не дивно, значення розміру задане в пікселях може бути і дробовим: <span class="accent">11.11px</span>. Це абсолютно нормально, браузер сам використовує дробові пікселі для внутрішніх обчислень.</p>
+<pre><code class="html">&#60;div class="container"&#62;&#60;/div&#62;</code></pre>
 <pre><code class="css">.container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px
-}
-.div {
-  text-align: center;
-  font-family: monospace;
-  font-size: 26px;
-  font-weight: bold;
-  width: 400px;
-  height: 150px;
-  margin: 0 auto;
-  border: 4px solid #0096D2;
-  padding: 50px;
+  width: 250px;
+  height: 250px;
   background-color: #0096D2;
 }</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-02.png" alt="розміри елемента"></figure>
-<pre><code class="css">.box {
-  box-sizing: border-box;
-}</code></pre>
-<h3 class="accent lesson-subtitle">Межі елемента.</h3>
-<p>Будь-який блоковий HTML-елемент можна виділяти за допомогою меж. Межа елемента являє собою одну або кілька ліній, що оточують вміст елемента та його відступи.</p>
-<p>Для створення межі в елементі використовується властивість <span class="accent">border</span>, яка є скороченням від кількох властивостей:</p>
-<ul class="list">
-<li><span class="accent">border-width</span> – ширина межі;</li>
-<li><span class="accent">border-style</span> – стиль межі;</li>
-<li><span class="accent">border-color</span> – колір межі.</li>
-</ul>
-<p>Кожна з цих властивостей може мати від одного до чотирьох значень (для верхньої, правої, нижньої та лівої межі).</p>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-04-01.png" alt="розмір контейнера пікселі"></figure>
+<h3 class="accent lesson-subtitle">Percentages.</h3>
+<p><span class="accent">Percentages</span> (<span class="accent">%</span>) – є відносною одиницею вимірювання, розміри елементів залежать від властивостей їх батьківського елемента.</p>
+<p>Тому, остаточні значення ширини, висоти, відступів або інших властивостей у елемента, що задані у відсотковому відношенні (<span class="accent">К</span>), можна розрахувати за наступним рівнянням:</p>
+<p class="accent text-center">Розмір елементу = (K/100) * Розмір батьківського елементу</p>
+<p>Використання відсотків дозволяє створювати дизайн, який може адаптуватися до різних розмірів екрану та різних пристроїв. Також відсотки можуть бути корисні для встановлення пропорцій елементів, таких як зображення, відео, тощо.</p>
+<pre><code class="html">&#60;div class="container"&#62
+  &#60;div class="box"&#62;
+    &#60;div class="box"&#62;&#60;/div&#62;
+  &#60;/div&#62;
+&#60;/div&#62;</code></pre>
 <pre><code class="css">.container {
-  border-top-width: 3px;
-  border-right-width: 5px;
-  border-bottom-width: 7px;
-  border-left-width: 9px;
-
-  border-top-style: solid;
-  border-right-style: dotted;
-  border-bottom-style: dashed;
-  border-left-style: double;
-
-  border-top-color:  #d27f46;
+  width: 300px;
+  height: 300px;
+  background-color: #0096D2;
+  border-radius: 10px;
+}
+.box { 
+  width: 50%;
+  height: 50%;
+  background-color: #6ca38c;
+  border-radius: 10px;
+}
+.box .box { 
+  background-color: #cf432e;
+}</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-04-02.png" alt="розмір контейнера відсотки"></figure>
+<h3 class="accent lesson-subtitle">Em.</h3>
+<p><span class="accent">Em</span> (<span class="accent">em</span>) – це одиниця вимірювання, яка наслідує своє значення відносно розміру шрифту батьківського елемента.</p>
+<p>Що таке розмір шрифту? Це зовсім не «розмір найбільшої літери в ньому», як можна було б здогадатися. Розмір шрифту – це певна умовна одиниця, яка вбудована в шрифт. Вона зазвичай трохи більше, ніж розмір найбільшої літери та розмір літер що мають «хвости». Тобто передбачається, що в цю висоту вміститься будь-яка літера або їх поєднання. </p>
+<p>Визначення остаточних значень ширини, висоти, відступів або інших властивостей у елемента, що задані в <span class="accent">em</span>, розраховується за наступним рівнянням:</p>
+<p class="accent text-center">Розмір елементу = значення (em) * Розмір шрифту батьківського елементу</p>
+<p>Якщо, батьківський елемент не має власного або успадкованого значення розміру для шрифту, в цьому випадку, береться стандартний розмір шрифту самого браузера, що становить <span class="accent">16px</span>.</p>
+<p>Використання <span class="accent">Em</span> в <span class="accent">CSS</span> дозволяє створювати більш гнучкий та адаптивний дизайн, який може легко адаптуватися до зміни розміру шрифту та інших властивостей на сторінці. </p>
+<p>Негативною стороною використання відсотків (<span class="accent">%</span>) та одиниць <span class="accent">em</span>, є їх підсумовуючий ефект. Тобто, одні елементи вкладені в інші будуть наслідувати значення розмірів від своїх батьківських елементів, які в свою чергу отримуватимуть значення розмірів від їх батьківських елементів і так далі по ланцюгу. Таку взаємодію досить складно спрогнозувати, якщо ступінь вкладеності буде досить велика, що в певних випадках може призвести до зовсім небажаних результатів.</p>
+<pre><code class="html">&#60;div class="box"&#62;
+  &#60;div class="box"&#62;
+   &#60;div class="box"&#62;
+     &#60;div class="box"&#62;
+        &#60;div class="box"&#62;&#60;/div&#62;
+     &#60;/div&#62;
+    &#60;/div&#62;
+  &#60;/div&#62;
+&#60;/div&#62;</code></pre>
+<pre><code class="css">.box {
+  font-size: 0.8em;
+  width: 25em;
+  height: 20em;
+  margin: 0.8em auto;
+  box-sizing: border-box;
+  border-style: solid;
+  border-radius: 5%;
+  border-width: 5px;
+  border-top-color: #d27f46;
   border-right-color: #6ca38c;
   border-bottom-color: #cf432e;
   border-left-color: #0096D2;
 }</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-03.png" alt="різні межі у елемента"></figure>
-<p>Для скорочення коду ці властивості можна задавати одним правилом, порядок застосування значень іде за годинниковою стрілкою: <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span>, <span class="accent">left</span>.   
-<pre><code class="css">.container {
-  border-width: 3px 5px 7px 9px;
-  border-top-style: solid dotted dashed double;
-  border-top-color: #d27f46 #6ca38c #cf432e #0096D2;
-}</code></pre>
-</p> 
-<p>В звичайному випадку, властивості межі для елементу задаються одним правилом через ключовий тег <span class="accent">border</span>.</p>
-<pre><code class="css">.container {
-  border: 3px  solid  #0096D2;
-}</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-04.png" alt="boder елемента"></figure>
-<h3 class="accent lesson-subtitle">Внутрішні відступи.</h3>
-<p>Властивість <span class="accent">padding</span> задає внутрішні відступи блоку для всіх чотирьох сторін — відступи від зовнішньої межі блоку до його вмісту. Ці відступи іноді називають «полями».</p>
-<p>Внутрішні відступи для різних сторін задаються за допомогою властивостей <span class="accent">padding-top</span>, <span class="accent">padding-right</span>, <span class="accent">padding-bottom</span> і <span class="accent">padding-left</span>.</p>
-<pre><code class="html">&#60;div class="container"&#62;
-  &#60;div class="div"&#62;content&#60;/div&#62;
-&#60;/div&#62;</code></pre>
-<pre><code class="css">.container {
-  color: #FFFFFF;
-  font-weight: bold;
-  text-align: center;
-  width: 300px;
-  height: 150px;
-  margin: 50px auto;
-  background-color: #0096D2;
-  box-sizing: border-box;
-  padding-top: 100px;
-  padding-left: 150px;  
-}</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-05.png" alt="внутрішні відступи елемента"></figure>
-<h3 class="accent lesson-subtitle">Зовнішні відступи.</h3>
-<p>Властивість <span class="accent">margin</span> задає зовнішні відступи блоку для всіх чотирьох сторін — відступи від зовнішньої межі елемента до межі батьківського елемента або до сусідніх елементів. Застосовується до усіх елементів, окрім внутрішніх елементів таблиці. Допустимі і негативні значення.</p>
-<p>Зовнішні відступи для різних сторін задаються за допомогою відповідних властивостей: <span class="accent">margin-top</span>, <span class="accent">margin-right</span>, <span class="accent">margin-bottom</span> і <span class="accent">margin-left</span>.</p>
-<p>За допомоги властивостей <span class="accent">margin-left</span> та <span class="accent">margin-right</span>, яким надано значення <span class="accent">auto</span>, елемент в середині батьківського контейнера можна рухати в горизонтальному напрямку. Тобто, у елемента відповідне поле розширюється до крою батьківського контейнера або суміжного блоку, що знаходиться в тому ж контейнері. Якщо обидва цих значення становляться рівними, елемент центрується відносно країв, що містить блок. </p>
-<p>Суміжні вертикальні відступи елементів у блочній моделі перекриваються.</p>
-<pre><code class="html">&#60;div class="container"&#62;
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-04-03.png" alt="розмір контейнера em"></figure>
+<h3 class="accent lesson-subtitle">Rem.</h3>
+<p><span class="accent">Rem</span> (<span class="accent">rem</span>) – це одиниця вимірювання, яка наслідує своє значення відносно розміру шрифту кореневого елемента, для веб-сторінки таким елементом є тег <span class="accent">html</span>.</p>
+<p>Особливість <span class="accent">Rem</span> полягає в тому, що зовсім не важливо, де його будуть використовувати, браузер ігноруватиме всі коригування, внесені для батьківських елементів, і буде масштабувати HTML-елемент, до якого застосовується властивість, виходячи із значення кореневого елемента.</p>
+<p>Визначення остаточних значень ширини, висоти, відступів або інших властивостей у елемента, що задані в <span class="accent">rem</span>, розраховується за наступним рівнянням:</p>
+<p class="accent text-center">Розмір елементу = значення (rem) * Розмір шрифту html елемента</p>
+<p>Однією з переваг використання <span class="accent">Rem</span> є те, що ця одиниця дозволяє створювати більш прогнозовані та стабільні макети для екранів з різними розмірами. Також <span class="accent">Rem</span> можна легко комбінувати з медіа-запитами та іншими техніками для адаптивного дизайну.</p>
+<pre><code class="html">&#60;div class="box"&#62;
   &#60;div class="box"&#62;
-    &#60;div&#62;box&#60;/div&#62;
-  &#60;/div&#62;
-  &#60;div class="box"&#62;
-    &#60;div&#62;box&#60;/div&#62;
-  &#60;/div&#62;
-  &#60;div class="box"&#62;
-    &#60;div&#62;box&#60;/div&#62;
+   &#60;div class="box"&#62;
+     &#60;div class="box"&#62;
+        &#60;div class="box"&#62; &#60;/div&#62;
+     &#60;/div&#62;
+    &#60;/div&#62;
   &#60;/div&#62;
 &#60;/div&#62;</code></pre>
-<pre><code class="css">.container {
-  color: #FFFFFF;
-  width: 60%;
+<pre><code class="css">.box { 
+  font-size: 0.8em;
+  width: 11rem;
+  height: 11rem;
   margin: 0 auto;
-  border: 3px solid #0096D2;
-}
-.box {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.box div {
-  width: 70px;
-  height: 70px;
-  padding: 20px 15px 15px 15px;
-  text-align: center;
+  padding-top: 1.5rem; 
+  padding-left: 1.5rem; 
+  box-sizing: border-box;
+  border-style: solid;
+  border-radius: 5%;
+  border-width: 5px;
+  border-top-color: #d27f46;
+  border-right-color: #6ca38c;
+  border-bottom-color: #cf432e;
+  border-left-color: #0096D2;
+}</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-04-04.png" alt="розмір контейнера rem"></figure>
+<h3 class="accent lesson-subtitle">VW & VH.</h3>
+<p><span class="accent">VW</span> та <span class="accent">VH</span> – це одиниці вимірювання, які наслідують своє значення відносно ширини та висоти видимої частини веб-сторінки.</p>
+<p><span class="accent">1vw</span> (<span class="accent">view width</span>) – це одиниця виміру, яка представляє <span class="accent">1% ширини вікна</span> перегляду. </p>
+<p><span class="accent">1vh</span> (<span class="accent">view height</span>) – це одиниця виміру, яка представляє <span class="accent">1% висоти вікна</span> перегляду.</p>
+<p>Визначення остаточних значень ширини чи висоти у елемента, що задані в <span class="accent">vw</span> або <span class="accent">vh</span>, розраховується за наступними рівняннями:</p>
+<p class="accent text-center">Ширина елементу = значення (vw) * Розмір (ширина) вікна перегляду</p>
+<p class="accent text-center">Висота елементу = значення (vh) * Розмір (висота) вікна перегляду</p>
+<p>Ці одиниці виміру можуть бути корисні для створення адаптивних веб-сайтів, які добре відображаються на будь-якому розмірі екрана.</p>
+<pre><code class="html">&#60;div class="container"&#62;
+  &#60;div class="box"&#62;
+    &#60;div class="box"&#62;&#60;/div&#62;
+  &#60;/div&#62;
+&#60;/div&#62;
+</code></pre>
+<pre><code class="css">.container {
+  width: 50vw;
+  height: 50vh;
   background-color: #0096D2;
-  border-radius: 5px;
+  border-radius: 10px;
 }
-.box:first-child div {
-  margin-left: 100px;
-  background-color: #d27f46;
-}
-.box:nth-child(2) div {
-  margin-right: 100px;
-  margin-left: auto;
+.box { 
+  width: 50%;
+  height: 50%;
   background-color: #6ca38c;
+  border-radius: 10px;
 }
-.box:last-child div {
-  margin-right: auto;
-  margin-left: auto;
+.box .box { 
   background-color: #cf432e;
 }</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-06.png" alt="зовнішні відступи елемента"></figure>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-04-05.png" alt="розмір контейнера vw і vh"></figure>
+<h3 class="accent lesson-subtitle">Vmin & Vmax.</h3>
+<p>Одиниці виміру <span class="accent">Vmin</span> та <span class="accent">Vmax</span> є додатковими відносними одиницями виміру в <span class="accent">CSS</span>, які можна використовувати для задання розмірів елементів в залежності від мінімального або максимального розміру екрана.</p>
+<p>Одиниця виміру <span class="accent">vmin</span> визначається як мінімальний розмір екрана між шириною та висотою, і становить <span class="accent">1% від меншого</span> з двох розмірів екрана.</p>
+<p>Одиниця виміру <span class="accent">vmax</span> визначається як максимальний розмір екрана між шириною та висотою, і становить <span class="accent">1% від більшого</span> з двох розмірів екрана.</p>
+<p>Замінимо значення висоти контейнера, із попереднього прикладу, на одиницю виміру <span class="accent">vmin</span>.</p>
+<pre>><code class="css">.container {
+  height: 50vmin;</code></pre>
+<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-04-06.png" alt="розмір контейнера vmax і vmin"></figure>
 </div>
           <div class="dowload-btn"><a class="dowload-btn__wraper" href="#">
               <div class="btn-descr">додаткові<br />матеріали</div>
