@@ -37,178 +37,65 @@
     <div class="section-lesson" id="section">
       <div class="section-row section-row__course">
         <div class="course-wrap" id="spbar">
-<div class="lesson-page">
-<h1 class="lesson-title">Блочна модель <span class="accent">CSS</span></h1>
-<h3 class="accent lesson-subtitle">Складові HTML-елемента.</h3>
-<p>Практично кожен HTML-елемент можна розглядати як прямокутник, що має свій власний вміст і певні властивості, вони дозволяють встановити межі навколо елементів та визначити відступи між самими елементами.</p>
-<p><span class="accent">Блочна модель</span> визначає, як різні частини HTML-елемента – поля, рамки, відступи та вміст – працюватимуть разом, щоб створити об'єкт, який буде відображений на сторінці.</p>
-<p><span class="text-bold">Розглянемо складові елемента:</span></p>
-<ul class="list">
-<li><span class="accent">вміст</span> – область внутрішнього вмісту блоку, який містить текст, зображення чи інші елементи контенту;</li>
-<li><span class="accent">внутрішні відступи</span> – розташовуються навколо вмісту як порожній простір; їх розмір контролюється за допомогою властивості <span class="accent">padding</span>;</li>
-<li><span class="accent">рамка</span> – обрамляє вміст та внутрішні відступи. Її розмір та стиль можна контролювати за допомогою властивості <span class="accent">border</span>;</li>
-<li><span class="accent">зовнішні відступи</span> – зовнішній шар, являє собою простір між поточним та іншими елементами. Його розмір контролюється за допомогою властивості <span class="accent">margin</span>.</li>
-</ul>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-01.png" alt="складові елемента"></figure>
-<p>Треба зауважити, що поля і відступи елемента не є обов'язковими, їх значення, за замовчуванням, дорівнює нулю. Тем не менш, деякі браузери, на основі своїх таблиць стилів додають цим властивостям позитивні значення. Очистити стилі браузерів для всіх елементів можна за допомогою універсального селектора:</p>
-<pre><code class="css">* {
-  margin: 0;
-  padding: 0;
-}</code></pre>
-<h3 class="accent lesson-subtitle">Розміри елемента.</h3>
-<p>Для надання ширини і висоти об'єкту в CSS існують дві властивості – <span class="accent">width</span> та <span class="accent">height</span>. Однак, при застосуванні деяких властивостей, таких як <span class="accent">padding</span>, <span class="accent">border</span> та <span class="accent">margin</span>, можна помітити, що це впливає на кінцевий розмір блоку. Тобто, виявляється, для визначення остаточного розміру елемента необхідно складати значення усіх цих властивостей.</p>
-<pre><code class="html">&lt;div class="container"&gt;
-  &lt;div class="div"&gt;content-box&lt;/div&gt;
-  &lt;div class="div box"&gt;border-box&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-<pre><code class="css">.container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px
-}
-.div {
-  width: 400px;
-  height: 150px;
-  text-align: center;
-  font-family: monospace;
-  font-size: 26px;
-  font-weight: bold;
-  padding: 50px;
-  margin: 0 auto;
-  border: 4px solid #0096D2;
-  background-color: #0096D2;
-}</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-02.png" alt="розміри елемента"></figure>
-<p>Таким чином, підсумкова ширина першого елемента на сторінці: <span class="accent">400px</span> + <span class="accent">4px</span> + <span class="accent">50px</span> + <span class="accent">50px</span> + <span class="accent">4px</span> дорівнює <span class="accent">508px.</span></p>
-<p>Така поведінка називається <span class="accent">Box Model</span>. Вона описує взаємозв'язок властивостей і кінцевого розміру елемента. У цій моделі браузери відображають блок за наступними принципом, вони накладають правила одне на інше перед тим, як вивести елемент на сторінку.</p>
-<p>Змінити поведінку <span class="accent">Box Model</span> можна! Для цього використовується властивість <span class="accent">box-sizing</span>, яка приймає наступні значення:</p>
-<ul class="list"> 
-<li><span class="accent">content-box</span> – значення за умовчанням. Працює так, як було описано вгорі.</li>
-<li><span class="accent">border-box</span> – значення меж і внутрішніх відступів не впливають на висоту та ширину елементу, вони «вкрадають» місце у контенту. Якщо встановлено фіксоване значення, то воно таким і залишиться, але для контенту всередині блоку місця стане менше. </li>
-</ul>
-<pre><code class="css">.box {
-  box-sizing: border-box;
-}</code></pre>
-<h3 class="accent lesson-subtitle">Межі елемента.</h3>
-<p>Будь-який блоковий HTML-елемент можна виділяти за допомогою меж. Межа елемента являє собою одну або кілька ліній, що оточують вміст елемента та його відступи.</p>
-<p>Для створення межі в елементі використовується властивість <span class="accent">border</span>, яка є скороченням від кількох властивостей:</p>
-<ul class="list">
-<li><span class="accent">border-width</span> – ширина межі;</li>
-<li><span class="accent">border-style</span> – стиль межі;</li>
-<li><span class="accent">border-color</span> – колір межі.</li>
-</ul>
-<p>Кожна з цих властивостей може мати від одного до чотирьох значень (для верхньої, правої, нижньої та лівої межі).</p>
-<pre><code class="html">&lt;div class="container"&gt;content&lt;/div&gt;</code></pre>
-<pre><code class="css">.container {
-  width: 300px;
-  height: 150px;
-  box-sizing: border-box;
-
-  text-align: center;
-  font-family: monospace;
-  font-size: 26px;
-  font-weight: bold;
-
-  padding-top: 50px;
-  margin: 50px auto;
-
-  border-top-width: 3px;
-  border-right-width: 5px;
-  border-bottom-width: 7px;
-  border-left-width: 9px;
-
-  border-top-style: solid;
-  border-right-style: dotted;
-  border-bottom-style: dashed;
-  border-left-style: double;
-
-  border-top-color:  #d27f46;
-  border-right-color: #6ca38c;
-  border-bottom-color: #cf432e;
-  border-left-color: #0096D2;
-}</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-03.png" alt="різні межі у елемента"></figure>
-<p>Для скорочення коду ці властивості можна задавати одним правилом, порядок застосування значень іде за годинниковою стрілкою: <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span>, <span class="accent">left</span>.   
-</p><pre><code class="css">.container {
-  border-width: 3px 5px 7px 9px;
-  border-top-style: solid dotted dashed double;
-  border-top-color: #d27f46 #6ca38c #cf432e #0096D2;
-}</code></pre>
-<p></p>
-<p>В звичайному випадку, властивості межі для елементу задаються одним правилом через ключовий тег <span class="accent">border</span>.</p>
-<pre><code class="css">.container {
-  border: 3px  solid  #0096D2;
-}</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-04.png" alt="boder елемента"></figure>
-<h3 class="accent lesson-subtitle">Внутрішні відступи.</h3>
-<p>Властивість <span class="accent">padding</span> задає внутрішні відступи блоку для всіх чотирьох сторін — відступи від зовнішньої межі блоку до його вмісту. Ці відступи іноді називають «полями».</p>
-<p>Внутрішні відступи для різних сторін задаються за допомогою властивостей <span class="accent">padding-top</span>, <span class="accent">padding-right</span>, <span class="accent">padding-bottom</span> і <span class="accent">padding-left</span>.</p>
-<pre><code class="html">&lt;div class="container"&gt;
-  &lt;div class="div"&gt;content&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-<pre><code class="css">.container { 
-  width: 300px;
-  height: 150px;
-  color: #FFFFFF;
-  text-align: center;
-  font-weight: bold;
-  padding-top: 100px;
-  padding-left: 150px;  
-  margin: 50px auto;
-  box-sizing: border-box;
-  background-color: #0096D2;
-}</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-05.png" alt="внутрішні відступи елемента"></figure>
-<h3 class="accent lesson-subtitle">Зовнішні відступи.</h3>
-<p>Властивість <span class="accent">margin</span> задає зовнішні відступи блоку для всіх чотирьох сторін — відступи від зовнішньої межі елемента до межі батьківського елемента або до сусідніх елементів. Застосовується до усіх елементів, окрім внутрішніх елементів таблиці. Допустимі і негативні значення.</p>
-<p>Зовнішні відступи для різних сторін задаються за допомогою відповідних властивостей: <span class="accent">margin-top</span>, <span class="accent">margin-right</span>, <span class="accent">margin-bottom</span> і <span class="accent">margin-left</span>.</p>
-<p>За допомоги властивостей <span class="accent">margin-left</span> та <span class="accent">margin-right</span>, яким надано значення <span class="accent">auto</span>, елемент в середині батьківського контейнера можна рухати в горизонтальному напрямку. Тобто, у елемента відповідне поле розширюється до крою батьківського контейнера або суміжного блоку, що знаходиться в тому ж контейнері. Якщо обидва цих значення становляться рівними, елемент центрується відносно країв, що містить блок. </p>
-<p>Суміжні вертикальні відступи елементів у блочній моделі перекриваються.</p>
-<pre><code class="html">&lt;div class="container"&gt;
-  &lt;div class="box"&gt;
-    &lt;div&gt;box&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="box"&gt;
-    &lt;div&gt;box&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="box"&gt;
-    &lt;div&gt;box&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-<pre><code class="css">.container {
-  color: #FFFFFF;
-  width: 60%;
-  margin: 0 auto;
-  border: 3px solid #0096D2;
-}
-.box {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.box div {
-  width: 70px;
-  height: 70px;
-  padding: 20px 15px 15px 15px;
-  text-align: center;
-  background-color: #0096D2;
-  border-radius: 5px;
-}
-.box:first-child div {
-  margin-left: 100px;
-  background-color: #d27f46;
-} 
-.box:nth-child(2) div {
-  margin-right: 100px;
-  margin-left: auto;
-  background-color: #6ca38c;
-}
-.box:last-child div {
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #cf432e;
-}</code></pre>
-<figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-06.png" alt="зовнішні відступи елемента"></figure>
-</div>
+          <div class="lesson-page">
+            <h1 class="lesson-title">Позиціонування елементів в <span class="accent">CSS</span></h1>
+            <p>За замовчуванням усі HTML-елементи розміщуються на веб-сторінці в порядку їх появи в HTML-коді – нормальний потік (<span class="accent">normal flow</span>). </p>
+            <p><span class="accent">Normal flow</span> – система, за допомогою якої елементи розміщуються у вікні перегляду браузера. Це означає, що коли браузер генерує HTML-сторінку, він буде відображати елементи в порядку їх входження в HTML-коді зверху вниз.</p>
+            <p>HTML-елементи можуть розташовуватись в потоці по-різному, залежно від їх типу і властивостей. </p>
+            <p><span class="accent">Блочні елементи</span> – займають усю доступну ширину екрану та розташовуються один за одним вертикально. Висота цих елементів дорівнює висоті їхнього вмісту – контенту. Вони призначені для структурування основних частин веб-сторінки шляхом поділу її вмісту на окремі блоки. </p>
+            <p><span class="accent">Рядкові елементи</span> – займають лише стільки місця, скільки потрібно для відображення їх вмісту, і можуть розташовуватись один поруч з іншим горизонтально. Цим елементам не можна задати висоту та ширину. Вони призначені, щоб розмежувати частину тексту та надавати йому певну функцію чи зміст.</p>
+            <p>Якщо треба контролювати розмір рядкового елемента або блокові елементи розташувати в рядок, потрібно налаштувати їх так, щоб вони поводився відповідно як блочний чи рядковий елемент, зробити це можна за допомогою властивості <span class="accent">display</span>.</p>
+            <h3 class="accent lesson-subtitle">Властивість Display.</h3>
+            <p><span class="accent">Властивість display</span> – може змінювати поведінку елементів у звичайному потоці і має стандартні значення: <span class="accent">block</span>, <span class="accent">inline</span>, <span class="accent">inline-block</span>, <span class="accent">none</span>.</p>
+            <p>Кожен елемент за замовчуванням має властивість <span class="accent">display</span>, для більшості HTML-елементів значення цієї властивості є або <span class="accent">block</span>, або <span class="accent">inline</span>. Заміна значень властивості призведе до зміни дефолтної поведінки самого елемента.</p>
+            <pre><code class="html">&#60;ul class="nav"&#62;</code></pre>
+            <pre><code class="css">.nav li {</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-01.png" alt="властивість display"></figure>
+            <h3 class="accent lesson-subtitle">Властивість Position.</h3>
+            <p><span class="accent">Властивість position</span> – визначає, як елемент буде позиціонуватись відносно вікна браузера чи інших елементів на веб-сторінці.</p>
+            <p><span class="text-bold">Основні значення властивості position в CSS:</span></p>
+            <ul class="list">
+              <li><span class="accent">static</span>;</li>
+              <li><span class="accent">relative</span>;</li>
+              <li><span class="accent">fixed</span>;</li>
+              <li><span class="accent">absolute</span>;</li>
+              <li><span class="accent">sticky</span>.</li>
+            </ul>
+            <h3 class="accent lesson-subtitle">Static.</h3>
+            <p>За замовчуванням, усі HTML-елементи розташовані статично. Елемент розміщується в звичайному потоці документа і не може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.</p>
+            <pre><code class="html">&#60;div class="container"&#62;</code></pre>
+            <pre><code class="css">.static {</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-02.png" alt="властивість display"></figure>
+            <h3 class="accent lesson-subtitle">Relative.</h3>
+            <p>Значення дозволяє елементу позиціонуватись відносно своєї початкової точки. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.</p>
+            <pre><code class="html">&#60;div class="container"&#62;</code></pre>
+            <pre><code class="css">.relative {</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-03.png" alt="властивість display"></figure>
+            <h3 class="accent lesson-subtitle">Absolute.</h3>
+            <p>Значення дозволяє елементу позиціонуватись відносно його найближчого родича, який має властивість <span class="accent">position</span> задану як <span class="accent">relative</span>, <span class="accent">absolute</span> або <span class="accent">fixed</span>. Якщо найближчий родич не має властивості <span class="accent">position</span>, то елемент позиціонується відносно вікна перегляду. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.</p>
+            <pre><code class="html">&#60;div class="container"&#62;</code></pre>
+            <pre><code class="css">.container {</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-04.png" alt="властивість display"></figure>
+            <h3 class="accent lesson-subtitle">Fixed.</h3>
+            <p>Значення дозволяє елементу позиціонуватись відносно вікна перегляду. Елемент залишається на місці, незалежно від того, як користувач прокручує сторінку. Елемент може бути зміщений за допомогою властивостей <span class="accent">position</span>, то елемент позиціонується відносно вікна перегляду. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.</p>
+            <pre><code class="html">&#60;div class="container"&#62;</code></pre>
+            <pre><code class="css">.container {</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-05.png" alt="властивість display"></figure>
+            <h3 class="accent lesson-subtitle">Sticky.</h3>
+            <p>Значення дозволяє елементу позиціонуватись відносно вікна перегляду. Елемент залишається на місці, незалежно від того, як користувач прокручує сторінку. Елемент може бути зміщений за допомогою властивостей <span class="accent">position</span>, то елемент позиціонується відносно вікна перегляду. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.</p>
+            <pre><code class="html">&#60;div class="relative"&#62;&#60;/div&#62; </code></pre>
+            <pre><code class="css">.relative {</code></pre><iframe width="100%" height="500" style="border: 2px solid #e9f1ef; border-radius: 15px" src="//jsfiddle.net/Syukh/209rcsj3/6/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            <h3 class="accent lesson-subtitle">Властивості: top, right, bottom, left.</h3>
+            <p>Елемент вважається позиціонованим, якщо властивість <span class="accent">position</span> має значення, відмінне від <span class="accent">static</span>. Позиціоновані елементи генерують позиціоновані блоки і можуть бути розташовані відповідно до наступних чотирьох фізичних властивостей: <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span>, <span class="accent">left</span>.</p>
+            <p>Кожна з властивостей задає відстань, на яку буде зміщуватися елемент, або від границь його батьківського елемента, або від положення елемента в нормальному потоці, або вікна браузера. Значення можуть бути від'ємними, щоб змістити елемент в протилежний бік від свого фактичного положення.</p>
+            <h3 class="accent lesson-subtitle">Властивість z-index.</h3>
+            <p><span class="accent">Z-index</span> – це властивість, що визначає порядок, в якому елементи розташовуються на сторінці за глибиною, тобто вздовж осі <span class="accent">z</span> один над іншим. Чим більше значення <span class="accent">z-index</span> у елемента, тим вище він буде відображатись в порівнянні з іншими елементами, які мають значення менше.</p>
+            <p>Значення <span class="accent">z-index</span> може бути будь-яким цілим числом, позитивним або негативним. Значення <span class="accent">0</span> означає, що елемент знаходиться на тому ж рівні, що і його батьківський елемент.</p>
+            <p>Властивість <span class="accent">z-index</span> працює лише для елементів, які мають властивість <span class="accent">position</span>, значення якої встановлено на <span class="accent">absolute</span>, <span class="accent">fixed</span> або <span class="accent">relative</span>.</p>
+            <pre><code class="html">&#60;div class="container"&#62;</code></pre>
+            <pre><code class="css">.container {</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-06.png" alt="властивість display"></figure>
+          </div>
           <div class="dowload-btn"><a class="dowload-btn__wraper" href="#">
               <div class="btn-descr">додаткові<br />матеріали</div>
               <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>

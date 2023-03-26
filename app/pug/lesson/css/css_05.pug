@@ -1,0 +1,221 @@
+.lesson-page
+  h1.lesson-title Позиціонування елементів в <span class="accent">CSS</span>
+  p За замовчуванням усі HTML-елементи розміщуються на веб-сторінці в порядку їх появи в HTML-коді – нормальний потік (<span class="accent">normal flow</span>). 
+  p <span class="accent">Normal flow</span> – система, за допомогою якої елементи розміщуються у вікні перегляду браузера. Це означає, що коли браузер генерує HTML-сторінку, він буде відображати елементи в порядку їх входження в HTML-коді зверху вниз.
+  p HTML-елементи можуть розташовуватись в потоці по-різному, залежно від їх типу і властивостей. 
+  p <span class="accent">Блочні елементи</span> – займають усю доступну ширину екрану та розташовуються один за одним вертикально. Висота цих елементів дорівнює висоті їхнього вмісту – контенту. Вони призначені для структурування основних частин веб-сторінки шляхом поділу її вмісту на окремі блоки. 
+  p <span class="accent">Рядкові елементи</span> – займають лише стільки місця, скільки потрібно для відображення їх вмісту, і можуть розташовуватись один поруч з іншим горизонтально. Цим елементам не можна задати висоту та ширину. Вони призначені, щоб розмежувати частину тексту та надавати йому певну функцію чи зміст.
+  p Якщо треба контролювати розмір рядкового елемента або блокові елементи розташувати в рядок, потрібно налаштувати їх так, щоб вони поводився відповідно як блочний чи рядковий елемент, зробити це можна за допомогою властивості <span class="accent">display</span>.
+
+  h3.accent.lesson-subtitle Властивість Display.
+  p <span class="accent">Властивість display</span> – може змінювати поведінку елементів у звичайному потоці і має стандартні значення: <span class="accent">block</span>, <span class="accent">inline</span>, <span class="accent">inline-block</span>, <span class="accent">none</span>.
+  p Кожен елемент за замовчуванням має властивість <span class="accent">display</span>, для більшості HTML-елементів значення цієї властивості є або <span class="accent">block</span>, або <span class="accent">inline</span>. Заміна значень властивості призведе до зміни дефолтної поведінки самого елемента.
+  pre
+    code.html &#60;ul class="nav"&#62;
+    //-   &#60;li&#62;&#60;a href="#"&#62;Home&#60;a&#62;&#60;/li&#62;
+    //-   &#60;li&#62;&#60;a href="#"&#62;News&#60;a&#62;&#60;/li&#62;
+    //-   &#60;li&#62;&#60;a href="#"&#62;Contact&#60;a&#62;&#60;/li&#62;
+    //-   &#60;li&#62;&#60;a href="#"&#62;About&#60;a&#62;&#60;/li&#62;
+    //- &#60;/ul&#62;
+    //- &#60;ul class="nav inline"&#62;
+    //-   &#60;li&#62;&#60;a href="#"&#62;Home&#60;/a&#62;&#60;/li&#62;
+    //-   &#60;li&#62;&#60;a href="#"&#62;News&#60;/a&#62;&#60;/li&#62;
+    //-   &#60;li&#62;&#60;a href="#"&#62;Contact&#60;/a&#62;&#60;/li&#62;
+    //-   &#60;li&#62;&#60;a href="#"&#62;About&#60;/a&#62;&#60;/li&#62;
+    //- &#60;/ul&#62;
+  pre
+    code.css .nav li {
+    //-   list-style-type: none;
+    //- }
+    //- .inline li {
+    //-   display: inline-block;
+    //-   margin-right: 20px;
+    //- }
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-01.png" alt="властивість display">
+
+  h3.accent.lesson-subtitle Властивість Position.
+  p <span class="accent">Властивість position</span> – визначає, як елемент буде позиціонуватись відносно вікна браузера чи інших елементів на веб-сторінці.
+  p <span class="text-bold">Основні значення властивості position в CSS:</span>
+  ul.list
+    li <span class="accent">static</span>;
+    li <span class="accent">relative</span>;
+    li <span class="accent">fixed</span>;
+    li <span class="accent">absolute</span>;
+    li <span class="accent">sticky</span>.
+
+  h3.accent.lesson-subtitle Static.
+  p За замовчуванням, усі HTML-елементи розташовані статично. Елемент розміщується в звичайному потоці документа і не може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.
+  pre
+    code.html &#60;div class="container"&#62;
+    //-   &#60;div class="static"&#62;static&#60;/div&#62;
+    //- &#60;/div&#62;
+  pre
+    code.css .static {
+    //-   position: static;
+    //-   top: 50px;
+    //-   left: 50px;
+      
+    //-   width: 300px;
+    //-   height: 50px;
+    //-   padding: 50px 0;
+    //-   background-color: #0096D2;
+    //-   border-radius: 10px;
+    //-   font-family: monospace;
+    //-   font-size: 2em;
+    //-   color: white;
+    //-   text-align: center;
+    //- }
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-02.png" alt="властивість display">
+
+  h3.accent.lesson-subtitle Relative.
+  p Значення дозволяє елементу позиціонуватись відносно своєї початкової точки. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.
+  pre
+    code.html &#60;div class="container"&#62;
+    //-   &#60;div class="relative"&#62;relative&#60;/div&#62;
+    //- &#60;/div&#62;
+  pre
+    code.css .relative {
+    //-   position: relative;
+    //-   top: 50px;
+    //-   left: 50px;
+    //- }
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-03.png" alt="властивість display">
+
+  h3.accent.lesson-subtitle Absolute.
+  p Значення дозволяє елементу позиціонуватись відносно його найближчого родича, який має властивість <span class="accent">position</span> задану як <span class="accent">relative</span>, <span class="accent">absolute</span> або <span class="accent">fixed</span>. Якщо найближчий родич не має властивості <span class="accent">position</span>, то елемент позиціонується відносно вікна перегляду. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.
+  pre
+    code.html &#60;div class="container"&#62;
+    //-   &#60;div class="abcolute"&#62;abcolute&#60;/div&#62;
+    //- &#60;/div&#62;
+  pre
+    code.css .container {
+    //-   position: relative;
+    //-   width: 200px;
+    //-   background-color: #0096D2;
+    //-   border-radius: 10px;
+    //-   font-family: monospace;
+    //-   font-size: 2em;
+    //-   color: white;
+    //-   text-align: center;
+    //- }
+
+    //- .absolute {
+    //-   position: absolute;
+    //-   right: 50px;
+    //-   bottom: 50px;
+    //- }
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-04.png" alt="властивість display">
+
+  h3.accent.lesson-subtitle Fixed.
+  p Значення дозволяє елементу позиціонуватись відносно вікна перегляду. Елемент залишається на місці, незалежно від того, як користувач прокручує сторінку. Елемент може бути зміщений за допомогою властивостей <span class="accent">position</span>, то елемент позиціонується відносно вікна перегляду. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.
+  pre
+    code.html &#60;div class="container"&#62;
+    //-   &#60;div class="fixed"&#62;fixed&#60;/div&#62;
+    //- &#60;/div&#62;
+  pre
+    code.css .container {
+    //-   height: 1200px;
+    //- }
+    //- .fixed {
+    //-   position: fixed;
+    //-   top: 50px;
+    //-   right: 50px;
+    //-   border-radius: 10px;
+    //-   padding: 20px 40px;
+    //-   background-color: #cf432e;
+    //-   font-family: monospace;
+    //-   font-size: 1.5em;
+    //-   color: white;
+    //-   text-align: center;
+    //- }
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-05.png" alt="властивість display">
+
+  h3.accent.lesson-subtitle Sticky.
+  p Значення дозволяє елементу позиціонуватись відносно вікна перегляду. Елемент залишається на місці, незалежно від того, як користувач прокручує сторінку. Елемент може бути зміщений за допомогою властивостей <span class="accent">position</span>, то елемент позиціонується відносно вікна перегляду. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.
+  pre
+    code.html &#60;div class="relative"&#62;&#60;/div&#62; 
+    //- &#60;div class="container"&#62;
+    //-   &#60;div class="sticky"&#62;sticky&#60;/div&#62;
+    //- &#60;/div&#62;
+  pre
+    code.css .relative {
+    //-   position: relative;
+    //-   width: 250px;
+    //-   height: 200px;
+    //-   background-color: #6ca38c;
+    //-   border-radius: 10px;
+    //- }
+    //- .container {
+    //-   width: 250px;
+    //-   height: 500px;
+    //-   background-color: #0096D2;
+    //-   border-radius: 10px;
+    //-   padding-top: 50px;
+    //-   margin-top: 8px;
+    //- }
+    //- .sticky {
+    //-   position: sticky;
+    //-   top: 0px;
+    //-   width: 30%;
+    //-   border-radius: 10px;
+    //-   padding: 20px 40px;
+    //-   margin: 0 auto;
+    //-   background-color: #cf432e;
+    //-   font-family: monospace;
+    //-   font-size: 1.5em;
+    //-   color: white;
+    //-   text-align: center;
+    //- }
+  <iframe width="100%" height="500" style="border: 2px solid #e9f1ef; border-radius: 15px" src="//jsfiddle.net/Syukh/209rcsj3/6/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+  h3.accent.lesson-subtitle Властивості: top, right, bottom, left.
+  p Елемент вважається позиціонованим, якщо властивість <span class="accent">position</span> має значення, відмінне від <span class="accent">static</span>. Позиціоновані елементи генерують позиціоновані блоки і можуть бути розташовані відповідно до наступних чотирьох фізичних властивостей: <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span>, <span class="accent">left</span>.
+  p Кожна з властивостей задає відстань, на яку буде зміщуватися елемент, або від границь його батьківського елемента, або від положення елемента в нормальному потоці, або вікна браузера. Значення можуть бути від'ємними, щоб змістити елемент в протилежний бік від свого фактичного положення.
+
+  h3.accent.lesson-subtitle Властивість z-index.
+  p <span class="accent">Z-index</span> – це властивість, що визначає порядок, в якому елементи розташовуються на сторінці за глибиною, тобто вздовж осі <span class="accent">z</span> один над іншим. Чим більше значення <span class="accent">z-index</span> у елемента, тим вище він буде відображатись в порівнянні з іншими елементами, які мають значення менше.
+  p Значення <span class="accent">z-index</span> може бути будь-яким цілим числом, позитивним або негативним. Значення <span class="accent">0</span> означає, що елемент знаходиться на тому ж рівні, що і його батьківський елемент.
+  p Властивість <span class="accent">z-index</span> працює лише для елементів, які мають властивість <span class="accent">position</span>, значення якої встановлено на <span class="accent">absolute</span>, <span class="accent">fixed</span> або <span class="accent">relative</span>.
+  pre
+    code.html &#60;div class="container"&#62;
+  //-   &#60;div class="box blue"&#62;&#60;/div&#62;
+  //-   &#60;div class="box red"&#62;&#60;/div&#62;
+  //-   &#60;div class="box green"&#62;&#60;/div&#62;
+  //- &#60;div&#62;
+  pre
+    code.css .container {
+    //-   position: relative;
+    //-   width: 1vw;
+    //-   height: 1vh;
+    //-   top:20px;
+    //-   left: 50px;
+    //- }
+    //- .box {
+    //-   position: absolute;
+    //-   width: 100px;
+    //-   height: 100px;
+    //-   border-radius: 10px;  
+    //- }
+    //- .red{
+    //-   z-index:1;
+    //-   background-color: #cf432e;
+    //- }
+    //- .green{
+    //-   z-index:2;
+    //-   top: 40px;
+    //-   left: 40px;
+    //-   background-color: #6ca38c;
+    //- }
+    //- .blue{
+    //-   z-index:3;
+    //-   top: 20px;
+    //-   left: 20px;
+    //-   background-color: #0096D2;
+    //- }
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-06.png" alt="властивість display">
