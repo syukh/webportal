@@ -67,7 +67,7 @@
     //-   text-align: center;
     //- }
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-02.png" alt="властивість display">
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-02.png" alt="значення static">
 
   h3.accent.lesson-subtitle Relative.
   p Значення дозволяє елементу позиціонуватись відносно своєї початкової точки. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.
@@ -82,7 +82,7 @@
     //-   left: 50px;
     //- }
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-03.png" alt="властивість display">
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-03.png" alt="значення relative">
 
   h3.accent.lesson-subtitle Absolute.
   p Значення дозволяє елементу позиціонуватись відносно його найближчого родича, який має властивість <span class="accent">position</span> задану як <span class="accent">relative</span>, <span class="accent">absolute</span> або <span class="accent">fixed</span>. Якщо найближчий родич не має властивості <span class="accent">position</span>, то елемент позиціонується відносно вікна перегляду. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.
@@ -108,7 +108,7 @@
     //-   bottom: 50px;
     //- }
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-04.png" alt="властивість display">
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-04.png" alt="значення abcolute">
 
   h3.accent.lesson-subtitle Fixed.
   p Значення дозволяє елементу позиціонуватись відносно вікна перегляду. Елемент залишається на місці, незалежно від того, як користувач прокручує сторінку. Елемент може бути зміщений за допомогою властивостей <span class="accent">position</span>, то елемент позиціонується відносно вікна перегляду. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.
@@ -133,7 +133,7 @@
     //-   text-align: center;
     //- }
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-05.png" alt="властивість display">
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-05.png" alt="значення fixed">
 
   h3.accent.lesson-subtitle Sticky.
   p Значення дозволяє елементу позиціонуватись відносно вікна перегляду. Елемент залишається на місці, незалежно від того, як користувач прокручує сторінку. Елемент може бути зміщений за допомогою властивостей <span class="accent">position</span>, то елемент позиціонується відносно вікна перегляду. Елемент може бути зміщений за допомогою властивостей <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span> або <span class="accent">left</span>.
@@ -175,7 +175,38 @@
 
   h3.accent.lesson-subtitle Властивості: top, right, bottom, left.
   p Елемент вважається позиціонованим, якщо властивість <span class="accent">position</span> має значення, відмінне від <span class="accent">static</span>. Позиціоновані елементи генерують позиціоновані блоки і можуть бути розташовані відповідно до наступних чотирьох фізичних властивостей: <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span>, <span class="accent">left</span>.
-  p Кожна з властивостей задає відстань, на яку буде зміщуватися елемент, або від границь його батьківського елемента, або від положення елемента в нормальному потоці, або вікна браузера. Значення можуть бути від'ємними, щоб змістити елемент в протилежний бік від свого фактичного положення.
+  p Кожна з властивостей задає відстань, на яку буде зміщуватися елемент, або від положення елемента в нормальному потоці, або від границь його батьківського елемента чи вікна браузера. Значення можуть бути і від'ємними, щоб змістити елемент в протилежний бік від свого фактичного положення.
+  pre
+    code.html &#60;div class="container"&#62;
+    //-   &#60;div class="box"&#62;&#60;/div&#62;
+    //- &#60;/div&#62;
+  pre
+    code.css .container {
+    //-   position: absolute;
+    //-   top: 0px;
+    //-   left: 0px;
+    //-   right: 0px;
+    //-   bottom: 0px;
+    //-   margin: auto;
+    //-   width: 200px;
+    //-   height: 200px;
+    //-   background-color: #0096D2;
+    //-   border-radius: 10px;  
+    //- }
+    //-  .box {
+    //-   position: absolute;
+    //-   top: 0px;
+    //-   left: 0px;
+    //-   right: 0px;
+    //-   bottom: 0px;
+    //-   margin: auto;
+    //-   width: 50%;
+    //-   height: 50%;
+    //-   background-color: #cf432e;
+    //-   border-radius: 10px;  
+    //- }
+  figure.wp-block-image
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-07.png" alt="центрування html-елементу">
 
   h3.accent.lesson-subtitle Властивість z-index.
   p <span class="accent">Z-index</span> – це властивість, що визначає порядок, в якому елементи розташовуються на сторінці за глибиною, тобто вздовж осі <span class="accent">z</span> один над іншим. Чим більше значення <span class="accent">z-index</span> у елемента, тим вище він буде відображатись в порівнянні з іншими елементами, які мають значення менше.
@@ -218,4 +249,4 @@
     //-   background-color: #0096D2;
     //- }
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-06.png" alt="властивість display">
+    <img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-05-06.png" alt="властивість z-index">
