@@ -147,15 +147,15 @@ b, strong {
 #menu.excel,
 .color-excel.simplebar-scrollbar:before,
 .excel.nav__tooltip {
-  background-color: #008000;
+  background-color: #107C41;
 }
 
 .color-excel {
-  color: #008000;
+  color: #107C41;
 }
 
 .color-excel p:before {
-  color: #008000;
+  color: #107C41;
 }
 
 #menu.pascal,
@@ -296,7 +296,7 @@ b, strong {
   background-color: #185ABD;
 }
 .dowload-btn .excel {
-  background-color: #008000;
+  background-color: #107C41;
 }
 .dowload-btn .pascal {
   background-color: #0089ff;
@@ -1199,7 +1199,7 @@ ul.list-table {
 }
 
 .excel p:before {
-  color: #008000;
+  color: #107C41;
 }
 
 .pascal p:before {
@@ -1255,7 +1255,7 @@ ul.list-table {
 }
 
 .lesson-text__box {
-  border: 3px solid #008000;
+  border: 3px solid #107C41;
   border-radius: 15px;
   padding: 10px 50px;
   width: 92%;
@@ -1302,19 +1302,19 @@ ul.list-table {
   margin-top: 20px;
 }
 .function-descr__arg {
-  background: #008000;
+  background: #107C41;
   color: #fff;
   line-height: 1.25;
   border-top: 1px solid #fff;
-  border-left: 1px solid #008000;
+  border-left: 1px solid #107C41;
 }
 .function-descr__arg:first-child {
-  border-top: 1px solid #008000;
+  border-top: 1px solid #107C41;
 }
 .function-descr__text {
-  border-top: 1px solid #008000;
-  border-left: 1px solid #008000;
-  border-right: 1px solid #008000;
+  border-top: 1px solid #107C41;
+  border-left: 1px solid #107C41;
+  border-right: 1px solid #107C41;
 }
 .function-descr__arg, .function-descr__text {
   width: 100%;
@@ -1322,7 +1322,7 @@ ul.list-table {
   padding: 5px 15px;
 }
 .function-descr__arg:last-child, .function-descr__text:last-child {
-  border-bottom: 1px solid #008000;
+  border-bottom: 1px solid #107C41;
 }
 
 .function-arg__des {
@@ -1335,7 +1335,7 @@ ul.list-table {
   text-align: center;
 }
 .func-table th {
-  background: #008000;
+  background: #107C41;
   color: #fff;
 }
 .func-table th:nth-child(2) {
@@ -1344,13 +1344,13 @@ ul.list-table {
 }
 .func-table td {
   width: 33.33333%;
-  border-right: 1px solid #008000;
-  border-bottom: 1px solid #008000;
+  border-right: 1px solid #107C41;
+  border-bottom: 1px solid #107C41;
   font-weight: 600;
-  color: #008000;
+  color: #107C41;
 }
 .func-table td:first-child {
-  border-left: 1px solid #008000;
+  border-left: 1px solid #107C41;
 }
 .func-table .false {
   color: #FF5216;
@@ -1367,17 +1367,17 @@ ul.list-table {
   width: 100%;
   height: 100%;
   padding: 5px 15px;
-  border-bottom: solid 1px #008000;
-  border-right: solid 1px #008000;
+  border-bottom: solid 1px #107C41;
+  border-right: solid 1px #107C41;
 }
 .table-func-pivot div:nth-child(odd) {
-  border-left: solid 1px #008000;
+  border-left: solid 1px #107C41;
 }
 .table-func-pivot div:first-child {
-  border-top: solid 1px #008000;
+  border-top: solid 1px #107C41;
 }
 .table-func-pivot div:nth-child(2) {
-  border-top: solid 1px #008000;
+  border-top: solid 1px #107C41;
 }
 .table-func-pivot .func-pivot {
   line-height: 1.25;
