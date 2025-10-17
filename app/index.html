@@ -38,7 +38,7 @@
       <div class="section-row section-row__course">
         <div class="course-wrap" id="spbar">
           <div class="lesson-page">
-            <h1 class="lesson-title">Анімації в <span class="accent">CSS</span></h1>
+            <h1 class="lesson-title">Анімації в <span class="accent">CSS</span> - <span class="accent">Transitions</span></h1>
             <p><span class="accent">CSS анімації</span> пропонують ефективний та простий спосіб додати візуальної привабливості та інтерактивності веб-інтерфейсам. Дозволяють оживити вебсторінку, зробити взаємодію приємнішою та привернути увагу користувачів.</p>
             <p class="text-bold">Існує два основні способи створення анімацій:</p>
             <ul class="list">
@@ -53,15 +53,35 @@
               <li><span class="accent">transition-property</span> — CSS-властивість, яку потрібно анімувати (наприклад, <span class="accent">background-color</span>, <span class="accent">width</span>, <span class="accent">opacity</span>);</li>
               <li><span class="accent">transition-duration</span> — тривалість або час переходу (наприклад, <span class="accent">0.5s</span>, <span class="accent">2s</span>);</li>
               <li><span class="accent">transition-timing</span> — функція-часу, яка описує прискорення чи сповільнення (<span class="accent">ease</span>, <span class="accent">linear</span>, <span class="accent">ease-in</span>, <span class="accent">ease-out</span>, <span class="accent">cubic-bezier()</span>);</li>
-              <li><span class="accent">transition-delay</span> — час перед початком анімації (затримка).</li>
+              <li><span class="accent">transition-delay</span> — час перед початком анімації (затримка переходу).</li>
               <li><span class="accent">transition-behavior</span> — визначає, чи можуть відбуватися переходи для дискретних властивостей CSS, таких як <span class="accent">display</span> або <span class="accent">visibility</span>, які не можна плавно анімувати.</li>
             </ul>
             <h3 class="accent lesson-subtitle">Властивість transition-property</h3>
-            <p>Властивість CSS <span class="accent">transition-property</span> визначає, які саме CSS-властивості повинні анімуватися. Може приймати одне або декілька імен властивостей CSS у списку, розділених комами, як ми зробили вище, або використати значення <span class="accent">all</span>, щоб вказати, що усі властивості елемента, які підтримують анімацію будуть брати участь у плавному переході при їх зміні.</p>
+            <p>Визначає, які саме CSS-властивості повинні анімуватися. Може приймати одне або декілька імен властивостей CSS у списку, розділених комами, як ми зробили вище, або використати значення <span class="accent">all</span>, щоб вказати, що усі властивості елемента, які підтримують анімацію будуть брати участь у плавному переході при їх зміні.</p>
             <pre><code class="css">.animation{</code></pre>
             <h3 class="accent lesson-subtitle">Властивість transition-duration</h3>
             <p>Визначає, як довго триватиме анімація від початкового до кінцевого стану. задається у одиницях часу, або в секундах (<span class="accent">s</span>), або в мілісекундах (<span class="accent">ms</span>), і за замовчуванням має значення <span class="accent">0s</span>.</p>
             <p>Важливо пам'ятати, що <span class="accent">transition-duration</span> застосовується як для переходу вперед (наприклад, при наведенні курсору), так і для переходу назад (коли курсор відводиться). Це створює симетричний ефект.</p><iframe height="280" style="width: 100%; border-radius: 15px" scrolling="no" src="https://codepen.io/yaqrlblm-the-decoder/embed/xbZrjyN?default-tab=result&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">  See the Pen <a href="https://codepen.io/yaqrlblm-the-decoder/pen/xbZrjyN">   Untitled</a> by WebPortal (<a href="https://codepen.io/yaqrlblm-the-decoder">@yaqrlblm-the-decoder</a>)  on <a href="https://codepen.io">CodePen</a>.</iframe>
+            <h3 class="accent lesson-subtitle">Властивість transition-timing-function</h3>
+            <p>Визначає, як змінюється швидкість переходу протягом його тривалості, тобто задає характер прискорення чи сповільнення анімації в різні моменти її виконання.</p>
+            <p class="text-bold">Основні значення функції:</p>
+            <ul class="list">
+              <li><span class="accent">linear</span> — рівномірний рух;</li>
+              <li><span class="accent">ease</span> — плавний старт і кінець (за замовчуванням);</li>
+              <li><span class="accent">ease-in</span> — повільний початок, швидке завершення;</li>
+              <li><span class="accent">ease-out</span> — швидкий початок, повільне завершення;</li>
+              <li><span class="accent">ease-in-out</span> — повільний початок і завершення;</li>
+              <li><span class="accent">cubic-bezier()</span> — повний контроль кривої прискорення.</li>
+            </ul><iframe height="340" style="width: 100%; border-radius: 15px" scrolling="no" src="https://codepen.io/yaqrlblm-the-decoder/embed/myVqdBp?default-tab=result&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">  See the Pen <a href="https://codepen.io/yaqrlblm-the-decoder/pen/myVqdBp">  Untitled</a> by WebPortal (<a href="https://codepen.io/yaqrlblm-the-decoder">@yaqrlblm-the-decoder</a>)  on <a href="https://codepen.io">CodePen</a>.</iframe>
+            <h3 class="accent lesson-subtitle">Властивість transition-delay</h3>
+            <p>Властивість <span class="accent">transition-delay</span> визначає проміжок часу, який має минути перед тим, як перехід (анімація) фактично розпочнеться.</p>
+            <p>Ця властивість особливо корисна, коли потрібно створити ефект послідовності або витримати паузу після певної дії користувача, перш ніж відбудеться візуальна зміна.</p>
+            <p>Задається в одиницях часу: секундах (<span class="accent">s</span>) або мілісекундах (<span class="accent">ms</span>)</p>
+            <ul class="list">
+              <li><span class="accent">Позитивне значення</span> (0.5s, 500ms): перехід почнеться лише після того, як мине вказаний час.</li>
+              <li><span class="accent">Нульове значення</span> (0s): перехід почнеться негайно (це значення за замовчуванням).</li>
+              <li><span class="accent">Негативне значення</span> (-1s): перехід почнеться негайно, але виглядатиме так, ніби він уже триває впродовж 1 секунди. Це означає, що анімація "пропустить" першу частину свого руху.</li>
+            </ul><iframe height="280" style="width: 100%; border-radius: 15px" scrolling="no" title="Untitled" src="https://codepen.io/yaqrlblm-the-decoder/embed/zxrPQzJ?default-tab=result&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">  See the Pen <a href="https://codepen.io/yaqrlblm-the-decoder/pen/zxrPQzJ">  Untitled</a> by WebPortal (<a href="https://codepen.io/yaqrlblm-the-decoder">@yaqrlblm-the-decoder</a>)  on <a href="https://codepen.io">CodePen</a>.</iframe>
           </div>
           <div class="dowload-btn"><a class="dowload-btn__wraper" href="#">
               <div class="btn-descr">додаткові<br />матеріали</div>
