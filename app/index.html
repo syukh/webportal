@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,85 +7,105 @@
   <title>WebPortal</title>
   <meta name="description" content=""/>
   <meta property="og:image" content="path/to/image.jpg"/>
-  <link rel="icon" href="img/favicon/favicon.ico"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png"/>
-  <link rel="stylesheet" href="libs/simplebar.css"/>
-  <link rel="stylesheet" href="css/libs.min.css"/>
-  <link rel="stylesheet" href="libs/highlight/silk-light.min.css"/>
-  <link rel="stylesheet" href="css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+  <link rel="icon" href="./img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon-180x180.png"/>
+  <link rel="stylesheet" href="./libs/simplebar.css"/>
+  <link rel="stylesheet" href="./css/libs.min.css"/>
+  <link rel="stylesheet" href="./libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="./css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
 </head>
 <body>
-  <div class="lesson-section" id="main-section">
-    <div class="css" id="menu">
-      <div class="logo"><a href="#"><img class="logo__img" src="/img/logo.svg" alt="Logo"/></a></div>
-      <nav class="nav"><a class="nav__link" href="#"><span class="nav__tooltip">Microsoft Office</span><img src="/img/logo_office.svg"/></a><a class="nav__link" href="#"><span class="nav__tooltip">Програмування</span><img src="/img/logo_prog.svg"/></a><a class="nav__link" href="#"><span class="nav__tooltip">Web-технології</span><img src="/img/logo_web.svg"/></a><a class="nav__link" href="#"><span class="nav__tooltip">Майстер-класи</span><img src="/img/logo_master.svg"/></a>
+  <div id="main-section">
+    <div id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="./img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="./img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="./img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="./img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua"><span class="nav__tooltip">Майстер-класи</span><img src="./img/site/logo_master.svg"/></a>
       </nav>
       <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
       <div class="wrap-mobile-menu"><button class=""><i class="fa fa-bars"></i></button>
         <div class="overlay overlay-scale">
           <nav class="mobile-menu">
             <ul class="mobile-nav">
-              <li class="mobile-nav__item nav-item red"><a class="nav-item__link">Microsoft Office</a></li>
-              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link">Програмування</a></li>
-              <li class="mobile-nav__item nav-item green"><a class="nav-item__link">Web-технології</a></li>
-              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link">Майстер-класи</a></li>
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua">Майстер-класи</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </div>
-    <div class="section-lesson" id="section">
-      <div class="section-row section-row__course">
+    <div class="course-lesson" id="section">
+      <div class="section-row section-row__header">
+        <h2 class="title-course">Word</h2>
+      </div>
+      <div class="section-row section-row__course lesson-row">
         <div class="course-wrap" id="spbar">
-          <div class="lesson-page">
-            <h1 class="lesson-title">Анімації в <span class="accent">CSS</span> - <span class="accent">Transitions</span></h1>
-            <p><span class="accent">CSS анімації</span> пропонують ефективний та простий спосіб додати візуальної привабливості та інтерактивності веб-інтерфейсам. Дозволяють оживити вебсторінку, зробити взаємодію приємнішою та привернути увагу користувачів.</p>
-            <p class="text-bold">Існує два основні способи створення анімацій:</p>
-            <ul class="list">
-              <li>за допомогою <span class="accent">transition</span> — для плавних змін станів (наприклад, при наведенні);</li>
-              <li>за допомогою <span class="accent">@keyframes</span> — для автоматичних або складних рухів.</li>
-            </ul>
-            <h3 class="accent lesson-subtitle">Плавні переходи з Transition</h3>
-            <p>У звичайному CSS зміна стилів відбувається миттєво. Наприклад, якщо задати елементу один колір у нормальному стані, а інший — у стані <span class="accent">:hover</span>, то при наведенні зміна кольору відбудеться одразу, без жодного ефекту.</p>
-            <p>Властивість <span class="accent">transition</span> дозволяє зробити ці зміни <span class="accent">плавними</span>, вказавши тривалість та спосіб переходу. Це один з найпростіших, але найефективніших інструментів CSS-анімацій.</p><iframe height="280" style="width: 100%; border-radius:15px" scrolling="no" title="Transition" src="https://codepen.io/yaqrlblm-the-decoder/embed/KwVqePB?default-tab=result&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"> See the Pen <a href="https://codepen.io/yaqrlblm-the-decoder/pen/KwVqePB"> Transition</a> by WebPortal (<a href="https://codepen.io/yaqrlblm-the-decoder">@yaqrlblm-the-decoder</a>) on <a href="https://codepen.io">CodePen</a>.</iframe>
-            <p class="text-bold">Властивість <span class="accent">transition</span> включає в себе:</p>
-            <ul class="list">
-              <li><span class="accent">transition-property</span> — CSS-властивість, яку потрібно анімувати (наприклад, <span class="accent">background-color</span>, <span class="accent">width</span>, <span class="accent">opacity</span>);</li>
-              <li><span class="accent">transition-duration</span> — тривалість або час переходу (наприклад, <span class="accent">0.5s</span>, <span class="accent">2s</span>);</li>
-              <li><span class="accent">transition-timing</span> — функція-часу, яка описує прискорення чи сповільнення (<span class="accent">ease</span>, <span class="accent">linear</span>, <span class="accent">ease-in</span>, <span class="accent">ease-out</span>, <span class="accent">cubic-bezier()</span>);</li>
-              <li><span class="accent">transition-delay</span> — час перед початком анімації (затримка переходу).</li>
-              <li><span class="accent">transition-behavior</span> — визначає, чи можуть відбуватися переходи для дискретних властивостей CSS, таких як <span class="accent">display</span> або <span class="accent">visibility</span>, які не можна плавно анімувати.</li>
-            </ul>
-            <h3 class="accent lesson-subtitle">Властивість transition-property</h3>
-            <p>Визначає, які саме CSS-властивості повинні анімуватися. Може приймати одне або декілька імен властивостей CSS у списку, розділених комами, як ми зробили вище, або використати значення <span class="accent">all</span>, щоб вказати, що усі властивості елемента, які підтримують анімацію будуть брати участь у плавному переході при їх зміні.</p>
-            <pre><code class="css">.animation{</code></pre>
-            <h3 class="accent lesson-subtitle">Властивість transition-duration</h3>
-            <p>Визначає, як довго триватиме анімація від початкового до кінцевого стану. задається у одиницях часу, або в секундах (<span class="accent">s</span>), або в мілісекундах (<span class="accent">ms</span>), і за замовчуванням має значення <span class="accent">0s</span>.</p>
-            <p>Важливо пам'ятати, що <span class="accent">transition-duration</span> застосовується як для переходу вперед (наприклад, при наведенні курсору), так і для переходу назад (коли курсор відводиться). Це створює симетричний ефект.</p><iframe height="280" style="width: 100%; border-radius: 15px" scrolling="no" src="https://codepen.io/yaqrlblm-the-decoder/embed/xbZrjyN?default-tab=result&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">  See the Pen <a href="https://codepen.io/yaqrlblm-the-decoder/pen/xbZrjyN">   Untitled</a> by WebPortal (<a href="https://codepen.io/yaqrlblm-the-decoder">@yaqrlblm-the-decoder</a>)  on <a href="https://codepen.io">CodePen</a>.</iframe>
-            <h3 class="accent lesson-subtitle">Властивість transition-timing-function</h3>
-            <p>Визначає, як змінюється швидкість переходу протягом його тривалості, тобто задає характер прискорення чи сповільнення анімації в різні моменти її виконання.</p>
-            <p class="text-bold">Основні значення функції:</p>
-            <ul class="list">
-              <li><span class="accent">linear</span> — рівномірний рух;</li>
-              <li><span class="accent">ease</span> — плавний старт і кінець (за замовчуванням);</li>
-              <li><span class="accent">ease-in</span> — повільний початок, швидке завершення;</li>
-              <li><span class="accent">ease-out</span> — швидкий початок, повільне завершення;</li>
-              <li><span class="accent">ease-in-out</span> — повільний початок і завершення;</li>
-              <li><span class="accent">cubic-bezier()</span> — повний контроль кривої прискорення.</li>
-            </ul><iframe height="340" style="width: 100%; border-radius: 15px" scrolling="no" src="https://codepen.io/yaqrlblm-the-decoder/embed/myVqdBp?default-tab=result&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">  See the Pen <a href="https://codepen.io/yaqrlblm-the-decoder/pen/myVqdBp">  Untitled</a> by WebPortal (<a href="https://codepen.io/yaqrlblm-the-decoder">@yaqrlblm-the-decoder</a>)  on <a href="https://codepen.io">CodePen</a>.</iframe>
-            <h3 class="accent lesson-subtitle">Властивість transition-delay</h3>
-            <p>Властивість <span class="accent">transition-delay</span> визначає проміжок часу, який має минути перед тим, як перехід (анімація) фактично розпочнеться.</p>
-            <p>Ця властивість особливо корисна, коли потрібно створити ефект послідовності або витримати паузу після певної дії користувача, перш ніж відбудеться візуальна зміна.</p>
-            <p>Задається в одиницях часу: секундах (<span class="accent">s</span>) або мілісекундах (<span class="accent">ms</span>)</p>
-            <ul class="list">
-              <li><span class="accent">Позитивне значення</span> (0.5s, 500ms): перехід почнеться лише після того, як мине вказаний час.</li>
-              <li><span class="accent">Нульове значення</span> (0s): перехід почнеться негайно (це значення за замовчуванням).</li>
-              <li><span class="accent">Негативне значення</span> (-1s): перехід почнеться негайно, але виглядатиме так, ніби він уже триває впродовж 1 секунди. Це означає, що анімація "пропустить" першу частину свого руху.</li>
-            </ul><iframe height="280" style="width: 100%; border-radius: 15px" scrolling="no" title="Untitled" src="https://codepen.io/yaqrlblm-the-decoder/embed/zxrPQzJ?default-tab=result&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">  See the Pen <a href="https://codepen.io/yaqrlblm-the-decoder/pen/zxrPQzJ">  Untitled</a> by WebPortal (<a href="https://codepen.io/yaqrlblm-the-decoder">@yaqrlblm-the-decoder</a>)  on <a href="https://codepen.io">CodePen</a>.</iframe>
+          <div class="lesson-item">
+            <div class="lesson-element">
+              <div class="lesson-element__num">01</div>
+              <div class="lesson-element__name"><a class="name-link" href="./word/start-work-office-word.html">Початок роботи з Microsoft Office Word</a></div><a class="lesson-element__link" href="./uploads/word/Word_less_01.zip"></a>
+            </div>
           </div>
-          <div class="dowload-btn"><a class="dowload-btn__wraper" href="#">
-              <div class="btn-descr">додаткові<br />матеріали</div>
-              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+          <div class="lesson-item">
+            <div class="lesson-element">
+              <div class="lesson-element__num">02</div>
+              <div class="lesson-element__name"><a class="name-link" href="./word/format-symbol-and-paragraph.html">Форматування символів та абзаців</a></div><a class="lesson-element__link" href="./uploads/word/Word_less_02.zip"></a>
+            </div>
+          </div>
+          <div class="lesson-item">
+            <div class="lesson-element">
+              <div class="lesson-element__num">03</div>
+              <div class="lesson-element__name"><a class="name-link" href="./word/creation-list.html">Створення списків в Word</a></div><a class="lesson-element__link" href="./uploads/word/Word_less_03.zip"></a>
+            </div>
+          </div>
+          <div class="lesson-item">
+            <div class="lesson-element">
+              <div class="lesson-element__num">04</div>
+              <div class="lesson-element__name"><a class="name-link" href="./word/tables-word.html">Таблиці у текстовому документі Word</a></div><a class="lesson-element__link" href="./uploads/word/Word_less_04.zip"></a>
+            </div>
+          </div>
+          <div class="lesson-item">
+            <div class="lesson-element">
+              <div class="lesson-element__num">05</div>
+              <div class="lesson-element__name"><a class="name-link" href="./word/calculations-in-tables-word.html">Розрахунки в таблицях Word</a></div><a class="lesson-element__link" href="./uploads/word/Word_less_05.zip"></a>
+            </div>
+          </div>
+          <div class="lesson-item">
+            <div class="lesson-element">
+              <div class="lesson-element__num">06</div>
+              <div class="lesson-element__name"><a class="name-link" href="./word/inset-pictures.html">Додавання графічних зображень у текстовий документ Word</a></div><a class="lesson-element__link" href="./uploads/word/Word_less_06.zip"></a>
+            </div>
+          </div>
+          <div class="lesson-item">
+            <div class="lesson-element">
+              <div class="lesson-element__num">07</div>
+              <div class="lesson-element__name"><a class="name-link" href="./word/graphic-primitives-in-word.html">Графічні примітиви у текстовому редакторі Word</a></div><a class="lesson-element__link" href="./uploads/word/Word_less_07.zip"></a>
+            </div>
+          </div>
+          <div class="lesson-item">
+            <div class="lesson-element">
+              <div class="lesson-element__num">08</div>
+              <div class="lesson-element__name"><a class="name-link" href="./word/symbols-formulas.html">Працюємо із спеціальними символами та формулами в Microsoft Word</a></div><a class="lesson-element__link" href="./uploads/word/Word_less_08.zip"></a>
+            </div>
+          </div>
+          <div class="lesson-item">
+            <div class="lesson-element">
+              <div class="lesson-element__num">09</div>
+              <div class="lesson-element__name"><a class="name-link" href="./word/doc-style-strucrure.html">Стилі. Заголовки. Структура документу</a></div><a class="lesson-element__link" href="./uploads/word/Word_less_09.zip"></a>
+            </div>
+          </div>
+          <div class="lesson-item">
+            <div class="lesson-element">
+              <div class="lesson-element__num">10</div>
+              <div class="lesson-element__name"><a class="name-link" href="./word/page-layout.html">Макет сторінки</a></div><a class="lesson-element__link" href="./uploads/word/Word_less_10.zip"></a>
+            </div>
+          </div>
+          <div class="lesson-item">
+            <div class="lesson-element">
+              <div class="lesson-element__num">11</div>
+              <div class="lesson-element__name"><a class="name-link" href="./word/titles-numbering-pages.html">Нумерація сторінок. Колонтитули</a></div><a class="lesson-element__link" href="./uploads/word/Word_less_11.zip"></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

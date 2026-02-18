@@ -2,23 +2,41 @@
   include ../modulus/menu.pug
   #section.course-lesson
     .section-row.section-row__header
-        //- h2.title-course JavaScript
-        h2.title-course PowerPoint
-        //- h2.section-title Web-технології
+        //- h2.title-course Excel
+        h2.title-course Word
     .section-row.section-row__course.lesson-row
       .course-wrap#spbar
         -
           let lesson = [
-            {'name':'Починаємо працювати з Microsoft Excel'},
-            {'name':'Уведення та редагування даних в Microsoft Excel'},
-            {'name':'Форматування електронної таблиці Microsoft Excel'},
-            {'name':'Уведення та редагування даних в Microsoft Excel'},
-            {'name':'Використання вбудованих функцій в Microsoft Excel'},
-            {'name':'Діаграми та графіки в Microsoft Excel'},
-            {'name':'Умовне форматування в Microsoft Excel'},
-            {'name':'Сортування та фільтрація даних в Microsoft Excel'},
-            {'name':'Використання функції IF в Excel'},
-            {'name':'Графічні примітиви у текстовому редакторі Microsoft Word'},
+            //--- COURSE EXCEL ---//
+            //- {'name':'Починаємо працювати з Microsoft Excel',                       'link':'./excel/intro-excel.html',                      'upload':'./uploads/excel/Excel_less_01.xlsx'},
+            //- {'name':'Введення та редагування даних. Оформлення таблиць Excel',   'link':'./excel/design-sell-and-enter-data-excel.html', 'upload':'./uploads/excel/Excel_less_02.xlsx'},
+            //- {'name':'Автозаповнення клітинок в Excel',													   'link':'./excel/autofill-cells-excel.html',             'upload':'./uploads/excel/Excel_less_03.xlsx'},
+            //- {'name':'Прості обчислення в Microsoft Excel',                          'link':'./excel/simple-calculations-in-excel.html',     'upload':'./uploads/excel/Excel_less_04.xlsx'},
+            //- {'name':'Використання вбудованих функцій в Microsoft Excel',           'link':'./excel/functions-excel.html',                  'upload':'./uploads/excel/Excel_less_05.xlsx'},
+            //- {'name':'Діаграми та графіки в Microsoft Excel',                        'link':'./excel/diagrams-graphs-excel.html',            'upload':'./uploads/excel/Excel_less_06.xlsx'},
+            //- {'name':'Умовне форматування в Microsoft Excel',                        'link':'./excel/conditional-formatting-excel.html',     'upload':'./uploads/excel/Excel_less_07.xlsx'},
+            //- {'name':'Сортування та фільтрація даних в Microsoft Excel',            'link':'./excel/sort-filter-excel.html',							   'upload':'./uploads/excel/Excel_less_08.xlsx'},
+            //- {'name':'Використання функції IF в Microsoft Excel',                    'link':'./excel/function-if.html',                   		'upload':'./uploads/excel/Excel_less_09.xlsx'},
+            //- {'name':'Функції для пошуку та роботи з посиланнями в Excel',         'link':'./excel/function-search-and-links.html',         'upload':'./uploads/excel/Excel_less_10.xlsx'},
+            //- {'name':'Текстові функції, обробка текстових даних в Excel',          'link':'./excel/text-function-in-excel.html',          	 'upload':'./uploads/excel/Excel_less_11.xlsx'},
+            //- {'name':'Функції дати та часу в Excel',                                 'link':'./excel/date-time-excel.html',                   'upload':'./uploads/excel/Excel_less_12.xlsx'},
+            //- {'name':'Працюємо з великими табличними масивами в Microsoft Excel',  'link':'./excel/large-table-arrays.html',   	            'upload':'./uploads/excel/Excel_less_13.xlsx'},
+            //- {'name':'Аналіз даних за допомоги зведених таблиць.',                 'link':'./excel/pivot-table.html',                        'upload':'./uploads/excel/Excel_less_14.xlsx'},
+            //--- COURSE WORD ---//
+            {'name':'Початок роботи з Microsoft Office Word',                             'link':'./word/start-work-office-word.html',               'upload':'./uploads/word/Word_less_01.zip'},
+            {'name':'Форматування символів та абзаців',                                 'link':'./word/format-symbol-and-paragraph.html',          'upload':'./uploads/word/Word_less_02.zip'},
+            {'name':'Створення списків в Word',                                           'link':'./word/creation-list.html',                        'upload':'./uploads/word/Word_less_03.zip'},
+            {'name':'Таблиці у текстовому документі Word',                               'link':'./word/tables-word.html',                           'upload':'./uploads/word/Word_less_04.zip'},
+            {'name':'Розрахунки в таблицях Word',                                         'link':'./word/calculations-in-tables-word.html',           'upload':'./uploads/word/Word_less_05.zip'},
+            {'name':'Додавання графічних зображень у текстовий документ Word',          'link':'./word/inset-pictures.html',                        'upload':'./uploads/word/Word_less_06.zip'},
+            {'name':'Графічні примітиви у текстовому редакторі Word',                     'link':'./word/graphic-primitives-in-word.html',            'upload':'./uploads/word/Word_less_07.zip'},
+            {'name':'Працюємо із спеціальними символами та формулами в Microsoft Word',  'link':'./word/symbols-formulas.html',                     'upload':'./uploads/word/Word_less_08.zip'},
+            {'name':'Стилі. Заголовки. Структура документу',                              'link':'./word/doc-style-strucrure.html',                   'upload':'./uploads/word/Word_less_09.zip'},
+            {'name':'Макет сторінки',                                                       'link':'./word/page-layout.html',                          'upload':'./uploads/word/Word_less_10.zip'},
+            {'name':'Нумерація сторінок. Колонтитули',                                   'link':'./word/titles-numbering-pages.html',              'upload':'./uploads/word/Word_less_11.zip'},
+
+          
           ]
         each element,i in lesson
           if (i < 9)
@@ -26,12 +44,12 @@
               .lesson-element
                 .lesson-element__num 0#{(i+1)}
                 .lesson-element__name
-                  a(href="#" class="name-link") #{element.name}
-                a(href="#" class="lesson-element__link")
+                  a(href=element.link class="name-link") #{element.name}
+                a(href=element.upload class="lesson-element__link")
           else
             .lesson-item
               .lesson-element
                 .lesson-element__num #{(i+1)}
                 .lesson-element__name
-                  a(href="#" class="name-link") #{element.name}
-                a(href="#" class="lesson-element__link")
+                  a(href=element.link class="name-link") #{element.name}
+                a(href=element.upload class="lesson-element__link")

@@ -12,41 +12,42 @@
       //---- Course Elements----//
       -
         let item = [
-          {'class':'red', 'icon':'/img/logo_office.svg', 'title':'Microsoft Office', 'descr':'Здобуваємо професійні навички роботи в найбільш популярному та поширеному серед користувачів  офісному пакеті програм.'},
-          {'class':'blue', 'icon':'/img/logo_prog.svg', 'title':'Програмування', 'descr':'Формуємо навички логічного мислення вивчаючи загальні принципи складання алгоритмів, знайомимо з сучасними мовами програмування.'},
-          {'class':'green', 'icon':'/img/logo_web.svg', 'title':'Web-технології', 'descr':"Вивчаємо прогресивні технології та методики створення web-сайтів, долучаємося до світового ком'юніті web-розробників."},
+          {'class':'red', 'icon':'./img/site/logo_office.svg', 'title':'Microsoft Office', 'descr':'Здобуваємо професійні навички роботи в найбільш популярному та поширеному серед користувачів  офісному пакеті програм.','link':'./office.html'},
+          {'class':'blue', 'icon':'./img/site/logo_prog.svg', 'title':'Програмування', 'descr':'Формуємо навички логічного мислення вивчаючи загальні принципи складання алгоритмів, знайомимо з сучасними мовами програмування.','link':'./program.html'},
+          {'class':'green', 'icon':'./img/site/logo_web.svg', 'title':'Web-технології', 'descr':"Вивчаємо прогресивні технології та методики створення web-сайтів, долучаємося до світового ком'юніті web-розробників.",'link':'./web.html'},
         ]
       each element in item
         div(class="item-elements "+element.class)
           .course
             .course-text
-              .row__elements-title.course-title #{element.title}
+              .row__elements-title.course-title 
+                a.course-title-link(href=element.link) #{element.title}
               .course-descr #{element.descr}
             img(src=element.icon class="course-icon")
       //--- Slider ----//
       .item-elements.slider
         //---Python ---//
-        .slider-item.python
-          .row__elements-title.slider-title Вивчаємо мову програмування Python
-          .slider-link.python
-            a.slider-link__python(href="#")
-              img.logo-python(src="https://webportal.com.ua/wp-content/uploads/2020/10/pythonnew.png")
-          img(src="img/slider-python-img.svg" class="slider__bg-img img-python")
+        //- .slider-item.python
+        //-   .row__elements-title.slider-title Вивчаємо мову програмування Python
+        //-   .slider-link.python
+        //-     a.slider-link__python(href="#")
+        //-       img.logo-python(src="https://webportal.com.ua/wp-content/uploads/2020/10/pythonnew.png")
+        //-   img(src="img/slider-python-img.svg" class="slider__bg-img img-python")
         //--- Offise ---//
         .slider-item
           .row__elements-title.slider-title Вчимося створювати професійні документи
           .slider-link
             -
               let slide = [
-                {'src':'img/logo_powerpoint.svg', 'title':'PowerPoint'},
-                {'src':'img/logo_excel.svg', 'title':'Excel'},
-                {'src':'img/logo_word.svg', 'title':'Word'},
+                {'src':'./img/site/logo_powerpoint.svg', 'title':'PowerPoint', 'link':'https://webportal.com.ua'},
+                {'src':'./img/site/logo_excel.svg', 'title':'Excel', 'link':'./excel.html'},
+                {'src':'./img/site/logo_word.svg', 'title':'Word', 'link':'./word.html'},
               ]
             each element in slide
-              a.slider-link__course(href="#")
+              a.slider-link__course(href=element.link)
                   img.slider-link__img(src=element.src)
                   .slider-link__title #{element.title}
-          img(src="img/slider-office-img.svg" class="slider__office-img")
+          img(src="./img/site/slider-office-img.svg" class="slider__office-img")
       //---- Dashbord ----//
       .item-elements.dashbord
         .row__elements-title.dashbord-title Доступно
@@ -60,7 +61,7 @@
           each element in round
             div(class="dashbord-item "+element.area)
               .dashbord__round-wrap
-                img(src="img/round.png", alt="")
+                img(src="./img/site/round.png", alt="")
                 .dashbord__round-text
                   .dashbord__round-num #{element.num}
                   .dashbord__round-desc #{element.desc}
