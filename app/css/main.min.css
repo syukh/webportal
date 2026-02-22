@@ -1,46 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Days";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/Days/Days.eot");
-  src: url("../fonts/Days/Days.eot?#iefix") format("embedded-opentype"), url("../fonts/Days/Days.woff") format("woff"), url("../fonts/Days/Days.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Gotham Pro";
-  font-weight: 300;
-  font-style: normal;
-  src: url("../fonts/GothamProLight/GothamProLight.eot");
-  src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProLight/GothamProLight.woff") format("woff"), url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Gotham Pro";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/GothamProRegular/GothamProRegular.eot");
-  src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"), url("../fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Gotham Pro";
-  font-weight: 500;
-  font-style: normal;
-  src: url("../fonts/GothamProMedium/GothamProMedium.eot");
-  src: url("../fonts/GothamProMedium/GothamProMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProMedium/GothamProMedium.woff") format("woff"), url("../fonts/GothamProMedium/GothamProMedium.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Gotham Pro";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../fonts/GothamProBold/GothamProBold.eot");
-  src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProBold/GothamProBold.woff") format("woff"), url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Gotham Pro";
-  font-weight: 900;
-  font-style: normal;
-  src: url("../fonts/GothamProBlack/GothamProBlack.eot");
-  src: url("../fonts/GothamProBlack/GothamProBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProBlack/GothamProBlack.woff") format("woff"), url("../fonts/GothamProBlack/GothamProBlack.ttf") format("truetype");
-}
 * {
   padding: 0;
   margin: 0;
@@ -61,7 +19,7 @@ body {
   max-width: 1920px;
   min-width: 320px;
   font-size: 0.875rem;
-  font-family: "Days", sans-serif;
+  font-family: "Days One", sans-serif;
   color: #333333;
   position: relative;
   margin: 0 auto;
@@ -257,7 +215,7 @@ b, strong {
 }
 
 .text-def {
-  font-family: "Days", sans-serif;
+  font-family: "Days One", sans-serif;
 }
 
 .slick-dots {
@@ -312,7 +270,7 @@ b, strong {
 }
 
 .default-font {
-  font-family: "Days", sans-serif;
+  font-family: "Days One", sans-serif;
 }
 
 pre {
@@ -363,7 +321,7 @@ pre code {
   border: 1px solid #ffffff;
   border-radius: 30px;
   font-size: 1rem;
-  font-family: "Gotham Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   white-space: nowrap;
   color: #ffffff;
@@ -1111,7 +1069,7 @@ pre code {
 
 .lesson-page {
   font-size: 1.1875rem;
-  font-family: "Gotham Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.65;
   padding: 0 40px;
 }
@@ -1121,7 +1079,7 @@ pre code {
 
 .lesson-title {
   font-size: calc(1.4375rem + 2.25vw);
-  font-family: "Days", sans-serif;
+  font-family: "Days One", sans-serif;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -1163,7 +1121,7 @@ ul.list-table {
   font-weight: normal;
   text-align: center;
   padding: 25px 0 15px 0;
-  font-family: "Days", sans-serif;
+  font-family: "Days One", sans-serif;
 }
 @media (min-width: 1200px) {
   .lesson-subtitle {
@@ -1290,14 +1248,14 @@ ul.list-table {
   margin-bottom: 20px;
 }
 .function-title-exel {
-  font-family: "Days", sans-serif;
+  font-family: "Days One", sans-serif;
   font-size: 26px;
   text-transform: uppercase;
   text-align: center;
   color: #0089FF;
 }
 .function-name {
-  font-family: "Days", sans-serif;
+  font-family: "Days One", sans-serif;
   text-transform: uppercase;
 }
 .function-descr {

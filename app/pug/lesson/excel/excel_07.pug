@@ -1,3 +1,5 @@
+- var url = "./img/lesson/excel/";
+//- - var url = 'https://webportal.com.ua/img/lesson/excel/';
 .lesson-page
   h1.lesson-title Умовне форматування в Microsoft <span class="accent">Excel</span>
   p <span class="accent">Умовне форматування</span> – це інструмент автоматичної зміни формату клітинок залежно від їх вмісту або від значень логічних виразів, для обчислення яких використовуються дані інших клітинок. Цей процес здійснюється за допомогою створення правил, що визначають умови та відповідні їм формати, з метою візуального виділення важливих даних та полегшення їх аналізу.
@@ -26,7 +28,7 @@
     li <span class="accent">значень</span>: число, відсоток, формула;
     li <span class="accent">вмісту</span>: текст, дати, пусті, не пусті, помилки, немає помилок.
   figure.wp-block-image
-    img(src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-07-01.png", alt="Правила виділення клітинок")
+    img(src=url+"less-excel-07-01.png", alt="Правила виділення клітинок")
   p Розглянемо застосування умовного форматування виділення клітинок на прикладі електронної таблиці <span class="accent">«Зайнятість працівників»</span>. Нам необхідно оформити клітинки різними кольорами заливки відповідно до вимог:
   ul.list
     li <span class="text-bold">відрядження <span class="accent">(вдр)</span></span> - світло-зеленим;
@@ -55,7 +57,7 @@
     li Менше середнього.
   p Тобто, відбувається форматування вказаного числа крайніх значень – <span class="accent">N (N%)</span> найбільших або найменших елементів, <span class="accent">Великих</span> або <span class="accent">Менших</span> від середнього арифметичного.
   figure.wp-block-image
-    img(src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-07-02.png", alt="Правила для визначення перших і останніх елементів.")
+    img(src=url+"less-excel-07-02.png", alt="Правила для визначення перших і останніх елементів.")
   p Розглянемо застосування умовного форматування виділення клітинок на прикладі електронної таблиці: <span class="accent">«Температури за рік»</span>. Виділимо клітинки кольором відповідно до вимог:
   ul.list
     li <span class="text-bold">5 перших значень</span> - світло-червоний;
@@ -83,7 +85,7 @@
     li визначити спосіб форматування – <span class="accent">Гістограми</span>;
     li обрати правило форматування – <span class="accent">Градієнтна заливка</span> та відповідний колір.
   figure.wp-block-image
-    img(src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-07-03.png", alt="Гістограми.")
+    img(src=url+"less-excel-07-03.png", alt="Гістограми.")
   p Але, іноді потрібно налаштувати власний формат гістограми або змінити напрям її відображення. В цьому випадку потрібно скористатися параметром – <span class="accent">Додаткові правила</span>.
   p.text-bold Налаштування додаткових правил для гістограм:
   ul.list
@@ -102,7 +104,7 @@
     li <span class="text-bold">середні значення</span> – білий;
     li <span class="text-bold">максимальні значення </span>– світло-зелений.
   figure.wp-block-image
-    img(src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-07-04.png", alt="Кольорові шкали.")
+    img(src=url+"less-excel-07-04.png", alt="Кольорові шкали.")
   p.text-bold Алгоритм налаштування правил умовного форматування:
   ul.list
     li виділити необхідний діапазон клітинок;
@@ -121,7 +123,7 @@
   ul.list
     li стовпець  <span class="accent">Різниця з попереднім періодом</span> – <span class="accent">3 кольорові стрілки</span>;
   figure.wp-block-image
-    img(src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-07-05.png", alt="Набори піктограм.")
+    img(src=url+"less-excel-07-05.png", alt="Набори піктограм.")
   p.text-bold Алгоритм налаштування правил умовного форматування:
   ul.list
     li виділити необхідний діапазон клітинок;
@@ -132,5 +134,5 @@
   h3.accent.lesson-subtitle Редагування правил.
   p Якщо на аркуші Excel до деякого діапазону клітинок застосоване умовне форматування, але з годом виникла потреба, змінити параметри форматування, користувачу необхідно звернутися до менеджера правил умовного форматування, тобто розгорнути меню <span class="accent">Умовного форматування</span> та обрати команду –  <span class="accent">Керувати правилами</span>. У вікні <span class="accent">Диспетчер правил умовного форматування</span> можна: створювати нові правила, редагувати правила, видаляти правила та змінювати їх порядок.
   figure.wp-block-image
-    img(src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-07-06.png", alt="Редагування правил умовного форматування.")
+    img(src=url+"less-excel-07-06.png", alt="Редагування правил умовного форматування.")
   p Треба відмітити, що до однієї клітинки може бути застосовано декілька правил умовного форматування, що суперечать одне одному, <span class="accent">чинним буде те правило, яке було встановлене останнім</span>.

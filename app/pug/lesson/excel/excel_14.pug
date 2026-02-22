@@ -1,3 +1,5 @@
+//- - var url = "./img/lesson/excel/";
+- var url = 'https://webportal.com.ua/img/lesson/excel/';
 .lesson-page
   h1.lesson-title Аналіз даних за допомоги зведених таблиць.
 
@@ -16,11 +18,11 @@
         li <span class="accent">Existing Worksheet</span> (Наявний аркуш) та у полі <span class="accent">Location</span> (Розташування) вказати де саме буде розташований порожній макет зведеної таблиці;
       li для застосування обраних параметрів натискаємо кнопку <span class="accent">Ок</span>.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-14-01.jpg" alt="Створення зведеної таблиці Excel">
+    img(src=url+"less-excel-14-01.jpg" alt="Створення зведеної таблиці Excel")
   p Після виконання вище зазначених дій, на аркуші Зведена таблиця з’явиться графічний об’єкт, на якому буде вказана назва зведеної таблиці –  <span class="accent">PivotTable1</span> (Зведена таблиця 1), в правій частині вікна панель – макет звіту, на стрічці команд дві додаткові вкладки – <span class="accent">Pivot Table Analyze</span> (Аналіз зведених таблиць) та <span class="accent">Design</span> (Клонструктор). 
   p Кожна область макета, куди поміщаються поля вихідної таблиці, має своє призначення, саме вони визначають зовнішній вигляд зведеної таблиці і її функціонал.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-14-02.jpg" alt="Створення зведеної таблиці Excel">
+    img(src=url+"less-excel-14-02.jpg" alt="Створення зведеної таблиці Excel")
   p.text-bold Макет звіту складається з 4 розділів:
   ul.list
     li <span class="accent">Filters</span> (Фільтри) – фільтр звіту зведеної таблиці. Якщо встановлено фільтр, то побудова і розрахунок даних зведеної таблиці ведеться для заданого значення.
@@ -33,7 +35,7 @@
     li зробити поточною будь-яку клітинку аркушу Excel де розташований порожній макет зведеної таблиці;
     li в панелі <span class="accent">Pivot Table Fields</span> (Поля зведеної таблиці) помістити поля вихідної таблиці у певні розділи макету.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-14-03.jpg" alt="Створення макета зведеної таблиці">
+    img(src=url+"less-excel-14-03.jpg" alt="Створення макета зведеної таблиці")
   p Зауважимо, що коли користувач просто встановлює прапорці навпроти полів таблиці, які необхідно додати у звіт, у цьому випадку Excel самостійно визначає їх розташування у розділах макету.
 
   h3.accent.lesson-subtitle Налаштування полів зведеної таблиці.
@@ -49,7 +51,7 @@
       li на вкладці <span class="accent">Show Values As</span> (Відображати значення як) вибрати спосіб обробки значень в області даних звіту зведеної таблиці, використовуючи значення інших областей даних.
       li для застосування обраних параметрів натискаємо кнопку <span class="accent">Ок</span>.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-14-04.jpg" alt="Налаштування полів зведеної таблиці">
+    img(src=url+"less-excel-14-04.jpg" alt="Налаштування полів зведеної таблиці")
   
   .table-func-pivot
     .func-pivot <span class="accent">Normal</span> <br> <span class="func-descr">(Без обчислення)</span>
@@ -119,16 +121,16 @@
       li у полі <span class="accent">Source</span> (Джерело) вказати діапазон клітинок з допустимими значеннями;
       li для застосування обраних параметрів натискаємо кнопку <span class="accent">Ок</span>.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-14-05.jpg" alt="Створення списку що розкривається">
+    img(src=url+"less-excel-14-05.jpg" alt="Створення списку що розкривається")
   p Тепер, коли клітинка, що містить список, стане поточною, біля неї з правої сторони з'являтися кнопка. Робимо клік по цій кнопці, щоб розгорнути список і вибрати необхідне значення.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-14-06.jpg" alt="Створення списку що розкривається">
+    img(src=url+"less-excel-14-06.jpg" alt="Створення списку що розкривається")
 
   h3.accent.lesson-subtitle Зв’язані списки.
   p <span class="accent">Зв’язаний список</span> – це звичайний список що випадає, але який може відображати різний перелік елементів, в залежності від значення іншої клітинки.
   p Розглянемо створення зв’язаного списку на прикладі. Маємо декілька таблиць з даними, одна з них містить категорії товарів, інші назви товарів. Потрібно, щоб в залежності від обраної категорії в клітинки поля <span class="accent">Товари</span>, із списку, підставлялися лише ті товари, які належать цій категорії.  
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-14-07.jpg" alt="Створення зв’язаного списку">
+    img(src=url+"less-excel-14-07.jpg" alt="Створення зв’язаного списку")
   p.text-bold Створення зв’язаного списку:
   ol.list
     li.text-bold Створити список що розкривається для поля Категорія:
@@ -146,10 +148,10 @@
       li перейти на стрічці команд до вкладки <span class="accent">Formulas</span> (Формули), у розділі <span class="accent">Defained Names</span> (Визначені імена) обрати команду <span class="accent">Create from Selection</span> (Створити в виділеного);
       li у діалоговому вікні <span class="accent">Create Names from Selection</span> (Створення імен з виділеного фрагменту) в розділі <span class="accent">Create Names from values in the</span> (Створити імена із значень у) встановити прапорець навпроти напису <span class="accent">Top row</span> (у рядку вище) та натиснути кнопку <span class="accent">Ок</span>;
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-14-08.jpg" alt="Створення зв’язаного списку">
+    img(src=url+"less-excel-14-08.jpg" alt="Створення зв’язаного списку")
   p <span class="accent">Зауважимо, що імена, які ми дали діапазонам, повинні в точності збігатися з іменами категорій</span>. Перевірити назви іменованих діапазонів можна звернувшись до команди <span class="accent">Name Manager</span> (Диспечер імен), яка знаходиться в тому ж розділі <span class="accent">Defained Names</span> (Визначені імена).
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-14-09.jpg" alt="Створення зв’язаного списку">
+    img(src=url+"less-excel-14-09.jpg" alt="Створення зв’язаного списку")
   p Порівнюємо і бачимо, що ім’я категорії Apple Watch не збігається з іменем діапазону <span class="accent">Apple_Watch</span>, Excel автоматично змінив назву діапазону. Це пов’язано з вимогами, котрих повинен дотримуватися користувач при складанні імені діапазону, а саме:  ім’я повинно бути унікальним, складатися тільки з букв і цифр, інші знаки (окрім знаку  підкреслення), символи, в тому числі і символ пропуску, не допускаються. Також, ім’я діапазону не може починатися з цифри.
   ol(start="3").list
     ul(type="disc")
@@ -164,5 +166,5 @@
         li у полі <span class="accent">Source</span> (Джерело) скласти наступну формулу <span class="accent">=INDIRECT(F4)</span>. Важливо, при складанні формули, посилання повинно бути на ту клітинку, яка знаходиться навпроти поточної;
         li для застосування обраних параметрів натискаємо кнопку <span class="accent">Ок</span>.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-14-10.jpg" alt="Створення зв’язаного списку">
+    img(src=url+"less-excel-14-10.jpg" alt="Створення зв’язаного списку")
   p Таким чином ми отримали зв’язаний список, в якому в залежності від обраної категорії товару автоматично підставляються товари які їй належать.

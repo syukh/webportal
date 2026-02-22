@@ -1,3 +1,5 @@
+- var url = "./img/lesson/excel/";
+//- - var url = 'https://webportal.com.ua/img/lesson/excel/';
 .lesson-page
   h1.lesson-title Прості обчислення в Microsoft <span class="accent">Excel</span>
   p У клітинки електронної таблиці, окрім числових та текстових даних, можна вводити також і <span class="accent">формули</span>.
@@ -18,15 +20,15 @@
     li для виводу результату натиснути на клавішу <span class="accent">Enter</span>.
   p Розглянемо дії, які необхідно виконати для розрахунку суми двох значень, що знаходяться у клітинках <span class="accent">А2</span> і <span class="accent">В2</span>, та відображення результату у клітинці <span class="accent">C2</span>.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-04-01.png" alt="Порядок дій при введенні формул">
+    img(src=url+"less-excel-04-01.png" alt="Порядок дій при введенні формул")
   p Таким чином, якщо клітинка з формулою є активною, то формула буде відображатися в рядку формул, а значення розрахунку в самій клітинці. Формулу в будь-який момент можна відредагувати, або безпосередньо в клітинці, або в рядку формул
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-04-02.png" alt="Редагування формул">
+    img(src=url+"less-excel-04-02.png" alt="Редагування формул")
   p В програмі ви можете додавати, віднімати, множити і ділити числа без використання вбудованих функцій, для цього в формулі потрібно лише вказати відповідний арифметичний оператор. 
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-04-03.png" alt="Просте рівняння" style="width:70%">
+    img(src=url+"less-excel-04-03.png" alt="Просте рівняння" style="width:70%")
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-04-04.png" alt="Таблиця операторів" style="width:70%">
+    img(src=url+"less-excel-04-04.png" alt="Таблиця операторів" style="width:70%")
 
   h3.accent.lesson-subtitle Копіювання формул.
   p В Excel можна проводити однакові розрахунки з різними групами клітинок, тобто не вводити формулу в кожну клітинку окремо, а спочатку скласти її в одній клітинці, і потім <span class="accent">за допомоги автозаповнення копіювати у вибраний діапазон клітинок</span>. За рахунок цього, розрахунки в електронній таблиці Excel є надзвичайно швидкими.
@@ -38,18 +40,18 @@
     li заповнити клітинки даними у діапазоні <span class="accent">F4:F10</span>.
   p Після виконання запропонованого алгоритму дій, у клітинки вказаного діапазону будуть додані формули, за ними виконаються обчислення, результати обчислень з’являться у відповідних клітинках.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-04-05.png" alt="Копіювання формули">
+    img(src=url+"less-excel-04-05.png" alt="Копіювання формули")
   p Копіювати формули доцільно лише тоді, коли вони містять посилання (адреси клітинок), в цьому випадку під час її копіювання відбувається автоматична заміна цих адрес – <span class="accent">модифікація формули</span>.
   p <span class="accent">Розглянемо, як саме відбувається модифікація</span>. В нашому випадку, копіювання проходило з клітинки <span class="accent">FЗ</span> у клітинку <span class="accent">F4</span> і далі, різниця між номерами рядків цих двох клітинок дорівнює <span class="accent">4 - 3 = 1</span>. Тому у скопійованій формулі всі номери рядків у посиланнях збільшилися на <span class="accent">1</span>.
   p Аналогічно, під час копіювання формули з <span class="accent">F3</span> у клітинку <span class="accent">F5</span> різниця між номерами рядків становила <span class="accent">2</span>, тому й у скопійованій формулі номери рядків у посиланнях збільшилися на <span class="accent">2</span>.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-04-06.png" alt="Модифікація формули" style="width:50%">
+    img(src=url+"less-excel-04-06.png" alt="Модифікація формули" style="width:50%")
   p Отже, під час копіювання формул відбувається їх модифікація за таким правилом: <span class="accent">номери стовпців (рядків) в адресах клітинок змінюються на різницю номерів кінцевого і початкового стовпців (рядків)</span>.
   
   h3.accent.lesson-subtitle Посилання на клітинки у формулах.
   p При копіюванні формул виникає необхідність керувати типами посилань на клітинки
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-04-07.png" alt="Модифікація формули" style="width:70%">
+    img(src=url+"less-excel-04-07.png" alt="Модифікація формули" style="width:70%")
   h3.accent.lesson-subtitle Відносні посилання.
   p При відносному посиланні на клітинки у формулі, коли, за допомоги автозаповнення або сполучення клавіш, відбувається її копіювання – ми спостерігаємо <span class="accent">модифікацію формули</span> залежно від напрямку копіювання.
   h3.accent.lesson-subtitle Абсолютні посилання.
@@ -85,7 +87,7 @@
     li в поле <span class="accent">Ім'я</span> ввести власну назву;
     li натиснути клавішу <span class="accent">Enter</span>.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-04-08.png" alt="Імʼя клітинки" style="width:40%">
+    img(src=url+"less-excel-04-08.png" alt="Імʼя клітинки" style="width:40%")
   p.text-bold Вставлення імені клітинки у формулу:
   ul.list
     li почати складати формулу;
@@ -93,7 +95,7 @@
     li додати потрібне імʼя у формулу;
     li після складання формули натиснути клавішу <span class="accent">Enter<span>.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-04-10.png" alt="Додавання імені клітинки у формулу">
+    img(src=url+"less-excel-04-10.png" alt="Додавання імені клітинки у формулу")
 
   h3.accent.lesson-subtitle Редагування імен клітинок.
   p В полі <span class="accent">Ім'я</span> можна задавати нове ім'я або здійснювати перехід до вказаної клітинки, але <span class="text-bold color-red">не редагувати вже існуючі імена</span>.
@@ -105,5 +107,5 @@
     li натиснути на кнопку <span class="accent">Редагувати</span> або <span class="accent">Видалити</span>, якщо ім’я треба видалити;
     li після завершення редагування імен натиснути на кнопку <span class="accent">Закрити</span>.
   figure.wp-block-image
-    <img src="https://webportal.com.ua/wp-content/uploads/img/excel/less-excel-04-09.png" alt="Редагування імені клітинки">
+    img(src=url+"less-excel-04-09.png" alt="Редагування імені клітинки")
 
