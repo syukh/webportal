@@ -17,13 +17,8 @@
   <link rel="stylesheet" href="./css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
 </head>
 <body>
-<<<<<<< HEAD
-  <div id="main">
-    <div id="menu">
-=======
   <div class="lesson-section" id="main-section">
-    <div class="python" id="menu">
->>>>>>> c043049fb4f5fefe99d1165cf3b60c35b6bb3b9e
+    <div class="html" id="menu">
       <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="./img/site/logo.svg" alt="Logo"/></a></div>
       <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="./img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="./img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="./img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="./img/site/logo_master.svg"/></a>
       </nav>
@@ -43,293 +38,56 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-    <div id="page">
-      <div class="home-row home-row__header">
-        <div class="home-caption">
-          <h1 class="home-caption__title">WebPortal</h1>
-          <h2 class="home-caption__subtitle">здобуваємо знання разом</h2>
-        </div>
-      </div>
-      <div class="home-row home-row__elements">
-        <div class="item-elements red">
-          <div class="course">
-            <div class="course-text">
-              <div class="row__elements-title course-title"> <a class="course-title-link" href="./office.html">Microsoft Office</a></div>
-              <div class="course-descr">Здобуваємо професійні навички роботи в найбільш популярному та поширеному серед користувачів  офісному пакеті програм.</div>
-            </div><img class="course-icon" src="./img/site/logo_office.svg"/>
-=======
     <div class="section-lesson" id="section">
       <div class="section-row section-row__course">
         <div class="course-wrap" id="spbar">
           <div class="lesson-page">
-            <h1 class="lesson-title">Списки</h1>
-            <p><span class="accent">Список (list)</span> – це структура даних для зберігання об'єктів різних типів. Списки належать до змінюваних типів даних. Список може містити будь-яку кількість будь-яких об'єктів, в тому числі і вкладені списки. </p>
-            <p>Списки – це змінні об'єкти, тому їх елементи можуть змінюватися, або може змінюватися їх порядок.</p>
-            <h3 class="accent lesson-subtitle">Створення списків.</h3>
-            <p><span class="text-bold">Існує декілька способів створення списків:</span></p>
-            <div class="lesson-list">
-              <p>у квадратних дужках перерахувати усі елементи списку через кому;<br>numbers = [<span class="color-excel">1</span>, <span class="color-excel">2</span>, <span class="color-excel">3</span>, <span class="color-excel">4</span>, <span class="color-excel">5</span>]</p>
-              <p>вказати лише тільки квадратні дужки, буде створено порожній список;<br>L = []</p>
-              <p>за допомоги конструктора <span class="accent">list()</span>.<br>L = <span class="text-bold">list</span>()</p>
-            </div>
-            <p><span class="text-bold">Приклад:</span> створити програму, яка буде записувати числа із послідовності від <span class="accent">1</span> до <span class="accent">n</span> у список.</p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>n = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">'введіть кількість цифр = '</span>))</li>
-                <li>L = <span class="text-bold">list</span>(<span class="text-bold">range</span>(<span class="color-excel">1, </span>n+<span class="color-excel">1</span>))</li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;[1, 2, 3, 4, … n]</span></li>
-              </ul>
-            </div>
-            <p>Кожен елемент списку має свій номер (індекс), за яким до нього можна звернутися. Перший елемент має індекс <span class="accent">[0]</span>, другий елемент має індекс <span class="accent">[1]</span> і так далі. Для звернення до елементів починаючи із кінця списку, можна використовувати негативні індекси, починаючи з <span class="accent">[-1]</span>.</p>
-            <p><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>]</li>
-                <li><span class="text-bold">print</span>(L[<span class="color-excel">1</span>]) <span class="color-excel">&#35;['orange']</span></li>
-                <li><span class="text-bold">print</span>(L[<span class="color-excel">-1</span>]) <span class="color-excel">&#35;['yellow']</span></li>
-              </ul>
-            </div>
-            <p>Вивести всі елементи списку можна за допомоги циклу.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-excel">1</span>, <span class="color-excel">2</span>, <span class="color-excel">3</span>, <span class="color-excel">4</span>, <span class="color-excel">5</span>]</li>
-                <li><span class="text-bold">for</span> i <span class="text-bold">in</span> L</li>
-                <li><span class="text-bold">print</span>(i, <span class="text-bold">end</span>=' ') <span class="color-excel">#1 2 3 4 5</span></li>
-              </ul>
-            </div>
-            <h3 class="accent lesson-subtitle">Додавання елементів списку.</h3>
-            <p>Щоб додати елемент у список застосовуються методи <span class="accent">append()</span> та <span class="accent">insert()</span>. </p>
-            <p><span class="accent">Метод append()</span> – додає елемент <span class="accent">item</span> в кінець списку.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>]</li>
-                <li>L.<span class="text-bold">append</span>(<span class="text-bold">input</span>('введіть свій колір: ')) <span class="color-excel">&#35;'green'</span></li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['red', 'orange', 'yellow', 'green']</span></li>
-              </ul>
-            </div>
-            <p><span class="accent">Метод insert ()</span> – додає елемент <span class="accent">item</span> в список за індексом <span class="accent">[i]</span>.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'green'</span>]</li>
-                <li>L.<span class="text-bold">insert</span>(<span class="color-excel">2</span>,<span class="color-accent">'yellow'</span>)</li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['red', 'orange', 'yellow', 'green']</span></li>
-              </ul>
-            </div>
-            <h3 class="accent lesson-subtitle">Зміна елементів списку.</h3>
-            <p>На відміну від рядків, елементи списку можна змінювати, привласнюючи їм нові значення. Тому, якщо відомо значення елемента списку або його індекс, цей елемент списку можна змінити безпосередньо звернувшись до нього.</p>
-            <p><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'green'</span>]</li>
-                <li>L[<span class="color-excel">2</span>] = <span class="color-accent">'yellow'</span></li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['red', 'orange', 'yellow']</span></li>
-              </ul>
-            </div>
-            <h3 class="accent lesson-subtitle">Зріз списку.</h3>
-            <p>В мові <span class="accent">Python</span> можна отримати зріз списку.</p>
-            <p><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]</li>
-                <li><span class="text-bold">print</span>(L[<span class="color-excel">1</span>:<span class="color-excel">3</span>]) <span class="color-excel">&#35;['orange', 'yellow']</span></li>
-                <li><span class="text-bold">print</span>(L[<span class="color-excel">1</span>:]) <span class="color-excel">&#35;['orange', 'yellow', 'green']</span></li>
-                <li><span class="text-bold">print</span>(L[:<span class="color-excel">3</span>]) <span class="color-excel">&#35;['red', 'orange']</span></li>
-                <li><span class="text-bold">print</span>(L[:]) <span class="color-excel">&#35;['red', 'orange', 'yellow', 'green']</span></li>
-                <li><span class="text-bold">print</span>(L[::<span class="color-excel">-1</span>]) <span class="color-excel">&#35;['green','yellow', 'orange','red']</span></li>
-              </ul>
-            </div>
-            <h3 class="accent lesson-subtitle">Видалення елементів із списку.</h3>
-            <p>Щоб видалити елемент із списку можна скористатися методами <span class="accent">pop()</span>, <span class="accent">remove()</span>, <span class="accent">clear()</span> або оператором <span class="accent">del</span>.</p>
-            <p><span class="accent">Метод pop()</span> – видаляє елемент з індексом <span class="accent">[i]</span> та повертає його. Якщо використовувати метод без аргументу, то буде видалений останній елемент зі списку.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]</li>
-                <li>L.<span class="text-bold">pop</span>()</li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['red', 'orange', 'yellow']</span></li>
-                <li><span class="text-bold">print</span>(L.<span class="text-bold">pop</span>(<span class="color-excel">0</span>)) <span class="color-excel">&#35;red</span></li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['orange', 'yellow']</span></li>
-              </ul>
-            </div>
-            <p><span class="accent">Метод remove()</span> – видаляє перше входження елемента x зі списку.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]</li>
-                <li>L.<span class="text-bold">remove</span>('red')</li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['orange', 'yellow', 'green']</span></li>
-              </ul>
-            </div>
-            <p><span class="accent">Метод clear</span>()</span> – видаляє усі елементи із списку.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]</li>
-                <li>L.<span class="text-bold">clear</span>()</li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;[]</span></li>
-              </ul>
-            </div>
-            <p><span class="accent">Оператор del</span> – видаляє елемент із списку або зріз.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]</li>
-                <li><span class="text-bold">del</span> L[<span class="color-excel">0</span>]</li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['orange', 'yellow', 'green']</span></li>
-                <li><span class="text-bold">del</span> L[<span class="color-excel">0</span>:<span class="color-excel">2</span>]</li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['green']</span></li>
-              </ul>
-            </div>
-            <h3 class="accent lesson-subtitle">Сортування списків.</h3>
-            <p><span class="accent">Метод sort()</span> – застосовується для сортування елементів списку за зростанням.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]</li>
-                <li>L.<span class="text-bold">sort</span>()</li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['green', 'orange', 'red', 'yellow']</span></li>
-              </ul>
-            </div>
-            <p>При сортуванні списків фактично порівнюються два об'єкти, і який з них «менше», ставиться перед тим, який «більше». Поняття <span class="accent">«більше»</span> і <span class="accent">«менше»</span> досить умовні. І якщо для чисел все просто - числа розставляються в порядку зростання, то для рядків чи інших об'єктів ситуація більш складна. Зокрема, рядки оцінюються по перших символах. Якщо перші символи рівні, оцінюються другі символи і так далі. При чому цифровий символ вважається «менше», ніж алфавітний титульний символ, а заголовний символ вважається «менше», ніж рядковий. </p>
-            <p><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'2orange'</span>,<span class="color-accent">'Yellow'</span>,<span class="color-accent">'green'</span>]</li>
-                <li>L.<span class="text-bold">sort</span>()</li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['2orange', 'Yellow', 'green', 'red']</span></li>
-              </ul>
-            </div>
-            <p>Таким чином, якщо в списку поєднуються рядки з великими та малими літерами, то можна отримати не зовсім коректні результати сортування.</p>
-            <p>І щоб змінити стандартну поведінку сортування, ми можемо передати в метод <span class="accent">sort()</span> в якості параметра функцію <span class="accent">key</span>.</p>
-            <p><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'Orange'</span>,<span class="color-accent">'Yellow'</span>,<span class="color-accent">'green'</span>]</li>
-                <li>L.<span class="text-bold">sort</span>(<span class="text-bold">key</span>=<span class="text-bold">srt.lover</span>)</li>
-                <li><span class="text-bold">prin</span>(L) <span class="color-excel">&#35;['green', 'Orange', 'red', 'Yellow']</span></li>
-              </ul>
-            </div>
-            <p><span class="accent">Метод reverse()</span> – переставляє елементи списку у зворотному порядку.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]</li>
-                <li>L.<span class="text-bold">reverse</span>()</li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['green', 'yellow', 'orange', 'red']</span></li>
-              </ul>
-            </div>
-            <h3 class="accent lesson-subtitle">Індекс елементу.</h3>
-            <p><span class="accent">Метод index()</span> – використовується для отримання індексу певного елемента списку. Якщо в списку декілька однакових елементів, функція поверне індекс першого. Також, метод має два не обов’язкові параметри <span class="accent">start</span> та <span class="accent">end</span>. Води дозволять регулювати проміжок в якому буде проводитися пошук певного елемента.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>,<span class="color-accent">'green'</span>]</li>
-                <li><span class="text-bold">print</span>(L.<span class="text-bold">index</span>(<span class="color-excel">'green'</span>)) <span class="color-excel">&#35;3</span></li>
-              </ul>
-            </div>
-            <h3 class="accent lesson-subtitle">Функції агрегації.</h3>
-            <p>В <span class="accent">Python</span> є деякі агрегатні функції:<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-excel">5</span>, <span class="color-excel">4</span>, <span class="color-excel">3</span>, <span class="color-excel">2</span>, <span class="color-excel">1</span>]</li>
-                <li><span class="text-bold">print</span>(<span class="text-bold">len</span>(L)) <span class="color-excel">&#35;5</span></li>
-                <li><span class="text-bold">print</span>(<span class="text-bold">min</span>(L)) <span class="color-excel">&#35;1</span></li>
-                <li><span class="text-bold">print</span>(<span class="text-bold">max</span>(L)) <span class="color-excel">&#35;5</span></li>
-                <li><span class="text-bold">print</span>(<span class="text-bold">sum</span>(L)) <span class="color-excel">&#35;15</span></li>
-              </ul>
-            </div>
-            <p>Треба зауважити, що <span class="accent">sum</span> працює тільки з числовими значеннями, а <span class="accent">min</span>, <span class="accent">max</span> та <span class="accent">len</span> можна використовувати також і з рядками.</p>
-            <h3 class="accent lesson-subtitle">Списки і строки.</h3>
-            <p><span class="accent"> Метод list()</span> – перетворює строку в список, де кожним елементом цього списку виступає окремий символ цієї строки.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>S = <span class="color-accent">'My program'</span></li>
-                <li>L = <span class="text-bold">list</span>(S)</li>
-                <li><span class="text-bold">print</span>(L) <span class="color-excel">&#35;['M', 'y', ' ', 'p', 'r', 'o', 'g', 'r', 'a', 'm']</span></li>
-              </ul>
-            </div>
-            <p><span class="accent"> Метод split()</span> – перетворює строку в список, де кожен елемент цього списку визначається роздільником, за замовчуванням – це символ пропуску. Але,  роздільник може бути визначеним будь-яким рядком.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>S = <span class="color-accent">'My-program'</span></li>
-                <li>L = S.<span class="text-bold">split</span>(<span class="color-excel">'-'</span>)</li>
-                <li><span class="text-bold">print</span>(L)  <span class="color-excel">&#35;['My', 'program']</span></li>
-              </ul>
-            </div>
-            <p><span class="accent"> Метод join()</span> – об’єднує елементи списку в строку, за певним роздільником, до якого саме і застосовується метод.<br><span class="text-bold">Приклад:</span></p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>L = [<span class="color-accent">'red'</span>,<span class="color-accent">'orange'</span>,<span class="color-accent">'yellow'</span>]</li>
-                <li>S = ' '</li>
-                <li>S = S.<span class="text-bold">join</span>(L)</li>
-                <li>P = '--'.<span class="text-bold">join</span>(L)</li>
-                <li><span class="text-bold">print</span>(S) <span class="color-excel">&#35;red orange yellow</span></li>
-                <li><span class="text-bold">print</span>(P) <span class="color-excel">&#35;red--orange—yellow</span></li>
-              </ul>
-            </div>
-            <h3 class="accent lesson-subtitle">Генератори списків.</h3>
-            <p>Для створення списків, які будуть заповнені за деяким алгоритмом, можна використовувати <span class="accent">генератори</span>: вирази, що дозволяють заповнити список за певною формулою.</p>
-            <p><span class="text-bold">Генератор має наступний вигляд:</span> [вираз <span class="accent">for</span> змінна <span class="accent">in</span> послідовність]<br> де <span class="accent">змінна</span> – ідентифікатор деякої змінної, <span class="accent">послідовність</span> – послідовність значень, яку приймає дана змінна (це може бути список, рядок або об'єкт, отриманий за допомогою функції range), вираз – деякий вираз, як правило, залежить від використаної в генераторі змінної, яким будуть заповнені елементи списку.</p>
-            <p><span class="text-bold">Приклад:</span> створити список, який буде заповнений квадратами чисел від <span class="accent">1</span> до <span class="accent">n</span>.</p>
-            <div class="example">
-              <ul class="example-program list">
-                <li>n = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">'Введіть кількість членів ряду = '</span>)) </li>
-                <li>a = [i ** <span class="color-excel">2</span> <span class="text-bold">for</span> i <span class="text-bold">in</span> <span class="text-bold">range</span>(<span class="color-excel">1</span>, n+<span class="color-excel">1</span>)]</li>
-                <li><span class="text-bold">print</span>(a) <span class="color-excel">&#35; n=5 -> [1, 4, 9, 16, 25] </span></li>
-              </ul>
-            </div>
->>>>>>> c043049fb4f5fefe99d1165cf3b60c35b6bb3b9e
+            <h1 class="lesson-title">Форми</h1>
+            <p>Форма – це компонент веб-сторінки з інтерактивними елементами керування, такими як текстові поля, кнопки, прапорці, перемикачі, списки, що призначений для отримання даних від користувача. </p>
+            <p>Форми додають на веб-сторінку за допомогою елемента <span class="accent">&#60;form&#62;</span>. Він є контейнером для всього вмісту форми, а також для будь-яких інших тегів мови HTML. Однак він не може містити інший елемент <span class="accent">&#60;form&#62;</span>.</p>
+            <p>Майже всі поля для форми створюються за допомогою елемента <span class="accent">&#60;input&#62;</span> (введення). Зовнішній вигляд елемента <span class="accent">&#60;input&#62;</span> змінюється залежно від його атрибута <span class="accent">type</span>.</p>
+            <P><span class="text-bold">Основні типи відображуваного елемента керування:</span> </P>
+            <ul class="list"> 
+              <li><span class="accent">text</span> – введення одного рядка тексту;</li>
+              <li><span class="accent">password</span> – текстове поле для введення пароля, в якому всі символи, що вводяться, замінюються зірочкою;</li>
+              <li><span class="accent">radio</span> – елемент-перемикач;</li>
+              <li><span class="accent">checkbox</span> – поле для встановлення прапорця, який можна встановити чи скинути;</li>
+              <li><span class="accent">submit</span> – кнопка, при натисканні якої відбувається надсилання даних, введених у форму;</li>
+              <li><span class="accent">reset</span> – кнопка при натисканні якої вся форма очищається.</li>
+            </ul>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="./img/lesson/html/less-html-11-01.png" alt="html form"></figure>
+            <h3 class="accent lesson-subtitle">Атрибут placeholder.</h3>
+            <p>На практиці доволі часто трапляються ситуації, коли опис для поля є, але зовсім незрозуміло, в якому форматі потрібно заповнити дані. Щоб допомогти користувачу зорієнтуватися, у тезі <span class="accent">&#60;input&#62;</span> використовується атрибут <span class="accent">placeholder</span>. Значення цього атрибуту буде виведено у текстовому полі.</p>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="./img/lesson/html/less-html-11-02.png" alt="placeholder"></figure>
+            <h3 class="accent lesson-subtitle">Eлемент-перемикач.</h3>
+            <p>Атрибут типу <span class="accent">radio</span> для елементу <span class="accent">input</span> створює перемикачі, які використовують принцип логічного «АБО», тобто дозволяється обрати лише одне з декількох значень.</p>
+            <p>Треба зауважити, що при створенні перемикачів (радіокнопок), в елементі <span class="accent">input</span> додатково треба вказувати ще атрибут <span class="accent">name</span>, значенням якого є довільне ім'я. Це ім'я має бути однаковим у всій групі радіокнопок. Без цього атрибуту браузер не бачитиме зв'язку між перемикачами і буде можливість вибрати всі значення одразу.</p>
+            <p>Для того, щоб після виправлення форми на сервері можливо було визначити, який саме пункт обрали, використовується значення атрибута <span class="accent">value</span>, всередині якого знаходиться певне значення, воно може відрізнятися від тексту підказки.</p>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="./img/lesson/html/less-html-11-03.png" alt="input radio"></figure>
+            <h3 class="accent lesson-subtitle">Eлемент-прапорець.</h3>
+            <p>Атрибут типу <span class="accent">checkbox</span> для елементу <span class="accent">input</span> створює елемент-прапорець (чекбокс). На відміну від перемикачів, чексбокс дозволяє обирати із наявних декілька елементів.</p>
+            <p>Для об’єднання чекбоксів в єдину групу, як і для радіокнопок, додатково в елементі <span class="accent">input</span> треба вказати атрибут <span class="accent">name</span>, значенням якого є довільне ім'я. Також, для подальшого визначення значень обраних пунктів застосовується атрибут <span class="accent">value</span>.</p>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="./img/lesson/html/less-html-11-04.png" alt="input checkbox"></figure>
+            <p>Наявність атрибута <span class="accent">checked</span> (встановлений) у елемента-перемикача та прапорця вказує на те, який з запропонованих варіантів повинен бути обраний за замовчуванням при завантаженні сторінки, якщо це необхідно.</p>
+            <h3 class="accent lesson-subtitle">Кнопки підтвердження та скидання.</h3>
+            <p>Атрибут типу <span class="accent">submit</span> (надіслати) для елементу <span class="accent">input</span> створює кнопку, при натисканні якої відбувається відправлення браузером даних, що були введені користувачем у форму.</p>
+            <p>За замовчуванням у браузерах на кнопці пишеться «Надіслати», для заміни напису на кнопці використовується атрибут <span class="accent">valuе</span> з новим значенням напису.</p>
+            <p>Атрибут типу <span class="accent">reset</span> (скинути) для елементу <span class="accent">input</span> створює кнопку, при натисканні якої відбувається скидання усіх налаштувань у формі, що зробив користувач.</p>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="./img/lesson/html/less-html-11-05.png" alt="button submit&reset"></figure>
+            <h3 class="accent lesson-subtitle">Групування елементів форми.</h3>
+            <p>Елементи форми, що пов'язані за змістом, можна згрупувати за допомоги елементу <span class="accent">fieldset</span>. Браузер відображає його, як рамку навколо групи елементів форми. </p>
+            <p>Для зручності, кожна така група може містити свій заголовок, встановлюється він за допомоги  елементу <span class="accent">legend</span>, який вбудовує текст заголовка в рамку групи.</p>
+            <pre><code class="html">&#60;form&#62;</code></pre>
+            <figure class="wp-block-image"><img src="./img/lesson/html/less-html-11-06.png" alt="fieldset"></figure>
           </div>
-        </div>
-        <div class="item-elements blue">
-          <div class="course">
-            <div class="course-text">
-              <div class="row__elements-title course-title"> <a class="course-title-link" href="./program.html">Програмування</a></div>
-              <div class="course-descr">Формуємо навички логічного мислення вивчаючи загальні принципи складання алгоритмів, знайомимо з сучасними мовами програмування.</div>
-            </div><img class="course-icon" src="./img/site/logo_prog.svg"/>
-          </div>
-        </div>
-        <div class="item-elements green">
-          <div class="course">
-            <div class="course-text">
-              <div class="row__elements-title course-title"> <a class="course-title-link" href="./web.html">Web-технології</a></div>
-              <div class="course-descr">Вивчаємо прогресивні технології та методики створення web-сайтів, долучаємося до світового ком'юніті web-розробників.</div>
-            </div><img class="course-icon" src="./img/site/logo_web.svg"/>
-          </div>
-        </div>
-        <div class="item-elements slider">
-          <div class="slider-item">
-            <div class="row__elements-title slider-title">Вчимося створювати професійні документи</div>
-            <div class="slider-link"><a class="slider-link__course" href="https://webportal.com.ua"><img class="slider-link__img" src="./img/site/logo_powerpoint.svg"/>
-                <div class="slider-link__title">PowerPoint</div></a><a class="slider-link__course" href="./excel.html"><img class="slider-link__img" src="./img/site/logo_excel.svg"/>
-                <div class="slider-link__title">Excel</div></a><a class="slider-link__course" href="./word.html"><img class="slider-link__img" src="./img/site/logo_word.svg"/>
-                <div class="slider-link__title">Word</div></a>
-            </div><img class="slider__office-img" src="./img/site/slider-office-img.svg"/>
-          </div>
-        </div>
-        <div class="item-elements dashbord">
-          <div class="row__elements-title dashbord-title">Доступно</div>
-          <div class="dashbord-wrap">
-            <div class="dashbord-item round-1">
-              <div class="dashbord__round-wrap"><img src="./img/site/round.png" alt=""/>
-                <div class="dashbord__round-text">
-                  <div class="dashbord__round-num">6</div>
-                  <div class="dashbord__round-desc">курси</div>
-                </div>
-              </div>
-            </div>
-            <div class="dashbord-item round-2">
-              <div class="dashbord__round-wrap"><img src="./img/site/round.png" alt=""/>
-                <div class="dashbord__round-text">
-                  <div class="dashbord__round-num">64</div>
-                  <div class="dashbord__round-desc">уроки</div>
-                </div>
-              </div>
-            </div>
-            <div class="dashbord-item round-3">
-              <div class="dashbord__round-wrap"><img src="./img/site/round.png" alt=""/>
-                <div class="dashbord__round-text">
-                  <div class="dashbord__round-num">195</div>
-                  <div class="dashbord__round-desc">завдання</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="dashbord-mail"><a class="dashbord-mail__link" href="mailto:info@webportal.com.ua">info@webportal.com.ua</a></div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="#">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
         </div>
       </div>
     </div>
