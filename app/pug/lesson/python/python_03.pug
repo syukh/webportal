@@ -142,6 +142,66 @@
       li b=<span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-accent">&#39;Введіть друге число b = &#39;</span>))
       li <span class="text-bold">print</span>(<span class="color-accent">&#39;a&#39;</span>, <span class="color-accent">&#39;*&#39;</span>, <span class="color-accent">&#39;b&#39;</span>, <span class="color-accent">&#39;=&#39;</span>, a*b)
 
+  h3.accent.lesson-subtitle Форматне виведення даних
+  p З розвитком мови Python для функції <span class="accent">print()</span> стали доступні нові методи, що допомагають створювати зрозумілі та зручні для читання повідомлення.
+  p Метод <span class="accent">str.format()</span> – виконує операцію форматування рядка. Повертає копію рядка, в якому кожне замінне поле замінюється рядковим значенням відповідного аргументу.
+  p <span class="text-bold">Приклад:</span>
+  .example
+    ul.list
+      li name = <span class="color-accent">"Jane"</span>
+      li age = <span class="color-excel">16</span>
+      li 
+        .example-program__str <span class="text-bold">print</span>(<span class="color-accent">"Мене звати {}, мені {} років."</span><span class="text-bold">.format</span>(name, age))
+        .example-program__str <span class="color-excel"># результат –> Мене звати Jane, мені 16 років.</span>
+  p Між даними зі списку можна виводити інші символи.
+  p <span class="text-bold"> Приклад:</span>
+  .example
+    ul.list
+      li a = <span class="color-excel">10</span>
+      li b = <span class="color-excel">15</span>
+      li 
+        .example-program__str <span class="text-bold">print</span>(<span class="color-accent">"{}+{}={}"</span><span class="text-bold">.format</span>(a, b, a+b))
+        .example-program__str <span class="color-excel"># результат –> 10+15=25</span>
+  p Як бачимо, рядок виводу будується за допомогою вбудованої функції <span class="accent">.format()</span>. Аргументи цієї функції, знаходяться у дужках – це дані, які виводяться. Символьний рядок зліва від точки – це форматний рядок, який визначає, як саме дані будуть представлені на екрані. Фігурні дужки позначають місце для виведення чергового елемента у порядку їх перерахування у списку аргументів функції.
+  p Налаштуємо відображення чисел.
+
+  p <span class="text-bold">Приклад:</span>
+  .example
+    ul.list
+      li x = <span class="color-excel">1234.56789714285</span>
+      li 
+        .example-program__str <span class="text-bold">print</span>(<span class="color-accent">"x = {:0.2f}"</span><span class="text-bold">.format</span>(x)) 
+        .example-program__str <span class="color-excel"># результат –> x = 1234.57</span>
+  p Коли проводяться розрахунки з дійсними числами – за замовчуванням виводиться 16 цифр. Якщо такий варіант не влаштовує, застосовують форматований вивід. Тут після двокрапки вказано формат <span class="accent">f</span>, за умовчанням він залишає 6 цифр у дробовій частині числа. Перед літерою <span class="accent">f</span> можна записати два числа через точку. Перше число задає загальну кількість позицій, відведене на виведення значення, а друге – кількість цифр у дробовій частині.
+  p <span class="accent">Форматування за допомогою f-рядків</span> – робить процес форматування рядків зручним, швидким та лаконічним. Синтаксис аналогічний тому, що використовується в <span class="accent">.format()</span>, але менш складний. Але вам необхідно лише запустити рядковий літерал з малої або великої літери <span class="accent">f</span>, а потім вставити значення, об'єкти або вирази у фігурні дужки у певних місцях.
+  
+  p <span class="text-bold">Приклад:</span>
+  .example
+    ul.list
+      li name = <span class="color-excel">"Jane"</span>
+      li age = <span class="color-excel">16</span>
+      li 
+        .example-program__str <span class="text-bold">print</span>(<span class="color-accent">f"Мене звати</span> {name}<span class="color-accent">, мені</span> {age} <span class="color-accent">років."</span>)
+        .example-program__str <span class="color-excel"># результат –> Мене звати Jane, мені 16 років.</span>
+
+  p Виконуємо обчислення всередині фігурних дужок f-рядка.
+  p <span class="text-bold">Приклад:</span>
+  .example
+    ul.list
+      li a = <span class="color-excel">10</span>
+      li b = <span class="color-excel">15</span>
+      li
+        .example-program__str <span class="text-bold">print</span>(<span class="color-accent">f"</span>{a}<span class="color-accent">+</span>{b}<span class="color-accent">=</span>{a+b}<span class="color-accent">"</span>)
+        .example-program__str <span class="color-excel"># результат –> 10+15=25</span>
+  p Налаштовуємо відображення чисел.
+  p <span class="text-bold">Приклад:</span>
+  .example
+    ul.list
+      li pi = <span class="color-excel">3.1415926535</span>
+      li
+        .example-program__str <span class="text-bold">print</span>(<span class="color-accent">f"Число π:</span> {pi:<span class="color-accent">0.2</span>f}<span class="color-accent">"</span>)
+        .example-program__str <span class="color-excel"># результат –> 3.14</span>
+
 
 
 
