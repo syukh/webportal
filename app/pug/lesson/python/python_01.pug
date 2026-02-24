@@ -1,3 +1,5 @@
+- var url = "./img/lesson/python/";
+//- - var url = 'https://webportal.com.ua/img/lesson/python/';
 .lesson-page
   h1.lesson-title Знайомство з мовою програмування <span class="accent">Python</span>
   p <span class="accent">Python</span> – це універсальна інтерпретована мова програмування, що в останній час стала досить популярною завдяки своїй концепції, великому ком'юніті розробників та можливості застосування.
@@ -20,7 +22,8 @@
   p.text-bold <span class="accent">Ідентифікатор</span> – це будь-яка кінцева послідовність літер, цифр і символу підкреслення, яка <span class="color-red">починається з букви або символу підкреслення</span>.
   p Не можна використовувати два поспіль символи нижнього підкреслення на початку і в кінці ідентифікатора.
   p Ідентифікатор не повинен співпадати ні з одним ключовим (зарезервованим) словом інтерпретатора Python. Перелік ключових слів можна отримати, виконавши послідовно дві команди: <span class="accent">import keyword</span> та <span class="accent">print(keyword.kwlist)</span>.
-  img(src="#", alt="1")
+  figure.wp-block-image
+    img(src=url+"less-python-01-01.jpg" alt="Ключові слова мови Python")
   p Як можна побачити, більшість службових слів (окрім: False, None, True) та вбудованих функцій пишуться маленькими літерами. Але <span class="accent">імена ідентифікаторів чутливі до регістру</span>. Наприклад, <span class="accent">myname</span> і <span class="accent">myName</span> - <span class="text-bold">це два різні ідентифікатори</span>.
 
   h3.accent.lesson-subtitle Літерали.
