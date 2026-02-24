@@ -561,7 +561,7 @@ pre code {
 }
 .course-descr {
   font-size: calc(1.2625rem + 0.15vw);
-  font-family: Gotham Pro;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   line-height: 1.5;
   color: #fff;
@@ -717,7 +717,7 @@ pre code {
 }
 .dashbord-mail__link {
   font-size: calc(1.2625rem + 0.15vw);
-  font-family: Gotham Pro;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #ffffff;
   text-decoration: none;
