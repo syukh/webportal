@@ -1,7 +1,7 @@
 #menu
   .logo
     a(href="https://webportal.com.ua")
-      img.logo__img(src="./img/site/logo.svg", alt="Logo")
+      img.logo__img(src="../img/site/logo.svg", alt="Logo")
   nav.nav
     -
       let nav = [
@@ -13,9 +13,9 @@
     each element in nav
       a(class="nav__link" href=element.link)
         span.nav__tooltip #{element.alt}
-        img(src="./img/site/"+element.src)
+        img(src="../img/site/"+element.src)
   
-    //- *** Mobile Menu *** -// 
+  //- *** Mobile Menu *** -// 
   .icon-bars
     a.icon-bars__link
       i.fa.fa-bars
