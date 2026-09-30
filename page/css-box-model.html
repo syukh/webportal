@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="html" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Блочна модель <span class="accent">CSS</span></h1>
+            <h3 class="accent lesson-subtitle">Складові HTML-елемента.</h3>
+            <p>Практично кожен HTML-елемент можна розглядати як прямокутник, що має свій власний вміст і певні властивості, вони дозволяють встановити межі навколо елементів та визначити відступи між самими елементами.</p>
+            <p><span class="accent">Блочна модель</span> визначає, як різні частини HTML-елемента – поля, рамки, відступи та вміст – працюватимуть разом, щоб створити об'єкт, який буде відображений на сторінці.</p>
+            <p><span class="text-bold">Розглянемо складові елемента:</span></p>
+            <ul class="list">
+              <li><span class="accent">вміст</span> – область внутрішнього вмісту блоку, який містить текст, зображення чи інші елементи контенту;</li>
+              <li><span class="accent">внутрішні відступи</span> – розташовуються навколо вмісту як порожній простір; їх розмір контролюється за допомогою властивості <span class="accent">padding</span>;</li>
+              <li><span class="accent">рамка</span> – обрамляє вміст та внутрішні відступи. Її розмір та стиль можна контролювати за допомогою властивості <span class="accent">border</span>;</li>
+              <li><span class="accent">зовнішні відступи</span> – зовнішній шар, являє собою простір між поточним та іншими елементами. Його розмір контролюється за допомогою властивості <span class="accent">margin</span>.</li>
+            </ul>
+            <figure class="wp-block-image"><img src="./img/css/less-css-03-01.png" alt="складові елемента"></figure>
+            <p>Треба зауважити, що поля і відступи елемента не є обов'язковими, їх значення, за замовчуванням, дорівнює нулю. Тем не менш, деякі браузери, на основі своїх таблиць стилів додають цим властивостям позитивні значення. Очистити стилі браузерів для всіх елементів можна за допомогою універсального селектора:</p>
+            <pre><code class="css">* {
+  margin: 0;
+  padding: 0;
+}</code></pre>
+            <h3 class="accent lesson-subtitle">Розміри елемента.</h3>
+            <p>Для надання ширини і висоти об'єкту в CSS існують дві властивості – <span class="accent">width</span> та <span class="accent">height</span>. Однак, при застосуванні деяких властивостей, таких як <span class="accent">padding</span>, <span class="accent">border</span> та <span class="accent">margin</span>, можна помітити, що це впливає на кінцевий розмір блоку. Тобто, виявляється, для визначення остаточного розміру елемента необхідно складати значення усіх цих властивостей.</p>
+            <pre><code class="html">&#60;div class="container"&#62;
+  &#60;div class="div"&#62;content-box&#60;/div&#62;
+  &#60;div class="div box"&#62;border-box&#60;/div&#62;
+&#60;/div&#62;</code></pre>
+            <pre><code class="css">.container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px
+}
+.div {
+  text-align: center;
+  font-family: monospace;
+  font-size: 26px;
+  font-weight: bold;
+  width: 400px;
+  height: 150px;
+  margin: 0 auto;
+  border: 4px solid #0096D2;
+  padding: 50px;
+  background-color: #0096D2;
+}</code></pre>
+            <figure class="wp-block-image"><img src="./img/css/less-css-03-02.png" alt="розміри елемента"></figure>
+            <p>Таким чином, підсумкова ширина першого елемента на сторінці: <span class="accent">400px</span> + <span class="accent">4px</span> + <span class="accent">50px</span> + <span class="accent">50px</span> + <span class="accent">4px</span> дорівнює <span class="accent">508px.</span></p>
+            <p>Така поведінка називається <span class="accent">Box Model</span>. Вона описує взаємозв'язок властивостей і кінцевого розміру елемента. У цій моделі браузери відображають блок за наступними принципом, вони накладають правила одне на інше перед тим, як вивести елемент на сторінку.</p>
+            <p>Змінити поведінку <span class="accent">Box Model</span> можна! Для цього використовується властивість <span class="accent">box-sizing</span>, яка приймає наступні значення:</p>
+            <ul class="list"> 
+              <li><span class="accent">content-box</span> – значення за умовчанням. Працює так, як було описано вгорі.</li>
+              <li><span class="accent">border-box</span> – значення меж і внутрішніх відступів не впливають на висоту та ширину елементу, вони «вкрадають» місце у контенту. Якщо встановлено фіксоване значення, то воно таким і залишиться, але для контенту всередині блоку місця стане менше. </li>
+            </ul>
+            <pre><code class="css">.box {
+  box-sizing: border-box;
+}</code></pre>
+            <h3 class="accent lesson-subtitle">Межі елемента.</h3>
+            <p>Будь-який блоковий HTML-елемент можна виділяти за допомогою меж. Межа елемента являє собою одну або кілька ліній, що оточують вміст елемента та його відступи.</p>
+            <p>Для створення межі в елементі використовується властивість <span class="accent">border</span>, яка є скороченням від кількох властивостей:</p>
+            <ul class="list">
+              <li><span class="accent">border-width</span> – ширина межі;</li>
+              <li><span class="accent">border-style</span> – стиль межі;</li>
+              <li><span class="accent">border-color</span> – колір межі.</li>
+            </ul>
+            <p>Кожна з цих властивостей може мати від одного до чотирьох значень (для верхньої, правої, нижньої та лівої межі).</p>
+            <pre><code class="html">&#60;div class="container"&#62;content&#60;/div&#62;</code></pre>
+            <pre><code class="css">.container {
+  border-top-width: 3px;
+  border-right-width: 5px;
+  border-bottom-width: 7px;
+  border-left-width: 9px;
+
+  border-top-style: solid;
+  border-right-style: dotted;
+  border-bottom-style: dashed;
+  border-left-style: double;
+
+  border-top-color:  #d27f46;
+  border-right-color: #6ca38c;
+  border-bottom-color: #cf432e;
+  border-left-color: #0096D2;
+}</code></pre>
+            <figure class="wp-block-image"><img src="https://webportal.com.ua/wp-content/uploads/img/css/less-css-03-03.png" alt="різні межі у елемента"></figure>
+            <p>Для скорочення коду ці властивості можна задавати одним правилом, порядок застосування значень іде за годинниковою стрілкою: <span class="accent">top</span>, <span class="accent">right</span>, <span class="accent">bottom</span>, <span class="accent">left</span>.   
+              <pre><code class="css">.container {
+  border-width: 3px 5px 7px 9px;
+  border-top-style: solid dotted dashed double;
+  border-top-color: #d27f46 #6ca38c #cf432e #0096D2;
+}</code></pre>
+            </p>
+            <p>В звичайному випадку, властивості межі для елементу задаються одним правилом через ключовий тег <span class="accent">border</span>.</p>
+            <pre><code class="css">.container {
+  border: 3px  solid  #0096D2;
+ }</code></pre>
+            <figure class="wp-block-image"><img src="./img/css/less-css-03-04.png" alt="boder елемента"></figure>
+            <h3 class="accent lesson-subtitle">Внутрішні відступи.</h3>
+            <p>Властивість <span class="accent">padding</span> задає внутрішні відступи блоку для всіх чотирьох сторін — відступи від зовнішньої межі блоку до його вмісту. Ці відступи іноді називають «полями».</p>
+            <p>Внутрішні відступи для різних сторін задаються за допомогою властивостей <span class="accent">padding-top</span>, <span class="accent">padding-right</span>, <span class="accent">padding-bottom</span> і <span class="accent">padding-left</span>.</p>
+            <pre><code class="html">&#60;div class="container"&#62;
+  &#60;div class="div"&#62;content&#60;/div&#62;
+&#60;/div&#62;</code></pre>
+            <pre><code class="css">.container {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: center;
+  width: 300px;
+  height: 150px;
+  margin: 50px auto;
+  background-color: #0096D2;
+  box-sizing: border-box;
+  padding-top: 100px;
+  padding-left: 150px;  
+}</code></pre>
+            <figure class="wp-block-image"><img src="./img/css/less-css-03-05.png" alt="внутрішні відступи елемента"></figure>
+            <h3 class="accent lesson-subtitle">Зовнішні відступи.</h3>
+            <p>Властивість <span class="accent">margin</span> задає зовнішні відступи блоку для всіх чотирьох сторін — відступи від зовнішньої межі елемента до межі батьківського елемента або до сусідніх елементів. Застосовується до усіх елементів, окрім внутрішніх елементів таблиці. Допустимі і негативні значення.</p>
+            <p>Зовнішні відступи для різних сторін задаються за допомогою відповідних властивостей: <span class="accent">margin-top</span>, <span class="accent">margin-right</span>, <span class="accent">margin-bottom</span> і <span class="accent">margin-left</span>.</p>
+            <p>За допомоги властивостей <span class="accent">margin-left</span> та <span class="accent">margin-right</span>, яким надано значення <span class="accent">auto</span>, елемент в середині батьківського контейнера можна рухати в горизонтальному напрямку. Тобто, у елемента відповідне поле розширюється до крою батьківського контейнера або суміжного блоку, що знаходиться в тому ж контейнері. Якщо обидва цих значення становляться рівними, елемент центрується відносно країв, що містить блок. </p>
+            <p>Суміжні вертикальні відступи елементів у блочній моделі перекриваються.</p>
+            <pre><code class="html">&#60;div class="container"&#62;
+  &#60;div class="box"&#62;
+    &#60;div&#62;box&#60;/div&#62;
+  &#60;/div&#62;
+  &#60;div class="box"&#62;
+    &#60;div&#62;box&#60;/div&#62;
+  &#60;/div&#62;
+  &#60;div class="box"&#62;
+    &#60;div&#62;box&#60;/div&#62;
+  &#60;/div&#62;
+&#60;/div&#62;
+            </code></pre>
+            <pre><code class="css">.container {
+  color: #FFFFFF;
+  width: 60%;
+  margin: 0 auto;
+  border: 3px solid #0096D2;
+}
+.box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.box div {
+  width: 70px;
+  height: 70px;
+  padding: 20px 15px 15px 15px;
+  text-align: center;
+  background-color: #0096D2;
+  border-radius: 5px;
+}
+.box:first-child div {
+  margin-left: 100px;
+  background-color: #d27f46;
+}
+.box:nth-child(2) div {
+  margin-right: 100px;
+  margin-left: auto;
+  background-color: #6ca38c;
+}
+.box:last-child div {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #cf432e;
+}
+</code></pre>
+            <figure class="wp-block-image"><img src="./img/css/less-css-03-06.png" alt="зовнішні відступи елемента"></figure>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="./uploads/css/css_lesson_03.zip">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>
