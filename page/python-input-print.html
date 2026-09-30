@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="python" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Введення виведення даних, перетворення типів в <span class="accent">Python</span></h1>
+            <h3 class="accent lesson-subtitle">Введення даних.</h3>
+            <p>Для зчитування рядка зі стандартного пристрою введення <span class="accent">sys.stdin</span> (<span class="accent">клавіатура</span>) в мові Python передбачено функцію <span class="accent">input([prompt])</span>.</p>
+            <p>Необов’язковий параметр <span class="accent">prompt</span>, призначений для вказання запрошення до введення, та буде виведений на стандартний пристрій виведення <span class="accent">sys.stdout</span> (<span class="accent">екран</span>).</p>
+            <div class="example otstup">
+              <p class="text-bold">Формат оператору вводу:</p>
+              <ul class="list">
+                <li><span class="accent">Змінна = input([prompt])</span></li>
+              </ul>
+            </div>
+            <div class="example otstup">
+              <p><span class="text-bold">Приклад:</span> скласти програму, яка буде запитувати ім’я користувача, а потім з ним привітається.</p>
+              <ul class="list">
+                <li>name = <span class="text-bold">input</span>(<span class="color-excel">&#39;Як Вас звати?&#39;</span>)</span></li>
+                <li><span class="text-bold">print</span>(<span class="color-accent">&#39;Вітаю&#39;, name</span>)</li>
+              </ul>
+            </div>
+            <h3 class="accent lesson-subtitle">Перетворення типів.</h3>
+            <p>Однак, функція <span class="accent">input</span> <span class="color-red text-bold">повертає лише значення рядкового типу</span> і для того щоб змінні, наприклад, мали цілочисельні значення треба <span class="accent">виконати перетворення типів</span> за допомогою функції <span class="accent">int()</span>.</p>
+            <div class="example otstup">
+              <p class="text-bold">Приклад:
+                <ul class="example-program list">
+                  <li> 
+                    <div class="example-program__str">a = <span class="text-bold">input</span>()</div>
+                    <div class="example-program__str"><span class="color-excel"># вводимо 3</span></div>
+                  </li>
+                  <li> 
+                    <div class="example-program__str">b = <span class="text-bold">input</span>()</div>
+                    <div class="example-program__str"><span class="color-excel"># вводимо 5</span></div>
+                  </li>
+                  <li> 
+                    <div class="example-program__str">a = <span class="text-bold">int</span>(a)</div>
+                  </li>
+                  <li> 
+                    <div class="example-program__str">b = <span class="text-bold">int</span>(b)</div>
+                  </li>
+                  <li> 
+                    <div class="example-program__str">x = a + b</div>
+                  </li>
+                  <li> 
+                    <div class="example-program__str"> <span class="text-bold">print</span>(x)</div>
+                    <div class="example-program__str"><span class="color-excel"># отримаємо 8</span></div>
+                  </li>
+                </ul>
+              </p>
+            </div>
+            <p>Але в мові <span class="accent">Python</span> можна об'єднати зчитування рядків і перетворення типів, якщо викликати функцію <span class="accent">int()</span> для того значення, яке поверне функція <span class="accent">input()</span>:</p>
+            <div class="example otstup">
+              <p class="text-bold">Приклад:
+                <ul class="example-program list">
+                  <li> 
+                    <div class="example-program__str">a = <span class="text-bold">int</span>(<span class="text-bold">input</span>())</div>
+                    <div class="example-program__str"><span class="color-excel"># вводимо 3</span></div>
+                  </li>
+                  <li> 
+                    <div class="example-program__str">b = <span class="text-bold">int</span>(<span class="text-bold">input</span>())</div>
+                    <div class="example-program__str"><span class="color-excel"># вводимо 5</span></div>
+                  </li>
+                  <li> 
+                    <div class="example-program__str">x = a + b</div>
+                  </li>
+                  <li>
+                    <div class="example-program__str"> <span class="text-bold">print</span>(x)</div>
+                    <div class="example-program__str"><span class="color-excel"># отримаємо 8</span></div>
+                  </li>
+                </ul>
+              </p>
+            </div>
+            <p>Бувають випадки, коли треба зчитувати значення змінних, які записані в окремому рядку, в цьому випадку доцільно використовувати <strong>метод</strong> <span class="accent">split()</span>, котрий розділяє рядок на частини по одному або декільком пропускам (можуть бути використані також інші символи пропуску зокрема табуляція).</p>
+            <div class="example otstup">
+              <p class="text-bold">Приклад:
+                <ul class="list">
+                  <li>a, b = <span class="text-bold">input</span>().<span class="text-bold">split</span>()</li>
+                </ul>
+              </p>
+            </div>
+            <p>Для того щоб одночасно зчитувати значення змінних, які записані в окремому рядку та виконувати перетворення їх типів, треба додатково використовувати функцію <span class="accent">map()</span>, яка застосовує до кожного елементу списку задану функцію.</p>
+            <div class="example otstup">
+              <p class="text-bold">Приклад:
+                <ul class="list">
+                  <li>a, b = <span class="text-bold">map</span>(<span class="text-bold color-accent">int</span>, <span class="text-bold">input</span>().<span class="text-bold">split</span>())</li>
+                </ul>
+              </p>
+            </div>
+            <p>Також, можна перетворити рядок і в дробове число, для цього треба застосовувати функцію <span class="accent">float()</span>.</p>
+            <div class="example otstup">
+              <p class="text-bold">Приклад:
+                <ul class="example-program list">
+                  <li> 
+                    <div class="example-program__str">a = <span class="text-bold">float</span>(<span class="text-bold">input</span>())		</div>
+                    <div class="example-program__str"><span class="color-excel"># вводимо 5.2</span></div>
+                  </li>
+                  <li> 
+                    <div class="example-program__str">b = <span class="text-bold">float</span>(<span class="text-bold">input</span>())		</div>
+                    <div class="example-program__str"><span class="color-excel"># вводимо 3.4</span></div>
+                  </li>
+                  <li> 
+                    <div class="example-program__str"><span class="text-bold">print</span>(<span class="text-bold">float</span>(a)+ <span class="text-bold">float</span>(b)) 	</div>
+                    <div class="example-program__str"><span class="color-excel"># отримаємо 8.6</span></div>
+                  </li>
+                </ul>
+              </p>
+            </div>
+            <p>Дробові числа можна перетворити у цілі функцією <span class="accent">int()</span>. Зверніть увагу: <span class="accent">int()</span> <span class="text-bold">НЕ округлює числа за правилами арифметики, а просто відкидає дробову частину</span>.</p>
+            <div class="example otstup">
+              <p class="text-bold">Приклад:
+                <ul class="example-program list">
+                  <li>
+                    <div class="example-program__str">a = <span class="color-excel">8.6</span></div>
+                  </li>
+                  <li>
+                    <div class="example-program__str"><span class="text-bold">print</span>(<span class="text-bold">int</span>(a))</div>
+                    <div class="example-program__str"><span class="color-excel"># отримаємо 8</span></div>
+                  </li>
+                </ul>
+              </p>
+            </div>
+            <h3 class="accent lesson-subtitle">Виведення даних.</h3>
+            <p>Для виведення результату роботи програми на стандартний пристрій виведення <span class="accent">sys.stdout</span> (<span class="accent">екран</span>), може бути використана функція <span class="accent">print()</span>.</p>
+            <div class="example otstup">
+              <p class="text-bold">Формат оператору виводу:</p>
+              <ul class="list">
+                <li><span class="accent">print(*objects, sep=&#39; &#39;, end=&#39;\n&#39;, file=sys.stdout, flush=False)</span></li>
+              </ul>
+            </div>
+            <p class="text-bold">Аргументи функції:</p>
+            <ul class="list">
+              <li><span class="accent">*objects</span> – перераховані через кому об'єкти (змінні, рядки, константи), значення яких потрібно виводити<br/><br/>
+                <div class="example">
+                  <p class="text-bold">Приклад:</p>
+                  <ul class="example-program list">
+                    <li> 
+                      <div class="example-program__str">a = <span class="color-excel">1</span></div>
+                    </li>
+                    <li> 
+                      <div class="example-program__str">b = <span class="color-excel">2</span></div>
+                    </li>
+                    <li> 
+                      <div class="example-program__str"><span class="text-bold">print</span>(a, <span class="color-accent">&#39;+&#39;</span>, b, <span class="color-accent">&#39;=&#39;</span>, a + b)	</div>
+                      <div class="example-program__str"><span class="color-excel"># результат –> 1 + 2 = 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><span class="accent">sep&#39; &#39;</span> – роздільник, який потрібно ставити між об’єктами що виводяться (за замовчуванням – пропуск). Для виводу спеціальних символів використовують <span class="accent">Escape-послідовності</span>, ось деякі з них:
+                <div class="example otstup"> 
+                  <ul>
+                    <li><span class="accent">\&#39;</span> – одинарна лапка</li>
+                    <li><span class="accent">\&#39;&#39;</span> – подвійна лапка</li>
+                    <li><span class="accent">\?</span> – знак питання</li>
+                    <li><span class="accent">\\</span> – зворотний слеш</li>
+                    <li><span class="accent">\n</span> – новий рядок</li>
+                    <li><span class="accent">\t</span> – горизонтальна табуляція</li>
+                    <li><span class="accent">\v</span> – вертикальна табуляція</li>
+                  </ul>
+                </div>
+                <div class="example">
+                  <p class="text-bold">Приклад:</p>
+                  <ul class="example-program list">
+                    <li> 
+                      <div class="example-program__str">a = <span class="color-excel">1</span></div>
+                    </li>
+                    <li> 
+                      <div class="example-program__str">b = <span class="color-excel">2</span></div>
+                    </li>
+                    <li> 
+                      <div class="example-program__str">с = <span class="color-excel">3</span></div>
+                    </li>
+                    <li> 
+                      <div class="example-program__str"><span class="text-bold">print</span>(a,b,с, <span class="text-bold">sep</span>=&#39;:&#39;)</div>
+                      <div class="example-program__str"><span class="color-excel"># результат –> 1:2:3</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <li><span class="accent">end=&#39\n&#39</span> – символ, що ставиться в кінці  рядка (за замовчуванням – символ кінця рядка)</li>
+                <li><span class="accent">file=sys.stdout</span> – виведення в файл. Об'єкт <span class="accent">file</span> повинен бути об'єктом з методом <span class="accent">write(str)</span>. <span class="accent">print()</span> можна використовувати тільки для текстових файлів.</li>
+                <li><span class="accent">flush=False</span> – примусове очищення буфера виводу (за замовчуванням – немає, оскільки зазвичай визначається файлом).</li>
+              </li>
+            </ul>
+            <div class="example otstup">
+              <p><span class="text-bold">Приклад:</span> скласти програму, яка буде виводити на екран суму двох чисел</p>
+              <ul class="example-program list">
+                <li> 
+                  <div class="example-program__str"><span class="text-bold">print</span>(<span class="color-excel">5</span>+<span class="color-excel">3</span>)</div>
+                  <div class="example-program__str"><span class="color-excel"># результат –> 8</span></div>
+                </li>
+              </ul>
+            </div>
+            <div class="example otstup">
+              <p><span class="text-bold">Приклад:</span> скласти програму, яка буде зчитувати числові дані введені користувачем з клавіатури у змінні <span class="accent">a</span> та <span class="accent">b</span>, а потім виводити на екран їх добуток.</p>
+              <ul class="list">
+                <li>a=<span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-accent">&#39;Введіть перше число a = &#39;</span>))</li>
+                <li>b=<span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-accent">&#39;Введіть друге число b = &#39;</span>))</li>
+                <li><span class="text-bold">print</span>(<span class="color-accent">&#39;a&#39;</span>, <span class="color-accent">&#39;*&#39;</span>, <span class="color-accent">&#39;b&#39;</span>, <span class="color-accent">&#39;=&#39;</span>, a*b)</li>
+              </ul>
+            </div>
+            <h3 class="accent lesson-subtitle">Форматне виведення даних</h3>
+            <p>З розвитком мови Python для функції <span class="accent">print()</span> стали доступні нові методи, що допомагають створювати зрозумілі та зручні для читання повідомлення.</p>
+            <p>Метод <span class="accent">str.format()</span> – виконує операцію форматування рядка. Повертає копію рядка, в якому кожне замінне поле замінюється рядковим значенням відповідного аргументу.</p>
+            <p><span class="text-bold">Приклад:</span></p>
+            <div class="example">
+              <ul class="list">
+                <li>name = <span class="color-accent">"Jane"</span></li>
+                <li>age = <span class="color-excel">16</span></li>
+                <li> 
+                  <div class="example-program__str"><span class="text-bold">print</span>(<span class="color-accent">"Мене звати {}, мені {} років."</span><span class="text-bold">.format</span>(name, age))</div>
+                  <div class="example-program__str"><span class="color-excel"># результат –> Мене звати Jane, мені 16 років.</span></div>
+                </li>
+              </ul>
+            </div>
+            <p>Між даними зі списку можна виводити інші символи.</p>
+            <p><span class="text-bold"> Приклад:</span></p>
+            <div class="example">
+              <ul class="list">
+                <li>a = <span class="color-excel">10</span></li>
+                <li>b = <span class="color-excel">15</span></li>
+                <li> 
+                  <div class="example-program__str"><span class="text-bold">print</span>(<span class="color-accent">"{}+{}={}"</span><span class="text-bold">.format</span>(a, b, a+b))</div>
+                  <div class="example-program__str"><span class="color-excel"># результат –> 10+15=25</span></div>
+                </li>
+              </ul>
+            </div>
+            <p>Як бачимо, рядок виводу будується за допомогою вбудованої функції <span class="accent">.format()</span>. Аргументи цієї функції, знаходяться у дужках – це дані, які виводяться. Символьний рядок зліва від точки – це форматний рядок, який визначає, як саме дані будуть представлені на екрані. Фігурні дужки позначають місце для виведення чергового елемента у порядку їх перерахування у списку аргументів функції.</p>
+            <p>Налаштуємо відображення чисел.</p>
+            <p><span class="text-bold">Приклад:</span></p>
+            <div class="example">
+              <ul class="list">
+                <li>x = <span class="color-excel">1234.56789714285</span></li>
+                <li> 
+                  <div class="example-program__str"><span class="text-bold">print</span>(<span class="color-accent">"x = {:0.2f}"</span><span class="text-bold">.format</span>(x)) </div>
+                  <div class="example-program__str"><span class="color-excel"># результат –> x = 1234.57</span></div>
+                </li>
+              </ul>
+            </div>
+            <p>Коли проводяться розрахунки з дійсними числами – за замовчуванням виводиться 16 цифр. Якщо такий варіант не влаштовує, застосовують форматований вивід. Тут після двокрапки вказано формат <span class="accent">f</span>, за умовчанням він залишає 6 цифр у дробовій частині числа. Перед літерою <span class="accent">f</span> можна записати два числа через точку. Перше число задає загальну кількість позицій, відведене на виведення значення, а друге – кількість цифр у дробовій частині.</p>
+            <p><span class="accent">Форматування за допомогою f-рядків</span> – робить процес форматування рядків зручним, швидким та лаконічним. Синтаксис аналогічний тому, що використовується в <span class="accent">.format()</span>, але менш складний. Але вам необхідно лише запустити рядковий літерал з малої або великої літери <span class="accent">f</span>, а потім вставити значення, об'єкти або вирази у фігурні дужки у певних місцях.</p>
+            <p><span class="text-bold">Приклад:</span></p>
+            <div class="example">
+              <ul class="list">
+                <li>name = <span class="color-excel">"Jane"</span></li>
+                <li>age = <span class="color-excel">16</span></li>
+                <li> 
+                  <div class="example-program__str"><span class="text-bold">print</span>(<span class="color-accent">f"Мене звати</span> {name}<span class="color-accent">, мені</span> {age} <span class="color-accent">років."</span>)</div>
+                  <div class="example-program__str"><span class="color-excel"># результат –> Мене звати Jane, мені 16 років.</span></div>
+                </li>
+              </ul>
+            </div>
+            <p>Виконуємо обчислення всередині фігурних дужок f-рядка.</p>
+            <p><span class="text-bold">Приклад:</span></p>
+            <div class="example">
+              <ul class="list">
+                <li>a = <span class="color-excel">10</span></li>
+                <li>b = <span class="color-excel">15</span></li>
+                <li>
+                  <div class="example-program__str"><span class="text-bold">print</span>(<span class="color-accent">f"</span>{a}<span class="color-accent">+</span>{b}<span class="color-accent">=</span>{a+b}<span class="color-accent">"</span>)</div>
+                  <div class="example-program__str"><span class="color-excel"># результат –> 10+15=25</span></div>
+                </li>
+              </ul>
+            </div>
+            <p>Налаштовуємо відображення чисел.</p>
+            <p><span class="text-bold">Приклад:</span></p>
+            <div class="example">
+              <ul class="list">
+                <li>pi = <span class="color-excel">3.1415926535</span></li>
+                <li>
+                  <div class="example-program__str"><span class="text-bold">print</span>(<span class="color-accent">f"Число π:</span> {pi:<span class="color-accent">0.2</span>f}<span class="color-accent">"</span>)</div>
+                  <div class="example-program__str"><span class="color-excel"># результат –> 3.14</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="./uploads/python/python_lesson_03.pdf">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>

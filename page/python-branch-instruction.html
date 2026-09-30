@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="python" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Логічний тип даних. Інструкція розгалуження.</h1>
+            <h3 class="accent lesson-subtitle">Логічний тип даних.</h3>
+            <p><span class="accent">Логічний</span> (<span class="accent">Булевий</span>) <span class="accent">тип</span> даних в <span class="accent">Python</span> відноситься до цілочисельного типу. Для цього типу визначені лише дві константи <span class="accent">True</span> і <span class="accent">False</span>.</p>
+            <p>Зверніть увагу, що в іменах констант <span class="accent">True</span> і <span class="accent">False перша буква - прописна</span>.</p>
+            <p>Значення логічного типу можна перетворювати, наприклад, застосувавши функцію перетворення <span class="accent">int</span> до логічного <span class="accent">True</span>  – отримаємо <span class="accent">1</span>, а перетворення <span class="accent">False</span>  дасть <span class="accent">0</span>. При зворотному перетворенні, число <span class="accent">0</span>  перетворюється в <span class="accent">False</span>, а будь-яке число більше нуля в <span class="accent">True</span>. Якщо перетворювати порожній рядок, то отримаємо логічне <span class="accent">False</span>, а будь-який непорожній рядок перетвориться в <span class="accent">True</span>.</p>
+            <p>Для перетворення до логічного типу використовується стандартна функція <span class="accent">bool()</span>.</p>
+            <h3 class="accent lesson-subtitle">Оператори порівняння.</h3>
+            <p>В <span class="accent">Python</span> для порівняння об’єктів (змінних різних типів) використовують операції порівняння.</p>
+            <p class="text-bold">До операцій порівняння належать наступні операції:</p>
+            <div class="example">
+              <ul class="example-program list">
+                <li><span class="accent"><</span> – менше;</li>
+                <li><span class="accent"><=</span> – менше або дорівнює;</li>
+                <li><span class="accent">></span> – більше;</li>
+                <li><span class="accent">>=</span> – більше або дорівнює;</li>
+                <li><span class="accent">==</span> – дорівнює;</li>
+                <li><span class="accent">!=</span> – не дорівнює.</li>
+              </ul>
+            </div>
+            <p>За замовчуванням, ці операції мають однаковий пріоритет, тому при виконанні обчислень вмикається асоціативність (порядок обчислення), для операцій порівняння вона ліва – обчислення відбувається з права на ліво. З іншого боку це дозволяє об’єднувати операції порівняння  в ланцюги, і на відміну від більшості мов програмування, не використовувати логічні оператори. </p>
+            <div class="example otstup">
+              <p class="text-bold">Приклад:</p>
+              <ul class="example-program list">
+                <li> 
+                  <div class="example-program__str">print(<span class="color-excel">4</span> > <span class="color-excel">3</span> <= <span class="color-excel">7</span> != <span class="color-excel">3</span> < <span class="color-excel">2</span>)</div>
+                  <div class="example-program__str"><span class="color-excel"># False</span></div>
+                </li>
+              </ul>
+            </div>
+            <h3 class="accent lesson-subtitle">Логічні операції.</h3>
+            <p>Логічні вирази (умови) можуть складатися з декількох частин. При цьому різні їх частини, також є логічними виразами (простими або складеними), які з’єднуються один з одним за допомоги наступних логічних операцій:</p>
+            <ol>
+              <li><span class="accent">or</span> – диз’юнкція або логічне додавання (<span class="accent">або</span>);</li>
+              <li><span class="accent">and</span> – кон’юнкція або логічне множення (<span class="accent">і</span>);</li>
+              <li><span class="accent">not</span> – заперечення (<span class="accent">не</span>).</li>
+            </ol>
+            <p>На відміну від операцій порівняння, <span class="color-excel">л</span>огічні операції мають різний пріоритет</span> (за вказаним порядком) але більш високий, ніж операції порівняння. Тому, в виразах з операціями порівняння, для зміни порядку обчислень, необхідно використовувати дужки.</p>
+            <div class="example otstup">
+              <p class="text-bold">Приклад:</p>
+              <ul class="example-program list">
+                <li> 
+                  <div class="example-program__str">print(<span class="color-excel">4</span> > <span class="color-excel">3</spn> or <span class="color-excel">3</spn> < <span class="color-excel">2</span> and <span class="color-excel">4</spn> == <span class="color-excel">5</spn>)</div>
+                  <div class="example-program__str"><span class="color-excel"># True</span></div>
+                </li>
+                <li>
+                  <div class="example-program__str">print((<span class="color-excel">4</spn> > <span class="color-excel">3</span> or <span class="color-excel">3</span> < <span class="color-excel">2</spn>) and <span class="color-excel">4</spn> == <span class="color-excel">5</spn>)</div>
+                  <div class="example-program__str"><span class="color-excel"># False</span></div>
+                </li>
+              </ul>
+            </div>
+            <p class="text-bold">Таблиця істинності логічних операцій:</p>
+            <ol class="table-truth">
+              <li><span class="accent">not</span> (не)
+                <ul><li class="text-bold"><span class="color-red">not</span> False = True
+<li class="text-bold"><span class="color-red">not</span> True = False
+                </ul>
+              </li><br/>
+              <li><span class="accent">and</span> (і)
+                <ul><li class="text-bold">True <span class="color-red">and </span>True = True
+<li class="text-bold">True <span class="color-red">and </span>False = False
+<li class="text-bold">False<span class="color-red"> and</span> True = False
+<li class="text-bold">False<span class="color-red"> and</span> False = False 
+                </ul>
+              </li><br/>
+              <li><span class="accent">or </span> (або)
+                <ul><li class="text-bold">True <span class="color-red">or </span>True = True
+<li class="text-bold">True <span class="color-red">or </span>False = True
+<li class="text-bold">False<span class="color-red"> or</span> True = True
+<li class="text-bold">False<span class="color-red"> or</span> False = False 
+                </ul>
+              </li>
+            </ol>
+            <h3 class="accent lesson-subtitle">Інструкція розгалуження.</h3>
+            <p>Алгоритми, в яких відбувається виконання тих чи інших послідовностей дій в залежності від деяких умов, називаються алгоритмами з розгалуженням. </p>
+            <p>Для реалізації таких алгоритмів в мовах програмування існують спеціальні засоби. В <span class="accent">Python</span> такими засобами є <span class="accent">інструкція розгалуження і вкладені інструкції розгалуження</span>.</p>
+            <p>Кожна інструкція розгалуження передбачає виконання однієї з двох дій в залежності від істинності деякої умови. Інструкція розгалуження може використовуватися в повній або скороченій формі.</p>
+            <h3 class="accent lesson-subtitle">Блок-схема повного розгалуження.</h3>
+            <div class="block-less">
+              <div class="block-less__img"><img src="./img/python/less-pyton-05-01.jpg" alt="Схема повного розгалуження"></div>
+              <div class="block-less__text">
+                <div class="example">
+                  <ul>
+                    <li><span class="accent">if</span> логічний_вираз<span class="accent">:</span>
+                      <ul>
+                        <li>блок_інструкцій_А</li>
+                      </ul>
+                    </li>
+                    <li><span class="accent">else:</span>
+                      <ul>
+                        <li>блок_інструкцій_B</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <p></p>
+            <p>Виконання інструкції повного розгалуження відбувається наступним чином: обчислюється  <span class="accent">значення логічного виразу</span>, якщо логічний вираз повертає значення <span class="accent">True</span>, то далі <span class="accent">виконується блок_інструкцій_А</span>, після чого програма переходить до виконання першої інструкції наступного фрагмента алгоритму; якщо ж логічний вираз повертає значення <span class="accent">False</span>, то <span class="accent">виконується блок_інструкцій_В</span>, а потім наступні інструкції.</p>
+            <p>Звернемо увагу, що у блоках <span class="accent">if</span> та <span class="accent">else</span> для внутрішніх блоків інструкцій треба робити відступи. Важливо щоб відступи були однакової довжини, тому для їх встановлення доцільно використовувати табуляцію або ставити рівну кількість пропусків (рекомендується використовувати відступ в 4 пропуски).</p>
+            <p>Для сумісності коду, не слід використовувати в оформленні блоків змішані символи (табуляції і пропуску). <span class="accent">Python</span> має самобутній синтаксис в якому відступи – частина суворого синтаксису. Порушення цих правил призведе до синтаксичної помилки. </p>
+            <p>Відступи є обмежувачами блоку. Блоком називається інструкція або група інструкцій, які виконуються як одна.</p>
+            <div class="example otstup">
+              <p><span class="text-bold">Приклад:</span> скласти програму, яка буде знаходити максимальне з двох чисел.</p>
+              <ul class="example-program list">
+                <li>a = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть перше число а = &#39;</span>)) </li>
+                <li>b = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть друге число b = &#39;</span>))</li>
+                <li><span class="text-bold">if</span> (a>b)<span class="text-bold">:</span>
+                  <ul>
+                    <li><span class="text-bold">print</span>(<span class="color-accent">&#39;Максимальне число&#39;</span>, а)</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">else:</span>
+                  <ul>
+                    <li><span class="text-bold">print</span>(<span class="color-accent">&#39;Максимальне число&#39;</span>, b)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <h3 class="accent lesson-subtitle">Блок-схема скороченого розгалуження.</h3>
+            <div class="block-less">
+              <div class="block-less__img"><img src="./img/python/less-pyton-05-02.jpg" alt="Схема скороченного розгалуження"></div>
+              <div class="block-less__text">
+                <div class="example">
+                  <ul>
+                    <li><span class="accent">if</span> логічний_вираз<span class="accent">:</span>
+                      <ul>
+                        <li>блок_інструкцій_А</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <p></p>
+            <p>Як бачимо, інструкція розгалуження може мати ще і  неповну форму, якщо в ній  відсутня гілка <span class="accent">else</span>, тобто відсутнє службове слово <span class="accent">else</span> з відповідним йому блоком інструкцій.</p>
+            <div class="example otstup">
+              <p><span class="text-bold">Приклад:</span> скласти програму, яка буде знаходити розв’язок наступного рівняння: <span class="accent">х = а ÷ b</span>, за умови, що <span class="accent">b</span> не дорівнює нулю.</p>
+              <ul class="example-program list">
+                <li>a = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть перше число а = &#39;</span>)) </li>
+                <li>b = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть друге число b = &#39;</span>))</li>
+                <li><span class="text-bold">if</span> (b != <span class="color-excel">0</span>)<span class="text-bold">:</span>
+                  <ul>
+                    <li><span class="text-bold">print</span>(a/b)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <h3 class="accent lesson-subtitle">Вкладені інструкції розгалуження.</h3>
+            <p>В інструкції розгалуження, в якості <span class="accent">блоків інструкцій А</span> та <span class="accent">В</span> дозволяється використовувати будь-які інструкції в тому числі і інструкції розгалуження. Таким чином, в <span class="accent">Python</span> можливо вкладення інструкції розгалуження по одній з наступних схем:</p>
+            <ol class="red-num">
+              <li class="red-num__item">
+                <div class="example">
+                  <ul>
+                    <li><span class="accent">if</span> логічний_вираз_1<span class="accent">:</span>
+                      <ul>
+                        <li><span class="accent">if</span> логічний_вираз_2<span class="accent">:</span>
+                          <ul>
+                            <li>блок_інструкцій_А</li>
+                          </ul>
+                        </li>
+                        <li><span class="accent">else:</span>
+                          <ul>
+                            <li>блок_інструкцій_B</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><span class="accent">else:</span>
+                      <ul>
+                        <li>блок_інструкцій_С</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="red-num__item">
+                <div class="example">
+                  <ul>
+                    <li><span class="accent">if</span> логічний_вираз_1<span class="accent">:</span>
+                      <ul>
+                        <li>блок_інструкцій_А</li>
+                      </ul>
+                    </li>
+                    <li><span class="accent">else:</span>
+                      <ul>
+                        <li><span class="accent">if</span> логічний_вираз_2<span class="accent">:</span>
+                          <ul>
+                            <li>блок_інструкцій_B</li>
+                          </ul>
+                        </li>
+                        <li><span class="accent">else:</span>
+                          <ul>
+                            <li>блок_інструкцій_С</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="red-num__item">
+                <div class="example">
+                  <ul>
+                    <li><span class="accent">if</span> логічний_вираз_1<span class="accent">:</span>
+                      <ul>
+                        <li><span class="accent">if</span> логічний_вираз_2<span class="accent">:</span>
+                          <ul>
+                            <li>блок_інструкцій_А</li>
+                          </ul>
+                        </li>
+                        <li><span class="accent">else:</span>
+                          <ul>
+                            <li>блок_інструкцій_B</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><span class="accent">else:</span>
+                      <ul>
+                        <li><span class="accent">if</span> логічний_вираз_3<span class="accent">:</span>
+                          <ul>
+                            <li>блок_інструкцій_C</li>
+                          </ul>
+                        </li>
+                        <li><span class="accent">else:</span>
+                          <ul>
+                            <li>блок_інструкцій_D</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ol>
+            <p><span class="text-bold">Приклад:</span> скласти програму обчислення значення функції:</p>
+            <div class="example">
+              <div class="formula-less">
+                <div class="formula-less__item">у =</div>
+                <div class="formula-less__item brace-3">{</div>
+                <div class="formula-less__item">x, при x < 0 <br> 0, при 0 <= x < 1 <br> 2*x, при x > 1</div>
+              </div>
+              <ul>
+                <li>x = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;Введіть перше число x = &#39;</span>)) </li>
+                <li><span class="text-bold">if</span> (x < <span class="color-excel">0</span>)<span class="text-bold">:</span>
+                  <ul>
+                    <li>y = x</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">else:</span>
+                  <ul>
+                    <li><span class="text-bold">if</span> x > <span class="color-excel">1</span><span class="text-bold">:</span>
+                      <ul> 
+                        <li>y = 2*x</li>
+                      </ul>
+                    </li>
+                    <li><span class="text-bold">else:</span>
+                      <ul>
+                        <li>y = <span class="color-excel">0</span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">print</span>(y)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="./uploads/python/python_lesson_05.pdf">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>

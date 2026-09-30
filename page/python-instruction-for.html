@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="python" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Інструкція циклу з параметром <span class="accent">For</span></h1>
+            <p>Цикл з параметром <span class="accent">for</span> використовується зазвичай в тих випадках, коли заздалегідь <span class="accent">можна визначити кількість повторень циклу</span>. Цикл з параметром <span class="accent">for</span> служить для організації n-кратного виконання тіла циклу для значень параметра циклу з деякої впорядкованої дискретної множини.</p>
+            <h3 class="accent lesson-subtitle">Схема оператора циклу з параметром.</h3>
+            <div class="block-less">
+              <div class="block-less__img"><img src="./img/python/less-pyton-08-01.jpg" alt="Схема інструкції цикду for" style="width:70%"></div>
+              <div class="block-less__text">
+                <div class="example">
+                  <ul>
+                    <li><span class="accent">for</span> <span class="text-bold">target_list</span> <span class="accent">in</span> <span class="text-bold">expression_list</span>:
+                      <ul>
+                        <li>блок_інструкцій_1</li>
+                        <li>блок_інструкцій_2</li>
+                        <li>блок_інструкцій_3</li>
+                        <li>…</li>
+                        <li>блок_інструкцій_N</li>
+                      </ul>
+                    </li>
+                    <li>[<span class="accent">else:</span>
+                      <ul>
+                        <li>блок_інструкцій_N+1]</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <p> </p>
+            <p><span class="accent">target_list</span> – параметр циклу (його ще називають індексом, лічильником) це змінна дискретного типу, тобто типу, на безлічі значень якої визначено поняття <span class="accent">«попередній елемент»</span> і <span class="accent">«наступний елемент»</span>.   </p>
+            <p><span class="accent">expression_list</span> – ім’я послідовності (наприклад, список) або  виклик функції <span class="accent">range()</span>.</p>
+            <p><span class="text-bold">Приклад:</span> створити програму, яка буде виводити на екран, у  назви кольорів: red, orange, yellow, green, cyan, blue, violet.</p>
+            <div class="example">
+              <ul class="example-program list">
+                <li><span class="text-bold">for</span> color <span class="text-bold">in</span> <span class="color-accent">&#39;red&#39;</span>, <span class="color-accent">&#39;orange&#39;</span>, <span class="color-accent">&#39;yellow&#39;</span>, <span class="color-accent">&#39;green&#39;</span>, <span class="color-accent">&#39;cyan&#39;</span>, <span class="color-accent">&#39;blue&#39;</span>, <span class="color-accent">&#39;violet&#39;</span>:
+                  <ul>
+                    <li><span class="text-bold">print</span>(color)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <h3 class="accent lesson-subtitle">Функція <span class="color-red">range</span>.</h3>
+            <p><span class="accent">range</span> – це функція, що генерує послідовності із цілих чисел у визначеному діапазоні. Функція може мати один, два чи три аргументи.</p>
+            <p><span class="accent">range(A)</span> – створюється  послідовність від <span class="accent">0</span> до <span class="accent">A-1</span> <span class="color-excel">#range(5) –> 0, 1, 2, 3, 4</span></p>
+            <p><span class="accent">range(A,B)</span> – створюється  послідовність від <span class="accent">A</span> до <span class="accent">B-1</span> <span class="color-excel">#range(1, 5) –> 1, 2, 3, 4</span></p>
+            <p><span class="accent">range(A,B,N)</span> – створюється  послідовність від <span class="accent">A</span> до <span class="accent">B-1</span> з кроком <span class="accent">N</span> (<span class="accent">може бути від’ємним</span>) <span class="color-excel">#range(1, 6, 2) –> 1, 3, 5</span></p>
+            <p><span class="text-bold">Приклад:</span> створити програму, яка буде виводити на екран, в рядок, числа від <span class="accent">1</span> до <span class="accent">n</span>:</p>
+            <div class="example">
+              <ul class="example-program list">
+                <li>n = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;введіть кількість цифр = &#39;</span>))</li>
+                <li><span class="text-bold">for</span> i <span class="text-bold">in range</span>(<span class="color-excel">1</span>, n+<span class="color-excel">1</span>):</li>
+                <ul>
+                  <li><span class="text-bold">print</span>(i, <span class="text-bold">end</span> = &#39; &#39;)</li>
+                </ul>
+              </ul>
+            </div>
+            <h3 class="accent lesson-subtitle">Накопичувачі суми і добутку.</h3>
+            <p>В циклах, доволі часто треба виконувати дії з отримання суми або добутку. Для цих цілей використовуються накопичувачі. Для використання таких накопичувачів необхідна змінна цілого або дійсного типу , яка приймає початкове значення <span class="text-bold color-red">0</span> <span class="accent">для накопичення суми</span> і початкове значення <span class="text-bold color-red">1</span> <span class="accent">для накопичення добутку</span> поза тілом циклу (до початку циклу). </p>
+            <p><span class="text-bold">Приклад:</span> створити програму, яка буде обчислювати суму ряду <span class="text-bold color-red">1+2+3+…+n</span> та виводити її на екран:</p>
+            <div class="example">
+              <ul class="example-program list">
+                <li>n = <span class="text-bold">int</span>(<span class="text-bold">input</span>(<span class="color-excel">&#39;введіть кількість членів ряду = &#39;</span>))</li>
+                <li>sum = <span class="color-excel">0</span></li>
+                <li><span class="text-bold">for</span> i <span class="text-bold">in range</span>(<span class="color-excel">1</span>, n+<span class="color-excel">1</span>):</li>
+                <ul>
+                  <li>sum = sum + i</li>
+                </ul>
+                <li><span class="text-bold">else:</span></li>
+                <ul>
+                  <li> <span class="text-bold">print</span>(<span class="color-accent">&#39;Сума&#39;</span>, n, <span class="color-accent">&#39;членів ряду =&#39;</span>, sum)</li>
+                </ul>
+              </ul>
+            </div>
+            <h3 class="accent lesson-subtitle">Вкладені цикли.</h3>
+            <p>Інструкція одного циклу <span class="accent">for</span> може перебувати всередині інструкції іншого циклу. Така структура називається структурою вкладених циклів. Робота такої структури відбувається наступним чином: на одну ітерацію зовнішнього циклу вкладений цикл робить всі можливі ітерації.</p>
+            <div class="block-less">
+              <div class="block-less__img"><img src="./img/python/less-pyton-08-02.jpg" alt="Схема інструкції цикду for" style="width:60%"></div>
+              <div class="block-less__text">
+                <div class="example">
+                  <ul>
+                    <li><span class="accent">for</span> <span class="text-bold">target_list</span> <span class="accent">in</span> <span class="text-bold">expression_list</span>:
+                      <ul>
+                        <li><span class="accent">for</span> <span class="text-bold">target_list</span> <span class="accent">in</span> <span class="text-bold">expression_list</span>:
+                          <ul>
+                            <li>блок_інструкцій_1</li>
+                            <li>…</li>
+                            <li>блок_інструкцій_N</li>
+                          </ul>
+                        </li>
+                        <li>[<span class="accent">else:</span>
+                          <ul>
+                            <li>блок_інструкцій_N+1]</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>[<span class="accent">else:</span>
+                      <ul>
+                        <li>блок_інструкцій_Z]</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <p> </p>
+            <p><span class="text-bold">Приклад:</span> створити програму, яка буде виводити на екран таблицю множення.</p>
+            <div class="example">
+              <ul class="example-program list">
+                <li><span class="text-bold">for</span> i <span class="text-bold">in range</span>(<span class="color-excel">1</span>, <span class="color-excel">11</span>):
+                  <ul>
+                    <li> <span class="text-bold">for</span> j <span class="text-bold">in range</span>(<span class="color-excel">1</span>, <span class="color-excel">11</span>):
+                      <ul>
+                        <li><span class="text-bold">print</span>(i * j, <span class="text-bold">end</span>=&#39;\t&#39;)</li>
+                      </ul>
+                    </li>
+                    <li><span class="text-bold">print</span>()</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="./uploads/python/python_lesson_08.pdf">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>

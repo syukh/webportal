@@ -62,7 +62,10 @@
             </ul>
             <h3 class="accent lesson-subtitle">Властивість transition-property</h3>
             <p>Визначає, які саме CSS-властивості повинні анімуватися. Може приймати одне або декілька імен властивостей CSS у списку, розділених комами, як ми зробили вище, або використати значення <span class="accent">all</span>, щоб вказати, що усі властивості елемента, які підтримують анімацію будуть брати участь у плавному переході при їх зміні.</p>
-            <pre><code class="css">.animation{</code></pre>
+            <pre><code class="css">.animation{
+  transition: all 0.8s;
+}
+            </code></pre>
             <h3 class="accent lesson-subtitle">Властивість transition-duration</h3>
             <p>Визначає, як довго триватиме анімація від початкового до кінцевого стану. задається у одиницях часу, або в секундах (<span class="accent">s</span>), або в мілісекундах (<span class="accent">ms</span>), і за замовчуванням має значення <span class="accent">0s</span>.</p>
             <p>Важливо пам'ятати, що <span class="accent">transition-duration</span> застосовується як для переходу вперед (наприклад, при наведенні курсору), так і для переходу назад (коли курсор відводиться). Це створює симетричний ефект.</p><iframe height="280" style="width: 100%; border-radius: 15px" scrolling="no" src="https://codepen.io/yaqrlblm-the-decoder/embed/xbZrjyN?default-tab=result&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">  See the Pen <a href="https://codepen.io/yaqrlblm-the-decoder/pen/xbZrjyN">   Untitled</a> by WebPortal (<a href="https://codepen.io/yaqrlblm-the-decoder">@yaqrlblm-the-decoder</a>)  on <a href="https://codepen.io">CodePen</a>.</iframe>
