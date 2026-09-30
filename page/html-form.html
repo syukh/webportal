@@ -55,34 +55,78 @@
               <li><span class="accent">submit</span> – кнопка, при натисканні якої відбувається надсилання даних, введених у форму;</li>
               <li><span class="accent">reset</span> – кнопка при натисканні якої вся форма очищається.</li>
             </ul>
-            <pre><code class="html">&#60;form&#62;</code></pre>
+            <pre><code class="html">&#60;form&#62;
+  &#60;p&#62;Ваш логін:&#60;input type="text"&#62;&#60;/p&#62; 
+  &#60;p&#62;Пароль:&#60;input type="password"&#62;&#60;/p&#62;
+  &#60;input type="submit"&#62; 
+&#60;/form&#62;</code></pre>
             <figure class="wp-block-image"><img src="./img/html/less-html-11-01.png" alt="html form"></figure>
             <h3 class="accent lesson-subtitle">Атрибут placeholder.</h3>
             <p>На практиці доволі часто трапляються ситуації, коли опис для поля є, але зовсім незрозуміло, в якому форматі потрібно заповнити дані. Щоб допомогти користувачу зорієнтуватися, у тезі <span class="accent">&#60;input&#62;</span> використовується атрибут <span class="accent">placeholder</span>. Значення цього атрибуту буде виведено у текстовому полі.</p>
-            <pre><code class="html">&#60;form&#62;</code></pre>
+            <pre><code class="html">&#60;form&#62;
+  &#60;p&#62;Ваш логин:&#60;input type="text" placeholder="Your Name"&#62;&#60;/p&#62; 
+  &#60;p&#62;Пароль:&#60;input type="password" placeholder="Number"&#62;&#60;/p&#62;
+  &#60;input type="submit"&#62; 
+&#60;/form&#62;</code></pre>
             <figure class="wp-block-image"><img src="./img/html/less-html-11-02.png" alt="placeholder"></figure>
             <h3 class="accent lesson-subtitle">Eлемент-перемикач.</h3>
             <p>Атрибут типу <span class="accent">radio</span> для елементу <span class="accent">input</span> створює перемикачі, які використовують принцип логічного «АБО», тобто дозволяється обрати лише одне з декількох значень.</p>
             <p>Треба зауважити, що при створенні перемикачів (радіокнопок), в елементі <span class="accent">input</span> додатково треба вказувати ще атрибут <span class="accent">name</span>, значенням якого є довільне ім'я. Це ім'я має бути однаковим у всій групі радіокнопок. Без цього атрибуту браузер не бачитиме зв'язку між перемикачами і буде можливість вибрати всі значення одразу.</p>
             <p>Для того, щоб після виправлення форми на сервері можливо було визначити, який саме пункт обрали, використовується значення атрибута <span class="accent">value</span>, всередині якого знаходиться певне значення, воно може відрізнятися від тексту підказки.</p>
-            <pre><code class="html">&#60;form&#62;</code></pre>
+            <pre><code class="html">&#60;form&#62;
+  &#60;p&#62;Яким браузером користуєтесь?&#60;/p&#62;
+  &#60;ul type="none" &#62;
+    &#60;li&#62;&#60;input type="radio" name="browser" value="Chrome"&#62;Chrome&#60;/li&#62;
+      &#60;li&#62;&#60;input type="radio" name="browser" value="Opera"&#62;Opera&#60;/li&#62;
+      &#60;li&#62;&#60;input type="radio" name="browser" value="Edge"&#62;Edge&#60;/li&#62;
+      &#60;li&#62;&#60;input type="radio" name="browser" value="Safari"&#62;Safari&#60;/li&#62;
+  &#60;/ul&#62;
+  &#60;input type="submit"&#62;
+&#60;/form&#62;</code></pre>
             <figure class="wp-block-image"><img src="./img/html/less-html-11-03.png" alt="input radio"></figure>
             <h3 class="accent lesson-subtitle">Eлемент-прапорець.</h3>
             <p>Атрибут типу <span class="accent">checkbox</span> для елементу <span class="accent">input</span> створює елемент-прапорець (чекбокс). На відміну від перемикачів, чексбокс дозволяє обирати із наявних декілька елементів.</p>
             <p>Для об’єднання чекбоксів в єдину групу, як і для радіокнопок, додатково в елементі <span class="accent">input</span> треба вказати атрибут <span class="accent">name</span>, значенням якого є довільне ім'я. Також, для подальшого визначення значень обраних пунктів застосовується атрибут <span class="accent">value</span>.</p>
-            <pre><code class="html">&#60;form&#62;</code></pre>
+            <pre><code class="html">&#60;form&#62;
+  &#60;p&#62;Яким браузером користуєтесь?&#60;/p&#62;
+  &#60;ul type="none" &#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Chrome" checked&#62;Chrome&#60;/li&#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Opera"&#62;Opera&#60;/li&#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Edge"&#62;Edge&#60;/li&#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Safari"&#62;Safari&#60;/li&#62;
+  &#60;/ul&#62;
+  &#60;input type="submit"&#62;
+&#60;/form&#62;</code></pre>
             <figure class="wp-block-image"><img src="./img/html/less-html-11-04.png" alt="input checkbox"></figure>
             <p>Наявність атрибута <span class="accent">checked</span> (встановлений) у елемента-перемикача та прапорця вказує на те, який з запропонованих варіантів повинен бути обраний за замовчуванням при завантаженні сторінки, якщо це необхідно.</p>
             <h3 class="accent lesson-subtitle">Кнопки підтвердження та скидання.</h3>
             <p>Атрибут типу <span class="accent">submit</span> (надіслати) для елементу <span class="accent">input</span> створює кнопку, при натисканні якої відбувається відправлення браузером даних, що були введені користувачем у форму.</p>
             <p>За замовчуванням у браузерах на кнопці пишеться «Надіслати», для заміни напису на кнопці використовується атрибут <span class="accent">valuе</span> з новим значенням напису.</p>
             <p>Атрибут типу <span class="accent">reset</span> (скинути) для елементу <span class="accent">input</span> створює кнопку, при натисканні якої відбувається скидання усіх налаштувань у формі, що зробив користувач.</p>
-            <pre><code class="html">&#60;form&#62;</code></pre>
+            <pre><code class="html">&#60;form&#62;
+  &#60;p&#62;Яким браузером користуєтесь?&#60;/p&#62;
+  &#60;ul type="none" &#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Chrome"#62;Chrome&#60;/li&#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Opera"&#62;Opera&#60;/li&#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Edge"&#62;Edge&#60;/li&#62;
+    &#60;li&#62;&#60;input type="checkbox" name="browser" value="Safari"&#62;Safari&#60;/li&#62;
+  &#60;/ul&#62;
+  &#60;input type="submit" value="Обрати"&#62;
+  &#60;input type="reset"&#62;
+&#60;/form&#62;</code></pre>
             <figure class="wp-block-image"><img src="./img/html/less-html-11-05.png" alt="button submit&reset"></figure>
             <h3 class="accent lesson-subtitle">Групування елементів форми.</h3>
             <p>Елементи форми, що пов'язані за змістом, можна згрупувати за допомоги елементу <span class="accent">fieldset</span>. Браузер відображає його, як рамку навколо групи елементів форми. </p>
             <p>Для зручності, кожна така група може містити свій заголовок, встановлюється він за допомоги  елементу <span class="accent">legend</span>, який вбудовує текст заголовка в рамку групи.</p>
-            <pre><code class="html">&#60;form&#62;</code></pre>
+            <pre><code class="html">&#60;form&#62;
+&#60;fieldset&#62;
+  &#60;legend&#62;Дані для входу&#60;/legend&#62;
+  &#60;p&#62;Ім’я:&#60;input type="text" placeholder="Your Name"&#62;&#60;/p&#62;
+  &#60;p&#62;E-mail:&#60;input type="text" placeholder="Your Email "&#62;&#60;/p&#62;
+  &#60;p&#62;Пароль:s&#60;input type="password" placeholder="Your Password "&#62;&#60;/p&#62;
+&#60;/fieldset&#62;
+&#60;input type="submit"&#62;
+&#60;/form&#62;</code></pre>
             <figure class="wp-block-image"><img src="./img/html/less-html-11-06.png" alt="fieldset"></figure>
           </div>
           <div class="dowload-btn"><a class="dowload-btn__wraper" href="#">

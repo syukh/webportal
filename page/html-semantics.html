@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="html" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+         <div class="lesson-page">
+            <h1 class="lesson-title">Семантична розмітка <span class="accent">HTML5</span></h1>
+            <p>Спочатку <span class="accent">HTML</span> сторінки будували із заголовків, абзаців, якщо це були складніші структури зверталися до таблиць, і браузер відображав їх коректно. Але з погляду структури сторінка складалась із «безликих» елементів - браузер бачив лише текст, а не логічні частини сторінки: де шапка сайту, де меню, а де основний вміст.</p>
+            <p><span class="accent">HTML5</span> вирішує цю проблему за допомогою семантичних тегів - елементів, назва яких одразу повідомляє про роль блоку на сторінці. Це корисно одразу з трьох причин: пошукові системи краще розуміють вміст сторінки (SEO), програми для людей із вадами зору коректно озвучують структуру сторінки (доступність), а самому розробнику простіше читати чужий код.</p>
+            <h3 class="accent lesson-subtitle">Структура сторінки: до і після.</h3>
+            <p>Раніше розробники позначали всі блоки одним і тим самим тегом <span class="accent">div</span>, а щоб не заплутатись - додавали атрибут <span class="accent">class</span> з описовою назвою:</p>
+            <pre><code class="html">&#60;div class="header"&#62;...&#60;/div&#62;
+&#60;div class="nav" &#62;... &#60;/div &#62;
+&#60;div class="main" &#62;... &#60;/div &#62;
+&#60;div class="footer" &#62;... &#60;/div &#62;
+            </code></pre>
+            <p>Браузер тут бачить лише чотири однакові теги <span class="accent">div</span> - про їхнє призначення він дізнається тільки з класів, які сам не «розуміє», а лише зберігає. У <span class="accent">HTML5</span> замість цього використовують теги, які самі по собі несуть значення:</p>
+            <pre><code class="html">&#60;header&#62;...&#60;/header&#62;
+&#60;nav&#62;...&#60;/nav&#62;
+&#60;main&#62;...&#60;/main&#62;
+&#60;footer&#62;...&#60;/footer&#62;
+            </code></pre>
+            <h3 class="accent lesson-subtitle">Тег &#60;header&#62;.</h3>
+            <p>Елемент <span class="accent">&#60;header&#62;</span> позначає шапку сторінки або окремого розділу. Найчастіше в ньому розміщують логотип, назву сайту та головне меню навігації.</p>
+            <pre><code class="html">&#60;header&#62;
+  &#60;h1&#62;Назва сайту&#60;/h1&#62;
+&#60;/header&#62;
+            </code></pre>
+            <h3 class="accent lesson-subtitle">Тег &#60;nav&#62;.</h3>
+            <p>Елемент <span class="accent">&#60;nav&#62;</span> позначає блок навігаційних посилань - головне меню сайту, «хлібні крихти» чи пагінацію. Важливо: не кожне посилання на сторінці варто загортати в <span class="accent">nav</span> - лише ті, що утворюють саме навігаційний блок.</p>
+            <pre><code class="html">&#60;nav&#62;
+  &#60;a href="#"&#62;Головна&#60;/a&#62;
+  &#60;a href="#"&#62;Про нас&#60;/a&#62;
+  &#60;a href="#"&#62;Контакти&#60;/a&#62;
+&#60;/nav&#62;
+            </code></pre>
+            <h3 class="accent lesson-subtitle">Тег &#60;main&#62;.</h3>
+            <p>Елемент <span class="accent">&#60;main&#62;</span> містить основний, унікальний вміст сторінки - те, заради чого користувач на неї прийшов. На сторінці може бути лише один тег <span class="accent">main</span>, і в ньому не повинні повторюватись елементи, що зустрічаються на кожній сторінці сайту (як меню чи підвал).</p>
+            <h3 class="accent lesson-subtitle">Тег &#60;section&#62;.</h3>
+            <p>Елемент <span class="accent">&#60;section&#62;</span> позначає тематичний розділ сторінки - логічно завершену групу вмісту, яка зазвичай має власний заголовок.</p>
+            <pre><code class="html">&#60;section&#62;
+  &#60;h2&#62;Наші послуги&#60;/h2&#62;
+  &#60;p&#62;Опис послуг компанії...&#60;/p&#62;
+&#60;/section&#62;
+            </code></pre>
+            <h3 class="accent lesson-subtitle">Тег &#60;article&#62;.</h3>
+            <p>Елемент <span class="accent">&#60;article&#62;</span> позначає самостійний, завершений за змістом блок, який має сенс і поза контекстом сторінки - наприклад, новина, стаття блогу чи коментар. Головна відмінність від <span class="accent">section</span>: контент <span class="accent">article</span> можна «вирвати» зі сторінки і опублікувати окремо, і він все одно матиме сенс.</p>
+            <pre><code class="html">&#60;article&#62;
+  &#60;h2&#62;Заголовок новини&#60;/h2&#62;
+  &#60;p&#62;Текст новини...&#60;/p&#62;
+&#60;/article&#62;
+            </code></pre>
+            <h3 class="accent lesson-subtitle">Тег &#60;aside&#62;.</h3>
+            <p>Елемент <span class="accent">&#60;aside&#62;</span> позначає вміст, побічний стосовно основного - бічну панель, рекламний блок, посилання на схожі статті чи цитату.</p>
+            <pre><code class="html">&#60;aside&#62;
+  &#60;h3&#62;Схожі статті&#60;/h3&#62;
+  &#60;ul&#62;
+    &#60;li&#62;&#60;a href="#"&#62;Стаття 1&#60;/a&#62;&#60;/li&#62;
+    &#60;li&#62;&#60;a href="#"&#62;Стаття 2&#60;/a&#62;&#60;/li&#62;
+  &#60;/ul&#62;
+&#60;/aside&#62;
+            </code></pre>
+            <h3 class="accent lesson-subtitle">Тег &#60;footer&#62;.</h3>
+            <p>Елемент <span class="accent">&#60;footer&#62;</span> позначає підвал сторінки або розділу - зазвичай тут розміщують контактні дані, посилання на соцмережі та інформацію про авторські права.</p>
+            <pre><code class="html">&#60;footer&#62;
+  &#60;p&#62;&copy; 2026 Мій сайт. Усі права захищені.&#60;/p&#62;
+&#60;/footer&#62;
+            </code></pre>
+            <h3 class="accent lesson-subtitle">Повний приклад сторінки.</h3>
+            <p>Наведемо приклад того, як усі ці теги працюють разом на одній сторінці:</p>
+            <pre><code class="html">&#60;header&#62;
+  &#60;h1&#62;Назва сайту&#60;/h1&#62;
+  &#60;p class="site-tag"&#62;Шапка сторінки: логотип, назва, слоган&#60;/p&#62;
+
+  &#60;nav&#62;
+    &#60;span class="tag-label"&#62;&lt;nav&gt;&#60;/span&#62;
+    &#60;ul&#62;
+      &#60;li&#62;&#60;a href="#"&#62;Головна&#60;/a&#62;&#60;/li&#62;
+      &#60;li&#62;&#60;a href="#"&#62;Блог&#60;/a&#62;&#60;/li&#62;
+      &#60;li&#62;&#60;a href="#"&#62;Про нас&#60;/a&#62;&#60;/li&#62;
+      &#60;li&#62;&#60;a href="#"&#62;Контакти&#60;/a&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+  &#60;/nav&#62;
+&#60;/header&#62;
+
+&#60;main&#62;
+  &#60;div class="row"&#62;
+
+  &#60;section&#62;
+    &#60;h2&#62;Останні статті&#60;/h2&#62;
+    &#60;p&#62;Тематичний розділ сторінки — логічно завершена група вмісту зі своїм заголовком.&#60;/p&#62;
+
+    &#60;article&#62;
+      &#60;h3&#62;Як влаштована семантична розмітка&#60;/h3&#62;
+      &#60;p class="meta"&#62;12 вересня 2026&#60;/p&#62;
+      &#60;p&#62;Самостійний блок вмісту, який має сенс навіть окремо від сторінки — стаття, новина чи допис.&#60;/p&#62;
+    &#60;/article&#62;
+  &#60;/section&#62;
+
+  &#60;aside&#62;
+    &#60;h3&#62;Схожі матеріали&#60;/h3&#62;
+    &#60;ul&#62;
+      &#60;li&#62;&#60;a href="#"&#62;Основи CSS&#60;/a&#62;&#60;/li&#62;
+      &#60;li&#62;&#60;a href="#"&#62;Flexbox на практиці&#60;/a&#62;&#60;/li&#62;
+      &#60;li&#62;&#60;a href="#"&#62;Вступ до Tailwind&#60;/a&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+  &#60;/aside&#62;
+
+  &#60;/div&#62;
+&#60;/main&#62;
+            </code></pre>
+            <figure class="wp-block-image"><img src="./img/lesson/html/less-html-12-01.png" alt="Семантична розмітка сторінки"></figure>
+            <p>Зверніть увагу: візуально сторінка виглядає так само, як і на <span class="accent">div</span>-ах — семантичні теги за замовчуванням не мають спеціального оформлення (окрім <span class="accent">display: block</span>). Їхня цінність не в зовнішньому вигляді, а в значенні, яке вони передають браузеру, пошуковику та іншим програмам.</p>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="#">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="html" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Оформлення цитат та визначень</h1>
+            <h3 class="accent lesson-subtitle">Оформлення цитат.</h3>
+            <p>Для створення цитат на мові HTML використовуються наступні елементи:</p>
+            <p><span class="accent">&#60;q&#62;</span> – коротка цитата (<span class="accent">quote</span> – цитувати). Тег призначений для виділення коротких цитат, що є частиною текстового абзацу. Як правило, вміст цього тегу автоматично обрамляється подвійними лапками. </p>
+            <p><span class="accent">&#60;blockquote&#62;</span> – окрема цитата. Тег призначений для виділення довгих цитат, які можуть складатися з кількох текстових абзаців. Відображає текст цитати у центрі сторінки з відступами від лівого та правого краю. Всередині нього можуть бути розташовані інші елементи форматування тексту.</p>
+            <pre><code class="html">&#60;p&#62;
+  &#60;q&#62;Hasta la vista, baby&#60;/q&#62; - фраза, що вимовляється Арнольдом Шварценеггером у ролі андроїда Термінатора, стала крилатою і потрапила до списку ста відомих цитат із американських фільмів за 100 років.
+  &#60;/q&#62;
+&#60;/p&#62;
+&#60;blockquote&#62; Найбільше і найдорожче добро кожного народу - це його мова, та жива схованка людського духу, його багата скарбниця, в яку народ вкладає і своє давнє життя і свої сподіванки, розум, досвід, почування.
+&#60;/blockquote&#62;
+&#60;p align = "right"&#62;&#60;b&#62;Панас Мирний&#60;/b&#62;&#60;/p&#62;
+            </code></pre>
+            <figure class="wp-block-image"><img src="./img/html/less-html-07-01.png" alt="вкладений список"></figure>
+            <h3 class="accent lesson-subtitle">Оформлення визначень.</h3>
+            <p><span class="accent">&#60;dfn&#62;</span> – дозволяє виділити текст як визначення (<span class="accent">definition</span>). Його треба використовувати, коли новий термін зустрічається в тексті вперше і відразу дається його визначення. Браузер показує такий текст курсивом.</p>
+            <pre><code class="html">&#60;p&#62;
+  &#60;dfn&#62;HyperText Markup Language&#60;/dfn&#62;  – стандартизована мова розмітки документів для перегляду веб-сторінок у браузері.
+&#60;/p&#62;
+            </code></pre>
+            <figure class="wp-block-image"><img src="./img/html/less-html-07-02.png" alt="вкладений список"></figure>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="#">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>
