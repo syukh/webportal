@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="excel" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Умовне форматування в Microsoft <span class="accent">Excel</span></h1>
+            <p><span class="accent">Умовне форматування</span> – це інструмент автоматичної зміни формату клітинок залежно від їх вмісту або від значень логічних виразів, для обчислення яких використовуються дані інших клітинок. Цей процес здійснюється за допомогою створення правил, що визначають умови та відповідні їм формати, з метою візуального виділення важливих даних та полегшення їх аналізу.</p><p class="accent text-center"> Умовне форматування автоматично змінює формат клітинки або її вміст на заданий, якщо дані в цій клітинці задовольняють певній умові.
+            <p class="text-bold">В Excel існує декілька способів виділення клітинок за допомоги умовного форматування:</p>
+            <ul class="list">
+              <li>Правила виділення клітинок.</li>
+              <li>Правила відбору перших і останніх значень.</li>
+              <li>Гістограми.</li>
+              <li>Кольорові шкали.</li>
+              <li>Набори піктограм.</li>
+            </ul>
+            <p>Розглянемо їх усі на конкретних прикладах.</p>
+            <h3 class="accent lesson-subtitle">Правила виділення клітинок.</h3>
+            <p>Застосовується, коли потрібно в електронній таблиці виділити клітинки (кольором заливки, межами, шрифтом, стилем, певним форматом даних) за обраним критерієм:</p>
+            <ul class="list">
+              <li>Більше.</li>
+              <li>Менше.</li>
+              <li>Між.</li>
+              <li>Дорівнює.</li>
+              <li>Текст, який містить.</li>
+              <li>Дата.</li>
+              <li>Повторювані значення.</li>
+            </ul>
+            <p class="text-bold">Клітинки можна форматувати на основі їх:</p>
+            <ul class="list">
+              <li><span class="accent">значень</span>: число, відсоток, формула;</li>
+              <li><span class="accent">вмісту</span>: текст, дати, пусті, не пусті, помилки, немає помилок.</li>
+            </ul>
+            <figure class="wp-block-image"><img src="./img/excel/less-excel-07-01.png" alt="Правила виділення клітинок"/></figure>
+            <p>Розглянемо застосування умовного форматування виділення клітинок на прикладі електронної таблиці <span class="accent">«Зайнятість працівників»</span>. Нам необхідно оформити клітинки різними кольорами заливки відповідно до вимог:</p>
+            <ul class="list">
+              <li><span class="text-bold">відрядження <span class="accent">(вдр)</span></span> - світло-зеленим;</li>
+              <li><span class="text-bold">відпустка <span class="accent">(від)</span></span> - сірим;</li>
+              <li><span class="text-bold">вихідні <span class="accent">(в)</span></span> - світло-синім;</li>
+              <li><span class="text-bold">лікарняні <span class="accent">(л/д)</span></span> - жовтим;</li>
+              <li><span class="text-bold">прогули <span class="accent">(п)</span></span> - світло-червоним.</li>
+            </ul>
+            <p class="text-bold">Алгоритм налаштування правил умовного форматування:</p>
+            <ul class="list">
+              <li>виділити необхідний діапазон клітинок електронної таблиці;</li>
+              <li>перейти до вкладки <span class="accent">Основне</span>, у розділі <span class="accent">Стилі</span> обрати команду <span class="accent">Умовне форматування</span>;</li>
+              <li>визначити спосіб форматування – <span class="accent">Правила виділення клітинок</span>;</li>
+              <li>обрати правило форматування – <span class="accent">Текст, який містить</span>;</li>
+              <li>у вікні, що відкривається, вказати умову форматування та формат, який буде застосовано, якщо умова виконається;</li>
+              <li>формат клітинки можна вибрати з уже запропонованих або, через команду <span class="accent">Настроюваний формат</span>, та налаштувати власні параметри форматування у вікні <span class="accent">Формат клітинок</span>;</li>
+              <li>для застосування умовного форматування натиснути кнопку <span class="accent">ОК</span>.</li>
+            </ul>
+            <h3 class="accent lesson-subtitle">Правила для визначення перших і останніх елементів.</h3>
+            <p>Застосовується, коли потрібно в електронній таблиці виділити клітинки (кольором заливки, межами, шрифтом, стилем, форматом даних) за обраним критерієм:</p>
+            <ul class="list">
+              <li>10 перших елементів;</li>
+              <li>Перші 10%</li>
+              <li>10 останніх елементів;</li>
+              <li>Останні 10%;</li>
+              <li>Більше середнього;</li>
+              <li>Менше середнього.</li>
+            </ul>
+            <p>Тобто, відбувається форматування вказаного числа крайніх значень – <span class="accent">N (N%)</span> найбільших або найменших елементів, <span class="accent">Великих</span> або <span class="accent">Менших</span> від середнього арифметичного.</p>
+            <figure class="wp-block-image"><img src="./img/excel/less-excel-07-02.png" alt="Правила для визначення перших і останніх елементів."/></figure>
+            <p>Розглянемо застосування умовного форматування виділення клітинок на прикладі електронної таблиці: <span class="accent">«Температури за рік»</span>. Виділимо клітинки кольором відповідно до вимог:</p>
+            <ul class="list">
+              <li><span class="text-bold">5 перших значень</span> - світло-червоний;</li>
+              <li><span class="text-bold">5 останніх значень</span> - світло-блакитним</li>
+            </ul>
+            <p class="text-bold">Алгоритм налаштування правил умовного форматування:</p>
+            <ul class="list">
+              <li>виділити необхідний діапазон клітинок електронної таблиці;</li>
+              <li>перейти до вкладки <span class="accent">Основне</span>, у розділі <span class="accent">Стилі</span> обрати команду <span class="accent">Умовне форматування</span>;</li>
+              <li>визначити спосіб форматування – <span class="accent">Правила визначення перших і останніх елементів</span>;</li>
+              <li>обрати правило форматування – <span class="accent">10 перших елементів</span>;</li>
+              <li>у вікні, що відкривається, вказати умову форматування та формат, який буде застосовано, якщо умова виконається;</li>
+              <li>для застосування умовного форматування натиснути на кнопку <span class="accent">ОК</span>. </li>
+            </ul>
+            <h3 class="accent lesson-subtitle">Гістограми.</h3>
+            <p><span class="accent">Гістограма</span> – це градієнтна або суцільна заливка клітинки, довжина якої безпосередньо залежить від числа, що знаходиться в ній.</p>
+            <p><span class="text-bold">Гістограми</span> допомагають наглядно визначити значення в клітинці відносно інших клітинок. Довжина гістограми відповідає значенню в клітинці. Чим вона довша – тим більше значення. Гістограми оптимальні при визначенні основних показників, особливо в великих обсягах даних.</p>
+            <p>Розглянемо застосування умовного форматування виділення клітинок на прикладі електронної таблиці: <span class="accent">«Розрахунок накопичень за вкладом»</span>. Виділимо клітинки кольором відповідно до вимог:</p>
+            <ul class="list">
+              <li><span class="text-bold">до стовпця Усього</span> застосувати умовне форматування – гістограма;</li>
+              <li><span class="text-bold">колір гістограми</span> – градієнтний, жовтий.</li>
+            </ul>
+            <p class="text-bold">Алгоритм налаштування правил умовного форматування:</p>
+            <ul class="list">
+              <li>виділити необхідний діапазон клітинок електронної таблиці;</li>
+              <li>перейти до вкладки <span class="accent">Основне</span>, у розділі <span class="accent">Стилі</span> обрати команду <span class="accent">Умовне форматування</span>;</li>
+              <li>визначити спосіб форматування – <span class="accent">Гістограми</span>;</li>
+              <li>обрати правило форматування – <span class="accent">Градієнтна заливка</span> та відповідний колір.</li>
+            </ul>
+            <figure class="wp-block-image"><img src="./img/excel/less-excel-07-03.png" alt="Гістограми."/></figure>
+            <p>Але, іноді потрібно налаштувати власний формат гістограми або змінити напрям її відображення. В цьому випадку потрібно скористатися параметром – <span class="accent">Додаткові правила</span>.</p>
+            <p class="text-bold">Налаштування додаткових правил для гістограм:</p>
+            <ul class="list">
+              <li>виділити необхідний діапазон клітинок;</li>
+              <li>перейти до меню умовного форматування;</li>
+              <li>обрати тип форматування – <span class="accent">Гістограми</span>, де клацнути на команду <span class="accent">Додаткові правила</span>;</li>
+              <li>у вікні <span class="accent">Нове правило форматування</span> обрати тип правила – <span class="accent">Форматувати всі клітинки на основі їх значень</span>; </li>
+              <li>у розділі <span class="accent">Оформлення смуги</span> налаштувати: тип заливки, колір заливки, наявність меж та їх колір, а також визначити напрям відображення смуги;</li>
+              <li>для застосування всіх налаштувань натиснути кнопку <span class="accent">ОК</span>.</li>
+            </ul>
+            <h3 class="accent lesson-subtitle">Кольорові шкали.</h3>
+            <p><span class="accent">Кольорова шкала</span> – це заливка обраного діапазону клітинок 2-ма або 3-ма кольорами, яка безпосередньо залежить від чисел, що знаходяться в ньому.</p>
+            <p>Розглянемо застосування умовного форматування виділення клітинок на прикладі електронної таблиці: <span class="accent">«Успішність учнів по предметах»</span>. Виділимо клітинки кольором відповідно до вимог:</p>
+            <ul class="list">
+              <li><span class="text-bold">мінімальні значення</span> – світло-червоний;</li>
+              <li><span class="text-bold">середні значення</span> – білий;</li>
+              <li><span class="text-bold">максимальні значення </span>– світло-зелений.</li>
+            </ul>
+            <figure class="wp-block-image"><img src="./img/excel/less-excel-07-04.png" alt="Кольорові шкали."/></figure>
+            <p class="text-bold">Алгоритм налаштування правил умовного форматування:</p>
+            <ul class="list">
+              <li>виділити необхідний діапазон клітинок;</li>
+              <li>перейти до вкладки <span class="accent">Основне</span>, у розділі <span class="accent">Стилі</span> обрати команду <span class="accent">Умовне форматування</span>;</li>
+              <li>обрати спосіб форматування – <span class="accent">Кольорові шкали</span>;</li>
+              <li>обрати стандартні кольори шкали або самостійно їх налаштувати звернувшись до команди <span class="accent">Додаткові правила</span>;</li>
+              <li>у вікні <span class="accent">Нове правило форматування</span> обрати тип правила – <span class="accent">Форматувати всі клітинки на основі їх значень</span>; </li>
+              <li>розгорнути список <span class="accent">Стиль формату</span> та обрати параметр – <span class="accent">Триколірна шкала</span>;</li>
+              <li>для значень визначити відповідні кольори;</li>
+              <li>для застосування всіх налаштувань натиснути кнопку <span class="accent">ОК</span>.</li>
+            </ul>
+            <h3 class="accent lesson-subtitle">Набори піктограм.</h3>
+            <p><span class="accent">Набори піктограм</span> – це встановлення позначок, що відображають тенденцію зміни чисел в клітинках обраного діапазону.</p>
+            <p>Розглянемо застосування умовного форматування на прикладі електронної таблиці: <span class="accent">«Середня глобальна температура (1900-2024)»</span>. </p>
+            <p class="text-bold">Візуалізувати дані за допомоги піктограм:</p>
+            <ul class="list">
+              <li>стовпець  <span class="accent">Різниця з попереднім періодом</span> – <span class="accent">3 кольорові стрілки</span>;</li>
+            </ul>
+            <figure class="wp-block-image"><img src="./img/excel/less-excel-07-05.png" alt="Набори піктограм."/></figure>
+            <p class="text-bold">Алгоритм налаштування правил умовного форматування:</p>
+            <ul class="list">
+              <li>виділити необхідний діапазон клітинок;</li>
+              <li>перейти до вкладки <span class="accent">Основне</span>, у розділі <span class="accent">Стилі</span> обрати команду <span class="accent">Умовне форматування</span>;</li>
+              <li>обирати потрібний спосіб форматування – <span class="accent">Набори піктограм</span>;</li>
+              <li>обрати відповідний набір піктограм.</li>
+            </ul>
+            <h3 class="accent lesson-subtitle">Редагування правил.</h3>
+            <p>Якщо на аркуші Excel до деякого діапазону клітинок застосоване умовне форматування, але з годом виникла потреба, змінити параметри форматування, користувачу необхідно звернутися до менеджера правил умовного форматування, тобто розгорнути меню <span class="accent">Умовного форматування</span> та обрати команду –  <span class="accent">Керувати правилами</span>. У вікні <span class="accent">Диспетчер правил умовного форматування</span> можна: створювати нові правила, редагувати правила, видаляти правила та змінювати їх порядок.</p>
+            <figure class="wp-block-image"><img src="./img/excel/less-excel-07-06.png" alt="Редагування правил умовного форматування."/></figure>
+            <p>Треба відмітити, що до однієї клітинки може бути застосовано декілька правил умовного форматування, що суперечать одне одному, <span class="accent">чинним буде те правило, яке було встановлене останнім</span>.</p>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="./uploads/excel/Excel_less_07.xlsx">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>
