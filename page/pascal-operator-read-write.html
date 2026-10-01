@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="pascal" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Оператори вводу-виводу</h1>
+            <h3 class="accent lesson-subtitle">Оператор вводу даних.</h3></h3><p> Цей оператор використовується для введення даних з клавіатури.
+            <div class="example"><span class="text-bold">Формат оператора вводу:</span>
+              <ul>
+                <li><span class="accent">Read</span> (ім’я_змінної_1, …, ім’я_ змінної _n);</li>
+              </ul>
+            </div><p> Значення кожної змінної вводиться з клавіатури. Тип змінної повинен відповідати типам тих змінних, які, вказані у списку параметрів оператора <span class="accent">Read</span>, а також ця змінна повинна бути описана в розділі опису змінних <span class="accent">Var</span>. При виконанні оператора введення черговій змінній із зазначеного списку в операторі <span class="accent">Read</span> присвоюється значення, що було введено. При введенні з клавіатури <span class="accent">дані набираються</span> через <span class="accent">пробіл</span> або <span class="accent">Enter</span>.
+            <h3 class="accent lesson-subtitle">Оператор виводу даних.</h3></h3><p> Цей оператор використовується для виведення даних на текстовий екран <span class="accent">Pascal.</span>
+            <div class="example"><span class="text-bold">Формат оператора виводу:</span>
+              <ul>
+                <li> <span class="accent">Write</span> (вираз_1, …, вираз_n);</li>
+              </ul>
+            </div><p> При виконанні оператора виведення значення виразів виводяться в тому ж порядку, в якому вони перераховані в списку. Якщо вхідні дані не поміщаються в одному рядку, то автоматично відбувається перехід на інший рядок. Після виведення останнього даного курсор залишається в поточній позиції.
+            <p class="text-bold">Приклади:</p>
+            <div class="example">
+              <ul class="example-program">
+                <li> 
+                  <div class="example-program__str"><span class="accent">write</span> (<span class="accent">&#39;Hello World&#39;</span>);</div>
+                  <div class="example-program__str"><span class="color-excel">// Hello World</span></div>
+                </li>
+                <li> 
+                  <div class="example-program__str"><span class="accent">write</span> (<span class="color-excel">5</span>);</div>
+                  <div class="example-program__str"><span class="color-excel">// 5</span></div>
+                </li>
+                <li> 
+                  <div class="example-program__str"><span class="accent">write</span> (<span class="color-excel">5 + 3</span>);</div>
+                  <div class="example-program__str"><span class="color-excel">// 8</span></div>
+                </li><br/>
+                <li>a := <span class="color-excel">5</span>; b := <span class="color-excel">3</span>;</li>
+                <li>Sum := a + b;</li>
+                <li> 
+                  <div class="example-program__str"><span class="accent">write</span> (<span class="color-accent">&#39;Sum = &#39;</span>, Sum);</div>
+                  <div class="example-program__str"><span class="color-excel">// Sum = 8</span></div>
+                </li><br/>
+                <li><span class="text-bold">або</span></li><br/>
+                <li>a := <span class="color-excel">15</span>; b := <span class="color-excel">5</span>;</li>
+                <li> 
+                  <div class="example-program__str"><span class="accent">write</span> (<span class="color-accent">&#39;Sum = &#39;</span>, a+b);</div>
+                  <div class="example-program__str"><span class="color-excel">// Sum = 20</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="./uploads/pascal/Pascal_less_02.pdf">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>

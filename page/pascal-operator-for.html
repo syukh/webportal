@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="pascal" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Оператор циклу з параметром <span class="accent">For</span></h1>
+            <p>Цикл з параметром <span class="accent">for</span> використовується зазвичай в тих випадках, коли заздалегідь <span class="accent">можна визначити кількість повторень циклу</span>. Цикл з параметром <span class="accent">for</span> служить для організації n-кратного виконання тіла циклу для значень параметра циклу з деякої впорядкованої дискретної множини.</p>
+            <h3 class="accent lesson-subtitle"> Схема оператора циклу з параметром.</h3>
+            <div class="block-less">
+              <div class="block-less__img"><img src="../img/pascal/less-pass-8-01.jpg" alt="Схема умовного оператора" style="width:70%"></div>
+              <div class="block-less__text">
+                <div class="example">
+                  <ul>
+                    <li><span class="text-bold">Оператор циклу з параметром має дві форми запису:</span></li><br>
+                    <li><span class="text-bold">for</span> параметр <span class="text-bold">:=</span> вираз_1 <span class="text-bold">to</span> вираз_2 <span class="text-bold">do</span>
+                      <ul>
+                        <li>тіло_циклу;</li>
+                      </ul>
+                    </li><br>
+                    <li><span class="text-bold">for</span> параметр <span class="text-bold">:=</span> вираз_1 <span class="text-bold">downto</span> вираз_2 <span class="text-bold">do</span>
+                      <ul>
+                        <li>тіло_циклу;</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <p><span class="accent">Параметр</span> (його ще називають параметром циклу, індексом, лічильником) – це змінна дискретного типу, тобто типу, на безлічі значень якої визначено поняття <span class="accent">«попередній елемент»</span> і <span class="accent">«наступний елемент»</span>. Найчастіше використовується змінні типу <span class="accent">integer</span> (але допустимі <span class="accent">char</span> і <span class="accent">boolean</span>). <span class="text-bold color-red">Не дозволений до застосування параметр типу real</span>.</p>
+            <p><span class="accent">Вираз_1</span> (<span class="text-bold">початкове значення параметра</span>) – це константа, змінна або вираз того ж типу, що й параметр циклу.</p>
+            <p><span class="accent">Вираз_2</span> (<span class="text-bold">кінцеве значення параметра</span>) – має той же спосіб визначення, що і вираз_1.</p>
+            <p><span class="accent">Тіло_циклу</span> – <span class="text-bold">це оператор</span>, наступний за ключовим словом <span class="accent">do</span>. Якщо необхідно повторити кілька операторів, то вони укладаються в операторні дужки <span class="accent">begin</span> і <span class="accent">end</span>, і тілом циклу стає <span class="text-bold">составний оператор</span>.</p>
+            <p class="text-bold">Розглянемо процес виконання циклу з параметром:</p>
+            <p><span class="text-bold">1. Цикл <span class="color-blue">for/to</span> for i := a <span class="color-red">to</span> b do тіло_циклу;</span> <br> Параметру циклу <span class="accent">i</span> присвоюється початкове значення <span class="accent">а</span>. Воно порівнюється зі значенням <span class="accent">b</span>, якщо в упорядкованій множині <span class="accent">i</span> передує <span class="accent">b</span> або збігається з ним, то виконується тіло циклу, далі параметру i присвоюється нове значення, наступне за тим, яке у нього було (<span class="accent">i := a + 1</span>). Після, відбувається наступне порівняння <span class="accent">i</span> з кінцевим значенням <span class="accent">b</span>, і якщо під час перевірки з'ясується, що поточне значення <span class="accent">i</span> слідує за кінцевим значенням <span class="accent">b</span> (<span class="accent">i > b</span>), то відбувається вихід з циклу і виконається наступний за тілом циклу оператор. </span></p>
+            <p><span class="text-bold">2. Цикл <span class="color-blue">for/downto</span> for i := a <span class="color-red">downto</span> b do тіло_циклу;</span> <br> Цей цикл виконується наступним чином. Параметру циклу <span class="accent">i</span> присвоюється початкове значення <span class="accent">а</span>. Значення параметра порівнюється з кінцевим значенням. Якщо в упорядкованій множині воно передує кінцевому значенню (<span class="accent">i < b</span>), то відбувається вихід з циклу, в іншому випадку виконується тіло циклу, змінній i присвоюється попереднє значення (<span class="accent">i := a - 1</span>) і відбувається наступне порівняння параметру з кінцевим значенням. </p></p>
+            <h3 class="accent lesson-subtitle">Зауваження.</h3>
+            <ol style="padding-left:18px">
+              <li>Цикл з параметром зручно використовувати в тих випадках, коли кількість повторень можна визначити заздалегідь.</li>
+              <p></p>
+              <li>Тіло циклу <span class="accent">for</span> може не виконатися жодного разу, так відбувається, коли в упорядкованій безлічі кінцеве значення параметра циклу передує початковому значенню (<span class="accent">у випадку з to</span>) або початкове значення передує кінцевому (<span class="accent">в випадку з downto</span>). Це відбувається тому, що <span class="accent">перевірка умови в циклі for відбувається перед виконанням циклу</span>. Тому у мові PascalABC цикл з параметром є окремим випадком циклу з передумовою і має таку ж структурну схему.</li>
+              <p></p>
+              <li><span class="accent">Параметр циклу не повинен змінюватися будь-яким оператором всередині циклу</span>. Параметр може довільним чином використовуватися у виразах в тілі циклу, але присвоювати йому нового значення всередині циклу небажано, тому що це може привести до непередбачуваних наслідків.</li>
+              <p></p>
+              <li><span class="accent">Параметр циклу, як і будь-яка інша змінна, повинен бути описаний в розділі змінних</span>.</li>
+              <p></p>
+              <li>Після виконання оператора циклу параметр циклу вважається невизначеним і не повинен використовуватися в наступних операторах без попереднього привласнення йому значення.</li>
+              <p></p>
+              <li>Дозволено використання вкладених циклів. Їх реалізація повинна проводиться за тими ж правилами, що і для циклів з передумовою.</li>
+            </ol>
+            <p></p>
+            <p><span class="text-bold">Приклад:</span> створити програму яка обчислює суму ряду <span   class="text-bold color-red">1+2+3+...+n</span>:</p>
+            <div class="example">
+              <ul>
+                <li><span class="text-bold">Program</span> SumRow;</li>
+                <li><span class="text-bold">var</span>
+                  <ul>
+                    <li>i, n : <span class="color-accent">integer</span>;</li></li>
+                    <li>Sum : <span class="color-accent">real</span>;</li></li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">begin</span>
+                  <ul>
+                    <li>write(<span class="color-accent">&#39;Введіть кількість членів ряду&#39;</span>);</li></li>
+                    <li>readln(n);</li></li>
+                    <li>Sum := <span class="color-excel">0</span>;</li></li>
+                    <li><span class="text-bold">for</span> i := <span class="color-excel">1</span> <span class="text-bold">to</span> n <span class="text-bold">do</span>
+                      <ul>
+                        <li>Sum := Sum + i;</li></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>writeln(<span class="color-accent">&#39;Сума &#39;</span>, n,<span class="color-accent"> &#39; членів ряду = &#39;</span>, Sum);</li>
+                <li><span class="text-bold">end.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="./uploads/pascal/Pascal_less_08.pdf">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>

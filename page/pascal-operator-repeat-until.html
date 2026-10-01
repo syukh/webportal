@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="pascal" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Оператор циклу з постумовою <span class="accent">Repeat/Until</span></h1>
+            <p>Цикл з постумовою – використовується в тому випадку, коли доцільно організувати повторення так, щоб спочатку виконувалася деяка послідовність дій, а потім перевірялося умова припинення її виконання.</p>
+            <p>Цикл з постумовою <span class="accent">Repeat/Until</span> – служить для організації n-кратного виконання групи операторів (тіла циклу) до тих пір, поки умова завершення циклу не стане істинною (<span class="accent">True</span>).</p>
+            <h3 class="accent lesson-subtitle"> Схема оператора циклу з постумовою.</h3>
+            <div class="block-less">
+              <div class="block-less__img"><img src="../img/pascal/less-pass-9-01.jpg" alt="Схема оператора циклу з постумовою" style="width:60%"></div>
+              <div class="block-less__text">
+                <div class="example">
+                  <ul>
+                    <li><span class="text-bold">repiat</span>
+                      <ul>
+                        <li>оператор_1;</li>
+                        <li>...</li>
+                        <li>оператор_n;</li>
+                      </ul>
+                    </li>
+                    <li><span class="text-bold">until</span> (умова);</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <p></p>
+            <p class="text-bold">Значення ключових слів:</p>
+            <div class="example">
+              <ul>
+                <li><span class="accent">repeat</span> – повторити;</li>
+                <li><span class="accent">until </span>– до.</li>
+              </ul>
+            </div>
+            <p><span class="text-bold">Виконується оператор циклу з постумовою в такий спосіб</span>: спочатку виконуються оператори – <span class="accent">тіло циклу</span>; далі, обчислюється значення виразу-умови, якщо воно приймає значення <span class="accent">False</span>, то знову виконується тіло циклу, в іншому випадку виконується наступний оператор, що іде за оператором циклу з постумовою.</p>
+            <h3 class="accent lesson-subtitle">Зауваження</h3>
+            <ol style="padding-left:18px">
+              <li>Тіло циклу з постумовою може містити кілька операторів, які не потрібно брати в операторні дужки. В даному випадку ключові слова <span class="accent">repeat і until відіграють роль операторних дужок</span>, між якими може знаходиться будь-яка кількість операторів.</li>
+              <p></p>
+              <li>Тіло циклу з постумовою завжди буде виконуватися хоча б один раз.</li>
+              <p></p>
+              <li>Дозволено використання вкладених циклів. Їх реалізація повинна проводиться за тими ж правилами, що і для циклів з передумовою.</li>
+              <p></p>
+            </ol>
+            <p><span class="text-bold">Приклад:</span> створити програму яка обчислює суму ряду <span class="text-bold color-red">1+2+3+...+n</span>:</p>
+            <div class="example">
+              <ul>
+                <li><span class="text-bold">Program</span> SumRow;</li>
+                <li><span class="text-bold">var</span>
+                  <ul>
+                    <li>i, n : <span class="color-accent">integer</span>;</li>
+                    <li>Sum : <span class="color-accent">real</span>;</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">begin</span>
+                  <ul>
+                    <li>write(<span class="color-accent">&#39;Введіть кількість членів ряду &#39;</span>);</li>
+                    <li>readln(n);</li>
+                    <li>i := <span class="color-excel">0</span>;</li>
+                    <li>Sum := <span class="color-excel">0</span>;</li>
+                    <li><span class="text-bold">repeat</span>
+                      <ul>
+                        <li>i := i + <span class="color-excel">1</span>;</li>
+                        <li>Sum := Sum + i;</li>
+                      </ul>
+                    </li>
+                    <li><span class="text-bold">until</span> (i >= n);</li>
+                  </ul>
+                </li>
+                <li> writeln(<span class="color-accent">&#39;Сума &#39;</span>, n,<span class="color-accent"> &#39; членів ряду = &#39;</span>, Sum);</li>
+                <li><span class="text-bold">end.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="./uploads/pascal/Pascal_less_09.pdf">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>

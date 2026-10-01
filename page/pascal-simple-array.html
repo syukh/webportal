@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="pascal" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Масиви</h1>
+            <h3 class="accent lesson-subtitle">Розділ опису типів.</h3>
+            <p>Якщо в програмі вводяться деякі типи даних, які відмінні від стандартних, вони повинні бути описані в розділі опису типів. Розділ типів починається з ключового слова <span class="accent">type</span> і має наступний формат:</p>
+            <div class="example">
+              <ul class="text-bold">
+                <li>type
+                  <ul>
+                    <li>ім’я_типу_1 := опис_типу_1;</li>
+                    <li>…</li>
+                    <li>ім’я_типу_n := опис_типу_n;</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <p>Таким же чином можуть і перевизначатися стандартні типи даних для того, щоб поліпшити наочність програми. У цьому випадку ім'я типу даних буде асоціюватися з областю значень відповідних змінних.</p>
+            <div class="example">
+              <ul>
+                <li><span class="text-bold">Наприклад:</span>
+                  <ul>
+                    <li><span class="text-bold">type</span>
+                      <ul>
+                        <li>Wysota = <span class="color-accent">real;</span></li>
+                        <li>Nomera = <span class="color-accent">integer;</span></li>
+                        <li>Litery = <span class="color-accent">char;</span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li><span class="text-bold">var</span>
+                      <ul>
+                        <li>h1, h2, h3: Wysota;</li>
+                        <li>num_1, num_2: Nomera;</li>
+                        <li>index, grif: Litery;</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <h3 class="accent lesson-subtitle">Одновимірні масиви.</h3>
+            <p><span class="accent">Масив даних</span> – це лінійно впорядкована сукупність елементів одного і того ж типу. Для масиву характерно наступне:</p>
+            <ul>
+              <li>кожен компонент масиву може бути явно позначений і до нього є прямий доступ;</li>
+              <li>число компонентів масиву визначається при його описі і надалі не змінюється.</li>
+            </ul>
+            <p>Масив є аналогом такого математичного поняття як <span class="accent">вектор</span>. Кожен елемент масиву є аналог проекції вектору на відповідну вісь координат. Отже, масив, що містить n елементів є аналог вектора в n-вимірному просторі.</p>
+            <p>Для позначення компонентів масиву використовується <span class="accent">ім’я</span>, яке ставиться у відповідності даного масиву (ім'я змінної масиву) та <span class="accent">індекси</span>, які однозначно вказують необхідний елемент. Індекси можуть бути тільки <span class="accent">рахованого типу</span> (<span class="text-bold color-red">integer, char</span>), який є безліччю цілого або символьного типів. Зазвичай в якості індексів при описі масиву використовують відрізок ряду цілих чисел: <span class="text-bold">m ... n</span>, де <span class="accent">m &#60; n</span>.</p>
+            <p>Об’явити масив можна одним з таких способів:</p>
+            <div class="lesson-list">
+              <p></p>
+              <div class="example">
+                <ul>
+                  <li><span class="text-bold">type</span>
+                    <ul>
+                      <li>Ar : <span class="text-bold">array</span>[m .. n] <span class="text-bold">of</span> <span class="color-accent">тип_елементів_масиву</span>; </li>
+                    </ul>
+                  </li>
+                  <li><span class="text-bold">var</span>
+                    <ul>
+                      <li>a : Ar;</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div><br/>
+              <p></p>
+              <div class="example">
+                <ul>
+                  <li><span class="text-bold">var</span>
+                    <ul>
+                      <li>a : <span class="text-bold">array</span>[m .. n] <span class="text-bold">of</span> <span class="color-accent">тип_елементів_масиву</span>;</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p>Скалярна величина вказівка ідентифікатора деякої змінної дозволяє однозначно звернеться до її значення. При роботі з масивами цього недостатньо. Тут крім вказівки ідентифікатора змінної-масиву необхідно ще й вказувати його індекс, що показує місце розташування необхідного значення в масиві <span class="accent">a[i]</span>.</p>
+            <p>Якщо при обробці деякої скалярної величини використовувався лінійний алгоритм, то <span class="accent">при обробці масиву</span> за тими ж правилами <span class="accent">необхідно використовувати циклічний алгоритм</span>. Пов'язано це з тим, що масив довжиною <span class="accent">n</span> значень відповідного типу, містить <span class="accent">n</span> значень відповідного типу, що еквівалентно наявності <span class="accent">n</span> змінних. Якби ми створили програму для роботи з скалярними величинами і нам необхідно було б обробити їх <span class="accent">n</span> різних значень (причому зберігати їх в пам'яті комп'ютера одночасно), то довелося б створювати довгу і неефективну програму, що обробляє кожен елемент по черзі.</p>
+            <p>При роботі з масивами алгоритм записується для обробки <span class="accent">лише однієї величини – елемента масиву</span>, а потім охоплюється циклом, який перебирає по черзі всі наступні елементи масиву.</p>
+            <figure class="wp-block-image"><img src="./img/pascal/less-pass-10-01.svg" style="width:30%"></figure>
+            <p><span class="accent">Приклад</span>: Скласти програму знаходження суми елементів деякої послідовності.</p>
+            <div class="example">
+              <ul>
+                <li><span class="text-bold">program</span> SumMass;</li>
+                <li><span class="text-bold">Const</span>
+                  <ul>
+                    <li>n = <span class="color-excel">5</span>;</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">Var</span>
+                  <ul>
+                    <li>mas: <span class="text-bold">array</span>[<span class="color-excel">1</span> .. n] <span class="text-bold">of</span> <span class="color-accent">integer</span>;</li>
+                    <li>i: <span class="color-accent">integer</span>;</li>
+                    <li>Sum: <span class="color-accent">integer</span>;</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">begin</span>
+                  <ul>
+                    <li><span class="text-bold">for</span> i := <span class="color-excel">1</span> <span class="text-bold">to</span> n <span class="text-bold">do</span>
+                      <ul>
+                        <li>ReadLn(mas[i]);</li>
+                      </ul>
+                    </li>
+                    <li>Sum := 0;</li>
+                    <li><span class="text-bold">for</span> i := <span class="color-excel">1</span> <span class="text-bold">to</span> n <span class="text-bold">do</span>
+                      <ul>Sum:= Sum + mas[i];</ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>WriteLn(<span class="color-accent">&apos;Sum = &apos;</span>, Sum);</li>
+                <li><span class="text-bold">end.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="./uploads/python/python_lesson_10.pdf">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>

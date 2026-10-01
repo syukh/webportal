@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="../app/img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../app/img/img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../app/libs/simplebar.css"/>
+  <link rel="stylesheet" href="../app/libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="../app/css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="pascal" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="../app/img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="../app/img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="../app/img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="../app/img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="../app/img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Процедури та функції на мові <span class="accent">PascalABC</span></h1>
+            <p><span class="accent">Процедура</span> або <span class="accent">функція – являє собою послідовність операторів, яка має ім'я, список параметрів і може бути викликана у різних частинах програми</span>. Функції, на відміну від процедур, в результаті свого виконання повертають значення, яке може бути використане у виразі. Для однаковості функції і процедури називаються <span class="accent">підпрограмами</span>.</p>
+            <p>Будь-яка використовувана в програмі процедура або функція повинна бути попередньо описана в розділі описів.</p>
+            <h3 class="accent lesson-subtitle">Процедури.</h3>
+            <p><span class="accent">Процедура</span> – це незалежна сукупність операторів, що виконують задану послідовність дій, і визначені окремо від основної частини програми. Опис процедури починається зі службового слова <span class="accent">Procedure</span>, після якого йде її ідентифікатор та формальні параметри. Інша частина аналогічна основній програмі.</p>
+            <p>Як тільки в тілі програми оголошується ім'я процедури з параметрами, виконання основної її частини припиняється, і управління обчислювальними процесами передається процедурі. Після виконання процедури здійснюється повернення на оператор основної програми, наступний за викликом процедури.</p>
+            <p class="text-bold">Опис процедури має вигляд:</span></p>
+            <div class="example">
+              <ul>
+                <li><span class="text-bold">procedure</span> ім’я_процедури (формальні параметри: тип даних);
+                  <ul>
+                    <li><span class="text-bold">var</span>
+                      <ul>
+                        <li>локальні змінні;</li>
+                      </ul>
+                    </li>
+                    <li><span class="text-bold">begin</span>
+                      <ul>
+                        <li>оператори</li>
+                      </ul>
+                    </li>
+                    <li><span class="text-bold">end;</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <p class="text-bold">Виклик процедури у програмі:</p>
+            <div class="example">
+              <ul>
+                <li>ім’я_процедури (фактичні параметри);</li>
+              </ul>
+            </div>
+            <p><span class="text-bold">Приклад:</span> скласти програму з процедурою <span class="text-bold">PrintSum</span>, яка буде складати два числа і виводити їхню суму на екран.</p>
+            <div class="example">
+              <ul>
+                <li><span class="text-bold">Program</span> Print_Sum;</li>
+                <li><span class="text-bold">var</span>
+                  <ul>
+                    <li>a, b: <span class="color-accent">integer</span>;</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">procedure</span> PrintSum (x, y: <span class="color-accent">integer</span>);
+                  <ul>
+                    <li><span class="text-bold">var</span>
+                      <ul>
+                        <li>z: <span class="color-accent">integer</span>;</li>
+                      </ul>
+                    </li>
+                    <li><span class="text-bold">begin</span>
+                      <ul>
+                        <li>z := x + y;</li>
+                        <li>WriteLn(z);</li>
+                      </ul>
+                    </li>
+                    <li><span class="text-bold">end</span>;</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">begin</span>
+                  <ul>
+                    <li>WriteLn(<span class="color-accent">&#39;Введіть два числа&#39;</span>);</li>
+                    <li>Readln(a, b);</li>
+                    <li>PrintSum(a, b);</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">end</span>;</li>
+              </ul>
+            </div>
+            <h3 class="accent lesson-subtitle">Параметри процедури.</h3>
+            <p>У будь-якій програмі всі змінні діляться на два типи: <span class="accent">локальні</span> та <span class="accent">глобальні</span>.</p>
+            <p><span class="accent">Глобальні змінні</span> – це змінні з розділу описів основної частини програми, а <span class="accent">локальні</span> – з розділу описів процедур та функцій. Локальні змінні існують тільки протягом часу роботи процедури, визначаються при її виклику і зникають після завершення роботи процедури. Глобальні навпаки, існують протягом роботи всієї програми.</p>
+            <p>При описі процедури вказується список формальних параметрів. Кожен параметр є локальним по відношенню до описуваної процедури, до нього можна звертатися тільки в межах даної процедури (в нашому прикладі <span class="accent">х, у – формальні параметри</span>).</p>
+            <p><span class="accent">Фактичні параметри</span> – це параметри, які передаються процедурі при зверненні до неї (<span class="accent">а, b – фактичні параметри</span>). <span class="text-bold">Число і тип формальних і фактичних параметрів повинні збігатися з точністю до їх   слідування.</span></p>
+            <p>Якщо попереду формального параметра <span class="accent">стоїть</span> ключове слово <span class="accent">var</span> або <span class="accent">const</span>, то його називають <span class="accent">параметром-змінною</span> і кажуть, що <span class="accent">він передається за посиланням</span>. Якщо ж параметр описаний без слів var або const, то його називають <span class="accent">параметром-значенням</span> і кажуть, що <span class="accent">він передається за значенням</span>.</p>
+            <p><span class="text-bold">Приклад:</span> скласти програму <span class="accent">з процедурою Sum</span>, яка буде складати два числа і передавати їхню суму.</p>
+            <div class="example">
+              <ul>
+                <li><span class="text-bold">Program</span> NumberSum;</li>
+                <li><span class="text-bold">var</span>
+                  <ul>
+                    <li>a, b, c: <span class="color-accent">integer</span>;</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">procedure</span> Sum(x, y: <span class="color-accent">integer</span>; var z: <span class="color-accent">integer</span>);
+                  <ul>
+                    <li><span class="text-bold">begin</span>
+                      <ul>
+                        <li>z := x + y;</li>
+                      </ul>
+                    </li>
+                    <li><span class="text-bold">end</span>;</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">begin</span>
+                  <ul>
+                    <li>Readln(a, b);</li>
+                    <li>Sum(a, b, c);</li>
+                    <li>WriteLn(c);</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">end.</span></li>
+              </ul>
+            </div>
+            <p>Змінна <span class="accent">z</span> в процедуру <span class="accent">Sum</span> передана за посиланням, це означає, що якщо її змінити в тілі процедури, то вона зміниться і в тому місці, звідки її передали в процедуру (наприклад, в тілі основної програми).</p>
+            <h3 class="accent lesson-subtitle">Функції.</h3>
+            <p><span class="accent">Функція</span> – це підпрограма, результат виконання якої є єдине скалярне значення, що привласнюється імені цієї функції. Отже, функції є окремим випадком процедур і принципово відрізняються від них тим, що, по-перше, результат виконання функції – одне значення, а процедури – одне або кілька; по-друге, результат виконання функції передається в основну програму, як значення імені цієї функції (тобто в тілі функції хоча б раз імені функції має бути присвоєно значення), а результати виконання процедури – як значення її параметрів.</p>
+            <p>Опис функції починається зі службового слова <span class="accent">Function</span>, після якого вказується її ідентифікатор, формальні параметри та тип значення, що повертає функція. Інша частина аналогічна основній програмі.</p>
+            <p class="text-bold">Опис функції має вигляд:</p>
+            <div class="example">
+              <ul>
+                <li><span class="text-bold">Function</span> ім’я_функції (список формальних параметрів): тип значення, що буде повертатися;
+                  <ul>
+                    <li>розділ опису</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">begin</span>
+                  <ul>
+                    <li>оператори</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">end;</span></li>
+              </ul>
+            </div>
+            <p class="text-bold">Виклик функції в програмі:</p>
+            <div class="example">
+              <ul>
+                <li>ім’я_функції (фактичні параметри);</li>
+              </ul>
+            </div>
+            <p><span class="text-bold"> Приклад:</span> скласти програму <span class="accent">з функцією Sum</span>, що буде складати два числа і повертати їх значення.</p>
+            <div class="example">
+              <ul>
+                <li><span class="text-bold">Program</span> NumberSum;</li>
+                <li><span class="text-bold">var</span>
+                  <ul>
+                    <li>a, b: <span class="color-accent">integer</span>;</li>
+                  </ul>
+                </li>
+                <li>
+                   <span class="text-bold">function</span> Sum(x, y: <span class="color-accent">integer</span>) : <span class="color-accent">integer</span>;
+                  <ul>
+                    <li><span class="text-bold">begin</span>
+                      <ul>
+                        <li>Sum := x + y;</li>
+                      </ul>
+                    </li>
+                    <li><span class="text-bold">end</span>;</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">begin</span>
+                  <ul>
+                    <li>Readln(a, b);</li>
+                    <li>WriteLn(<span class="color-accent">&#39;Сума двох чисел дорівнює&#39;</span>,Sum(a, b));</li>
+                  </ul>
+                </li>
+                <li><span class="text-bold">end.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="./uploads/pascal/Pascal_less_11.pdf"></a>
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../app/js/libs.min.js"></script>
+<script src="../app/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../app/js/app.min.js"></script>
