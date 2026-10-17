@@ -2,8 +2,8 @@
   include ../modulus/menu.pug
   #section.course-lesson
     .section-row.section-row__header
-        h2.title-course Excel
-        //- h2.title-course Word
+        //- h2.title-course Excel
+        h2.title-course Word
         //- h2.title-course Pascal ABC
         //- h2.title-course Python
         //- h2.title-course HTML
@@ -13,32 +13,32 @@
         -
           let lesson = [
             //--- COURSE EXCEL ---//
-            {'name':'Починаємо працювати з Microsoft Excel',                       'link':'./excel-intro.html',                      'upload':'./uploads/excel/Excel_less_01.xlsx'},
-            {'name':'Введення та редагування даних. Оформлення таблиць Excel',   'link':'./excel-design-sell-and-enter-data.html', 'upload':'./uploads/excel/Excel_less_02.xlsx'},
-            {'name':'Автозаповнення клітинок в Excel',													   'link':'./excel-autofill-cells.html',             'upload':'./uploads/excel/Excel_less_03.xlsx'},
-            {'name':'Прості обчислення в Microsoft Excel',                          'link':'./excel-simple-calculations.html',        'upload':'./uploads/excel/Excel_less_04.xlsx'},
-            {'name':'Використання вбудованих функцій в Microsoft Excel',           'link':'./excel-functions.html',                  'upload':'./uploads/excel/Excel_less_05.xlsx'},
-            {'name':'Діаграми та графіки в Microsoft Excel',                        'link':'./excel-diagrams-graphs.html',            'upload':'./uploads/excel/Excel_less_06.xlsx'},
-            {'name':'Умовне форматування в Microsoft Excel',                        'link':'./excel-conditional-formatting.html',     'upload':'./uploads/excel/Excel_less_07.xlsx'},
-            {'name':'Сортування та фільтрація даних в Microsoft Excel',            'link':'./excel-sort-filter.html',							   'upload':'./uploads/excel/Excel_less_08.xlsx'},
-            {'name':'Використання функції IF в Microsoft Excel',                    'link':'./excel-function-if.html',                'upload':'./uploads/excel/Excel_less_09.xlsx'},
-            {'name':'Функції для пошуку та роботи з посиланнями в Excel',         'link':'./excel-function-search-links.html',      'upload':'./uploads/excel/Excel_less_10.xlsx'},
-            {'name':'Текстові функції, обробка текстових даних в Excel',          'link':'./excel-text-function.html',          	  'upload':'./uploads/excel/Excel_less_11.xlsx'},
-            {'name':'Функції дати та часу в Excel',                                 'link':'./excel-date-time.html',                  'upload':'./uploads/excel/Excel_less_12.xlsx'},
-            {'name':'Працюємо з великими табличними масивами в Microsoft Excel',  'link':'./excel-large-table.html',   	             'upload':'./uploads/excel/Excel_less_13.xlsx'},
-            {'name':'Аналіз даних за допомоги зведених таблиць.',                 'link':'./excel-pivot-table.html',                 'upload':'./uploads/excel/Excel_less_14.xlsx'},
+            //- {'name':'Починаємо працювати з Microsoft Excel',                       'link':'./excel-intro.html',                      'upload':'./uploads/excel/Excel_less_01.xlsx'},
+            //- {'name':'Введення та редагування даних. Оформлення таблиць Excel',   'link':'./excel-design-sell-and-enter-data.html', 'upload':'./uploads/excel/Excel_less_02.xlsx'},
+            //- {'name':'Автозаповнення клітинок в Excel',													   'link':'./excel-autofill-cells.html',             'upload':'./uploads/excel/Excel_less_03.xlsx'},
+            //- {'name':'Прості обчислення в Microsoft Excel',                          'link':'./excel-simple-calculations.html',        'upload':'./uploads/excel/Excel_less_04.xlsx'},
+            //- {'name':'Використання вбудованих функцій в Microsoft Excel',           'link':'./excel-functions.html',                  'upload':'./uploads/excel/Excel_less_05.xlsx'},
+            //- {'name':'Діаграми та графіки в Microsoft Excel',                        'link':'./excel-diagrams-graphs.html',            'upload':'./uploads/excel/Excel_less_06.xlsx'},
+            //- {'name':'Умовне форматування в Microsoft Excel',                        'link':'./excel-conditional-formatting.html',     'upload':'./uploads/excel/Excel_less_07.xlsx'},
+            //- {'name':'Сортування та фільтрація даних в Microsoft Excel',            'link':'./excel-sort-filter.html',							   'upload':'./uploads/excel/Excel_less_08.xlsx'},
+            //- {'name':'Використання функції IF в Microsoft Excel',                    'link':'./excel-function-if.html',                'upload':'./uploads/excel/Excel_less_09.xlsx'},
+            //- {'name':'Функції для пошуку та роботи з посиланнями в Excel',         'link':'./excel-function-search-links.html',      'upload':'./uploads/excel/Excel_less_10.xlsx'},
+            //- {'name':'Текстові функції, обробка текстових даних в Excel',          'link':'./excel-text-function.html',          	  'upload':'./uploads/excel/Excel_less_11.xlsx'},
+            //- {'name':'Функції дати та часу в Excel',                                 'link':'./excel-date-time.html',                  'upload':'./uploads/excel/Excel_less_12.xlsx'},
+            //- {'name':'Працюємо з великими табличними масивами в Microsoft Excel',  'link':'./excel-large-table.html',   	             'upload':'./uploads/excel/Excel_less_13.xlsx'},
+            //- {'name':'Аналіз даних за допомоги зведених таблиць.',                 'link':'./excel-pivot-table.html',                 'upload':'./uploads/excel/Excel_less_14.xlsx'},
             //--- COURSE WORD ---//
-            //- {'name':'Початок роботи з Microsoft Office Word',                             'link':'./start-work-office-word.html',           'upload':'./uploads/word/Word_less_01.zip'},
-            //- {'name':'Форматування символів та абзаців в Word',                           'link':'./format-symbol-and-paragraph-word.html', 'upload':'./uploads/word/Word_less_02.zip'},
-            //- {'name':'Створення списків в Word',                                           'link':'./creation-list-word.html',               'upload':'./uploads/word/Word_less_03.zip'},
-            //- {'name':'Таблиці у текстовому документі Word',                               'link':'./tables-word.html',                      'upload':'./uploads/word/Word_less_04.zip'},
-            //- {'name':'Розрахунки в таблицях Word',                                         'link':'./calculations-in-tables-word.html',      'upload':'./uploads/word/Word_less_05.zip'},
-            //- {'name':'Додавання графічних зображень у текстовий документ Word',          'link':'./inset-pictures-word.html',             'upload':'./uploads/word/Word_less_06.zip'},
-            //- {'name':'Графічні примітиви у текстовому редакторі Word',                    'link':'./graphic-primitives-in-word.html',      'upload':'./uploads/word/Word_less_07.zip'},
-            //- {'name':'Працюємо із спеціальними символами та формулами в Microsoft Word', 'link':'./symbols-formulas-word.html',            'upload':'./uploads/word/Word_less_08.zip'},
-            //- {'name':'Стилі. Заголовки. Структура документу',                             'link':'./doc-style-strucrure-word.html',         'upload':'./uploads/word/Word_less_09.zip'},
-            //- {'name':'Макет сторінки',                                                      'link':'./page-layout-word.html',                 'upload':'./uploads/word/Word_less_10.zip'},
-            //- {'name':'Нумерація сторінок. Колонтитули',                                    'link':'./titles-numbering-pages-word.html',      'upload':'./uploads/word/Word_less_11.zip'},
+            {'name':'Початок роботи з Microsoft Office Word',                             'link':'./start-work-office-word.html',           'upload':'./uploads/word/Word_less_01.zip'},
+            {'name':'Форматування символів та абзаців в Word',                           'link':'./format-symbol-and-paragraph-word.html', 'upload':'./uploads/word/Word_less_02.zip'},
+            {'name':'Створення списків в Word',                                           'link':'./creation-list-word.html',               'upload':'./uploads/word/Word_less_03.zip'},
+            {'name':'Таблиці у текстовому документі Word',                               'link':'./tables-word.html',                      'upload':'./uploads/word/Word_less_04.zip'},
+            {'name':'Розрахунки в таблицях Word',                                         'link':'./calculations-in-tables-word.html',      'upload':'./uploads/word/Word_less_05.zip'},
+            {'name':'Додавання графічних зображень у текстовий документ Word',          'link':'./inset-pictures-word.html',             'upload':'./uploads/word/Word_less_06.zip'},
+            {'name':'Графічні примітиви у текстовому редакторі Word',                    'link':'./graphic-primitives-in-word.html',      'upload':'./uploads/word/Word_less_07.zip'},
+            {'name':'Працюємо із спеціальними символами та формулами в Microsoft Word', 'link':'./symbols-formulas-word.html',            'upload':'./uploads/word/Word_less_08.zip'},
+            {'name':'Стилі. Заголовки. Структура документу',                             'link':'./doc-style-strucrure-word.html',         'upload':'./uploads/word/Word_less_09.zip'},
+            {'name':'Макет сторінки',                                                      'link':'./page-layout-word.html',                 'upload':'./uploads/word/Word_less_10.zip'},
+            {'name':'Нумерація сторінок. Колонтитули',                                    'link':'./titles-numbering-pages-word.html',      'upload':'./uploads/word/Word_less_11.zip'},
             //--- COURSE PASCAL ---//
             //- {'name':'Введення в мову програмування Pascal',       'link':'./pascal-intro.html',                      'upload':'./uploads/pascal/PascalABC.rar'},
             //- {'name':'Оператори вводу-виводу',                      'link':'./pascal-operator-read-write.html',        'upload':'./uploads/pascal/Pascal_less_02.pdf',},
