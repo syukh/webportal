@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5EWDP67J"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XC5EWDP67J');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>WebPortal</title>
+  <meta name="description" content=""/>
+  <meta property="og:image" content="path/to/image.jpg"/>
+  <link rel="icon" href="./img/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon-180x180.png"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./libs/simplebar.css"/>
+  <link rel="stylesheet" href="./libs/highlight/silk-light.min.css"/>
+  <link rel="stylesheet" href="./css/main.min.css"/><script src="https://kit.fontawesome.com/7ee8fb5d9d.js"></script>
+</head>
+<body>
+  <div class="lesson-section" id="main-section">
+    <div class="word" id="menu">
+      <div class="logo"><a href="https://webportal.com.ua"><img class="logo__img" src="./img/site/logo.svg" alt="Logo"/></a></div>
+      <nav class="nav"><a class="nav__link" href="./office.html"><span class="nav__tooltip">Microsoft Office</span><img src="./img/site/logo_office.svg"/></a><a class="nav__link" href="./program.html"><span class="nav__tooltip">Програмування</span><img src="./img/site/logo_prog.svg"/></a><a class="nav__link" href="./web.html"><span class="nav__tooltip">Web-технології</span><img src="./img/site/logo_web.svg"/></a><a class="nav__link" href="https://webportal.com.ua/"><span class="nav__tooltip">Майстер-класи</span><img src="./img/site/logo_master.svg"/></a>
+      </nav>
+      <div class="icon-bars"><a class="icon-bars__link"><i class="fa fa-bars"></i></a></div>
+      <div class="wrap-mobile-menu"><button class="">
+<i class="fa fa-bars"></i>
+</button>
+        <div class="overlay overlay-scale">
+          <nav class="mobile-menu">
+            <ul class="mobile-nav">
+              <li class="mobile-nav__item nav-item red"><a class="nav-item__link" href="./office.html">Microsoft Office</a></li>
+              <li class="mobile-nav__item nav-item blue"><a class="nav-item__link" href="./program.html">Програмування</a></li>
+              <li class="mobile-nav__item nav-item green"><a class="nav-item__link" href="./web.html">Web-технології</a></li>
+              <li class="mobile-nav__item nav-item orange"><a class="nav-item__link" href="https://webportal.com.ua/">Майстер-класи</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="section-lesson" id="section">
+      <div class="section-row section-row__course">
+        <div class="course-wrap" id="spbar">
+          <div class="lesson-page">
+            <h1 class="lesson-title">Розрахунки в таблицях <span class="accent">Word</span></h1>
+            <p>Працюючи з таблицями, в тестовому редакторі <span class="accent">Word</span>, практично кожен користувач стикається з необхідністю виконувати в них деякі нескладні розрахунки.</p>
+            <h3 class="accent lesson-subtitle">Додавання формул в клітинку таблиці.</h3>
+            <p>Для виконання розрахунків в таблицях, редактор <span class="accent">Word</span> використовує спеціальні формули. <span class="accent">Формула</span> – це вираз, який задає операції над даними в клітинках таблиці та порядок їх виконання.</p>
+            <p class="text-bold">Додавання формул в клітинку таблиці:</p>
+            <ul class="list">
+              <li>поставити текстовий курсор в клітинку таблиці, де необхідно відобразити результат обчислення;</li>
+              <li>на стрічці команд перейти до вкладки <span class="accent">Макет</span>;</li>
+              <li>в групі <span class="accent">Дані</span> клацнути на елемент інструменту <span class="accent">Формула</span> та відкрити відповідне діалогове вікно;</li>
+              <li>в полі <span class="accent">Формула</span> скласти формулу та натиснути на кнопку <span class="accent">ОК</span>.</li>
+            </ul>
+            <figure class="wp-block-image"><img src="./img/lesson/word/less-word-05-01.png" alt="Додавання формули в клітинку таблиці"/></figure>
+            <p>Як бачимо, за замовчуванням, програма сама додає початкову формулу – це формула обчислення суми усіх числових значень, що знаходяться у тому ж рядку або стовпці, в залежності від того де проводяться розрахунки.</p>
+            <h3 class="accent lesson-subtitle">Прості обчислення в таблиці.</h3>
+            <p>Однак, бувають випадки, коли користувачу необхідно проводити розрахунки з даними які знаходяться в несуміжних клітинках.</p>
+            <p>Ми пам’ятаємо, <span class="accent">таблиця</span> – це графічний об’єкт текстового документа, що <span class="accent">складається зі стовпців і рядків</span> на перетині яких знаходяться <span class="accent">клітинки таблиці</span>. В свою чергу, кожна клітинка таблиці має власну адресу, за якою до неї можна звернутись та отримати дані, які вона містить. Але, як визначити цю адресу?</p>
+            <p><span class="accent">Адреса клітинки утворюється з назви стовпчика та номера рядка</span>, тобто кожному стовпцю в таблиці надається літера латинського алфавіту, а рядкам – окремий порядковий номер.   </p>
+            <figure class="wp-block-image"><img src="./img/lesson/word/less-word-05-02.png" alt="Адреса клітинки"/></figure>
+            <p>Сукупність клітинок в таблиці утворює діапазон клітинок. <span class="accent">Діапазон клітинок</span>, як і окрема клітинка, теж має адресу. <span class="accent">Адреса діапазону клітинок задається адресами двох клітинок, розміщених у його протилежних кутах, що розділені двокрапкою</span>.</p>
+            <figure class="wp-block-image"><img src="./img/lesson/word/less-word-05-03.png" alt="Адреса діапазону"/></figure>
+            <p>Отже тепер, коли ми можемо отримати дані з будь-якої клітинки таблиці, розглянемо порядок виконання простих обчислень.</p>
+            <p class="text-bold">Порядок обчислень в таблиці:</p>
+            <ul class="list">
+              <li>поставити текстовий курсор в клітинку таблиці, де необхідно відобразити результат обчислення;</li>
+              <li>виконати команду <span class="accent">створення порожнього поля</span>, комбінація клавіш <span class="accent">Ctrl+F9</span> (з’явиться нове поле у фігурних дужках);</li>
+              <li>ввести з клавіатури знак рівності <span class="accent">=</span> (сигналізуємо програмі, що в поле буде введена формула);</li>
+              <li>скласти просте математичне рівняння використовуючи:
+                <ul>
+                  <li>посилання на клітинки;</li>
+                  <li>оператори (арифметичні або оператори порівняння);</li>
+                  <li>константи (числові дані);</li>
+                </ul>
+              </li>
+              <li>відобразити значення розрахунків, команда – <span class="accent">оновити поле</span>, клавіша <span class="accent">F9</span>.</li>
+            </ul>
+            <p>Для відображення коду або значень полів існує команда – <span class="accent">Alt+F9</span>.</p>
+            <figure class="wp-block-image"><img src="./img/lesson/word/less-word-05-04.png" alt="Прості обчислення в таблиці"/></figure>
+            <p>В редакторі <span class="accent">Word</span> ви можете додавати, віднімати, множити і ділити числа не використовуючи вбудовані функції, а лише вказувати потрібний оператор.</p>
+            <figure class="wp-block-image"><img src="./img/lesson/word/less-word-05-05.png" alt="Арифметичні оператори та оператори порівняння"/></figure>
+            <p>Зауважимо, що на відміну від електронних таблиць <span class="accent">Excel</span>, оновлення значень розрахунків у документі <span class="accent">Word</span> відбувається або при його відкритті, або примусово. Якщо, дані в таблиці були змінені, необхідно виконати оновлення елементів самостійно.</p>
+            <p class="text-bold">Оновлення значень розрахунків:</p>
+            <ul class="list">
+              <li>виділити весь документ, команда <span class="accent">Ctrl+A</span> або лише клітинку з формулою;</li>
+              <li>виконати команду – <span class="accent">оновити поле</span>, клавіша <span class="accent">F9</span>.</li>
+            </ul>
+            <h3 class="accent lesson-subtitle"> Використання вбудованих функцій</h3>
+            <p>Дійсно, для розрахунків, що мають невелику кількість елементів в рівнянні, доцільно використовувати лише прості математичні оператори. З іншого боку, для автоматизації розрахунків, в редактор Word вбудовані спеціальні функції. </p>
+            <p><span class="accent">Функція</span> – це заздалегідь визначена формула, згідно з якою виконуються обчислення за заданими величинами у вказаному порядку.</p>
+            <figure class="wp-block-image"><img src="./img/lesson/word/less-word-05-06.png" alt="Функція SUM" style="width:35%"/></figure>
+            <p>Під час запису функції у формулі спочатку вказується її ім’я, потім, у круглих дужках, список аргументів, якщо аргументів декілька вони перераховуються через крапку з комою. Аргументами функції можуть бути числа, посилання на клітинки або діапазони, вирази та інші функції.</p>
+            <p class="text-bold">Вставлення функції у формулу:</p>
+            <ul class="list">
+              <li>поставити текстовий курсор в клітинку таблиці, де необхідно відобразити результат обчислення;</li>
+              <li>на стрічці команд перейти до вкладки <span class="accent">Макет</span>;</li>
+              <li>в групі <span class="accent">Дані</span> клацнути на елемент інструменту <span class="accent">Формула</span> та відкрити відповідне діалогове вікно;</li>
+              <li>в полі <span class="accent">Формула</span> скласти формулу:
+                <ul>
+                  <li>ввести з клавіатури знак рівності <span class="accent">=</span> ;</li>
+                  <li>розгорнути спадаючий список <span class="accent">Вставити функцію</span> та обрати потрібну функцію;</li>
+                  <li>у круглих дужках вказати аргументи функції;</li>
+                </ul>
+              </li>
+              <li>натиснути кнопку <span class="accent">ОК</span> для виводу результату.</li>
+            </ul>
+            <figure class="wp-block-image"><img src="./img/lesson/word/less-word-05-07.png" alt="Обчислення в таблиці"/></figure>
+            <h3 class="accent lesson-subtitle">Копіювання формул.</h3>
+            <p>Швидко робити однакові розрахунки з різними групами клітинок можна лише тоді, коли в якості аргументів функції виступають так звані аргументи розташування:</p>
+            <ul class="list">
+              <li><span class="accent">LEFT</span> – дані в поточному рядку ліворуч від формули;</li>
+              <li><span class="accent">RIGHT</span> – дані в поточному рядку праворуч від формули;</li>
+              <li><span class="accent">ABOVE</span> – дані в поточному стовпчику над формулою;</li>
+              <li><span class="accent">BELOW</span> – дані в поточному стовпчику під формулою.</li>
+            </ul>
+            <p>Використання аргументів розташування можливе лише у наступних функціях: <span class="accent">AVERAGE</span>, <span class="accent">COUNT</span>, <span class="accent">MAX</span>, <span class="accent">MIN</span>, <span class="accent">PRODUCT</span>, <span class="accent">SUM</span>.</p>
+            <p>Зверніть увагу, щоб уникнути помилок під час розрахунків в таблиці за допомоги аргументів розташування, клітинки таблиці, які входять до обчислення, повинні містити значення. Якщо якесь значення відсутнє, в клітинку необхідно поставити нуль, інакше обчислення буде виконано до першої порожньої клітинки.</p>
+            <figure class="wp-block-image"><img src="./img/lesson/word/less-word-05-08.png" alt="Копіювання формул"/></figure>
+            <p class="text-bold">Копіювання формул:</p>
+            <ul class="list">
+              <li>поставити текстовий курсор в клітинку таблиці, де необхідно відобразити результат обчислення;</li>
+              <li>скласти формулу;</li>
+              <li>виділити клітинку таблиці з розрахунками;</li>
+              <li>виконати команду <span class="accent">Копіювати</span>;</li>
+              <li>виділити клітинки таблиці де треба виконати подібні обчислення;</li>
+              <li>виконати команду <span class="accent">Вставити</span>;</li>
+              <li>відобразити значення розрахунків для поточних формул, команда – <span class="accent">оновити поле</span>, клавіша <span class="accent">F9</span>.</li>
+            </ul>
+            <p>Такий механізм можливий тільки завдяки тому, що аргументи розташування не прив’язані до конкретного діапазону чи окремої клітинки таблиці.</p>
+          </div>
+          <div class="dowload-btn"><a class="dowload-btn__wraper" href="./uploads/word/Word_less_05.zip">
+              <div class="btn-descr">додаткові<br />матеріали</div>
+              <div class="btn-icon"><i class="far fa-file-archive"></i></div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/libs.min.js"></script>
+<script src="./libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="./js/app.min.js"></script>
